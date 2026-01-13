@@ -17,3 +17,9 @@
     cursor: url('public/cursor-yellow.png') 12 12, auto;
   }
 }
+
+.dots-bg {
+  background-color: #15110B;
+  background-image: radial-gradient(gray 1px, transparent 1px);
+  background-size: 16px 16px;
+}

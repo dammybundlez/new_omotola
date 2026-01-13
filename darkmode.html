@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <script src="https://kit.fontawesome.com/c4993cb090.js" crossorigin="anonymous"></script>
+    <title>Omotola</title>
+</head>
+<body class="bg-[#0D0D0D] text-white">
+    <div class="pb-10">
+        <header class="fixed w-full z-50 top-0 bg-[#0D0D0D] text-white px-4 md:px-6 py-2 shadow-sm font-geist font-normal">
+           <div id="navbar" class="">
+               <div class="flex justify-between items-center px-4">
+                   <a href="index.html">
+                       <img src="/public/img124.webp" class="w-10 md:w-10 text-[#0D0D0D] "/>
+                   </a>
+   
+                   <button id="menuBtn" class="md:hidden text-amber-500 text-2xl">
+                       <i class="fa-solid fa-bars"></i>
+                   </button>
+   
+                   <nav class="hidden md:flex text-sm">
+                       <ul class="flex items-center text-white gap-10 uppercase">
+                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="films.html">Films</a></li>
+                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="news.html">News</a></li>
+                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="legacy.html">30 Years legacy</a></li>
+                           <li class="relative group">
+                               <a class="hover:text-orange-300 transition-all duration-200 flex items-center gap-2" 
+                                   id="othersBtn" 
+                                   aria-expanded="false"
+                                   href="#">Others <span class="text-sm pl-2"><i class="fa-solid fa-chevron-down"></i></span>
+                               </a>
+                               <div
+                                   id="othersDropdown"
+                                   class="absolute top-full mt-4 left-[-130px] -translate-x-1/2 w-[430px] px-2 py-2 rounded-3xl bg-white shadow-[0_8px_32px_rgba(0,0,0,0.35)] invisible group-hover:visible
+                                       transition-all duration-300 z-[999px]">
+                                   <ul class="relative text-stone-500 text-base font-normal font-geist leading-relaxed">
+                                      <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
+                                        <a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 px-4 transition-all duration-200">OYEP</a>  <br><br>
+                                      </li>
+                                      <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
+                                        <a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 px-4 transition-all duration-200">OSEAL</a>  <br><br>
+                                      </li>
+                                      <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
+                                        <a href="https://www.teffest.com/" class="hover:text-orange-300 px-4 transition-all duration-200">TEFFEST</a>  <br><br>
+                                      </li>
+                                      <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
+                                        <a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 px-4 transition-all duration-200">DOUBLE DOORS</a>  <br><br>
+                                      </li>
+                                   </ul>
+                               </div>
+                           </li>
+                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="about.html">About</a></li>
+                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="contact.html">Contact</a></li>
+                       </ul>
+                   </nav>
+               </div>
+   
+               <nav id="mobileMenu" class="hidden text-white pb-6 h-full ease-out transition-all duration-300">
+                   <ul class="flex flex-col  gap-y-3 uppercase p-6 text-white">
+                      <li class=""><a href="films.html" class="hover:text-orange-300 transition-all ease-out duration-200">Films</a></li>
+                      <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="news.html">News</a></li>
+                      <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="legacy.html">30 Years legacy</a></li>
+                      <li class=""><button class="hover:text-orange-300 transition-all ease-out duration-200" id="othersToggle">OTHERS <span class="text-sm"><i id="othersIcon" class="fa-solid fa-chevron-down transition-transform duration-300"></i></span></button>
+                          <ul
+                              id="othersAccordion"
+                              class="mt-1 ml-4 space-y-3 text-sm
+                                  max-h-0 overflow-hidden
+                                  transition-all duration-300"
+                          >
+                              <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">OYEP</a></li>
+                              <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">OSEAL</a></li>
+                              <li><a href="https://www.teffest.com/" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">TEFFEST</a></li>
+                              <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">Double Doors</a></li>
+                          </ul>
+                      </li>
+                      <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="about.html">About</a></li>
+                      <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="contact.html">Contact</a></li>
+                   </ul>
+               </nav>
+           </div>
+       </header> 
+       <div class="md:px-10 pt-10 mt-10 md:mt-14 w-full">
+           <div class="bg-[#3D3D3D] border border-[#202020]">
+              <div class="p-6">
+                <section class="relative w-full h-[650px] overflow-hidden bg-[url('public/herobg.png')] bg-cover bg-[center_10%] font-geist">
+                  <div class="absolute inset-0 bg-[#56565640]"></div>
+                  <header class="absolute md:top-14 md:left-8 left-4 top-4 bg-[#0D0D0D33] p-2 rounded-md">
+                    <ul class="flex items-center gap-1.5">
+                      <li class="size-2 bg-white rounded-full"></li>
+                      <li class="size-2 bg-white rounded-full"></li>
+                      <li class="size-2 bg-white rounded-full"></li>
+                      <li class="size-3 bg-amber-500 rounded-full"></li>
+                      <li class="size-2 bg-white rounded-full"></li>
+                      <li class="size-2 bg-white rounded-full"></li>
+                      <li class="size-2 bg-white rounded-full"></li>
+                    </ul>
+                  </header>
+
+                  <article class="absolute bottom-0 w-full mt-64 md:mt-80 bg-rose-100/20 backdrop-blur-sm md:px-10 px-4 py-8">
+                    <div class="mx-auto max-w-6xl flex flex-col md:flex-row md:items-end md:justify-between md:gap-8 gap-4">
+                      <div class="max-w-md md:space-y-4 space-y-2">
+                        <h1
+                          class="text-[#0D0D0D] text-3xl md:text-4xl font-bold font-geist uppercase tracking-wide"
+                        >
+                          A Mother’s Love
+                        </h1>
+
+                        <p
+                          class="text-[#0D0D0D] text-sm font-medium uppercase tracking-wide"
+                        >
+                          Only in theatres
+                        </p>
+
+                        <div class="flex flex-wrap gap-4 font-geist">
+                          <button
+                            class="px-6 py-3 bg-[#0D0D0D] text-white font-medium uppercase text-sm"
+                          >
+                            Get Ticket
+                          </button>
+
+                          <button
+                            class="px-6 py-3 bg-amber-500 text-[#0D0D0D] font-medium uppercase text-sm"
+                          >
+                            View Trailer
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- Controls / Icons -->
+                      <nav class="flex items-center gap-6 self-start md:self-auto">
+                        <button class="">
+                          <span class="bg-white rounded-full w-8 h-8 flex items-center justify-center">
+                            <i class="fa-solid fa-arrow-left text-lg text-zinc-400"></i>
+                          </span>
+                        </button>
+                        <button class="">
+                          <span class="bg-white rounded-full w-8 h-8 flex items-center justify-center">
+                            <i class="fa-solid fa-arrow-right text-lg text-zinc-400"></i>
+                          </span>
+                        </button>
+                      </nav>
+                    </div>
+                  </article>
+                </section>
+              </div>
+           </div>
+       </div>
+    </div>
+    <div class="flex flex-col justify-center items-center px-4 md:px-0 py-20 space-y-5">
+        <h2 class="uppercase font-geist font-medium text-2xl text-white">Explore brands</h2>
+        <div class="flex justify-center items-center md:gap-x-14 gap-x-10 p-2">
+            <img class="md:w-[142px] w-[80px] h-[120px]  text-white" src="/public/oyep.webp" />
+            <img class="md:w-[354px] w-[80px] h-[20px] md:h-[120px] object-cover object-[center_20%] flex items-center justify-center text-white " src="public/teffest.webp" />
+            <img class="md:w-[134px] w-[80px] h-[120px] text-white" src="/public/galg.webp" />
+        </div>
+    </div>
+    <section class="w-full py-8 font-geist">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 flex flex-col gap-12">
+        <header class="flex flex-col gap-4">
+          <h2 class="text-white text-lg md:text-xl font-medium uppercase font-geist">
+            Featured Film
+          </h2>
+
+          <div class="relative h-1 bg-neutral-100 overflow-hidden">
+            <span class="absolute left-0 top-0 h-full w-24 bg-yellow-600"></span>
+          </div>
+        </header>
+
+        <!-- Film Grid -->
+        <div class="flex flex-col items-center gap-12">
+          <div class="flex flex-nowrap gap-6 scroll-container w-full overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory px-4 py-2 scrollbar-hide no-scrollbar">
+            <article class="flex-shrink-0 snap-start
+                    w-[220px] sm:w-[260px] md:w-[300px]
+                    flex flex-col gap-4">
+                <img
+                src="public/herobg.webp"
+                class="w-full aspect-[3/4] object-cover rounded"
+                alt="A Mother’s Love"
+                />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">
+                A Mother’s Love
+                </h3>
+            </article>
+
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4">
+                <img src="public/rs.png" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Rattle Snake</h3>
+            </article>
+
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4">
+                <img src="public/Road Rogue.webp" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Road Rogue</h3>
+            </article>
+
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4">
+                <img src="public/film6.webp" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Ije: The Journey</h3>
+            </article>
+
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4">
+                <img src="public/film5.webp" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Blood Sister</h3>
+            </article>
+        </div>
+          <a href="#" class="inline-flex items-center justify-center px-8 py-4 bg-[#E19403] text-white text-sm md:text-base font-medium uppercase font-geist hover:bg-amber-600 transition">
+            View Films
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full py-16">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 flex flex-col gap-12">
+
+        <!-- Header -->
+        <header>
+          <h2 class="text-white text-lg md:text-xl font-semibold uppercase font-geist">
+            Latest News
+          </h2>
+        </header>
+
+        <!-- News List -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+          <!-- News Item -->
+          <article class="flex gap-5 items-start">
+            <div class="flex-1 flex flex-col gap-2 w-1/3">
+              <h3 class="text-white text-base md:text-lg font-normal underline leading-snug font-geist">
+                Omotola Jalade Receives her Honorary Film Icon BEFFTA Award / Exclusive interview.
+              </h3>
+              <p class="text-neutral-400 text-xs md:text-sm font-semibold font-geist uppercase">
+                The Telegraph · November 2025
+              </p>
+            </div>
+
+            <figure class="w-40 sm:w-[57%] flex-shrink-0">
+              <img
+                src="public/beffta.png"
+                alt="Omosexy news cover"
+                class="w-full h-[145px] object-[center_20%] object-cover rounded"
+              />
+            </figure>
+          </article>
+
+          <article class="flex gap-5 items-start">
+            <div class="flex-1 flex flex-col gap-2 w-1/3">
+              <h3 class="text-white text-base md:text-lg font-normal underline leading-snug font-geist">
+                Nollywood Diva, Omotola Jalade-Ekeinde covers Glam Africa magazine
+              </h3>
+              <p class="text-neutral-400 text-xs md:text-sm font-semibold font-geist uppercase">
+                Vanguard · November 2025
+              </p>
+            </div>
+
+            <figure class="w-40 sm:w-[57%] flex-shrink-0">
+              <img
+                src="public/glam_africa.png"
+                alt="Glam Africa cover"
+                class="w-full h-[145px] object-[center_0%] object-cover rounded"
+              />
+            </figure>
+          </article>
+
+          <article class="flex gap-5 items-start">
+            <div class="flex-1 flex flex-col gap-2 w-1/3">
+              <h3 class="text-white text-base md:text-lg font-normal underline leading-snug font-geist">
+                The 2013 TIME 100
+              </h3>
+              <p class="text-neutral-400 text-xs md:text-sm font-semibold font-geist uppercase">
+                Time · November 2025
+              </p>
+            </div>
+
+            <figure class="w-40 sm:w-[57%] flex-shrink-0">
+              <img
+                src="public/100.png"
+                alt="TIME 100 article"
+                class="w-full h-[145px] object-[center_0%] object-cover  rounded"
+              />
+            </figure>
+          </article>
+
+          <article class="flex gap-5 items-start">
+            <div class="flex-1 flex flex-col gap-2 w-1/3">
+              <h3 class="text-white text-base md:text-lg font-normal underline leading-snug font-geist">
+                Nollywood actress builds “film village”
+              </h3>
+              <p class="text-neutral-400 text-xs md:text-sm font-semibold font-geist uppercase">
+                CNN Watch · November 2025
+              </p>
+            </div>
+
+            <figure class="w-40 sm:w-[57%] flex-shrink-0">
+              <img
+                src="public/film_village.png"
+                alt="Film village news"
+                class="w-full h-[145px] object-[center_30%] object-cover rounded"
+              />
+            </figure>
+          </article>
+
+          <article class="flex gap-5 items-start">
+            <div class="flex-1 flex flex-col gap-2 w-1/3">
+              <h3 class="text-white text-base md:text-lg font-normal underline leading-snug font-geist">
+                Interview with Ms. Omotola Jalade-Ekeinde – WISE 2013 Forum
+              </h3>
+              <p class="text-neutral-400 text-xs md:text-sm font-semibold font-geist uppercase">
+                YouTube · November 2025
+              </p>
+            </div>
+
+            <figure class="w-40 sm:w-[57%] flex-shrink-0">
+              <img
+                src="public/wise.png"
+                alt="WISE interview"
+                class="w-full h-[145px] object-[center_0%] object-cover rounded"
+              />
+            </figure>
+          </article>
+
+          <article class="flex gap-5 items-start">
+            <div class="flex-1 flex flex-col gap-2 w-1/3">
+              <h3 class="text-white text-base md:text-lg font-normal underline leading-snug font-geist">
+                Omotola Jalade-Ekeinde is More Than a Nollywood Legend
+              </h3>
+              <p class="text-neutral-400 text-xs md:text-sm font-semibold font-geist uppercase">
+                BellaNaija · November 2025
+              </p>
+            </div>
+
+            <figure class="w-40 sm:w-[57%] flex-shrink-0">
+              <img
+                src="public/legend.png"
+                alt="BellaNaija article"
+                class="w-full h-[145px] object-[center_50%] object-cover rounded"
+              />
+            </figure>
+          </article>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="flex justify-center">
+          <a
+            href="#"
+            class="px-8 py-4 bg-[#E19403] uppercase text-white text-sm md:text-base font-medium font-geist  hover:bg-amber-600 transition"
+          >
+            View All News
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="relative w-full overflow-hidden dots-bg py-10 lg:py-12">
+      <div class="mx-auto max-w-7xl px-6 relative">
+        <header class="flex flex-col items-center text-center gap-6 mb-10">
+          <div class="flex gap-4">
+            <img
+              src="public/3.webp"
+              alt="Portrait still"
+              class="h-60 w-auto object-cover"
+            />
+            <img
+              src="public/0.webp"
+              alt="Portrait still"
+              class="h-60 w-auto object-cover"
+            />
+          </div>
+
+          <h2 class="text-[#E09E23] text-4xl md:text-6xl font-extrabold font-shantell uppercase tracking-wide">
+            Years of Impact
+          </h2>
+
+          <button class="px-6 py-4 bg-amber-500 text-[#0D0D0D] font-geist uppercase font-medium">
+            Explore 30-Year Legacy
+          </button>
+          <!-- <figure class="absolute top-0 right-0 lg">
+              <img
+                src="public/bwomotola.png"
+                alt="Portrait"
+                class="w-80 h-auto object-cover"
+              />
+            </figure> -->
+        </header>
+
+        <article class="relative grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div class="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
+            <p class="text-white text-lg leading-9 font-geist">
+              Delve into the extraordinary journey of Omotola Jalade Ekeinde, a true cinematic icon of Africa and a trailblazer in cultural advocacy. From her groundbreaking performances that have captivated audiences worldwide to her significant contributions to humanitarian efforts, Omotola's story is one of resilience and inspiration. She has not only redefined the landscape of African cinema but has also used her platform to effect positive change in communities across the globe. 
+            </p>
+          </div>
+
+          <div class="h-[700px] hidden lg:block">
+            <figure class="absolute w-1/2 bottom-12 right-0 rotate-2 bg-white outline outline-2 outline-gray-200 p-4">
+              <img
+                src="public/3b.png"
+                alt="Film still"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+
+            <figure class="absolute w-2/5 top-0 right-10 -rotate-6 bg-white outline outline-2 outline-gray-200 p-4">
+              <img
+                src="public/e5aafbbce54605ccb7cd181268ee3ecdd4a7a59b.png"
+                alt="Film still"
+                class="w-full h-60 object-cover object-[center_15%]"
+              />
+            </figure>
+
+            <figure class="absolute  bottom-5 left-10 -rotate-12 bg-white outline outline-2 outline-gray-200 p-4">
+              <img
+                src="public/3a.png"
+                alt="Film still"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="w-full py-8">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 flex flex-col gap-4">
+        <header>
+          <h2 class="text-white text-lg md:text-xl font-semibold uppercase font-geist">
+            About the studio
+          </h2>
+        </header>
+
+        <div class="space-y-10">
+            <p class="text-white text-base sm:text-lg lg:text-lg font-normal font-geist leading-7 sm:leading-8">
+                <strong class="font-medium text-white">Redhot Concepts</strong> is a premium African production studio founded on the core philosophy that world-class talent demands world-class infrastructure. We are more than a production house; we are an ecosystem builder dedicated to professionalizing the entertainment industry across Africa and exporting authentic, high-impact stories to the global stage.
+            </p>
+
+            <p class="text-white text-base sm:text-lg lg:text-lg font-normal font-geist leading-7 sm:leading-8">
+                <strong class="font-medium text-white">Redhot Concepts</strong> is a premium African production studio founded on the core philosophy that world-class talent demands world-class infrastructure. We are more than a production house; we are an ecosystem builder dedicated to professionalizing the entertainment industry across Africa and exporting authentic, high-impact stories to the global stage.
+            </p>
+
+            <p class="text-white text-base sm:text-lg lg:text-lg font-normal font-geist leading-7 sm:leading-8">
+                <strong class="font-medium text-white">Redhot Concepts</strong> is a premium African production studio founded on the core philosophy that world-class talent demands world-class infrastructure. We are more than a production house; we are an ecosystem builder dedicated to professionalizing the entertainment industry across Africa and exporting authentic, high-impact stories to the global stage.
+            </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col items-center gap-12">
+          <div class="flex flex-nowrap gap-3 w-full overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory px-4 py-2 scrollbar-hide no-scrollbar">
+            <article
+              class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px]
+                    aspect-[3/5] bg-[#3D3D3D] border border-[#202020] overflow-hidden p-4"
+            >
+              <img
+                src="public/legacy1.webp"
+                alt="Gallery image"
+                class="w-full h-full object-cover"
+              />
+            </article>
+
+            <article
+              class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px]
+                    aspect-[3/5] bg-[#3D3D3D] border border-[#202020] overflow-hidden p-4"
+            >
+              <img
+                src="public/leg2.png"
+                alt="Gallery image"
+                class="w-full h-full object-cover object-[center_20%]"
+              />
+            </article>
+
+            <article
+              class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px]
+                    aspect-[3/5] bg-[#3D3D3D] border border-[#202020] overflow-hidden p-4"
+            >
+              <img
+                src="public/leg3.png"
+                alt="Gallery image"
+                class="w-full h-full object-cover"
+              />
+            </article>
+
+            <article
+              class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px]
+                    aspect-[3/5] bg-[#3D3D3D] border border-[#202020] overflow-hidden p-4"
+            >
+              <img
+                src="public/legacy4.webp"
+                alt="Gallery image"
+                class="w-full h-full object-cover"
+              />
+            </article>
+
+            <article
+              class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px]
+                    aspect-[3/5] bg-[#3D3D3D] border border-[#202020] overflow-hidden p-4"
+            >
+              <img
+                src="public/legacy5.png"
+                alt="Gallery image"
+                class="w-full h-full object-cover"
+              />
+            </article>
+          </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 py-20">
+      <header>
+        <h2 class="text-white text-xl font-semibold uppercase font-geist">
+          Career Milestones: The Iconic Timeline
+        </h2>
+      </header>
+
+      <div class="bg-[#252423]  border-neutral-100 rounded-sm">
+            <div class="max-h-[70vh] overflow-y-auto scroll-smooth p-6 md:p-10 no-scrollbar scrollbar-hide">
+              <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10">
+                <ol class="space-y-6">
+                  <li class="space-y-4 group cursor-default">
+                    <article class="flex gap-6">
+                      <time class="w-16 shrink-0 group-hover:text-[#B98E3E] text-[#C6BEAD] text-xs font-semibold uppercase">
+                        1995
+                      </time>
+                      <p class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold font-shantell uppercase leading-snug">
+                        The Debut: Enters Nollywood with her first film, Venom of Justice.
+                      </p>
+                    </article>
+                    <hr class="border-neutral-200" />
+                  </li>
+
+                  <li class="space-y-4 group cursor-default">
+                    <article class="flex gap-6">
+                      <time class="w-16 shrink-0 group-hover:text-[#B98E3E] text-[#C6BEAD] text-xs font-semibold uppercase">
+                        1996
+                      </time>
+                      <p class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold font-shantell uppercase leading-snug">
+                        The Breakthrough: Stars in the critically acclaimed Mortal Inheritance. Wins Best Actress Overall at THEMA 1997.
+                      </p>
+                    </article>
+                    <hr class="border-neutral-200" />
+                  </li>
+
+                  <li class="space-y-4 group cursor-default">
+                    <article class="flex gap-6">
+                      <time class="w-16 shrink-0 group-hover:text-[#B98E3E] text-[#C6BEAD] text-xs font-bold uppercase">
+                        2003
+                      </time>
+                      <p class="group-hover:text-[#B98E3E] text-[#C6BEAD] text-lg md:text-2xl font-bold font-shantell uppercase leading-snug">
+                        The Dominance: Cemented as a major force with blockbuster hits like Blood Sisters.
+                      </p>
+                    </article>
+                    <hr class="border-neutral-200" />
+                  </li>
+
+                  <li class="space-y-4 group cursor-default">
+                    <article class="flex gap-6">
+                      <time class="w-16 shrink-0 group-hover:text-[#B98E3E] text-[#C6BEAD] text-xs font-semibold uppercase">
+                        2005
+                      </time>
+                      <p class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold font-shantell uppercase leading-snug">
+                        The Humanitarian Pivot: Becomes WFP Goodwill Ambassador and releases debut album GBA.
+                      </p>
+                    </article>
+                    <hr class="border-neutral-200" />
+                  </li>
+
+                  <li class="space-y-4 group cursor-default">
+                    <article class="flex gap-6">
+                      <time class="w-16 shrink-0 group-hover:text-[#B98E3E] text-[#C6BEAD] text-xs font-semibold uppercase">
+                        2010
+                      </time>
+                      <p class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold font-shantell uppercase leading-snug">
+                        The Global Film: Co-stars in Ije: The Journey, the highest-grossing Nollywood film at the time.
+                      </p>
+                    </article>
+                  </li>
+
+                </ol>
+
+                <!-- Sticky Side Image -->
+                <figure class="hidden lg:block w-56 border border-gray-200 bg-white p-3 sticky top-6 self-start">
+                  <img
+                    src="public/film6.webp"
+                    alt="Career milestone visual"
+                    class="w-full h-auto object-cover"
+                  />
+                </figure>
+              </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white text-[#0D0D0D]">
+      <div class="max-w-7xl mx-auto px-6 py-8 space-y-24">
+        <header class="space-y-10">
+          <h2 class=" text-xl font-semibold uppercase font-geist">
+            Contact
+          </h2>
+
+          <form class="space-y-12">
+            <fieldset class="grid grid-cols-1 md:grid-cols-2 gap-10">
+              
+              <label class="flex flex-col gap-3">
+                <input
+                  type="text" placeholder="Enter Name"
+                  class="bg-transparent border-b py-2 border-zinc-600 focus:outline-none focus:border-white transition placeholder:text-neutral-500"
+                />
+              </label>
+
+              <label class="flex flex-col gap-3">
+                <input
+                  type="email" placeholder="Enter Email Address"
+                  class="bg-transparent border-b py-2 border-zinc-600 focus:outline-none focus:border-white transition placeholder:text-neutral-500"
+                />
+              </label>
+
+            </fieldset>
+
+            <label class="flex flex-col gap-3">
+              <textarea
+                rows="1" placeholder="Your Message"
+                class="bg-transparent border-b py-2 border-zinc-600 resize-none focus:outline-none focus:border-white transition placeholder:text-neutral-500"
+              ></textarea>
+            </label>
+
+            <button
+              type="submit"
+              class="inline-flex items-center gap-x-4 bg-[#0D0D0D] text-white px-8 py-3 uppercase font-medium font-geist hover:bg-black transition"
+            >
+              Send
+              <span aria-hidden><i class="fa-solid fa-arrow-right"></i></span>
+            </button>
+          </form>
+        </header>
+
+        <!-- BRAND + FOOTER -->
+        <footer class="space-y-16">
+
+          <!-- Brand -->
+          <h1 class="text-center text-[#E2C75A] font-bold font-shantell text-5xl sm:text-7xl md:text-7xl lg:text-[7.5rem] uppercase">
+            Redhot Concepts
+          </h1>
+
+          <!-- Footer Info -->
+          <div class="flex flex-col md:flex-row justify-between gap-12 font-geist">
+
+            <!-- Socials -->
+            <nav aria-label="Social media links" class="space-y-4">
+              <h3 class="text-sm font-semibold uppercase text-[#171717]">
+                Socials
+              </h3>
+              <ul class="flex items-center gap-10 text-2xl text-[#0D0D0D]">
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" aria-label="Imdb"><i class="fa-brands fa-imdb"></i></a></li>
+                <li><a href="#" aria-label="Wikipedia"><i class="fa-brands fa-wikipedia-w"></i></a></li>
+              </ul>
+            </nav>
+
+            <!-- Email -->
+            <address class="not-italic text-right space-y-4 flex flex-col">
+              <p class="text-sm font-semibold uppercase text-[#171717]">
+                Email
+              </p>
+              <a
+                href="mailto:hello@redhotconcept.com"
+                class="text-xl font-inter hover:underline"
+              >
+                hello@redhotconcept.com
+              </a>
+            </address>
+
+          </div>
+        </footer>
+
+      </div>
+    </section>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  let open = false;
+
+  menuBtn.addEventListener('click', () => {
+    open = !open;
+
+    if (open) {
+      mobileMenu.classList.remove('hidden');
+    } else {
+      mobileMenu.classList.add('hidden');
+    }
+
+    menuBtn.innerHTML = open
+      ? '<i class="fa-solid fa-xmark"></i>'
+      : '<i class="fa-solid fa-bars"></i>';
+  });
+</script>
+
+<script>
+  const btn = document.getElementById('othersBtn');
+  const dropdown = document.getElementById('othersDropdown');
+
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('opacity-0');
+    dropdown.classList.toggle('invisible');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.classList.add('opacity-0', 'invisible');
+    }
+  });
+</script>
+
+<script>
+  const toggle = document.getElementById('othersToggle');
+  const accordion = document.getElementById('othersAccordion');
+  const icon = document.getElementById('othersIcon');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = accordion.style.maxHeight;
+
+    if (isOpen) {
+      accordion.style.maxHeight = null;
+      icon.classList.remove('rotate-180');
+    } else {
+      accordion.style.maxHeight = accordion.scrollHeight + 'px';
+      icon.classList.add('rotate-180');
+    }
+  });
+</script>
+</body>
+</html>
