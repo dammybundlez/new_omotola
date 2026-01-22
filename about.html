@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <script src="https://kit.fontawesome.com/c4993cb090.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <title>Omotola . About</title>
+</head>
+<body class="bg-[#0d0d0d] text-white">
+    <div class="pb-10">
+        <header class="fixed w-full z-50 top-0 bg-[#0D0D0D] text-white px-4 md:px-6 py-2 shadow-sm font-geist font-normal">
+           <div id="navbar" class="">
+               <div class="flex justify-between items-center px-4">
+                   <a href="darkmode.html">
+                       <img src="/public/img124.webp" class="w-10 md:w-10 text-[#0D0D0D] "/>
+                   </a>
+   
+                   <button id="menuBtn" class="md:hidden text-amber-500 text-2xl">
+                       <i class="fa-solid fa-bars"></i>
+                   </button>
+   
+                   <nav class="hidden md:flex text-sm">
+                       <ul class="flex items-center text-white gap-10 uppercase">
+                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="films.html">Films</a></li>
+                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="news.html">News</a></li>
+                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="legacy.html">30 Years legacy</a></li>
+                           <li class="relative group">
+                               <a class="hover:text-orange-300 transition-all duration-200 flex items-center gap-2" 
+                                   id="othersBtn" 
+                                   aria-expanded="false"
+                                   href="#">Others <span class="text-sm pl-2"><i class="fa-solid fa-chevron-down"></i></span>
+                               </a>
+                               <div
+                                   id="othersDropdown"
+                                   class="absolute top-full mt-4 left-[-130px] -translate-x-1/2 w-[430px] px-2 py-2 rounded-3xl bg-white shadow-[0_8px_32px_rgba(0,0,0,0.35)] invisible group-hover:visible
+                                       transition-all duration-300 z-[999px]">
+                                   <ul class="relative text-stone-500 text-base font-normal font-geist leading-relaxed">
+                                      <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
+                                        <a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 px-4 transition-all duration-200">OYEP</a>  <br><br>
+                                      </li>
+                                      <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
+                                        <a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 px-4 transition-all duration-200">OSEAL</a>  <br><br>
+                                      </li>
+                                      <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
+                                        <a href="https://www.teffest.com/" class="hover:text-orange-300 px-4 transition-all duration-200">TEFFEST</a>  <br><br>
+                                      </li>
+                                      <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
+                                        <a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 px-4 transition-all duration-200">DOUBLE DOORS</a>  <br><br>
+                                      </li>
+                                   </ul>
+                               </div>
+                           </li>
+                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="about.html">About</a></li>
+                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="#contact">Contact</a></li>
+                       </ul>
+                   </nav>
+               </div>
+   
+               <nav id="mobileMenu" class="hidden text-white pb-6 h-full ease-out transition-all duration-300">
+                   <ul class="flex flex-col  gap-y-3 uppercase p-6 text-white">
+                      <li class=""><a href="films.html" class="hover:text-orange-300 transition-all ease-out duration-200">Films</a></li>
+                      <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="news.html">News</a></li>
+                      <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="legacy.html">30 Years legacy</a></li>
+                      <li class=""><button class="hover:text-orange-300 transition-all ease-out duration-200" id="othersToggle">OTHERS <span class="text-sm"><i id="othersIcon" class="fa-solid fa-chevron-down transition-transform duration-300"></i></span></button>
+                          <ul
+                              id="othersAccordion"
+                              class="mt-1 ml-4 space-y-3 text-sm
+                                  max-h-0 overflow-hidden
+                                  transition-all duration-300"
+                          >
+                              <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">OYEP</a></li>
+                              <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">OSEAL</a></li>
+                              <li><a href="https://www.teffest.com/" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">TEFFEST</a></li>
+                              <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">Double Doors</a></li>
+                          </ul>
+                      </li>
+                      <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="about.html">About</a></li>
+                      <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="#contact">Contact</a></li>
+                   </ul>
+               </nav>
+           </div>
+       </header> 
+    </div>
+
+    <section class="relative max-w-7xl mx-auto px-6 py-20 overflow-hidden">
+
+      <!-- Ambient background -->
+      <!-- <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_#1a1a1a,_transparent_60%)] opacity-40"></div> -->
+
+      <!-- Header -->
+      <header class="relative mb-32 text-center">
+        <span class="block mb-4 text-xs tracking-[0.35em] uppercase text-amber-400">
+          Who We Are
+        </span>
+
+        <h2 class="text-4xl md:text-6xl font-light uppercase tracking-tight text-white font-geist">
+          About Redhot Concepts
+        </h2>
+
+        <div class="mx-auto mt-10 h-px w-24 bg-zinc-700"></div>
+      </header>
+
+      <!-- Identity Block -->
+      <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-40">
+
+        <!-- Text -->
+        <article
+          data-aos="fade-up"
+          class="relative pl-6 border-l border-zinc-800 space-y-8"
+        >
+          <h3 class="text-zinc-400 text-2xl md:text-3xl font-semibold uppercase font-geist">
+            The Architects of African Cinematic Structure
+          </h3>
+
+          <p class="text-white text-lg md:text-xl leading-8 font-geist max-w-xl">
+            Redhot Concepts is a premium African production studio founded on the
+            core philosophy that world-class talent demands world-class
+            infrastructure.
+          </p>
+
+          <p class="text-zinc-400 text-lg md:text-xl leading-8 font-geist max-w-xl">
+            We are more than a production house; we are an ecosystem builder
+            dedicated to professionalizing the entertainment industry across Africa
+            and exporting authentic, high-impact stories to the global stage.
+          </p>
+        </article>
+
+        <!-- Image -->
+        <figure
+          data-aos="fade-up"
+          data-aos-delay="100"
+          class="relative group overflow-hidden rounded-xl"
+        >
+          <img
+            src="/public/beffta.png"
+            alt="Redhot Concepts studio portrait"
+            class="w-full h-[320px] object-cover object-[center_20%] md:grayscale group-hover:grayscale-0
+                  transition duration-700 ease-out"
+          />
+
+          <!-- Film overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div>
+        </figure>
+
+      </div>
+
+      <!-- Story Block -->
+      <div class="relative space-y-32 mb-40">
+
+        <article
+          data-aos="fade-up"
+          class="relative max-w-4xl mx-auto pl-6 border-l border-zinc-800 space-y-8"
+        >
+          <h3 class="text-zinc-400 text-2xl font-semibold uppercase font-geist">
+            Our Story — The Need for Ownership
+          </h3>
+
+          <p class="text-white text-lg md:text-xl leading-8 font-geist">
+            Founded by Omotola Jalade Ekeinde, MFR, the genesis of Redhot Concepts
+            began with a vision that extended beyond the screen.
+          </p>
+
+          <p class="text-zinc-400 text-lg md:text-xl leading-8 font-geist">
+            After years of defining the face of Nollywood, Omotola recognized that
+            an industry built on raw talent alone could not sustain its future.
+            The studio was created in the mid-2000s out of a necessity to establish
+            systems, financial integrity, and ownership—the missing pillars required
+            to transform Nollywood into a globally competitive creative economy.
+          </p>
+
+          <p class="text-zinc-400 text-lg md:text-xl leading-8 font-geist">
+            Today, Redhot Concepts anchors a thriving ecosystem of brands—including
+            OYEP and TEFFEST—cultivating the next generation of African excellence.
+          </p>
+        </article>
+
+        <!-- Wide Film Still -->
+        <figure
+          data-aos="fade-up"
+          data-aos-delay="100"
+          class=" relative group  overflow-hidden rounded-2xl "
+        >
+          <img
+            src="/public/fa.png"
+            alt="Redhot Concepts production still"
+            class="w-full h-[420px] object-cover  object-[center_20%] md:grayscale group-hover:grayscale-0
+                  transition duration-700 ease-out"
+          />
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        </figure>
+
+      </div>
+
+      <!-- Vision & Values -->
+      <div class="relative grid grid-cols-1 md:grid-cols-2 gap-20">
+
+        <!-- Vision -->
+        <article data-aos="fade-up" class="space-y-6">
+          <h3 class="text-zinc-400 text-2xl font-semibold uppercase font-geist">
+            Vision
+          </h3>
+
+          <p class="text-white text-lg md:text-xl leading-8 font-geist">
+            To be the leading Pan-African studio creating content that transcends
+            borders, builds scalable business models for African creatives, and
+            drives the global cultural narrative.
+          </p>
+        </article>
+
+        <!-- Core Values -->
+        <article data-aos="fade-up" data-aos-delay="100" class="space-y-8">
+          <h3 class="text-zinc-400 text-2xl font-semibold uppercase font-geist">
+            Core Values
+          </h3>
+
+          <ul class="space-y-6">
+            <li class="text-white text-lg leading-8 font-geist">
+              <span class="text-amber-400 font-medium">Excellence</span> — Demanding
+              world-class standards in every aspect of production and execution.
+            </li>
+
+            <li class="text-white text-lg leading-8 font-geist">
+              <span class="text-amber-400 font-medium">Authenticity</span> — Telling
+              humane, homegrown stories that retain Nigeria’s heart while engaging a
+              global audience.
+            </li>
+
+            <li class="text-white text-lg leading-8 font-geist">
+              <span class="text-amber-400 font-medium">Structure & Professionalism</span> —
+              Championing fair labor advocacy, documentation, and long-term stability.
+            </li>
+          </ul>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <section class="relative max-w-7xl mx-auto px-6 py-20 space-y-24 overflow-hidden">
+        <!-- Ambient background -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_#1b1b1b,_transparent_60%)] opacity-40"></div>
+        <div class="pointer-events-none absolute inset-0 bg-[url('/grain.png')] opacity-[0.05] mix-blend-overlay"></div>
+
+        <!-- Header -->
+        <header
+          data-aos="fade-up"
+          class="relative text-center space-y-6 max-w-4xl mx-auto"
+        >
+          <span class="block text-amber-400 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] font-geist">
+            The Production Philosophy
+          </span>
+
+          <h2 class="text-4xl md:text-6xl font-light uppercase leading-tight tracking-tight font-geist text-white">
+            African Heart. <br />
+            <span class="text-amber-400">Global Standard.</span>
+          </h2>
+
+          <div class="mx-auto h-px w-24 bg-zinc-700"></div>
+        </header>
+
+        <!-- Film Frame -->
+        <figure
+          data-aos="fade-up"
+          data-aos-delay="100"
+          class="relative w-full overflow-hidden rounded-2xl
+                border border-white/10 shadow-[0_40px_120px_-40px_rgba(0,0,0,0.9)]"
+        >
+
+          <!-- Film matte -->
+          <div class="absolute inset-0 pointer-events-none
+                      bg-gradient-to-t from-black/40 via-black/10 to-transparent z-10"></div>
+
+          <video
+            controls
+            playsinline
+            class="w-full h-[320px] md:h-[720px] object-cover"
+          >
+            <source src="/public/omotola vid.mp4" type="video/mp4" />
+          </video>
+
+          <!-- Caption -->
+          <figcaption
+            class="absolute top-6 left-6 z-20 text-xs md:text-sm
+                  tracking-[0.25em] uppercase text-white/90 font-geist"
+          >
+            30 Years of Omotola
+          </figcaption>
+        </figure>
+
+        <!-- Manifesto Text -->
+        <article
+          data-aos="fade-up"
+          class="relative max-w-5xl mx-auto space-y-14"
+        >
+
+          <p class="text-white text-lg md:text-xl leading-relaxed font-geist">
+            Our philosophy is centered on the intersection of creativity and commerce.
+            We believe that cinematic quality is non-negotiable. Every Redhot Concepts
+            project—from feature films like <em class="text-amber-400 not-italic">Mother’s Love</em>
+            to documentary series and commercial ventures—is executed with a commitment to
+            high-impact visuals, powerful direction, and narratives that explore the
+            depth of the human condition.
+          </p>
+
+          <!-- Principles -->
+          <ol class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10
+                    text-white text-lg font-geist">
+
+            <li class="space-y-2">
+              <span class="block text-xs uppercase tracking-[0.3em] text-amber-400">
+                Principle 01
+              </span>
+              <strong class="block font-medium">
+                Centers African Agency
+              </strong>
+              <p class="text-zinc-400">
+                We control our narratives, ensuring they are told with integrity and
+                free from external compromise.
+              </p>
+            </li>
+
+            <li class="space-y-2">
+              <span class="block text-xs uppercase tracking-[0.3em] text-amber-400">
+                Principle 02
+              </span>
+              <strong class="block font-medium">
+                Prioritizes the Audience
+              </strong>
+              <p class="text-zinc-400">
+                We create projects that are not only artful but designed to perform
+                commercially on modern streaming and theatrical platforms.
+              </p>
+            </li>
+
+            <li class="space-y-2">
+              <span class="block text-xs uppercase tracking-[0.3em] text-amber-400">
+                Principle 03
+              </span>
+              <strong class="block font-medium">
+                Invests in the Future
+              </strong>
+              <p class="text-zinc-400">
+                Every production builds capacity, formalizes best practices, and
+                raises industry standards.
+              </p>
+            </li>
+
+            <li class="space-y-2">
+              <span class="block text-xs uppercase tracking-[0.3em] text-amber-400">
+                Principle 04
+              </span>
+              <strong class="block font-medium">
+                Structure & Professionalism
+              </strong>
+              <p class="text-zinc-400">
+                Championing fair labor advocacy, proper documentation, and long-term
+                financial stability for all practitioners.
+              </p>
+            </li>
+
+          </ol>
+        </article>
+
+    </section>
+
+
+    <section class="relative my-10 space-y-24 overflow-hidden">
+  <!-- Ambient atmosphere -->
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_#1a1a1a,_transparent_60%)] opacity-40"></div>
+      <div class="pointer-events-none absolute inset-0 bg-[url('/grain.png')] opacity-[0.05] mix-blend-overlay"></div>
+
+      <!-- Chapter Header -->
+      <header class="relative text-center max-w-4xl mx-auto space-y-6">
+        <span class="block text-xs tracking-[0.35em] uppercase text-amber-400">
+          Studio Process
+        </span>
+
+        <h2 class="text-white font-light uppercase text-4xl md:text-6xl tracking-tight font-geist">
+          Behind the Scenes
+        </h2>
+
+        <p class="text-zinc-400 text-lg md:text-xl font-geist">
+          A quiet commitment to craft, discipline, and cinematic intention.
+        </p>
+
+        <div class="mx-auto h-px w-24 bg-zinc-700"></div>
+      </header>
+
+      <!-- Slideshow -->
+      <div
+        id="slideshowView"
+        class="relative w-full overflow-hidden"
+        aria-label="Behind the scenes image reel"
+      >
+
+        <!-- Gradient masks -->
+        <div class="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
+        <div class="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10"></div>
+
+        <!-- Track -->
+        <div
+          id="marqueeTrack"
+          class="relative flex w-max gap-8 will-change-transform"
+        >
+
+          <!-- Film still -->
+          <template id="slideTemplate">
+            <figure class="relative group w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl">
+              <img
+                src=""
+                alt=""
+                class="slide-img h-full w-full object-cover grayscale
+                      group-hover:grayscale-0 transition duration-700 ease-out"
+              />
+
+              <!-- Film matte -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div>
+            </figure>
+          </template>
+
+          <!-- Your images (same as before) -->
+          <img src="./public/about1.webp" class="slide-img" />
+          <img src="./public/about2.webp" class="slide-img" />
+          <img src="./public/about3.webp" class="slide-img" />
+          <img src="./public/about4.webp" class="slide-img" />
+          <img src="./public/about5.webp" class="slide-img" />
+          <img src="./public/about6.webp" class="slide-img" />
+          <img src="./public/about7.webp" class="slide-img" />
+          <img src="./public/about8.webp" class="slide-img" />
+          <img src="./public/about9.webp" class="slide-img" />
+          <img src="./public/about10.webp" class="slide-img" />
+          <img src="./public/about11.webp" class="slide-img" />
+          <img src="./public/about12.webp" class="slide-img" />
+
+          <!-- Loop duplicate -->
+          <img src="./public/about1.webp" class="slide-img" />
+          <img src="./public/about2.webp" class="slide-img" />
+          <img src="./public/about3.webp" class="slide-img" />
+          <img src="./public/about4.webp" class="slide-img" />
+          <img src="./public/about5.webp" class="slide-img" />
+          <img src="./public/about6.webp" class="slide-img" />
+          <img src="./public/about7.webp" class="slide-img" />
+          <img src="./public/about8.webp" class="slide-img" />
+          <img src="./public/about9.webp" class="slide-img" />
+          <img src="./public/about10.webp" class="slide-img" />
+          <img src="./public/about11.webp" class="slide-img" />
+          <img src="./public/about12.webp" class="slide-img" />
+        </div>
+
+        <!-- Controls -->
+        <nav
+          class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20
+                flex items-center gap-6 opacity-60 hover:opacity-100 transition"
+        >
+          <button
+            id="moveLeft"
+            aria-label="Previous"
+            class="h-12 w-12 rounded-full border border-white/20
+                  flex items-center justify-center text-white
+                  hover:border-amber-400 hover:text-amber-400 transition"
+          >
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+
+          <button
+            id="togglePlay"
+            aria-label="Pause slideshow"
+            class="h-14 w-14 rounded-full border border-white/30
+                  flex items-center justify-center text-white
+                  hover:border-amber-400 hover:text-amber-400 transition"
+          >
+            ❚❚
+          </button>
+
+          <button
+            id="moveRight"
+            aria-label="Next"
+            class="h-12 w-12 rounded-full border border-white/20
+                  flex items-center justify-center text-white
+                  hover:border-amber-400 hover:text-amber-400 transition"
+          >
+          <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </nav>
+
+      </div>
+
+    </section>
+<section class="relative w-full py-40 bg-black overflow-hidden">
+
+  <!-- Atmospheric background -->
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_#1a1a1a,_transparent_65%)] opacity-40"></div>
+  <div class="pointer-events-none absolute inset-0 bg-[url('/grain.png')] opacity-[0.06] mix-blend-overlay"></div>
+
+  <div
+    data-aos="fade-up"
+    class="relative max-w-5xl mx-auto px-6 text-center space-y-10"
+  >
+
+    <!-- Subtle preface -->
+    <span class="block text-xs uppercase tracking-[0.45em] text-amber-400 font-geist">
+      The Work Continues
+    </span>
+
+    <!-- Statement -->
+    <h2
+      class="text-3xl md:text-5xl lg:text-6xl font-light leading-tight tracking-tight text-white font-geist"
+    >
+      We are not here to chase attention.
+      <br />
+      <span class="text-amber-400">
+        We are here to build legacy.
+      </span>
+    </h2>
+
+    <!-- Divider -->
+    <div class="mx-auto h-px w-28 bg-zinc-700"></div>
+
+    <!-- Supporting line -->
+    <p class="max-w-3xl mx-auto text-zinc-400 text-lg md:text-xl leading-relaxed font-geist">
+      Through structure, ownership, and uncompromising craft,
+      Redhot Concepts exists to ensure African stories are not
+      merely seen — but remembered, respected, and preserved
+      for generations.
+    </p>
+
+    <!-- Signature -->
+    <p class="pt-8 text-sm uppercase tracking-[0.4em] text-zinc-500 font-geist">
+      Redhot Concepts
+    </p>
+
+  </div>
+</section>
+
+
+    <section class="bg-white text-[#0D0D0D] scroll-mt-20" id="contact">
+      <div class="max-w-7xl mx-auto px-6 py-8 space-y-24">
+        <header class="space-y-10">
+          <h2 class=" text-xl font-semibold uppercase font-geist">
+            Contact
+          </h2>
+
+          <form class="space-y-12">
+            <fieldset class="grid grid-cols-1 md:grid-cols-2 gap-10">
+              
+              <label class="flex flex-col gap-3">
+                <input
+                  type="text" placeholder="Enter Name"
+                  class="bg-transparent border-b py-2 border-zinc-600 focus:outline-none focus:border-white transition placeholder:text-neutral-500"
+                />
+              </label>
+
+              <label class="flex flex-col gap-3">
+                <input
+                  type="email" placeholder="Enter Email Address"
+                  class="bg-transparent border-b py-2 border-zinc-600 focus:outline-none focus:border-white transition placeholder:text-neutral-500"
+                />
+              </label>
+
+            </fieldset>
+
+            <label class="flex flex-col gap-3">
+              <textarea
+                rows="1" placeholder="Your Message"
+                class="bg-transparent border-b py-2 border-zinc-600 resize-none focus:outline-none focus:border-white transition placeholder:text-neutral-500"
+              ></textarea>
+            </label>
+
+            <button
+              type="submit"
+              class="inline-flex items-center gap-x-4 bg-[#0D0D0D] text-white px-8 py-3 uppercase font-medium font-geist hover:bg-black transition"
+            >
+              Send
+              <span aria-hidden><i class="fa-solid fa-arrow-right"></i></span>
+            </button>
+          </form>
+        </header>
+
+        <!-- BRAND + FOOTER -->
+        <footer class="space-y-16">
+
+          <!-- Brand -->
+          <h1 class="text-center text-[#E2C75A] font-bold font-shantell text-5xl sm:text-7xl md:text-7xl lg:text-[7.5rem] uppercase">
+            Redhot Concepts
+          </h1>
+
+          <!-- Footer Info -->
+          <div class="flex flex-col md:flex-row justify-between gap-12 font-geist">
+
+            <!-- Socials -->
+            <nav aria-label="Social media links" class="space-y-4">
+              <h3 class="text-sm font-semibold uppercase text-[#171717]">
+                Socials
+              </h3>
+              <ul class="flex items-center gap-10 text-2xl text-[#0D0D0D]">
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" aria-label="Imdb"><i class="fa-brands fa-imdb"></i></a></li>
+                <li><a href="#" aria-label="Wikipedia"><i class="fa-brands fa-wikipedia-w"></i></a></li>
+              </ul>
+            </nav>
+
+            <address class="not-italic text-right space-y-4 flex flex-col">
+              <p class="text-sm font-semibold uppercase text-[#171717]">
+                Email
+              </p>
+              <a
+                href="mailto:hello@redhotconcept.com"
+                class="text-xl font-inter hover:underline"
+              >
+                hello@redhotconcept.com
+              </a>
+            </address>
+
+          </div>
+        </footer>
+
+      </div>
+    </section>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true, 
+        });
+    </script>
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const navbar = document.getElementById('navbar');
+
+        let open = false;
+
+        menuBtn.addEventListener('click', () => {
+            open = !open;
+
+            if (open) {
+            navbar.style.maxHeight = '480px';
+            } else {
+            navbar.style.maxHeight = '70px'; 
+            }
+            menuBtn.innerHTML = open
+                ? '<i class="fa-solid fa-xmark"></i>'
+                : '<i class="fa-solid fa-bars"></i>';
+        });
+    </script>
+
+    <script>
+    document.querySelectorAll(".scroll-section").forEach(section => {
+
+        const container = section.querySelector(".scroll-container");
+        const leftBtn = section.querySelector(".scroll-left");
+        const rightBtn = section.querySelector(".scroll-right");
+
+        leftBtn.addEventListener("click", () => {
+            container.scrollBy({ left: -350, behavior: "smooth" });
+        });
+
+        rightBtn.addEventListener("click", () => {
+            container.scrollBy({ left: 350, behavior: "smooth" });
+        });
+
+    });
+    </script>
+
+<!-- Hero slider -->
+<script>
+    const slides = [
+  {
+    bg: "public/herobg.webp",
+    title: "A MOTHER’S LOVE",
+    subtitle: "Now Available Only in Theaters",
+    href: "moviedetails.html"
+  },
+  {
+    bg: "public/rr.webp",
+    title: "RR The Movie",
+    subtitle: "Coming To Theatres Soon",
+  },
+  {
+    bg: "public/rs.webp",
+    title: "Rattle Snake",
+    subtitle: "The Entertainment Fair",
+  },
+  {
+    bg: "public/lastflight.webp",
+    title: "Last Flight To Abuja",
+    subtitle: "Coming To Theatres Soon",
+  }
+];
+
+let currentIndex = 0;
+
+const heroBg = document.querySelector(".hero-bg");
+const heroTitle = document.querySelector(".hero-title");
+const heroSub = document.querySelector(".hero-sub");
+const heroLink = document.querySelector(".hero-link");
+const tabs = document.querySelectorAll(".hero-tab");
+
+function updateSlide(i) {
+  const slide = slides[i];
+
+  heroBg.style.opacity = 0; 
+
+  setTimeout(() => {
+    heroBg.src = slide.bg;  
+    heroTitle.textContent = slide.title;
+    heroSub.textContent = slide.subtitle;
+    heroBg.style.opacity = 1;
+  }, 500);
+
+  tabs.forEach((tab, index) => {
+    if (index === i) {
+      tab.classList.remove("border-white/30");
+      tab.classList.add("border-orange-300");
+    } else {
+      tab.classList.add("border-white/30");
+      tab.classList.remove("border-orange-300");
+    }
+  });
+}
+
+document.querySelector(".scroll-right").onclick = () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateSlide(currentIndex);
+};
+
+document.querySelector(".scroll-left").onclick = () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateSlide(currentIndex);
+};
+
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateSlide(currentIndex);
+}, 5000);
+
+</script>
+
+<script>
+  const track = document.getElementById("marqueeTrack");
+  const togglePlayBtn = document.getElementById("togglePlay");
+  const moveLeftBtn = document.getElementById("moveLeft");
+  const moveRightBtn = document.getElementById("moveRight");
+
+  let isPlaying = true;
+  let direction = -1; // -1 = left, 1 = right
+  let speed = 0.6;
+  let position = 0;
+
+  function animate() {
+    if (isPlaying) {
+      position += speed * direction;
+
+      // seamless loop
+      if (Math.abs(position) >= track.scrollWidth / 2) {
+        position = 0;
+      }
+
+      track.style.transform = `translateX(${position}px)`;
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  togglePlayBtn.addEventListener("click", () => {
+    isPlaying = !isPlaying;
+    togglePlayBtn.innerHTML = isPlaying
+      ? `<i class="fa-solid fa-pause"></i>`
+      : `<i class="fa-solid fa-play"></i>`;
+  });
+
+  moveLeftBtn.addEventListener("click", () => {
+    direction = -1;
+  });
+
+  moveRightBtn.addEventListener("click", () => {
+    direction = 1;
+  });
+</script>
+
+<script>
+  const btn = document.getElementById('othersBtn');
+  const dropdown = document.getElementById('othersDropdown');
+
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('opacity-0');
+    dropdown.classList.toggle('invisible');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.classList.add('opacity-0', 'invisible');
+    }
+  });
+</script>
+
+<script>
+  const toggle = document.getElementById('othersToggle');
+  const accordion = document.getElementById('othersAccordion');
+  const icon = document.getElementById('othersIcon');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = accordion.style.maxHeight;
+
+    if (isOpen) {
+      accordion.style.maxHeight = null;
+      icon.classList.remove('rotate-180');
+    } else {
+      accordion.style.maxHeight = accordion.scrollHeight + 'px';
+      icon.classList.add('rotate-180');
+    }
+  });
+</script>
+
+<script>
+  const modal = document.getElementById("exitModal");
+
+  function openModal() {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    document.body.style.overflow = "";
+  }
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+</script>
+</body>
+</html>

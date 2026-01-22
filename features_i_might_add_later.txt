@@ -1,0 +1,57 @@
+shows poster card on hover
+
+<tr
+  data-aos="fade-up"
+  class="group relative transition-all duration-500 hover:bg-white/[0.04]"
+>
+
+  <!-- YEAR -->
+  <td class="py-5 px-6 text-zinc-400">2012</td>
+
+  <!-- TITLE -->
+  <td class="py-5 px-6 relative">
+    <span class="block text-base text-white tracking-wide
+                 group-hover:text-amber-400 transition">
+      Last Flight to Abuja
+    </span>
+
+    <!-- POSTER PREVIEW -->
+    <div
+      class="pointer-events-none absolute top-1/2 right-[-260px] z-30 w-48
+             -translate-y-1/2 opacity-0 scale-95
+             group-hover:opacity-100 group-hover:scale-100
+             transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]"
+    >
+      <div class="relative rounded-xl overflow-hidden shadow-[0_40px_80px_-20px_rgba(0,0,0,0.9)]">
+
+        <!-- vignette -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+
+        <img
+          src="/posters/last-flight-to-abuja.jpg"
+          alt="Last Flight to Abuja poster"
+          class="w-full aspect-[2/3] object-cover"
+        />
+      </div>
+    </div>
+  </td>
+
+  <!-- ROLE -->
+  <td class="py-5 px-6 text-zinc-300">Suzie</td>
+
+  <!-- CATEGORY -->
+  <td class="py-5 px-6 text-zinc-400">Thriller</td>
+
+  <!-- NOTES -->
+  <td class="py-5 px-6">
+    <a
+      href="https://www.imdb.com/title/tt2287851/"
+      target="_blank"
+      class="inline-flex items-center gap-2 text-xs uppercase tracking-widest
+             text-amber-400/80 hover:text-amber-400 transition"
+    >
+      IMDb ↗
+    </a>
+  </td>
+
+</tr>
