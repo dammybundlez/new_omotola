@@ -15,7 +15,7 @@
            <div id="navbar" class="">
                <div class="flex justify-between items-center px-4">
                    <a href="index.html">
-                       <img src="/public/img124.webp" class="w-10 md:w-10 text-[#0D0D0D] "/>
+                       <img src="/public/img124.webp" class="w-10 md:w-10 text-[#0D0D0D]"/>
                    </a>
    
                    <button id="menuBtn" class="md:hidden text-amber-500 text-2xl">
@@ -147,15 +147,6 @@
        </div>
     </div>
     
-    <div class="flex flex-col justify-center items-center px-4 md:px-0 py-14 space-y-5">
-        <h2 class="uppercase font-geist font-medium text-2xl text-white">Explore brands</h2>
-        <div class="flex justify-center items-center md:gap-x-14 gap-x-10 p-2">
-            <img class="md:w-[142px] w-[80px] h-[120px]  text-white" src="/public/oyep.webp" />
-            <img class="md:w-[354px] w-[80px] h-[20px] md:h-[120px] object-cover object-[center_20%] flex items-center justify-center text-white " src="public/teffest.webp" />
-            <img class="md:w-[134px] w-[80px] h-[120px] text-white" src="/public/galg.webp" />
-        </div>
-    </div>
-    
     <section class="relative w-full py-20 bg-black overflow-hidden">
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_#1f1f1f,_transparent_70%)] opacity-40"></div>
 
@@ -189,6 +180,91 @@
 
       </div>
     </section>
+
+    <header class="relative flex flex-col items-center text-center py-20 gap-8 mb-32">
+
+    <!-- opening stills -->
+    <div class="flex gap-6">
+      <img
+        src="public/3.webp"
+        alt="Portrait still"
+        class="h-64 w-auto object-cover contrast-125 opacity-90"
+      />
+      <img
+        src="public/0.webp"
+        alt="Portrait still"
+        class="h-64 w-auto object-cover contrast-125 opacity-90 translate-y-4"
+      />
+    </div>
+
+  <!-- title -->
+  <h2 class="text-[#E09E23] text-4xl md:text-6xl font-geist font-extrabold uppercase tracking-[0.2em]">
+    Years of Impact
+  </h2>
+
+  <!-- subline -->
+  <p class="max-w-xl text-zinc-400 text-lg leading-relaxed">
+    Three decades of cinema, influence, and cultural authorship.
+  </p>
+
+  <!-- CTA -->
+  <a
+    href="legacy.html"
+    class="relative mt-2 px-10 py-4 border border-[#E09E23]/40 text-[#E09E23]
+           uppercase font-geist tracking-widest
+           hover:bg-[#E09E23] hover:text-black
+           transition-all duration-500"
+  >
+    Explore 30-Year Legacy
+  </a>
+
+  <!-- cinematic divider -->
+  <span class="w-24 h-px bg-[#E09E23]/30 mt-6"></span>
+
+  <!-- FILM FRAMES -->
+  <div class="relative mt-12 w-full max-w-5xl">
+
+    <!-- subtle vignette -->
+    <div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/40 via-transparent to-black/40"></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+      <!-- frame 01 -->
+      <figure class="relative group">
+        <div class="absolute -inset-3 border border-white/10"></div>
+        <img
+          src="public/100.png"
+          alt="Film still"
+          class="w-full h-[420px] object-cover object-[center_0%]
+                 grayscale contrast-125
+                 group-hover:grayscale-0
+                 transition duration-700"
+        />
+        <figcaption class="absolute bottom-4 left-4 text-xs uppercase tracking-widest text-white/60">
+          Frame 01
+        </figcaption>
+      </figure>
+
+      <!-- frame 02 -->
+      <figure class="relative group translate-y-10">
+        <div class="absolute -inset-3 border border-white/10"></div>
+        <img
+          src="public/legacy4.webp"
+          alt="Film still"
+          class="w-full h-[420px] object-cover object-[center_0%]
+                 grayscale contrast-125
+                 group-hover:grayscale-0
+                 transition duration-700"
+        />
+        <figcaption class="absolute bottom-4 left-4 text-xs uppercase tracking-widest text-white/60">
+          Frame 02
+        </figcaption>
+      </figure>
+
+    </div>
+  </div>
+
+</header>
 
     <section class="w-full py-8 font-geist">
       <div class="w-full mx-auto px-4 md:px-8 flex flex-col gap-12">
@@ -629,6 +705,114 @@
       </div>
     </section>
 
+    <section data-aos="fade-up" data-aos-duration="1200"
+      class="relative min-h-screen bg-gradient-to-br from-neutral-900 via-neutral-800 to-black overflow-hidden rounded-3xl animate-[float_6s_ease-in-out_infinite]">
+      <!-- ambient glow -->
+      <div class="absolute -top-32 -left-32 w-[500px] h-[500px] bg-orange-500/10 blur-[120px]"></div>
+      <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-sky-500/10 blur-[120px]"></div>
+
+      <div class="relative max-w-7xl mx-auto px-8 py-24 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+
+        <!-- LEFT CONTENT -->
+        <div class="space-y-10">
+
+          <img
+            src="public/esemunch.png"
+            alt="Brand Logo"
+            class="w-36 opacity-90"
+          />
+
+          <h1 class="font-['Athelas'] text-neutral-50 text-5xl md:text-7xl leading-[1.05] tracking-tight">
+            Your Favourite <br /> Meal App
+          </h1>
+
+          <p class="max-w-xl text-neutral-300 text-lg leading-relaxed">
+            Your favourite meal is only a single tap away, ready to be delivered
+            straight to your doorstep. Order now and experience food the modern way.
+          </p>
+
+          <!-- Store Buttons -->
+          <div class="flex items-center gap-6 pt-4">
+            <img
+              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+              class="h-11 opacity-90 hover:opacity-100 hover:scale-105 transition"
+              alt="App Store"
+            />
+            <img
+              src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+              class="h-16 hover:scale-105 transition"
+              alt="Google Play"
+            />
+          </div>
+        </div>
+
+        <!-- RIGHT MOCKUP -->
+        <div class="relative flex justify-center">
+
+          <!-- phone glow -->
+          <div class="absolute inset-0 flex justify-center">
+            <div class="w-[280px] h-[600px] bg-black/40 blur-[80px]"></div>
+          </div>
+
+          <!-- phone frame -->
+          <div class="relative w-full h-full rounded-[60px] bg-black shadow-2xl ring-1 ring-white/10 overflow-hidden">
+            <img
+              src="public/eseimage.jpeg"
+              alt="App Screenshot"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="relative flex flex-col justify-center items-center px-4 py-10 bg-black space-y-10 overflow-hidden">
+      <!-- subtle background texture -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40 pointer-events-none"></div>
+
+      <h2 class="uppercase font-geist font-medium text-sm md:text-base tracking-[0.35em] text-zinc-300">
+        Explore Brands
+      </h2>
+
+      <div class="relative flex justify-center items-center gap-x-10 md:gap-x-20">
+
+        <!-- Brand -->
+        <div class="group transition-all duration-700 ease-out">
+          <img
+            src="/public/oyep.webp"
+            class="w-[90px] md:w-[150px] h-auto grayscale opacity-70 
+                  group-hover:grayscale-0 group-hover:opacity-100 
+                  group-hover:scale-105 transition-all duration-700 ease-out"
+            alt="OYEP"
+          />
+        </div>
+
+        <!-- Brand (hero logo) -->
+        <div class="group transition-all duration-700 ease-out ">
+          <img
+            src="/public/teffest.webp"
+            class="w-[120px] md:w-[280px] h-auto grayscale opacity-80 object-center
+                  group-hover:grayscale-0 group-hover:opacity-100 
+                  group-hover:scale-105 transition-all duration-700 ease-out"
+            alt="TEFFEST"
+          />
+        </div>
+
+        <!-- Brand -->
+        <div class="group transition-all duration-700 ease-out">
+          <img
+            src="/public/galg.webp"
+            class="w-[90px] md:w-[150px] h-auto grayscale opacity-70 
+                  group-hover:grayscale-0 group-hover:opacity-100 
+                  group-hover:scale-105 transition-all duration-700 ease-out"
+            alt="GALG"
+          />
+        </div>
+
+      </div>
+    </section>
+
     <section class="relative w-full py-20 bg-black">
       <div class="max-w-7xl mx-auto px-6">
 
@@ -907,7 +1091,7 @@
                 <!-- Sticky Side Image -->
                 <figure class="hidden lg:block w-56 border border-gray-200 bg-white p-3 sticky top-6 self-start">
                   <img
-                    src="public/film3.webp"
+                    src="public/film4.webp"
                     alt="Career milestone visual"
                     class="w-full h-auto object-cover"
                   />
@@ -1157,7 +1341,7 @@
   const moveRightBtn = document.getElementById("moveRight");
 
   let isPlaying = true;
-  let direction = -1; // -1 = left, 1 = right
+  let direction = -1; 
   let speed = 0.6;
   let position = 0;
 
@@ -1207,9 +1391,9 @@ const slides = [
     subtitle: "Coming To Theatres Soon",
   },
   {
-    bg: "/public/lastflight.webp",
-    title: "Last Flight To Abuja",
-    subtitle: "Coming To Theatres Soon",
+    bg: "/public/film4.webp",
+    title: "Alter Ego",
+    subtitle: "Now Playing on All Platforms",
   }
 ];
 
