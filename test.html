@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+<div class="w-full h-screen relative overflow-hidden" id="heroSection">
+  <!-- Hero BG -->
+  <div id="heroBg" class="absolute inset-0 bg-black bg-center bg-cover transform scale-100 transition-transform duration-[20000ms] ease-linear"></div>
+
+  <!-- Hero Text -->
+  <div id="heroContent" class="relative z-20 max-w-4xl text-center px-4 pointer-events-none">
+    <h1 id="heroTitle" class="text-6xl md:text-8xl font-extrabold text-white font-geist mb-4 opacity-0 translate-y-10 transition-all duration-700"></h1>
+    <p id="heroDesc" class="text-xl md:text-2xl text-white font-geist opacity-0 translate-y-10 transition-all duration-700 delay-200"></p>
+  </div>
+
+  <!-- Close Button -->
+  <button id="closeHero" class="absolute top-6 right-6 text-white text-3xl font-bold hidden z-50">
+    ×
+  </button>
+
+  <!-- Figures -->
+  <div id="heroFigures" class="relative flex flex-col h-full items-center justify-center px-6">
+    <div class="flex items-center gap-4 w-full max-w-6xl justify-center">
+      <figure
+        data-img="/public/herobg.png"
+        data-title="A Mother Love"
+        data-desc="Delve into the extraordinary journey of 'A Mother Love'."
+        class="group relative w-[140px] h-[280px] overflow-hidden transform-gpu origin-center transition-transform duration-1000 ease-[cubic-bezier(.19,1,.22,1)] hover:scale-y-[1.25] hover:z-10 cursor-pointer"
+        onclick="swapHero(this)"
+      >
+        <img src="/public/herobg.png" class="absolute inset-0 w-full h-full object-cover" alt="" />
+        <img src="/public/herobg.png" class="absolute inset-0 w-full h-full object-cover grayscale transition-[clip-path] duration-1000 group-hover:[clip-path:inset(0_0_100%_0)]" alt="" />
+      </figure>
+
+      <figure
+        data-img="/public/Road Rogue.webp"
+        data-title="Road Rogue"
+        data-desc="Experience the thrill of 'Road Rogue'."
+        class="group relative w-[140px] h-[280px] overflow-hidden transform-gpu origin-center transition-transform duration-1000 ease-[cubic-bezier(.19,1,.22,1)] hover:scale-y-[1.25] hover:z-10 cursor-pointer"
+        onclick="swapHero(this)"
+      >
+        <img src="/public/Road Rogue.webp" class="absolute inset-0 w-full h-full object-cover" alt="" />
+        <img src="/public/Road Rogue.webp" class="absolute inset-0 w-full h-full object-cover grayscale transition-[clip-path] duration-1000 group-hover:[clip-path:inset(0_0_100%_0)]" alt="" />
+      </figure>
+
+      <figure
+        data-img="/public/film4.webp"
+        data-title="Alter Ego"
+        data-desc="Explore the drama of 'Alter Ego'."
+        class="group relative w-[140px] h-[280px] overflow-hidden transform-gpu origin-center transition-transform duration-1000 ease-[cubic-bezier(.19,1,.22,1)] hover:scale-y-[1.25] hover:z-10 cursor-pointer"
+        onclick="swapHero(this)"
+      >
+        <img src="/public/film4.webp" class="absolute inset-0 w-full h-full object-cover" alt="" />
+        <img src="/public/film4.webp" class="absolute inset-0 w-full h-full object-cover grayscale transition-[clip-path] duration-1000 group-hover:[clip-path:inset(0_0_100%_0)]" alt="" />
+      </figure>
+    </div>
+  </div>
+
+  <!-- Background Title -->
+  <h2 class="flex items-end justify-center text-[160px] md:text-[160px] font-geist font-medium capitalize text-zinc-800 z-0 pointer-events-none select-none leading-none">
+    redhotconcept
+  </h2>
+</div>
+
+<script>
+const heroBg = document.getElementById("heroBg");
+const heroContent = document.getElementById("heroContent");
+const heroTitle = document.getElementById("heroTitle");
+const heroDesc = document.getElementById("heroDesc");
+const heroFigures = document.getElementById("heroFigures");
+const closeBtn = document.getElementById("closeHero");
+
+let timeoutId;
+
+// Swap hero on figure click
+function swapHero(fig) {
+  const img = fig.dataset.img;
+  const title = fig.dataset.title;
+  const desc = fig.dataset.desc || "";
+
+  // Hide figures
+  heroFigures.classList.add("hidden");
+
+  // Set hero bg
+  heroBg.style.backgroundImage = `url(${img})`;
+  heroBg.style.backgroundColor = "black";
+  heroBg.classList.add("scale-[1.05]");
+
+  // Slide/fade text in
+  heroTitle.textContent = title;
+  heroDesc.textContent = desc;
+  heroTitle.classList.remove("opacity-0", "translate-y-10");
+  heroDesc.classList.remove("opacity-0", "translate-y-10");
+
+  // Show close button
+  closeBtn.classList.remove("hidden");
+
+  // 30-second timeout to restore
+  timeoutId = setTimeout(restoreHero, 30000);
+}
+
+// Restore hero to figures & black bg
+function restoreHero() {
+  // Hide text
+  heroTitle.classList.add("opacity-0", "translate-y-10");
+  heroDesc.classList.add("opacity-0", "translate-y-10");
+
+  // Reset hero bg
+  heroBg.style.backgroundImage = "";
+  heroBg.style.backgroundColor = "black";
+  heroBg.classList.remove("scale-[1.05]");
+
+  // Show figures
+  heroFigures.classList.remove("hidden");
+
+  // Hide close button
+  closeBtn.classList.add("hidden");
+
+  // Clear timeout
+  if (timeoutId) clearTimeout(timeoutId);
+}
+
+// Close button click
+closeBtn.addEventListener("click", restoreHero);
+</script>
+
+</body>
+</html>

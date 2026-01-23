@@ -10,8 +10,8 @@
     <title>Omotola</title>
 </head>
 <body class="bg-[#0D0D0D] text-white">
-    <div class="pb-10">
-        <header class="fixed w-full z-50 top-0 bg-[#0D0D0D] text-white px-4 md:px-6 py-2 shadow-sm font-geist font-normal">
+    <div class="">
+        <header class="= fixed w-full z-50 top-0 bg-[#0d0d0d]/80 text-white px-4 md:px-6 shadow-sm font-geist font-normal">
            <div id="navbar" class="">
                <div class="flex justify-between items-center px-4">
                    <a href="index.html">
@@ -39,16 +39,16 @@
                                        transition-all duration-300 z-[999px]">
                                    <ul class="relative text-stone-500 text-base font-normal font-geist leading-relaxed">
                                       <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
-                                        <a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 px-4 transition-all duration-200">OYEP</a>  <br><br>
+                                        <a href="https://amber-hot.vercel.app/Oyep.html" class="hover:text-orange-300 px-4 transition-all duration-200">OYEP</a>  <br><br>
                                       </li>
                                       <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
-                                        <a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 px-4 transition-all duration-200">OSEAL</a>  <br><br>
+                                        <a href="https://amber-hot.vercel.app/Oseal.html" class="hover:text-orange-300 px-4 transition-all duration-200">OSEAL</a>  <br><br>
                                       </li>
                                       <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
                                         <a href="https://www.teffest.com/" class="hover:text-orange-300 px-4 transition-all duration-200">TEFFEST</a>  <br><br>
                                       </li>
                                       <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
-                                        <a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 px-4 transition-all duration-200">DOUBLE DOORS</a>  <br><br>
+                                        <a href="https://amber-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 px-4 transition-all duration-200">DOUBLE DOORS</a>  <br><br>
                                       </li>
                                    </ul>
                                </div>
@@ -71,10 +71,10 @@
                                   max-h-0 overflow-hidden
                                   transition-all duration-300"
                           >
-                              <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">OYEP</a></li>
-                              <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">OSEAL</a></li>
+                              <li><a href="https://amber-hot.vercel.app/Oyep.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">OYEP</a></li>
+                              <li><a href="https://amber-hot.vercel.app/Oseal.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">OSEAL</a></li>
                               <li><a href="https://www.teffest.com/" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">TEFFEST</a></li>
-                              <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">Double Doors</a></li>
+                              <li><a href="https://amber-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">Double Doors</a></li>
                           </ul>
                       </li>
                       <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="about.html">About</a></li>
@@ -83,71 +83,208 @@
                </nav>
            </div>
        </header> 
-       <div class="w-full">
-           <div class="">
-              <div class="">
-                <section class="hero-bg relative h-screen overflow-hidden bg-cover  bg-no-repeat font-geist">
-                  <div class="absolute inset-0 bg-[#56565640]"></div>
-                  <header class="absolute md:top-24 md:left-10 left-4 top-4 bg-[#0D0D0D33] p-2 rounded-md">
-                      <ul class="flex items-center gap-1.5">
-                        <li class="hero-dot size-2 bg-white/60 rounded-full cursor-pointer" data-index="0"></li>
-                        <li class="hero-dot size-2 bg-white/60 rounded-full cursor-pointer" data-index="1"></li>
-                        <li class="hero-dot size-2 bg-white/60 rounded-full cursor-pointer" data-index="2"></li>
-                      </ul>
-                  </header>
+      <div class="w-full h-screen" id="heroSection">
 
-                  <article class="absolute bottom-0 w-full mt-64 md:mt-80 bg-rose-100/20 backdrop-blur-sm md:px-10 px-4 py-8">
-                    <div class="mx-auto max-w-6xl flex flex-col md:flex-row md:items-end md:justify-between md:gap-8 gap-4">
-                      <div class="max-w-md md:space-y-4 space-y-2">
-                        <h1
-                          class="hero-title text-[#0D0D0D] text-3xl md:text-4xl font-bold font-geist uppercase tracking-wide"
-                        >
-                          A Mother’s Love
-                        </h1>
+          <div id="heroBg" class="absolute inset-0  bg-[center_0%] bg-cover transform scale-100 transition-transform duration-[20000ms] ease-linear">
+            <div class="absolute inset-0 bg-gradient-to-tr
+              from-black/80 via-black/50 to-black/20"></div>
+          </div>
+          <!-- Hero Text -->
+          
+          <div id="heroMeta"
+                class="absolute hidden bottom-10 left-5 top-6 z-30  rounded-md
+                      px-6 py-16
+                      text-white
+                      font-geist h-full flex flex-col justify-between
+                      space-y-3">
+              <h3 id="metaTitle" class="hero-title text-6xl font-semibold font-inter tracking-wider"></h3>
+              <div class="space-y-3">
+                <div class="flex items-center">
+                  <h3>Country: &nbsp;</h3>
+                  <div>
+                    <span id="metaCountryUSA" class="meta-pill hidden font-geist"></span>
+                    <span id="metaCountryNG" class="meta-pill hidden font-geist"></span>
+                  </div>
+                </div>       
+                <div class="flex items-center">
+                  <h3 class="text-base">Studio: &nbsp;</h3>
+                  <dd id="metaStudio" class="meta-pill font-geist"></dd>
+                </div>
+                <div class="flex items-center">
+                  <h3>Duration: &nbsp;</h3>
+                  <dd id="metaTime" class="meta-pill font-geist"></dd>
+                </div>
+                <div class="flex items-center">
+                  <h3>Date: &nbsp;</h3>
+                  <dd id="metaDate" class="meta-pill font-geist"></dd>
+                </div>
+                <div class="flex items-center">
+                  <h3>Rate: &nbsp;</h3>
+                  <dd id="metaRate" class="meta-pill font-geist"></dd>
+                </div>
+              </div>        
 
-                        <p
-                          class="hero-sub text-[#0D0D0D] text-sm font-medium uppercase tracking-wide"
-                        >
-                          Only in theatres
-                        </p>
+            </div>
 
-                        <div class="flex flex-wrap gap-4 font-geist">
-                          <button
-                            class="px-6 py-3 bg-[#0D0D0D] text-white font-medium uppercase text-sm"
-                          >
-                            Get Ticket
-                          </button>
 
-                          <button
-                            class="px-6 py-3 bg-amber-500 text-[#0D0D0D] font-medium uppercase text-sm"
-                          >
-                            View Trailer
-                          </button>
-                        </div>
-                      </div>
+        <button
+          id="closeHero"
+          onclick="restoreHero()"
+          class="absolute top-20 right-6 z-50 hidden
+                size-8 pb-1
+                flex items-center justify-center
+                rounded-full
+                bg-black backdrop-blur-md
+                text-white text-2xl font-light
+                transition-all duration-300 ease-out
+                hover:bg-white hover:text-black
+                hover:scale-110
+                focus:outline-none"
+          aria-label="Close fullscreen hero"
+        >
+          ×
+        </button>
+        
 
-                      <!-- Controls / Icons -->
-                      <nav class="flex items-center gap-6 self-start md:self-auto">
-                        <button class="scroll-left">
-                          <span class="bg-white rounded-full w-8 h-8 flex items-center justify-center">
-                            <i class="fa-solid fa-arrow-left text-lg text-zinc-400"></i>
-                          </span>
-                        </button>
-                        <button class="scroll-right">
-                          <span class="bg-white rounded-full w-8 h-8 flex items-center justify-center">
-                            <i class="fa-solid fa-arrow-right text-lg text-zinc-400"></i>
-                          </span>
-                        </button>
-                      </nav>
-                    </div>
-                  </article>
-                </section>
+
+        <div id="heroFigures" class="relative flex w-full justify-between flex-col h-full px-6">
+          <!-- IMAGE STRIP -->
+          <div class="flex-1 w-full flex items-center justify-center">
+            <div  class="flex items-center gap-4 w-full max-w-6xl justify-center z-20">
+              <figure data-aos="fade-up" data-aos-delay="100" 
+                onclick="swapHero(this)"
+                data-img="/public/motherlovebg.png"
+                data-title="A Mother’s Love"
+                data-country="USA, Nigeria"
+                data-studio="RedHotConcepts"
+                data-time="2h 46min"
+                data-date="14 Feb 2026"
+                data-rate="13+"
+                class="group relative w-[180px] h-[350px]"
+              >
+              <div class="overflow-hidden
+                      transform-gpu origin-center
+                      transition-transform duration-1000
+                      ease-[cubic-bezier(.19,1,.22,1)]
+                      hover:scale-y-[1.25] hover:z-10 h-full w-full">
+                <img
+                  src="/public/herobg.png"
+                  class="absolute inset-0 w-full h-full object-cover"
+                  alt=""
+                />
+  
+                <!-- GRAYSCALE OVERLAY (reveals bottom → top) -->
+                <img
+                  src="/public/herobg.png"
+                  class="
+                    absolute  inset-0 w-full h-full object-cover
+                    grayscale
+                    [clip-path:inset(0_0_0_0)]
+                    transition-[clip-path] duration-1000
+                    ease-[cubic-bezier(.19,1,.22,1)]
+                    group-hover:[clip-path:inset(0_0_100%_0)]
+                  "
+                  alt=""
+                />
               </div>
-           </div>
-       </div>
+                <!-- COLOR BASE -->
+              </figure>
+              <figure data-aos="fade-up" data-aos-delay="250" 
+                data-img="/public/Road Rogue.webp"
+                onclick="swapHero(this)"
+                data-src="/public/Road Rogue.webp"
+                data-title="Road Rogue"
+                data-country="USA, Nigeria"
+                data-studio="RedHotConcepts"
+                data-time="2h 46min"
+                data-date="14 Feb 2026"
+                data-rate="13+"
+                class="group relative w-[180px] h-[350px]"
+              >
+                <div class="overflow-hidden
+                      transform-gpu origin-center
+                      transition-transform duration-1000
+                      ease-[cubic-bezier(.19,1,.22,1)]
+                      hover:scale-y-[1.25] hover:z-10 h-full w-full">
+
+                      <img
+                        src="/public/Road Rogue.webp"
+                        class="absolute inset-0 w-full h-full object-cover"
+                        alt=""
+                      />
+      
+                      <!-- GRAYSCALE OVERLAY (reveals bottom → top) -->
+                      <img
+                        src="/public/Road Rogue.webp"
+                        class="
+                          absolute inset-0 w-full h-full object-cover
+                          grayscale
+                          [clip-path:inset(0_0_0_0)]
+                          transition-[clip-path] duration-1000
+                          ease-[cubic-bezier(.19,1,.22,1)]
+                          group-hover:[clip-path:inset(0_0_100%_0)]
+                        "
+                        alt=""
+                      />
+                </div>
+              </figure>
+              <figure data-aos="fade-up" data-aos-delay="400" 
+                data-img="/public/film4.webp"
+                onclick="swapHero(this)"
+                data-title="Alter Ego"
+                data-country="USA, Nigeria"
+                data-studio="RedHotConcepts"
+                data-time="2h 46min"
+                data-date="14 Feb 2017"
+                data-rate="13+"
+                class="group relative w-[180px] h-[350px]"
+              >
+                <div class="overflow-hidden
+                      transform-gpu origin-center
+                      transition-transform duration-1000
+                      ease-[cubic-bezier(.19,1,.22,1)]
+                      hover:scale-y-[1.25] hover:z-10 h-full w-full">
+                      <img
+                        src="/public/film4.webp"
+                        class="absolute inset-0 w-full h-full object-cover"
+                        alt=""
+                      />
+      
+                      <!-- GRAYSCALE OVERLAY (reveals bottom → top) -->
+                      <img
+                        src="/public/film4.webp"
+                        class="
+                          absolute inset-0 w-full h-full object-cover
+                          grayscale
+                          [clip-path:inset(0_0_0_0)]
+                          transition-[clip-path] duration-1000
+                          ease-[cubic-bezier(.19,1,.22,1)]
+                          group-hover:[clip-path:inset(0_0_100%_0)]
+                        "
+                        alt=""
+                      />
+                    </div>
+              </figure>
+            </div>
+          </div>
+
+          <!-- BACKGROUND TITLE -->
+          <h2 data-aos="fade-up" data-aos-delay="500" 
+            class="absolute inset-1 bottom-0 flex items-end justify-center
+                  text-[80px] md:text-[160px]
+                  font-geist font-medium capitalize
+                  text-zinc-800
+                  z-10 pointer-events-none select-none
+                  leading-none"
+          >
+            redhotconcept
+          </h2>
+        </div>
+        
+      </div>
     </div>
-    
-    <section class="relative w-full py-20 bg-black overflow-hidden">
+
+    <section class="relative w-full py-20 bg-[#0d0d0d] overflow-hidden">
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_#1f1f1f,_transparent_70%)] opacity-40"></div>
 
       <div class="relative max-w-5xl mx-auto px-6 text-center">
@@ -162,8 +299,8 @@
           class="text-2xl md:text-4xl lg:text-5xl font-light leading-tight text-white font-geist
                 transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]"
         >
-          “I don’t want to be remembered as famous —
-          <span class="text-amber-400">I want to be remembered as impactful.</span>”
+          “I don’t want to be remembeamber as famous —
+          <span class="text-amber-400">I want to be remembeamber as impactful.</span>”
         </blockquote>
 
         <!-- Divider -->
@@ -183,94 +320,94 @@
 
     <header class="relative flex flex-col items-center text-center py-20 gap-8 mb-32">
 
-    <!-- opening stills -->
-    <div class="flex gap-6">
-      <img
-        src="public/3.webp"
-        alt="Portrait still"
-        class="h-64 w-auto object-cover contrast-125 opacity-90"
-      />
-      <img
-        src="public/0.webp"
-        alt="Portrait still"
-        class="h-64 w-auto object-cover contrast-125 opacity-90 translate-y-4"
-      />
+      <!-- opening stills -->
+      <div class="flex gap-6">
+        <img
+          src="public/3.webp"
+          alt="Portrait still"
+          class="h-64 w-auto object-cover contrast-125 opacity-90"
+        />
+        <img
+          src="public/0.webp"
+          alt="Portrait still"
+          class="h-64 w-auto object-cover contrast-125 opacity-90 translate-y-4"
+        />
+      </div>
+
+    <!-- title -->
+    <h2 class="text-[#E09E23] text-4xl md:text-6xl font-geist font-extrabold uppercase tracking-[0.2em]">
+      Years of Impact
+    </h2>
+
+    <!-- subline -->
+    <p class="max-w-xl text-zinc-400 text-lg leading-relaxed">
+      Three decades of cinema, influence, and cultural authorship.
+    </p>
+
+    <!-- CTA -->
+    <a
+      href="legacy.html"
+      class="relative mt-2 px-10 py-4 border border-[#E09E23]/40 text-[#E09E23]
+            uppercase font-geist tracking-widest
+            hover:bg-[#E09E23] hover:text-[#0d0d0d]
+            transition-all duration-500"
+    >
+      Explore 30-Year Legacy
+    </a>
+
+    <!-- cinematic divider -->
+    <span class="w-24 h-px bg-[#E09E23]/30 mt-6"></span>
+
+    <!-- FILM FRAMES -->
+    <div class="relative mt-12 w-full max-w-5xl">
+
+      <!-- subtle vignette -->
+      <div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-[#0d0d0d]/40 via-transparent to-[#0d0d0d]/40"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+        <!-- frame 01 -->
+        <figure class="relative group">
+          <div class="absolute -inset-3 border border-white/10"></div>
+          <img
+            src="public/legacy2.webp"
+            alt="Film still"
+            class="w-full h-[420px] object-cover object-[center_15%]
+                  grayscale contrast-125
+                  group-hover:grayscale-0
+                  transition duration-700"
+          />
+          <figcaption class="absolute bottom-4 left-4 text-xs uppercase tracking-widest text-white/60">
+            omotola jalade
+          </figcaption>
+        </figure>
+
+        <!-- frame 02 -->
+        <figure class="relative group translate-y-10">
+          <div class="absolute -inset-3 border border-white/10"></div>
+          <img
+            src="public/legacy4.webp"
+            alt="Film still"
+            class="w-full h-[420px] object-cover object-[center_0%]
+                  grayscale contrast-125
+                  group-hover:grayscale-0
+                  transition duration-700"
+          />
+          <figcaption class="absolute bottom-4 left-4 text-xs uppercase tracking-widest text-white/60">
+            Omotola Jalade-Ekeinde
+          </figcaption>
+        </figure>
+
+      </div>
     </div>
 
-  <!-- title -->
-  <h2 class="text-[#E09E23] text-4xl md:text-6xl font-geist font-extrabold uppercase tracking-[0.2em]">
-    Years of Impact
-  </h2>
-
-  <!-- subline -->
-  <p class="max-w-xl text-zinc-400 text-lg leading-relaxed">
-    Three decades of cinema, influence, and cultural authorship.
-  </p>
-
-  <!-- CTA -->
-  <a
-    href="legacy.html"
-    class="relative mt-2 px-10 py-4 border border-[#E09E23]/40 text-[#E09E23]
-           uppercase font-geist tracking-widest
-           hover:bg-[#E09E23] hover:text-black
-           transition-all duration-500"
-  >
-    Explore 30-Year Legacy
-  </a>
-
-  <!-- cinematic divider -->
-  <span class="w-24 h-px bg-[#E09E23]/30 mt-6"></span>
-
-  <!-- FILM FRAMES -->
-  <div class="relative mt-12 w-full max-w-5xl">
-
-    <!-- subtle vignette -->
-    <div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/40 via-transparent to-black/40"></div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-      <!-- frame 01 -->
-      <figure class="relative group">
-        <div class="absolute -inset-3 border border-white/10"></div>
-        <img
-          src="public/legacy2.webp"
-          alt="Film still"
-          class="w-full h-[420px] object-cover object-[center_15%]
-                 grayscale contrast-125
-                 group-hover:grayscale-0
-                 transition duration-700"
-        />
-        <figcaption class="absolute bottom-4 left-4 text-xs uppercase tracking-widest text-white/60">
-          omotola jalade
-        </figcaption>
-      </figure>
-
-      <!-- frame 02 -->
-      <figure class="relative group translate-y-10">
-        <div class="absolute -inset-3 border border-white/10"></div>
-        <img
-          src="public/legacy4.webp"
-          alt="Film still"
-          class="w-full h-[420px] object-cover object-[center_0%]
-                 grayscale contrast-125
-                 group-hover:grayscale-0
-                 transition duration-700"
-        />
-        <figcaption class="absolute bottom-4 left-4 text-xs uppercase tracking-widest text-white/60">
-          Omotola Jalade-Ekeinde
-        </figcaption>
-      </figure>
-
-    </div>
-  </div>
-
-</header>
+    </header>
 
     <section class="w-full py-8 font-geist">
       <div class="w-full mx-auto px-4 md:px-8 flex flex-col gap-12">
         <header class="flex justify-between items-center gap-4">
           <h2 class="text-xl md:text-3xl font-semibold uppercase font-geist tracking-wide text-white">
-            Featured Film
+            Featuamber Film
           </h2>
 
           <a href="films.html"
@@ -375,7 +512,7 @@
       </div>
     </section>
 
-    <section class="relative w-full py-20 bg-black overflow-hidden">
+    <section class="relative w-full py-20 bg-[#0d0d0d] overflow-hidden">
       <!-- Ambient light -->
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_#1f1f1f,_transparent_70%)] opacity-40"></div>
 
@@ -387,7 +524,7 @@
             Cultural Impact
           </span>
           <h2 class="text-3xl md:text-5xl font-light text-white leading-tight font-geist">
-            Measured not in applause,  
+            Measuamber not in applause,  
             <span class="text-zinc-400">but in influence.</span>
           </h2>
         </header>
@@ -447,9 +584,8 @@
       </div>
     </section>
 
-    <section class="w-full bg-black py-20">
+    <section class="w-full  py-20">
       <div class="max-w-7xl mx-auto px-4 md:px-8">
-
         <!-- Header -->
         <header class="mb-14 flex items-end justify-between">
           <h2 class="text-white text-xl md:text-3xl font-semibold uppercase font-geist tracking-wide">
@@ -460,17 +596,17 @@
             View All <span><i class="fa-solid fa-arrow-right pl-2"></i></span>
           </a>
         </header>
-
         <!-- News Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-20 gap-x-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-y-20 gap-x-10 relative">
           <span class="absolute -left-[7px] top-3 h-3 w-3 rounded-full bg-amber-400"></span>
           <!-- News Card -->
+           
           <li data-aos="fade-up" data-aos-delay="100"
               class="press-item relative grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-8 pl-6 border-l border-zinc-800
                     opacity-0 translate-y-16 scale-95
                     transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]"
             >
-
+            
             <!-- Text Content -->
             <div class="relative text-white">
 
@@ -517,7 +653,7 @@
               />
 
               <!-- Soft cinematic overlay -->
-              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0d0d0d]/40 via-[#0d0d0d]/10 to-transparent"></div>
             </figure>
 
           </li>
@@ -573,7 +709,7 @@
               />
 
               <!-- Soft cinematic overlay -->
-              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0d0d0d]/40 via-[#0d0d0d]/10 to-transparent"></div>
             </figure>
 
           </li>
@@ -600,7 +736,7 @@
               <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
                 It is Omotola Jalade‘s birthday today, and the star is giving us the gift of a truly jaw-dropping look.
 
-                The Nigerian actress shared a photo of her glamorous look she wore to celebrate her 47th birthday. The glamorous ensemble is comprised of a crisp white shirt casually unbuttoned to partly reveal her under-layered matching white camisole. She folded the sleeves of the shirt while sitting and posing like a supermodel.
+                The Nigerian actress shaamber a photo of her glamorous look she wore to celebrate her 47th birthday. The glamorous ensemble is comprised of a crisp white shirt casually unbuttoned to partly reveal her under-layeamber matching white camisole. She folded the sleeves of the shirt while sitting and posing like a supermodel.
               </p>
 
               <!-- Quote -->
@@ -630,7 +766,7 @@
               />
 
               <!-- Soft cinematic overlay -->
-              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0d0d0d]/40 via-[#0d0d0d]/10 to-transparent"></div>
             </figure>
 
           </li>
@@ -656,7 +792,7 @@
 
               <!-- Description -->
               <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
-                Actress Omotola Jalade shared a fun moment teaching an Oyinbo man how to enjoy Nigerian food the traditional way
+                Actress Omotola Jalade shaamber a fun moment teaching an Oyinbo man how to enjoy Nigerian food the traditional way
               </p>
 
               <!-- Quote -->
@@ -686,7 +822,7 @@
               />
 
               <!-- Soft cinematic overlay -->
-              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0d0d0d]/40 via-[#0d0d0d]/10 to-transparent"></div>
             </figure>
 
           </li>
@@ -701,12 +837,11 @@
             View All News
           </a>
         </div>
-
       </div>
     </section>
 
     <section data-aos="fade-up" data-aos-duration="1200"
-      class="relative min-h-screen bg-gradient-to-br from-neutral-900 via-neutral-800 to-black overflow-hidden rounded-3xl animate-[float_6s_ease-in-out_infinite]">
+      class="relative min-h-screen bg-gradient-to-br from-neutral-900 via-neutral-800 to-[#0d0d0d] overflow-hidden rounded-3xl animate-[float_6s_ease-in-out_infinite]">
       <!-- ambient glow -->
       <div class="absolute -top-32 -left-32 w-[500px] h-[500px] bg-orange-500/10 blur-[120px]"></div>
       <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-sky-500/10 blur-[120px]"></div>
@@ -727,7 +862,7 @@
           </h1>
 
           <p class="max-w-xl text-neutral-300 text-lg leading-relaxed">
-            Your favourite meal is only a single tap away, ready to be delivered
+            Your favourite meal is only a single tap away, ready to be deliveamber
             straight to your doorstep. Order now and experience food the modern way.
           </p>
 
@@ -751,13 +886,13 @@
 
           <!-- phone glow -->
           <div class="absolute inset-0 flex justify-center">
-            <div class="w-[280px] h-[600px] bg-black/40 blur-[80px]"></div>
+            <div class="w-[280px] h-[600px] bg-[#0d0d0d]/40 blur-[80px]"></div>
           </div>
 
           <!-- phone frame -->
           <div class="relative w-full h-full rounded-[60px] overflow-hidden">
             <img
-              src="public/eseimage.jpeg"
+              src="public/ses.PNG"
               alt="App Screenshot"
               class="w-4/5 h-1/2 object-cover"
             />
@@ -766,10 +901,9 @@
       </div>
     </section>
 
-
-    <section class="relative flex flex-col justify-center items-center px-4 py-10 bg-black space-y-10 overflow-hidden">
+    <section class="relative flex flex-col justify-center items-center px-4 py-10 bg-[#0d0d0d] space-y-10 overflow-hidden">
       <!-- subtle background texture -->
-      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0d0d0d]/40 via-transparent to-[#0d0d0d]/40 pointer-events-none"></div>
 
       <h2 class="uppercase font-geist font-medium text-sm md:text-base tracking-[0.35em] text-zinc-300">
         Explore Brands
@@ -813,7 +947,7 @@
       </div>
     </section>
 
-    <section class="relative w-full py-20 bg-black">
+    <section class="relative w-full py-20 bg-[#0d0d0d]">
       <div class="max-w-7xl mx-auto px-6">
 
         <!-- Header -->
@@ -889,153 +1023,7 @@
 
       </div>
     </section>
-
-    <!-- <section class="relative w-full overflow-hidden dots-bg py-10 lg:py-12">
-      <div class="mx-auto max-w-7xl px-6 relative">
-        <header class="flex flex-col items-center text-center gap-6 mb-10">
-          <div class="flex gap-4">
-            <img
-              src="public/3.webp"
-              alt="Portrait still"
-              class="h-60 w-auto object-cover"
-            />
-            <img
-              src="public/0.webp"
-              alt="Portrait still"
-              class="h-60 w-auto object-cover"
-            />
-          </div>
-
-          <h2 class="text-[#E09E23] text-4xl md:text-6xl font-extrabold font-athelas uppercase tracking-wide">
-            Years of Impact
-          </h2>
-
-          <button class="px-6 py-4 bg-amber-500 text-[#0D0D0D] font-geist uppercase font-medium">
-            Explore 30-Year Legacy
-          </button>
-        </header>
-
-        <article class="relative grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <div class="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
-            <p class="text-white text-lg leading-9 font-geist">
-              Delve into the extraordinary journey of Omotola Jalade Ekeinde, a true cinematic icon of Africa and a trailblazer in cultural advocacy. From her groundbreaking performances that have captivated audiences worldwide to her significant contributions to humanitarian efforts, Omotola's story is one of resilience and inspiration. She has not only redefined the landscape of African cinema but has also used her platform to effect positive change in communities across the globe. 
-            </p>
-          </div>
-
-          <div class="h-[700px] hidden lg:block">
-            <figure class="absolute w-1/2 bottom-12 right-0 rotate-2 bg-white outline outline-2 outline-gray-200 p-4">
-              <img
-                src="public/3b.png"
-                alt="Film still"
-                class="w-full h-full object-cover"
-              />
-            </figure>
-
-            <figure class="absolute w-2/5 top-0 right-10 -rotate-6 bg-white outline outline-2 outline-gray-200 p-4">
-              <img
-                src="public/e5aafbbce54605ccb7cd181268ee3ecdd4a7a59b.png"
-                alt="Film still"
-                class="w-full h-60 object-cover object-[center_15%]"
-              />
-            </figure>
-
-            <figure class="absolute  bottom-5 left-10 -rotate-12 bg-white outline outline-2 outline-gray-200 p-4">
-              <img
-                src="public/3a.png"
-                alt="Film still"
-                class="w-full h-full object-cover"
-              />
-            </figure>
-          </div>
-        </article>
-      </div>
-    </section> -->
-
-    <!-- <section class="w-full py-8">
-      <div class="max-w-7xl mx-auto px-4 md:px-8 flex flex-col gap-4">
-        <header>
-          <h2 class="text-white text-lg md:text-xl font-semibold uppercase font-geist">
-            About the studio
-          </h2>
-        </header>
-
-        <div class="space-y-10">
-            <p class="text-white text-base sm:text-lg lg:text-lg font-normal font-geist leading-7 sm:leading-8">
-                <strong class="font-medium text-white">Redhot Concepts</strong> is a premium African production studio founded on the core philosophy that world-class talent demands world-class infrastructure. We are more than a production house; we are an ecosystem builder dedicated to professionalizing the entertainment industry across Africa and exporting authentic, high-impact stories to the global stage.
-            </p>
-
-            <p class="text-white text-base sm:text-lg lg:text-lg font-normal font-geist leading-7 sm:leading-8">
-                <strong class="font-medium text-white">Redhot Concepts</strong> is a premium African production studio founded on the core philosophy that world-class talent demands world-class infrastructure. We are more than a production house; we are an ecosystem builder dedicated to professionalizing the entertainment industry across Africa and exporting authentic, high-impact stories to the global stage.
-            </p>
-
-            <p class="text-white text-base sm:text-lg lg:text-lg font-normal font-geist leading-7 sm:leading-8">
-                <strong class="font-medium text-white">Redhot Concepts</strong> is a premium African production studio founded on the core philosophy that world-class talent demands world-class infrastructure. We are more than a production house; we are an ecosystem builder dedicated to professionalizing the entertainment industry across Africa and exporting authentic, high-impact stories to the global stage.
-            </p>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="flex flex-col items-center gap-12">
-          <div class="flex flex-nowrap gap-3 w-full overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory px-4 py-2 scrollbar-hide no-scrollbar">
-            <article
-              class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px]
-                    aspect-[3/5] bg-[#3D3D3D] border border-[#202020] overflow-hidden p-4"
-            >
-              <img
-                src="public/legacy1.webp"
-                alt="Gallery image"
-                class="w-full h-full object-cover"
-              />
-            </article>
-
-            <article
-              class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px]
-                    aspect-[3/5] bg-[#3D3D3D] border border-[#202020] overflow-hidden p-4"
-            >
-              <img
-                src="public/leg2.png"
-                alt="Gallery image"
-                class="w-full h-full object-cover object-[center_20%]"
-              />
-            </article>
-
-            <article
-              class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px]
-                    aspect-[3/5] bg-[#3D3D3D] border border-[#202020] overflow-hidden p-4"
-            >
-              <img
-                src="public/leg3.png"
-                alt="Gallery image"
-                class="w-full h-full object-cover"
-              />
-            </article>
-
-            <article
-              class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px]
-                    aspect-[3/5] bg-[#3D3D3D] border border-[#202020] overflow-hidden p-4"
-            >
-              <img
-                src="public/legacy4.webp"
-                alt="Gallery image"
-                class="w-full h-full object-cover"
-              />
-            </article>
-
-            <article
-              class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px]
-                    aspect-[3/5] bg-[#3D3D3D] border border-[#202020] overflow-hidden p-4"
-            >
-              <img
-                src="public/legacy5.png"
-                alt="Gallery image"
-                class="w-full h-full object-cover"
-              />
-            </article>
-          </div>
-        </div>
-    </section> -->
-
+  
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 py-20">
       <header class="flex justify-between itemw-center">
         <h2 class="text-xl md:text-3xl font-semibold uppercase font-geist tracking-wide">
@@ -1110,7 +1098,7 @@
         </div>
     </section>
 
-    <section class="relative w-full py-40 bg-black overflow-hidden">
+    <section class="relative w-full py-40 bg-[#0d0d0d] overflow-hidden">
       <!-- Atmospheric background -->
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_#1a1a1a,_transparent_65%)] opacity-40"></div>
       <div class="pointer-events-none absolute inset-0 bg-[url('/grain.png')] opacity-[0.06] mix-blend-overlay"></div>
@@ -1142,19 +1130,18 @@
         <!-- Supporting line -->
         <p class="max-w-3xl mx-auto text-zinc-400 text-lg md:text-xl leading-relaxed font-geist">
           Through structure, ownership, and uncompromising craft,
-          Redhot Concepts exists to ensure African stories are not
-          merely seen — but remembered, respected, and preserved
+          amberhot Concepts exists to ensure African stories are not
+          merely seen — but remembeamber, respected, and preserved
           for generations.
         </p>
 
         <!-- Signature -->
         <p class="pt-8 text-sm uppercase tracking-[0.4em] text-zinc-500 font-geist">
-          Redhot Concepts
+          amberhot Concepts
         </p>
 
       </div>
     </section>
-
 
     <section class="bg-white text-[#0D0D0D] scroll-mt-20" id="contact">
       <div class="max-w-7xl mx-auto px-6 py-8 space-y-24">
@@ -1191,7 +1178,7 @@
 
             <button
               type="submit"
-              class="inline-flex items-center gap-x-4 bg-[#0D0D0D] text-white px-8 py-3 uppercase font-medium font-geist hover:bg-black transition"
+              class="inline-flex items-center gap-x-4 bg-[#0D0D0D] text-white px-8 py-3 uppercase font-medium font-geist hover:bg-[#0d0d0d] transition"
             >
               Send
               <span aria-hidden><i class="fa-solid fa-arrow-right"></i></span>
@@ -1231,10 +1218,10 @@
                 Email
               </p>
               <a
-                href="mailto:hello@redhotconcept.com"
+                href="mailto:hello@amberhotconcept.com"
                 class="text-xl font-inter hover:underline"
               >
-                hello@redhotconcept.com
+                hello@amberhotconcept.com
               </a>
             </address>
 
@@ -1244,13 +1231,122 @@
       </div>
     </section>
 
-  <script>
-      AOS.init({
-          duration: 800,
-          easing: 'ease-out-cubic',
-          once: true, 
+
+ <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true, 
+        });
+    </script>
+
+<script>
+  const heroBg = document.getElementById('heroBg');
+  const heroFigures = document.getElementById('heroFigures');
+  const closeHeroBtn = document.getElementById('closeHero');
+  const heroMeta = document.getElementById('heroMeta');
+
+  const metaTitle = document.getElementById('metaTitle');
+  const metaCountryUSA = document.getElementById('metaCountryUSA');
+  const metaCountryNG = document.getElementById('metaCountryNG');
+  const metaStudio = document.getElementById('metaStudio');
+  const metaTime = document.getElementById('metaTime');
+  const metaDate = document.getElementById('metaDate');
+  const metaRate = document.getElementById('metaRate');
+
+  let heroTimeout;
+
+  function swapHero(figure) {
+    clearTimeout(heroTimeout);
+
+    /* ---------- DATA ---------- */
+    const imgSrc = figure.dataset.img || figure.dataset.src;
+    const title = figure.dataset.title || '';
+    const countries = figure.dataset.country || '';
+    const studio = figure.dataset.studio || '';
+    const time = figure.dataset.time || '';
+    const date = figure.dataset.date || '';
+    const rate = figure.dataset.rate || '';
+
+    /* ---------- HERO BG ---------- */
+    heroFigures.classList.add('opacity-0', 'scale-90', 'pointer-events-none');
+
+    heroBg.style.backgroundImage = `url('${imgSrc}')`;
+    heroBg.style.opacity = '0';
+    heroBg.style.transform = 'scale(.5) translate(120px,120px)';
+    heroBg.style.transition = 'none';
+
+    heroMeta.classList.remove('hidden');
+      requestAnimationFrame(() => {
+        heroMeta.classList.remove('opacity-0', 'pointer-events-none');
+        heroMeta.classList.add('opacity-100');
       });
-  </script>
+
+
+
+    requestAnimationFrame(() => {
+      heroBg.style.transition =
+        'transform 1.2s cubic-bezier(.19,1,.22,1), opacity .6s ease-out';
+      heroBg.style.opacity = '1';
+      heroBg.style.transform = ' translate(0,0)';
+    });
+
+    /* ---------- META CONTENT ---------- */
+    metaTitle.textContent = title;
+
+    // Countries
+    metaCountryUSA.classList.add('hidden');
+    metaCountryNG.classList.add('hidden');
+
+    if (countries.includes('USA')) {
+      metaCountryUSA.textContent = 'USA';
+      metaCountryUSA.classList.remove('hidden');
+    }
+
+    if (countries.includes('Nigeria')) {
+      metaCountryNG.textContent = 'Nigeria';
+      metaCountryNG.classList.remove('hidden');
+    }
+
+    metaStudio.textContent = studio;
+    metaTime.textContent = time;
+    metaDate.textContent = date;
+    metaRate.textContent = rate;
+
+    closeHeroBtn.classList.remove('hidden');
+
+    heroTimeout = setTimeout(restoreHero, 30000);
+  }
+
+  function restoreHero() {
+    clearTimeout(heroTimeout);
+
+    heroBg.style.transition = 'opacity .5s ease';
+    heroBg.style.opacity = '0';
+
+    heroMeta.classList.add('opacity-0', 'pointer-events-none');
+    heroMeta.classList.remove('opacity-100');
+
+    setTimeout(() => {
+      heroMeta.classList.add('hidden');
+    }, 300);
+
+
+    setTimeout(() => {
+      heroBg.style.backgroundImage = 'none';
+    }, 500);
+
+    heroFigures.classList.remove(
+      'opacity-0',
+      'scale-95',
+      'pointer-events-none'
+    );
+
+    closeHeroBtn.classList.add('hidden');
+  }
+
+  closeHeroBtn.addEventListener('click', restoreHero);
+</script>
 
 <script>
   const menuBtn = document.getElementById('menuBtn');
@@ -1379,85 +1475,10 @@
 </script>
 
 <script>
-const slides = [
-  {
-    bg: "/public/herobg.webp",
-    title: "A MOTHER’S LOVE",
-    subtitle: "Now Available Only in Theaters",
-  },
-  {
-    bg: "/public/Road rogue.webp",
-    title: "Road Rogue",
-    subtitle: "Coming To Theatres Soon",
-  },
-  {
-    bg: "/public/film4.webp",
-    title: "Alter Ego",
-    subtitle: "Now Playing on All Platforms",
-  }
-];
-
-let currentIndex = 0;
-
-const heroBg = document.querySelector(".hero-bg");
-const heroTitle = document.querySelector(".hero-title");
-const heroSub = document.querySelector(".hero-sub");
-const dots = document.querySelectorAll(".hero-dot");
-
-function updateDots(index) {
-  dots.forEach((dot, i) => {
-    dot.classList.toggle("active", i === index);
-  });
-}
-
-function updateSlide(index) {
-  const slide = slides[index];
-
-  heroBg.style.opacity = 0;
-
-  setTimeout(() => {
-    heroBg.style.backgroundImage = `url('${slide.bg}')`;
-    heroTitle.textContent = slide.title;
-    heroSub.textContent = slide.subtitle;
-    heroBg.style.opacity = 1;
-    updateDots(index);
-  }, 400);
-}
-
-// Initial load
-updateSlide(currentIndex);
-
-// Click dots
-dots.forEach(dot => {
-  dot.addEventListener("click", () => {
-    currentIndex = Number(dot.dataset.index);
-    updateSlide(currentIndex);
-  });
-});
-
-// Controls
-document.querySelector(".scroll-right").onclick = () => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateSlide(currentIndex);
-};
-
-document.querySelector(".scroll-left").onclick = () => {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  updateSlide(currentIndex);
-};
-
-// Auto play
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateSlide(currentIndex);
-}, 8000);
-</script>
-
-<script>
   const quotes = [
     {
-      text: `“I don’t want to be remembered as famous —
-        <span class="text-amber-400">I want to be remembered as impactful.</span>”`,
+      text: `“I don’t want to be remembeamber as famous —
+        <span class="text-amber-400">I want to be remembeamber as impactful.</span>”`,
       author: "Omotola Jalade-Ekeinde",
     },
     {

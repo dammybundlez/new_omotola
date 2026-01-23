@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');@tailwind base;
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -19,6 +19,17 @@
 html {
   scroll-behavior: smooth;
 }
+
+.meta-pill {
+  @apply inline-flex items-center px-4 py-1 rounded-full
+         border border-white/30
+         text-sm tracking-wide;
+}
+
+.meta-pill.wide {
+  @apply w-full;
+}
+
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
