@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./index.html", "./darkmode.html", "./films.html", "./legacy.html", "./news.html", "./about.html" , "./test.html",
+    "./index.html", "./darkmode.html", "./films.html", "./legacy.html", "./news.html", "./about.html" , "./test.html", "seconddesign.html"
   ],
   theme: {
     extend: {
@@ -9,7 +9,8 @@ module.exports = {
         geist: ['Geist', 'sans-serif'],
         shantell: ['Shantell Sans', 'cursive'],
         athelas: ['"Athelas"', 'serif'],
-        inter: ['"inter"' , 'serif']
+        inter: ['"inter"' , 'serif'],
+        archivo: ['"archivo"' , "serif"]
       },
       keyframes: {
         softBounce: {

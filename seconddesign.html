@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c4993cb090.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="output.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <title>Omotola</title>
+</head>
+<body class="bg-[#0D0D0D] text-white">
+    <div class="h-screen relative  from-black/90  to-black/60  bg-no-repeat bg-cover bg-[center_30%] bg-[url('public/emotymotherlove.png')]"
+    style="
+    background-image: url('public/emotymotherlove.png');
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  ">
+        <div class="absolute inset-0 bg-gradient-to-t 
+              from-black/90 via-black/60 to-black/10">
+  </div>
+        <header class="fixed top-2 left-0 w-full z-50 px-4 md:px-10 font-geist">
+        <div
+            id="navbar"
+            class="bg-zinc-900/90 backdrop-blur-md rounded-lg
+                outline outline-1 outline-orange-300/10
+                transition-[max-height] duration-500 ease-in-out overflow-hidden md:overflow-visible max-h-[70px] md:max-h-[95px]">
+
+            <div class="flex justify-between items-center px-4">
+                <a href="index.html">
+                    <img src="/public/img124.webp" class="w-12 md:w-16" />
+                </a>
+
+                <button id="menuBtn" class="md:hidden text-white text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <nav class="hidden md:flex text-sm">
+                    <ul class="flex items-center text-white gap-10 uppercase">
+                        <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="films.html">Films</a></li>
+                        <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="news.html">News</a></li>
+                        <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="legacy.html">30 Years legacy</a></li>
+                        <li class="relative group">
+                            <a class="hover:text-orange-300 transition-all duration-200 flex items-center gap-2" 
+                                id="othersBtn" 
+                                aria-expanded="false"
+                                href="#">Others <span class="text-sm pl-2"><i class="fa-solid fa-chevron-down"></i></span>
+                            </a>
+                            <div
+                                id="othersDropdown"
+                                class="absolute top-full mt-4 left-2/5 -translate-x-1/2 w-[230px] px-5 py-5 rounded-xl outline outline-4 outline-orange-300 bg-zinc-900/90
+                                    backdrop-blur-xl border border-orange-300 shadow-[0_8px_32px_rgba(0,0,0,0.35)] invisible group-hover:opacity-100 group-hover:visible
+                                    transition-all duration-300 z-[999px]">
+                                <div class="relative text-neutral-50 text-base font-normal font-poppins leading-relaxed">
+                                    <a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 transition-all duration-200">OYEP</a>  <br><br>
+                                    <a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 transition-all duration-200">OSEAL</a>  <br><br>
+                                    <a href="https://www.teffest.com/" class="hover:text-orange-300 transition-all duration-200">TEFFEST</a> <br><br>
+                                    <a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 transition-all duration-200">DOUBLE DOORS</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="about.html">About</a></li>
+                        <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <nav id="mobileMenu" class="md:hidden px-4 pb-6 h-full">
+                <ul class="flex flex-col text-white gap-y-3 uppercase p-6 border-t border-orange-300/10">
+                        <li class=""><a href="films.html" class="hover:text-orange-300 transition-all ease-out duration-200">Films</a></li>
+                        <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="news.html">News</a></li>
+                        <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="legacy.html">30 Years legacy</a></li>
+                        <li class=""><button class="hover:text-orange-300 transition-all ease-out duration-200" id="othersToggle">OTHERS <span class="text-sm"><i id="othersIcon" class="fa-solid fa-chevron-down transition-transform duration-300"></i></span></button>
+                            <ul
+                                id="othersAccordion"
+                                class="mt-1 ml-4 space-y-3 text-sm
+                                    max-h-0 overflow-hidden
+                                    transition-all duration-300"
+                            >
+                                <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">OYEP</a></li>
+                                <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">OSEAL</a></li>
+                                <li><a href="https://www.teffest.com/" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">TEFFEST</a></li>
+                                <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">Double Doors</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="about.html">About</a></li>
+                        <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> 
+        <div class="relative z-10 h-full w-full flex items-end py-10 md:pl-10 pl-5">
+            <div class="flex justify-between w-full gap-10">
+
+                <!-- LEFT -->
+                <div class="space-y-7 animate-fadeUp opacity-0 font-inter">
+                <h1 class="md:text-[60px] sm:text-[40px] text-[30px] font-semibold leading-none">
+                    A MOTHER’S LOVE
+                </h1>
+
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-star text-amber-300"></i>
+                    <p>9.2 | 1055</p>
+
+                    <div class="ml-3 px-5 py-2 flex items-center gap-3 text-sm rounded-full bg-white/10 backdrop-blur-md border border-white/20">
+                    <span>1h 42m</span>
+                    <span class="opacity-60">•</span>
+                    <span>Family, Drama</span>
+                    <span class="opacity-60">•</span>
+                    <span>2025</span>
+                    </div>
+                </div>
+
+                <p class="text-sm opacity-90 animate-fadeUp delay-200">
+                    Next showing Today 3:15pm at B & B Omaha Oakview Plaza 14
+                </p>
+
+                <button
+                    class="animate-fadeUp delay-300 bg-[#E7B005] hover:bg-amber-500 transition-all duration-300 hover:scale-105 px-6 py-3 rounded-md shadow-lg"
+                >
+                    More Details
+                </button>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="w-[45%] md:block hidden space-y-6 font-archivo animate-fadeUp delay-500 opacity-0">
+                <div class="w-full">
+                            <h4 class="text-white font-medium text-xl mb-3">Posters</h4>
+
+                            <div
+                                class="group relative flex gap-4 overflow-x-scroll 
+                                    whitespace-nowrap w-full scroll-smooth scrollbar-hide"
+                            >
+                                <img
+                                    src="public/herobg.webp"
+                                    class="
+                                        w-36 h-20 flex-none object-cover rounded-lg
+                                        ring-1 ring-white/10 object-[center_0%]
+                                        shadow-[0_20px_40px_rgba(0,0,0,0.6)]
+                                        transition-all duration-500 ease-out
+                                        hover:scale-110
+                                        hover:-translate-y-1
+                                        hover:ring-[#E7B005]
+                                        hover:shadow-[0_30px_60px_rgba(231,176,5,0.35)]
+                                    "
+                                    />
+
+                                    <img
+                                        src="public/1.png"
+                                        class="
+                                        w-36 h-20 flex-none object-cover object-[center_0%] rounded-lg
+                                            ring-1 ring-white/10
+                                            shadow-[0_20px_40px_rgba(0,0,0,0.6)]
+                                            transition-all duration-500 ease-out
+                                            hover:scale-110
+                                            hover:-translate-y-1
+                                            hover:ring-[#E7B005]
+                                            hover:shadow-[0_30px_60px_rgba(231,176,5,0.35)]
+                                        "
+                                        />
+
+                                        <img
+                                        src="public/1.png"
+                                        class="
+                                        w-36 h-20 flex-none object-cover object-[center_0%] rounded-lg
+                                            ring-1 ring-white/10
+                                            shadow-[0_20px_40px_rgba(0,0,0,0.6)]
+                                            transition-all duration-500 ease-out
+                                            hover:scale-110
+                                            hover:-translate-y-1
+                                            hover:ring-[#E7B005]
+                                            hover:shadow-[0_30px_60px_rgba(231,176,5,0.35)]
+                                        "
+                                        />
+                                        <img
+                                        src="public/1.png"
+                                        class="
+                                        w-36 h-20 flex-none object-cover object-[center_0%] rounded-lg
+                                            ring-1 ring-white/10
+                                            shadow-[0_20px_40px_rgba(0,0,0,0.6)]
+                                            transition-all duration-500 ease-out
+                                            hover:scale-110
+                                            hover:-translate-y-1
+                                            hover:ring-[#E7B005]
+                                            hover:shadow-[0_30px_60px_rgba(231,176,5,0.35)]
+                                        "
+                                        />
+                                        <img
+                                        src="public/1.png"
+                                        class="
+                                        w-36 h-20 flex-none object-cover object-[center_0%] rounded-lg
+                                            ring-1 ring-white/10
+                                            shadow-[0_20px_40px_rgba(0,0,0,0.6)]
+                                            transition-all duration-500 ease-out
+                                            hover:scale-110
+                                            hover:-translate-y-1
+                                            hover:ring-[#E7B005]
+                                            hover:shadow-[0_30px_60px_rgba(231,176,5,0.35)]
+                                        "
+                                        />
+                                        <img
+                                        src="public/2.png"
+                                        class="
+                                            w-36 h-20 flex-none object-cover object-[center_110%] rounded-lg
+                                            ring-1 ring-white/10
+                                            shadow-[0_20px_40px_rgba(0,0,0,0.6)]
+                                            transition-all duration-500 ease-out
+                                            hover:scale-110
+                                            hover:-translate-y-1
+                                            hover:ring-[#E7B005]
+                                            hover:shadow-[0_30px_60px_rgba(231,176,5,0.35)]
+                                        "
+                                        />
+
+                                        
+
+                                        <img
+                                        src="public/3aa.jpg"
+                                        class="
+                                        w-36 h-20 flex-none object-cover  rounded-lg
+                                            ring-1 ring-white/10
+                                            shadow-[0_20px_40px_rgba(0,0,0,0.6)]
+                                            transition-all duration-500 ease-out
+                                            hover:scale-110
+                                            hover:-translate-y-1
+                                            hover:ring-[#E7B005]
+                                            hover:shadow-[0_30px_60px_rgba(231,176,5,0.35)]
+                                        "
+                                        />
+                            </div>
+                        </div>
+
+                <!-- Cast -->
+                <div class="space-y-4 text-white">
+                            <h4 class="text-white font-medium text-xl leading-none tracking-wide">
+                                Top Cast
+                            </h4>
+
+                            <div class="flex flex-wrap">
+                                <!-- Cast Item -->    
+                                <div
+                                class="group relative text-center flex items-center flex-col"
+                                >
+                                <img
+                                    src="public/i1.png"
+                                    alt=""
+                                    class="
+                                    w-14 h-14 rounded-full object-cover
+                                    ring-2 ring-white/10
+                                    transition-all duration-300
+                                    group-hover:scale-110
+                                    group-hover:ring-[#E7B005]
+                                    "
+                                />
+                                <span class="text-xs tracking-wider w-20  mt-2">Omotola Jalade-Ekeinde</span>
+                                <!-- glow -->
+                                <div
+                                    class="
+                                    absolute inset-0 rounded-full
+                                    bg-[#E7B005]/30 blur-md opacity-0
+                                    group-hover:opacity-100
+                                    transition-opacity duration-300
+                                    -z-10
+                                    "
+                                ></div>
+                                </div>
+
+                                <!-- duplicate cast items -->
+                                <div class="group relative flex-shrink-0  text-center  flex items-center flex-col">
+                                <img src="public/i2.png" class="w-14 h-14 rounded-full object-[center_10%] object-cover ring-2 ring-white/10 transition-all duration-300 group-hover:scale-110 group-hover:ring-[#E7B005]" />
+                                <span class="text-xs tracking-wider  w-20 mt-2">Olumide  Oworu</span>
+                                <div class="absolute inset-0 rounded-full bg-[#E7B005]/30 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+                                </div>
+
+                                <div class="group relative flex-shrink-0  text-center  flex items-center  flex-col">
+                                <img src="public/i3.png" class="w-14 h-14 rounded-full object-cover ring-2 ring-white/10 transition-all duration-300 group-hover:scale-110 group-hover:ring-[#E7B005]" />
+                                <span class="text-xs tracking-wider w-20 mt-2">Noray Nehita</span>
+                                <div class="absolute inset-0 rounded-full bg-[#E7B005]/30 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+                                </div>
+
+                                <div class="group relative flex-shrink-0  text-center  flex items-center  flex-col">
+                                <img src="public/i4.png" class="w-14 h-14 rounded-full object-cover ring-2 ring-white/10 transition-all duration-300 group-hover:scale-110 group-hover:ring-[#E7B005]" />
+                                <span class="text-xs tracking-wider mt-2 w-20">Nosa Rex</span>
+                                <div class="absolute inset-0 rounded-full bg-[#E7B005]/30 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+                                </div>
+
+                                <div class="group relative flex-shrink-0  text-center  flex items-center  flex-col">
+                                <img src="public/i5.png" class="w-14 h-14 bg-white object-[center_10%] rounded-full object-cover ring-2 ring-white/10 transition-all duration-300 group-hover:scale-110 group-hover:ring-[#E7B005]" />
+                                <span class="text-xs tracking-wider w-20 mt-2">Ifeanyi Kalu</span>
+                                <div class="absolute inset-0 rounded-full bg-[#E7B005]/30 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+                                </div>
+
+                                <!-- View All -->
+                                <a
+                                href="details.html"
+                                class="
+                                    ml-2 mt-2 flex-shrink-0
+                                    px-4 h-9
+                                    inline-flex items-center justify-center
+                                    rounded-full
+                                    text-sm font-medium
+                                    text-white
+                                    bg-[#E7B005]
+                                    hover:bg-amber-500
+                                    transition-all duration-300
+                                    hover:scale-105
+                                    shadow-lg shadow-black/30
+                                "
+                                >
+                                View all →
+                                </a>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="relative w-full py-20 bg-[#0d0d0d] overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_#1f1f1f,_transparent_70%)] opacity-40"></div>
+
+      <div class="relative max-w-5xl mx-auto px-6 text-center">
+
+        <span class="block mb-6 text-xs tracking-[0.35em] uppercase text-amber-400">
+          A Voice That Endures
+        </span>
+
+        <!-- Quote Text -->
+        <blockquote
+          id="quoteText"
+          class="text-2xl md:text-4xl lg:text-5xl font-light leading-tight text-white font-geist
+                transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]"
+        >
+          “I don’t want to be remembeamber as famous —
+          <span class="text-amber-400">I want to be remembeamber as impactful.</span>”
+        </blockquote>
+
+        <!-- Divider -->
+        <div class="mx-auto my-10 h-px w-24 bg-zinc-700"></div>
+
+        <!-- Attribution -->
+        <p
+          id="quoteAuthor"
+          class="text-sm md:text-base uppercase tracking-widest text-zinc-400 font-geist
+                transition-all duration-500"
+        >
+          Omotola Jalade-Ekeinde
+        </p>
+
+      </div>
+    </section>
+
+    <header class="relative flex flex-col items-center text-center py-20 gap-8 mb-32">
+
+      <!-- opening stills -->
+      <div class="flex gap-6">
+        <img
+          src="public/3.webp"
+          alt="Portrait still"
+          class="h-64 w-auto object-cover contrast-125 opacity-90"
+        />
+        <img
+          src="public/0.webp"
+          alt="Portrait still"
+          class="h-64 w-auto object-cover contrast-125 opacity-90 translate-y-4"
+        />
+      </div>
+
+    <!-- title -->
+    <h2 class="text-[#E09E23] text-4xl md:text-6xl font-geist font-extrabold uppercase tracking-[0.2em]">
+      Years of Impact
+    </h2>
+
+    <!-- subline -->
+    <p class="max-w-xl text-zinc-400 text-lg leading-relaxed">
+      Three decades of cinema, influence, and cultural authorship.
+    </p>
+
+    <!-- CTA -->
+    <a
+      href="legacy.html"
+      class="relative mt-2 px-10 py-4 border border-[#E09E23]/40 text-[#E09E23]
+            uppercase font-geist tracking-widest
+            hover:bg-[#E09E23] hover:text-[#0d0d0d]
+            transition-all duration-500"
+    >
+      Explore 30-Year Legacy
+    </a>
+
+    <!-- cinematic divider -->
+    <span class="w-24 h-px bg-[#E09E23]/30 mt-6"></span>
+
+    <!-- FILM FRAMES -->
+    <div class="relative mt-12 w-full px-10">
+
+      <!-- subtle vignette -->
+      <div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-[#0d0d0d]/40 via-transparent to-[#0d0d0d]/40"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+        <!-- frame 01 -->
+        <figure class="relative group">
+          <div class="absolute -inset-3 border border-white/10"></div>
+          <img
+            src="public/legacy2.webp"
+            alt="Film still"
+            class="w-full h-[420px] object-cover object-[center_15%]
+                  grayscale contrast-125
+                  group-hover:grayscale-0
+                  transition duration-700"
+          />
+          <figcaption class="absolute bottom-4 left-4 text-xs uppercase tracking-widest text-white/60">
+            omotola jalade
+          </figcaption>
+        </figure>
+
+        <!-- frame 02 -->
+        <figure class="relative group translate-y-10">
+          <div class="absolute -inset-3 border border-white/10"></div>
+          <img
+            src="public/legacy4.webp"
+            alt="Film still"
+            class="w-full h-[420px] object-cover object-[center_0%]
+                  grayscale contrast-125
+                  group-hover:grayscale-0
+                  transition duration-700"
+          />
+          <figcaption class="absolute bottom-4 left-4 text-xs uppercase tracking-widest text-white/60">
+            Omotola Jalade-Ekeinde
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+
+    </header>
+
+    <section class="w-full py-8 font-geist">
+      <div class="w-full mx-auto px-4 md:px-8 flex flex-col gap-12">
+        <header class="flex justify-between items-center gap-4">
+          <h2 class="text-xl md:text-3xl font-semibold uppercase font-geist tracking-wide text-white">
+            Featuamber Film
+          </h2>
+
+          <a href="films.html"
+            class="hidden md:inline-block text-sm uppercase tracking-wider text-amber-400 hover:opacity-70 transition font-geist">
+            View All <span><i class="fa-solid fa-arrow-right pl-2"></i></span>
+          </a>
+
+          <!-- <div class="relative h-1 bg-neutral-100 overflow-hidden">
+            <span class="absolute left-0 top-0 h-full w-24 bg-yellow-600"></span>
+          </div> -->
+        </header>
+
+        <!-- Film Grid -->
+        <div id="slideshowView" class=" flex flex-col items-center gap-16 overflow-hidden">
+          <div id="marqueeTrack" class=" flex gap-6 w-full px-4 py-2">
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/herobg.webp" class="w-full aspect-[3/4] object-cover rounded" alt="A Mother’s Love" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist"> A Mother’s Love</h3>
+            </article>
+
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/Road Rogue.webp" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Road Rogue</h3>
+            </article>
+
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/ije.jpg" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Ije: The Journey</h3>
+            </article>
+
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/film5.webp" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Blood Sister</h3>
+            </article>
+
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/lastflight.webp" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Last Flight to Abuja</h3>
+            </article>
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/deseperatesister.jpg" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Desperate Sisters</h3>
+            </article>
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/shadowparty.webp" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Shadow Parties</h3>
+            </article>
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/film4.webp" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Alter Ego</h3>
+            </article>
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/The-Tribunal-600x750.webp" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">The Tribunal</h3>
+            </article>
+
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/herobg.webp" class="w-full aspect-[3/4] object-cover rounded" alt="A Mother’s Love" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist"> A Mother’s Love</h3>
+            </article>
+
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/Road Rogue.webp" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Road Rogue</h3>
+            </article>
+
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/ije.jpg" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Ije: The Journey</h3>
+            </article>
+
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/film5.webp" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Blood Sister</h3>
+            </article>
+
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/lastflight.webp" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Last Flight to Abuja</h3>
+            </article>
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/deseperatesister.jpg" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Desperate Sisters</h3>
+            </article>
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/shadowparty.webp" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Shadow Parties</h3>
+            </article>
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/film4.webp" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">Alter Ego</h3>
+            </article>
+            <article class="flex-shrink-0 snap-start w-[220px] sm:w-[260px] md:w-[300px] flex flex-col gap-4 slide-img">
+                <img src="public/The-Tribunal-600x750.webp" class="w-full aspect-[3/4] object-cover rounded" />
+                <h3 class="text-sm md:text-base font-semibold uppercase font-geist">The Tribunal</h3>
+            </article>
+          </div>
+          <a href="films.html" class="inline-flex md:hidden items-center justify-center px-8 py-3 bg-[#E19403] text-white text-sm md:text-base font-medium uppercase font-geist hover:bg-amber-600 transition">
+            View Films
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative w-full py-20 bg-[#0d0d0d] overflow-hidden">
+      <!-- Ambient light -->
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_#1f1f1f,_transparent_70%)] opacity-40"></div>
+
+      <div class="relative max-w-7xl mx-auto px-8">
+
+        <!-- Header -->
+        <header class="mb-20  text-center">
+          <span class="block mb-4 text-xs tracking-[0.35em] uppercase text-amber-400">
+            Cultural Impact
+          </span>
+          <h2 class="text-3xl md:text-5xl font-light text-white leading-tight font-geist">
+            Measuamber not in applause,  
+            <span class="text-zinc-400">but in influence.</span>
+          </h2>
+        </header>
+
+        <!-- Metrics Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 font-athelas">
+
+          <!-- Metric -->
+          <div class="group" data-aos="fade-up" data-aos-delay="100">
+            <p class="text-6xl md:text-7xl font-light text-white font-athelas">
+              300+
+            </p>
+            <div class="mt-4 h-px w-12 bg-zinc-700 group-hover:bg-amber-400 transition"></div>
+            <p class="mt-4 max-w-xs text-sm leading-relaxed text-zinc-400">
+              Film appearances across cinema, video-era classics,
+              and the modern streaming age.
+            </p>
+          </div>
+
+          <!-- Metric -->
+          <div class="group" data-aos="fade-up" data-aos-delay="100">
+            <p class="text-6xl md:text-7xl font-light text-white font-athelas">
+              30+
+            </p>
+            <div class="mt-4 h-px w-12 bg-zinc-700 group-hover:bg-amber-400 transition"></div>
+            <p class="mt-4 max-w-xs text-sm leading-relaxed text-zinc-400">
+              Years shaping the narrative and evolution of Nollywood
+              on the global stage.
+            </p>
+          </div>
+
+          <!-- Metric -->
+          <div class="group" data-aos="fade-up" data-aos-delay="100">
+            <p class="text-6xl md:text-7xl font-light text-white font-athelas">
+              <span class="font-geist">1</span>st
+            </p>
+            <div class="mt-4 h-px w-12 bg-zinc-700 group-hover:bg-amber-400 transition"></div>
+            <p class="mt-4 max-w-xs text-sm leading-relaxed text-zinc-400">
+              Nollywood actress named among
+              <span class="italic">TIME 100 Most Influential People.</span>
+            </p>
+          </div>
+
+          <!-- Metric -->
+          <div class="group" data-aos="fade-up" data-aos-delay="100">
+            <p class="text-6xl md:text-7xl font-light text-white font-athelas">
+              Global
+            </p>
+            <div class="mt-4 h-px w-12 bg-zinc-700 group-hover:bg-amber-400 transition"></div>
+            <p class="mt-4 max-w-xs text-sm leading-relaxed text-zinc-400">
+              Recognition from CNN, TIME, BBC, The Guardian,
+              and international film institutions.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full  py-20">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <!-- Header -->
+        <header class="mb-14 flex items-end justify-between">
+          <h2 class="text-white text-xl md:text-3xl font-semibold uppercase font-geist tracking-wide">
+            News
+          </h2>
+          <a href="news.html"
+            class="hidden md:inline-block text-sm uppercase tracking-wider text-amber-400 hover:opacity-70 transition font-geist">
+            View All <span><i class="fa-solid fa-arrow-right pl-2"></i></span>
+          </a>
+        </header>
+        <!-- News Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-y-20 gap-x-10 relative">
+          <span class="absolute -left-[7px] top-3 h-3 w-3 rounded-full bg-amber-400"></span>
+          <!-- News Card -->
+           
+          <li data-aos="fade-up" data-aos-delay="100"
+              class="press-item relative grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-8 pl-6 border-l border-zinc-800
+                    opacity-0 translate-y-16 scale-95
+                    transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]"
+            >
+            
+            <!-- Text Content -->
+            <div class="relative text-white">
+
+              <!-- Year -->
+              <span class="block mb-3 text-xs tracking-[0.35em] uppercase text-amber-400">
+                2013
+              </span>
+
+              <!-- Headline -->
+              <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist">
+                TIME 100 Most Influential People
+              </h3>
+
+              <!-- Description -->
+              <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
+                Omotola Jalade-Ekeinde is named among the world’s most influential individuals,
+                marking a historic moment of global recognition for Nollywood.
+              </p>
+
+              <!-- Quote -->
+              <blockquote
+                class="mt-6 pl-5 border-l-2 border-amber-400/70 italic text-zinc-200 max-w-2xl"
+              >
+                “Omotola is not just a movie star — she is a movement.”
+              </blockquote>
+
+              <!-- Link -->
+              <a
+                href="https://time100.time.com/2013/04/18/time-100/slide/omotola-jalade-ekeinde/"
+                target="_blank"
+                class="inline-flex items-center gap-2 mt-6 text-sm tracking-wide text-amber-400 hover:opacity-70 transition"
+              >
+                Read TIME feature
+                <span class="text-lg">→</span>
+              </a>
+            </div>
+
+            <!-- Image -->
+            <figure class="relative overflow-hidden rounded-lg group">
+              <img
+                src="public/2013_time100_jalade.webp"
+                alt="Omotola Jalade-Ekeinde TIME 100"
+                class="h-full w-full object-cover grayscale-0 md:grayscale group-hover:grayscale-0 transition duration-700 ease-out"
+              />
+
+              <!-- Soft cinematic overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0d0d0d]/40 via-[#0d0d0d]/10 to-transparent"></div>
+            </figure>
+
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="100"
+              class="press-item relative grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-8 pl-6 border-l border-zinc-800
+                    opacity-0 translate-y-16 scale-95
+                    transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]"
+            >
+
+            <!-- Text Content -->
+            <div class="relative text-white">
+
+              <!-- Year -->
+              <span class="block mb-3 text-xs tracking-[0.35em] uppercase text-amber-400">
+                2023
+              </span>
+
+              <!-- Headline -->
+              <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist capitalize line-clamp-2">
+                Young people must not argue with parents when choosing life partners – Omotola Jalade-Ekeinde
+              </h3>
+
+              <!-- Description -->
+              <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
+                Nigerian actress Omotola Jalade-Ekeinde has advised young people not to argue with their parents when it comes to the selection of their life partners.
+              </p>
+
+              <!-- Quote -->
+              <blockquote
+                class="mt-6 pl-5 border-l-2 border-amber-400/70 italic text-zinc-200 max-w-2xl"
+              >
+                “sometimes they don't see that because they are not in that generation”
+              </blockquote>
+
+              <!-- Link -->
+              <a
+                href="https://www.myjoyonline.com/young-people-must-not-argue-with-parents-when-choosing-life-partners-omotola-jalade-ekeinde/"
+                target="_blank"
+                class="inline-flex items-center gap-2 mt-6 text-sm tracking-wide text-amber-400 hover:opacity-70 transition"
+              >
+                Read Article
+                <span class="text-lg">→</span>
+              </a>
+            </div>
+
+            <!-- Image -->
+            <figure class="relative overflow-hidden rounded-lg group">
+              <img
+                src="/public/youungpeople.jpg"
+                alt="Omotola Jalade-Ekeinde TIME 100"
+                class="h-full w-full object-cover grayscale-0 md:grayscale group-hover:grayscale-0 transition duration-700 ease-out"
+              />
+
+              <!-- Soft cinematic overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0d0d0d]/40 via-[#0d0d0d]/10 to-transparent"></div>
+            </figure>
+
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="100"
+              class="press-item relative grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-8 pl-6 border-l border-zinc-800
+                    opacity-0 translate-y-16 scale-95
+                    transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]"
+            >
+
+            <!-- Text Content -->
+            <div class="relative text-white">
+
+              <!-- Year -->
+              <span class="block mb-3 text-xs tracking-[0.35em] uppercase text-amber-400">
+                2025
+              </span>
+
+              <!-- Headline -->
+              <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
+                Omotola Jalade stuns in sultry photos as she celebrate her 47th birthday
+              </h3>
+              <!-- Description -->
+              <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
+                It is Omotola Jalade‘s birthday today, and the star is giving us the gift of a truly jaw-dropping look.
+
+                The Nigerian actress shaamber a photo of her glamorous look she wore to celebrate her 47th birthday. The glamorous ensemble is comprised of a crisp white shirt casually unbuttoned to partly reveal her under-layeamber matching white camisole. She folded the sleeves of the shirt while sitting and posing like a supermodel.
+              </p>
+
+              <!-- Quote -->
+              <blockquote
+                class="mt-6 pl-5 border-l-2 border-amber-400/70 italic text-zinc-200 max-w-2xl"
+              >
+                “Grateful for life and God's plan”
+              </blockquote>
+
+              <!-- Link -->
+              <a
+                href="https://creebhills.com/2025/02/omotola-jalade-ekeinde-stuns-in-sultry"
+                target="_blank"
+                class="inline-flex items-center gap-2 mt-6 text-sm tracking-wide text-amber-400 hover:opacity-70 transition"
+              >
+                CREEBHILLS
+                <span class="text-lg">→</span>
+              </a>
+            </div>
+
+            <!-- Image -->
+            <figure class="relative overflow-hidden rounded-lg group">
+              <img
+                src="/public/birthday.jpg"
+                alt="Omotola Jalade-Ekeinde TIME 100"
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out"
+              />
+
+              <!-- Soft cinematic overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0d0d0d]/40 via-[#0d0d0d]/10 to-transparent"></div>
+            </figure>
+
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="100"
+              class="press-item relative grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-8 pl-6 border-l border-zinc-800
+                    opacity-0 translate-y-16 scale-95
+                    transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]"
+            >
+
+            <!-- Text Content -->
+            <div class="relative text-white">
+
+              <!-- Year -->
+              <span class="block mb-3 text-xs tracking-[0.35em] uppercase text-amber-400">
+                2025
+              </span>
+
+              <!-- Headline -->
+              <h3 class="text-2xl md:text-3xl font-light text-white leading-snug capitalize font-geist line-clamp-2">
+                No fork: Lovely moment as Omotola Jalade teaches Oyinbo man how to eat pounded yam
+              </h3>
+
+              <!-- Description -->
+              <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
+                Actress Omotola Jalade shaamber a fun moment teaching an Oyinbo man how to enjoy Nigerian food the traditional way
+              </p>
+
+              <!-- Quote -->
+              <blockquote
+                class="mt-6 pl-5 border-l-2 border-amber-400/70 italic text-zinc-200 max-w-2xl"
+              >
+                “That's one of our national treasures you have seated in your back seat❤️.”
+              </blockquote>
+
+              <!-- Link -->
+              <a
+                href="https://www.msn.com/en-xl/africa/nigeria/no-fork-lovely-moment-as-omotola-jalade-teaches-oyinbo-man-how-to-eat-pounded-yam/ar-AA1Ub9QI?ocid=BingNewsSerp"
+                target="_blank"
+                class="inline-flex items-center gap-2 mt-6 text-sm tracking-wide text-amber-400 hover:opacity-70 transition"
+              >
+                MSN
+                <span class="text-lg">→</span>
+              </a>
+            </div>
+
+            <!-- Image -->
+            <figure class="relative overflow-hidden rounded-lg group">
+              <img
+                src="/public/egusi.jpeg"
+                alt="Omotola Jalade-Ekeinde TIME 100"
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out"
+              />
+
+              <!-- Soft cinematic overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0d0d0d]/40 via-[#0d0d0d]/10 to-transparent"></div>
+            </figure>
+
+          </li>
+        </div>
+
+        <!-- Mobile CTA -->
+        <div class="mt-16 flex justify-center md:hidden">
+          <a
+            href="#"
+            class="px-8 py-4 bg-[#E19403] uppercase text-white text-sm font-medium font-geist hover:bg-amber-600 transition"
+          >
+            View All News
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section data-aos="fade-up" data-aos-duration="1200"
+      class="relative min-h-screen bg-gradient-to-br from-neutral-900 via-neutral-800 to-[#0d0d0d] overflow-hidden rounded-3xl animate-[float_6s_ease-in-out_infinite]">
+      <!-- ambient glow -->
+      <div class="absolute -top-32 -left-32 w-[500px] h-[500px] bg-orange-500/10 blur-[120px]"></div>
+      <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-sky-500/10 blur-[120px]"></div>
+
+      <div class="relative max-w-7xl mx-auto px-8 py-24 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+
+        <!-- LEFT CONTENT -->
+        <div class="space-y-10">
+
+          <img
+            src="public/esemunch.png"
+            alt="Brand Logo"
+            class="w-36 opacity-90"
+          />
+
+          <h1 class="font-['Athelas'] text-neutral-50 text-5xl md:text-7xl leading-[1.05] tracking-tight">
+            Your Favourite <br /> Meal App
+          </h1>
+
+          <p class="max-w-xl text-neutral-300 text-lg leading-relaxed">
+            Your favourite meal is only a single tap away, ready to be deliveamber
+            straight to your doorstep. Order now and experience food the modern way.
+          </p>
+
+          <!-- Store Buttons -->
+          <div class="flex items-center gap-6 pt-4">
+            <img
+              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+              class="h-11 opacity-90 hover:opacity-100 hover:scale-105 transition"
+              alt="App Store"
+            />
+            <img
+              src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+              class="h-16 hover:scale-105 transition"
+              alt="Google Play"
+            />
+          </div>
+        </div>
+
+        <!-- RIGHT MOCKUP -->
+        <div class="relative flex justify-center">
+
+          <!-- phone glow -->
+          <div class="absolute inset-0 flex justify-center">
+            <div class="w-[280px] h-[600px] bg-[#0d0d0d]/40 blur-[80px]"></div>
+          </div>
+
+          <!-- phone frame -->
+          <div class="relative w-full h-full rounded-[60px] overflow-hidden">
+            <img
+              src="public/ses.PNG"
+              alt="App Screenshot"
+              class="w-4/5 h-1/2 object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative flex flex-col justify-center items-center px-4 py-10 bg-[#0d0d0d] space-y-10 overflow-hidden">
+      <!-- subtle background texture -->
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0d0d0d]/40 via-transparent to-[#0d0d0d]/40 pointer-events-none"></div>
+
+      <h2 class="uppercase font-geist font-medium text-sm md:text-base tracking-[0.35em] text-zinc-300">
+        Explore Brands
+      </h2>
+
+      <div class="relative flex justify-center items-center gap-x-10 md:gap-x-20">
+
+        <!-- Brand -->
+        <div class="group transition-all duration-700 ease-out">
+          <img
+            src="/public/oyep.webp"
+            class="w-[90px] md:w-[150px] h-auto grayscale opacity-70 
+                  group-hover:grayscale-0 group-hover:opacity-100 
+                  group-hover:scale-105 transition-all duration-700 ease-out"
+            alt="OYEP"
+          />
+        </div>
+
+        <!-- Brand (hero logo) -->
+        <div class="group transition-all duration-700 ease-out ">
+          <img
+            src="/public/teffest.webp"
+            class="w-[120px] md:w-[280px] h-auto grayscale opacity-80 object-center
+                  group-hover:grayscale-0 group-hover:opacity-100 
+                  group-hover:scale-105 transition-all duration-700 ease-out"
+            alt="TEFFEST"
+          />
+        </div>
+
+        <!-- Brand -->
+        <div class="group transition-all duration-700 ease-out">
+          <img
+            src="/public/galg.webp"
+            class="w-[90px] md:w-[150px] h-auto grayscale opacity-70 
+                  group-hover:grayscale-0 group-hover:opacity-100 
+                  group-hover:scale-105 transition-all duration-700 ease-out"
+            alt="GALG"
+          />
+        </div>
+
+      </div>
+    </section>
+
+    <section class="relative w-full py-20 bg-[#0d0d0d]">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Header -->
+        <header class="mb-16 text-center">
+          <span class="block mb-4 text-xs tracking-[0.35em] uppercase text-amber-500">
+            Global Recognition
+          </span>
+          <h2 class="text-2xl md:text-4xl font-light text-white leading-snug font-geist">
+            Institutions that have  
+            <span class="text-zinc-400">amplified her voice.</span>
+          </h2>
+        </header>
+
+        <!-- Logos -->
+        <ul class="grid grid-cols-2 text-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-12 gap-y-10 items-center">
+
+          <!-- TIME -->
+          <li data-aos="fade-up" data-aos-delay="100" class="flex items-center justify-center opacity-60 hover:opacity-100 transition group">
+            <img src="/public/TIME_logo_PNG_(1).png" alt="TIME Magazine" class=" w-full grayscale-0 md:grayscale group-hover:grayscale-0 transition" />
+          </li>
+
+          <!-- CNN -->
+          <li data-aos="fade-up" data-aos-delay="100" class="flex items-center justify-center opacity-60 hover:opacity-100 transition group">
+            <img src="/public/CNN_(7).png" alt="CNN" class=" w-full grayscale-0 md:grayscale group-hover:grayscale-0  transition" />
+          </li>
+
+          <!-- BBC -->
+          <li data-aos="fade-up" data-aos-delay="100" class="flex items-center justify-center opacity-60 hover:opacity-100 transition group">
+            <img src="/public/BBC_(10).png" alt="BBC" class=" w-full grayscale-0 md:grayscale group-hover:grayscale-0 transition" />
+          </li>
+
+          <!-- The Guardian -->
+          <li data-aos="fade-up" data-aos-delay="100" class="flex items-center justify-center opacity-60 hover:opacity-100 transition group">
+            <img src="/public/The_Guardian_logo_PNG_(10).png" alt="The Guardian" class=" w-full grayscale-0 md:grayscale group-hover:grayscale-0 transition" />
+          </li>
+
+          <!-- Netflix -->
+          <li data-aos="fade-up" data-aos-delay="100" class="flex items-center justify-center opacity-50 hover:opacity-100 transition group">
+            <img src="/public/Netflix-Logo.png" alt="Netflix" class="w-full grayscale-0 md:grayscale group-hover:grayscale-0 transition" />
+          </li>
+
+          <!-- Amazon Prime -->
+          <li data-aos="fade-up" data-aos-delay="100" class="flex  items-center justify-center opacity-50 hover:opacity-100 transition group">
+            <img src="/public/Amazon-Prime-Video-Logo.png" alt="Amazon Prime Video" class=" w-full object-cover grayscale-0 md:grayscale group-hover:grayscale-0 transition" />
+          </li>
+
+          <!-- TIFF -->
+          <!-- <li data-aos="fade-up" data-aos-delay="100" class="flex items-center justify-center opacity-50 hover:opacity-100 transition">
+            <img src="/public/logos/tiff.svg" alt="Toronto International Film Festival" class="w-full grayscale" />
+          </li> -->
+
+          <!-- AMAA -->
+          <!-- <li data-aos="fade-up" data-aos-delay="100" class="flex items-center justify-center opacity-50 hover:opacity-100 transition">
+            <img src="/public/logos/amaa.svg" alt="Africa Movie Academy Awards" class="h-7 grayscale" />
+          </li> -->
+
+          <!-- AMVCA -->
+          <!-- <li data-aos="fade-up" data-aos-delay="100" class="flex items-center justify-center opacity-50 hover:opacity-100 transition">
+            <img src="/public/logos/amvca.svg" alt="Africa Magic Viewer's Choice Awards" class="h-7 grayscale" />
+          </li> -->
+
+          <!-- BEFFTA -->
+          <!-- <li data-aos="fade-up" data-aos-delay="100" class="flex items-center justify-center opacity-50 hover:opacity-100 transition">
+            <img src="/public/logos/beffta.svg" alt="BEFFTA Awards" class="h-7 grayscale" />
+          </li> -->
+
+        </ul>
+
+        <!-- Footnote -->
+        <p class="mt-16 max-w-2xl text-xs text-zinc-500 italic">
+          Recognition spans international media, film institutions, and global streaming platforms.
+        </p>
+
+      </div>
+    </section>
+  
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 py-20">
+      <header class="flex justify-between itemw-center">
+        <h2 class="text-xl md:text-3xl font-semibold uppercase font-geist tracking-wide">
+          Career Milestones: The Iconic Timeline
+        </h2>
+        <a href="legacy.html"
+            class="hidden md:inline-block text-sm uppercase tracking-wider text-amber-400 hover:opacity-70 transition font-geist">
+            View All <span><i class="fa-solid fa-arrow-right pl-2"></i></span>
+          </a>
+      </header>
+
+      <div class="bg-[#252423]  border-neutral-100 rounded-sm">
+            <div class=" overflow-y-auto scroll-smooth p-6 md:p-10 no-scrollbar scrollbar-hide">
+              <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10">
+                <ol class="space-y-6">
+                  <li class="space-y-4 group cursor-default">
+                    <article class="flex gap-6">
+                      <time class="w-16 shrink-0 group-hover:text-[#B98E3E] text-[#C6BEAD] text-xs font-semibold uppercase">
+                        1995
+                      </time>
+                      <p class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold font-athelas uppercase leading-snug">
+                        The Debut: Enters Nollywood with her first film, Venom of Justice.
+                      </p>
+                    </article>
+                    <hr class="border-neutral-200" />
+                  </li>
+
+                  <li class="space-y-4 group cursor-default">
+                    <article class="flex gap-6">
+                      <time class="w-16 shrink-0 group-hover:text-[#B98E3E] text-[#C6BEAD] text-xs font-semibold uppercase">
+                        1996
+                      </time>
+                      <p class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold font-athelas uppercase leading-snug">
+                        The Breakthrough: Stars in the critically acclaimed Mortal Inheritance. Wins Best Actress Overall at THEMA 1997.
+                      </p>
+                    </article>
+                    <hr class="border-neutral-200" />
+                  </li>
+
+                  <li class="space-y-4 group cursor-default">
+                    <article class="flex gap-6">
+                      <time class="w-16 shrink-0 group-hover:text-[#B98E3E] text-[#C6BEAD] text-xs font-bold uppercase">
+                        2003
+                      </time>
+                      <p class="group-hover:text-[#B98E3E] text-[#C6BEAD] text-lg md:text-2xl font-bold font-athelas uppercase leading-snug">
+                        The Dominance: Cemented as a major force with blockbuster hits like Blood Sisters.
+                      </p>
+                    </article>
+                    <hr class="border-neutral-200" />
+                  </li>
+                </ol>
+
+                <!-- Sticky Side Image -->
+                <figure class="hidden lg:block w-56 border border-gray-200 bg-white p-3 sticky top-6 self-start">
+                  <img
+                    src="public/film4.webp"
+                    alt="Career milestone visual"
+                    class="w-full h-auto object-cover"
+                  />
+                </figure>
+              </div>
+        </div>
+      </div>
+
+      <div class="mt-16 flex justify-center md:hidden">
+          <a
+            href="#"
+            class="px-8 py-4 bg-[#E19403] uppercase text-white text-sm font-medium font-geist hover:bg-amber-600 transition"
+          >
+            View Legacy
+          </a>
+        </div>
+    </section>
+
+    <section class="relative w-full py-40 bg-[#0d0d0d] overflow-hidden">
+      <!-- Atmospheric background -->
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_#1a1a1a,_transparent_65%)] opacity-40"></div>
+      <div class="pointer-events-none absolute inset-0 bg-[url('/grain.png')] opacity-[0.06] mix-blend-overlay"></div>
+
+      <div
+        data-aos="fade-up"
+        class="relative max-w-5xl mx-auto px-6 text-center space-y-10"
+      >
+
+        <!-- Subtle preface -->
+        <span class="block text-xs uppercase tracking-[0.45em] text-amber-400 font-geist">
+          The Work Continues
+        </span>
+
+        <!-- Statement -->
+        <h2
+          class="text-3xl md:text-5xl lg:text-6xl font-light leading-tight tracking-tight text-white font-geist"
+        >
+          We are not here to chase attention.
+          <br />
+          <span class="text-amber-400">
+            We are here to build legacy.
+          </span>
+        </h2>
+
+        <!-- Divider -->
+        <div class="mx-auto h-px w-28 bg-zinc-700"></div>
+
+        <!-- Supporting line -->
+        <p class="max-w-3xl mx-auto text-zinc-400 text-lg md:text-xl leading-relaxed font-geist">
+          Through structure, ownership, and uncompromising craft,
+          amberhot Concepts exists to ensure African stories are not
+          merely seen — but remembeamber, respected, and preserved
+          for generations.
+        </p>
+
+        <!-- Signature -->
+        <p class="pt-8 text-sm uppercase tracking-[0.4em] text-zinc-500 font-geist">
+          amberhot Concepts
+        </p>
+
+      </div>
+    </section>
+
+    <section class="bg-white text-[#0D0D0D] scroll-mt-20" id="contact">
+      <div class="max-w-7xl mx-auto px-6 py-8 space-y-24">
+        <header class="space-y-10">
+          <h2 class=" text-xl font-semibold uppercase font-geist">
+            Contact
+          </h2>
+
+          <form class="space-y-12">
+            <fieldset class="grid grid-cols-1 md:grid-cols-2 gap-10">
+              
+              <label class="flex flex-col gap-3">
+                <input
+                  type="text" placeholder="Enter Name"
+                  class="bg-transparent border-b py-2 border-zinc-600 focus:outline-none focus:border-white transition placeholder:text-neutral-500"
+                />
+              </label>
+
+              <label class="flex flex-col gap-3">
+                <input
+                  type="email" placeholder="Enter Email Address"
+                  class="bg-transparent border-b py-2 border-zinc-600 focus:outline-none focus:border-white transition placeholder:text-neutral-500"
+                />
+              </label>
+
+            </fieldset>
+
+            <label class="flex flex-col gap-3">
+              <textarea
+                rows="1" placeholder="Your Message"
+                class="bg-transparent border-b py-2 border-zinc-600 resize-none focus:outline-none focus:border-white transition placeholder:text-neutral-500"
+              ></textarea>
+            </label>
+
+            <button
+              type="submit"
+              class="inline-flex items-center gap-x-4 bg-[#0D0D0D] text-white px-8 py-3 uppercase font-medium font-geist hover:bg-[#0d0d0d] transition"
+            >
+              Send
+              <span aria-hidden><i class="fa-solid fa-arrow-right"></i></span>
+            </button>
+          </form>
+        </header>
+
+        <!-- BRAND + FOOTER -->
+        <footer class="space-y-16">
+
+          <!-- Brand -->
+          <h1 class="text-center text-[#E2C75A] font-bold font-athelas text-5xl sm:text-7xl md:text-7xl lg:text-[7.5rem] uppercase">
+            Redhot Concepts
+          </h1>
+
+          <!-- Footer Info -->
+          <div class="flex flex-col md:flex-row justify-between gap-12 font-geist">
+
+            <!-- Socials -->
+            <nav aria-label="Social media links" class="space-y-4">
+              <h3 class="text-sm font-semibold uppercase text-[#171717]">
+                Socials
+              </h3>
+              <ul class="flex items-center gap-10 text-2xl text-[#0D0D0D]">
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" aria-label="Imdb"><i class="fa-brands fa-imdb"></i></a></li>
+                <li><a href="#" aria-label="Wikipedia"><i class="fa-brands fa-wikipedia-w"></i></a></li>
+              </ul>
+            </nav>
+
+            <!-- Email -->
+            <address class="not-italic text-right space-y-4 flex flex-col">
+              <p class="text-sm font-semibold uppercase text-[#171717]">
+                Email
+              </p>
+              <a
+                href="mailto:hello@amberhotconcept.com"
+                class="text-xl font-inter hover:underline"
+              >
+                hello@amberhotconcept.com
+              </a>
+            </address>
+
+          </div>
+        </footer>
+
+      </div>
+    </section>
+
+
+ <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true, 
+        });
+    </script>
+
+    <script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navbar = document.getElementById('navbar');
+
+  let open = false;
+
+  menuBtn.addEventListener('click', () => {
+    open = !open;
+
+    if (open) {
+      navbar.style.maxHeight = '480px';
+    } else {
+      navbar.style.maxHeight = '70px'; 
+    }
+    menuBtn.innerHTML = open
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+  });
+
+</script>
+
+
+
+  <script>
+  const items = document.querySelectorAll(".press-item");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove(
+            "opacity-0",
+            "translate-y-16",
+            "scale-95"
+          );
+          entry.target.classList.add(
+            "opacity-100",
+            "translate-y-0",
+            "scale-100"
+          );
+        }
+      });
+    },
+    { threshold: 0.25 }
+  );
+
+  items.forEach(item => observer.observe(item));
+</script>
+
+<script>
+  const btn = document.getElementById('othersBtn');
+  const dropdown = document.getElementById('othersDropdown');
+
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('opacity-0');
+    dropdown.classList.toggle('invisible');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.classList.add('opacity-0', 'invisible');
+    }
+  });
+</script>
+
+<script>
+  const toggle = document.getElementById('othersToggle');
+  const accordion = document.getElementById('othersAccordion');
+  const icon = document.getElementById('othersIcon');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = accordion.style.maxHeight;
+
+    if (isOpen) {
+      accordion.style.maxHeight = null;
+      icon.classList.remove('rotate-180');
+    } else {
+      accordion.style.maxHeight = accordion.scrollHeight + 'px';
+      icon.classList.add('rotate-180');
+    }
+  });
+</script>
+
+<script>
+  const track = document.getElementById("marqueeTrack");
+  const togglePlayBtn = document.getElementById("togglePlay");
+  const moveLeftBtn = document.getElementById("moveLeft");
+  const moveRightBtn = document.getElementById("moveRight");
+
+  let isPlaying = true;
+  let direction = -1; 
+  let speed = 0.6;
+  let position = 0;
+
+  function animate() {
+    if (isPlaying) {
+      position += speed * direction;
+
+      // seamless loop
+      if (Math.abs(position) >= track.scrollWidth / 2) {
+        position = 0;
+      }
+
+      track.style.transform = `translateX(${position}px)`;
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  togglePlayBtn.addEventListener("click", () => {
+    isPlaying = !isPlaying;
+    togglePlayBtn.innerHTML = isPlaying
+      ? `<i class="fa-solid fa-pause"></i>`
+      : `<i class="fa-solid fa-play"></i>`;
+  });
+
+  moveLeftBtn.addEventListener("click", () => {
+    direction = -1;
+  });
+
+  moveRightBtn.addEventListener("click", () => {
+    direction = 1;
+  });
+</script>
+
+<script>
+  const quotes = [
+    {
+      text: `“I don’t want to be remembeamber as famous —
+        <span class="text-amber-400">I want to be remembeamber as impactful.</span>”`,
+      author: "Omotola Jalade-Ekeinde",
+    },
+    {
+      text: `“Storytelling is power.
+        <span class="text-amber-400">When used well, it changes culture.</span>”`,
+      author: "Omotola Jalade-Ekeinde",
+    },
+    {
+      text: `“Africa does not need permission to be seen —
+        <span class="text-amber-400">we need platforms.</span>”`,
+      author: "Omotola Jalade-Ekeinde",
+    },
+    {
+      text: `“Legacy is not built on applause,
+        <span class="text-amber-400">but on contribution.</span>”`,
+      author: "Omotola Jalade-Ekeinde",
+    }
+  ];
+
+  const quoteText = document.getElementById("quoteText");
+  const quoteAuthor = document.getElementById("quoteAuthor");
+
+  let index = 0;
+
+  setInterval(() => {
+    // Animate out
+    quoteText.classList.add("opacity-0", "translate-y-6");
+    quoteAuthor.classList.add("opacity-0");
+
+    setTimeout(() => {
+      index = (index + 1) % quotes.length;
+
+      quoteText.innerHTML = quotes[index].text;
+      quoteAuthor.textContent = quotes[index].author;
+
+      // Animate in
+      quoteText.classList.remove("opacity-0", "translate-y-6");
+      quoteAuthor.classList.remove("opacity-0");
+    }, 600);
+
+  }, 4000);
+</script>
+</body>
+</html>
