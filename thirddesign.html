@@ -4,318 +4,181 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/c4993cb090.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="./output.css">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <title>Omotola</title>
 </head>
-<body class="bg-[#0D0D0D] text-white">
-    <div class="h-screen relative  from-black/90  to-black/60  bg-no-repeat bg-cover bg-[center_30%] bg-[url('public/emotymotherlove.png')]"
-    style="
-    background-image: url('public/emotymotherlove.png');
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-  ">
-        <div class="absolute inset-0 bg-gradient-to-t 
-              from-black/90 via-black/60 to-black/10">
-  </div>
-         <header class="fixed top-2 left-0 w-full z-50 px-4 md:px-10 font-geist">
-        <div
-            id="navbar"
-            class="bg-zinc-900/90 backdrop-blur-md rounded-lg
-                outline outline-1 outline-orange-300/10
-                transition-[max-height] duration-500 ease-in-out overflow-hidden md:overflow-visible max-h-[70px] md:max-h-[95px]">
-
-            <div class="flex justify-between items-center px-4">
-                <a href="index.html">
-                    <img src="/public/img124.webp" class="w-12 md:w-16" />
-                </a>
-
-                <button id="menuBtn" class="md:hidden text-white text-2xl">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-
-                <nav class="hidden md:flex text-sm">
-                    <ul class="flex items-center text-white gap-10 uppercase">
-                        <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="films.html">Films</a></li>
-                        <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="news.html">News</a></li>
-                        <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="legacy.html">30 Years legacy</a></li>
-                        <li class="relative group">
-                            <a class="hover:text-orange-300 transition-all duration-200 flex items-center gap-2" 
-                                id="othersBtn" 
-                                aria-expanded="false"
-                                href="#">Others <span class="text-sm pl-2"><i class="fa-solid fa-chevron-down"></i></span>
-                            </a>
-                            <div
-                                id="othersDropdown"
-                                class="absolute top-full mt-4 left-2/5 -translate-x-1/2 w-[230px] px-5 py-5 rounded-xl outline outline-4 outline-orange-300 bg-zinc-900/90
-                                    backdrop-blur-xl border border-orange-300 shadow-[0_8px_32px_rgba(0,0,0,0.35)] invisible group-hover:opacity-100 group-hover:visible
-                                    transition-all duration-300 z-[999px]">
-                                <div class="relative text-neutral-50 text-base font-normal font-poppins leading-relaxed">
-                                    <a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 transition-all duration-200">OYEP</a>  <br><br>
-                                    <a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 transition-all duration-200">OSEAL</a>  <br><br>
-                                    <a href="https://www.teffest.com/" class="hover:text-orange-300 transition-all duration-200">TEFFEST</a> <br><br>
-                                    <a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 transition-all duration-200">DOUBLE DOORS</a>
+<body class="bg-[#0d0d0d] text-white">
+    <div>
+        <header class="= fixed w-full z-50 top-0 bg-[#0d0d0d]/80 text-white px-4 md:px-6 shadow-sm font-geist font-normal mb-20">
+            <div id="navbar" class="">
+                <div class="flex justify-between items-center px-4">
+                    <a href="index.html">
+                        <img src="/public/img124.webp" class="w-10 md:w-10 text-[#0D0D0D]"/>
+                    </a>
+    
+                    <button id="menuBtn" class="md:hidden text-amber-500 text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+    
+                    <nav class="hidden md:flex text-sm">
+                        <ul class="flex items-center text-white gap-10 uppercase">
+                            <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="films.html">Films</a></li>
+                            <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="news.html">News</a></li>
+                            <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="legacy.html">30 Years legacy</a></li>
+                            <li class="relative group">
+                                <a class="hover:text-orange-300 transition-all duration-200 flex items-center gap-2" 
+                                    id="othersBtn" 
+                                    aria-expanded="false"
+                                    href="#">Others <span class="text-sm pl-2"><i class="fa-solid fa-chevron-down"></i></span>
+                                </a>
+                                <div
+                                    id="othersDropdown"
+                                    class="absolute top-full mt-4 left-[-130px] -translate-x-1/2 w-[430px] px-2 py-2 rounded-3xl bg-white shadow-[0_8px_32px_rgba(0,0,0,0.35)] invisible group-hover:visible
+                                        transition-all duration-300 z-[999px]">
+                                    <ul class="relative text-stone-500 text-base font-normal font-geist leading-relaxed">
+                                      <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
+                                        <a href="https://amber-hot.vercel.app/Oyep.html" class="hover:text-orange-300 px-4 transition-all duration-200">OYEP</a>  <br><br>
+                                      </li>
+                                      <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
+                                        <a href="https://amber-hot.vercel.app/Oseal.html" class="hover:text-orange-300 px-4 transition-all duration-200">OSEAL</a>  <br><br>
+                                      </li>
+                                      <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
+                                        <a href="https://www.teffest.com/" class="hover:text-orange-300 px-4 transition-all duration-200">TEFFEST</a>  <br><br>
+                                      </li>
+                                      <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
+                                        <a href="https://amber-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 px-4 transition-all duration-200">DOUBLE DOORS</a>  <br><br>
+                                      </li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="about.html">About</a></li>
-                        <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="contact.html">Contact</a></li>
+                            </li>
+                            <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="about.html">About</a></li>
+                            <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+    
+                <nav id="mobileMenu" class="hidden text-white pb-6 h-full ease-out transition-all duration-300">
+                    <ul class="flex flex-col  gap-y-3 uppercase p-6 text-white">
+                      <li class=""><a href="films.html" class="hover:text-orange-300 transition-all ease-out duration-200">Films</a></li>
+                      <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="news.html">News</a></li>
+                      <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="legacy.html">30 Years legacy</a></li>
+                      <li class=""><button class="hover:text-orange-300 transition-all ease-out duration-200" id="othersToggle">OTHERS <span class="text-sm"><i id="othersIcon" class="fa-solid fa-chevron-down transition-transform duration-300"></i></span></button>
+                          <ul
+                              id="othersAccordion"
+                              class="mt-1 ml-4 space-y-3 text-sm
+                                  max-h-0 overflow-hidden
+                                  transition-all duration-300"
+                          >
+                              <li><a href="https://amber-hot.vercel.app/Oyep.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">OYEP</a></li>
+                              <li><a href="https://amber-hot.vercel.app/Oseal.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">OSEAL</a></li>
+                              <li><a href="https://www.teffest.com/" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">TEFFEST</a></li>
+                              <li><a href="https://amber-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">Double Doors</a></li>
+                          </ul>
+                      </li>
+                      <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="about.html">About</a></li>
+                      <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
-
-            <nav id="mobileMenu" class="md:hidden px-4 pb-6 h-full">
-                <ul class="flex flex-col text-white gap-y-3 uppercase p-6 border-t border-orange-300/10">
-                        <li class=""><a href="films.html" class="hover:text-orange-300 transition-all ease-out duration-200">Films</a></li>
-                        <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="news.html">News</a></li>
-                        <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="legacy.html">30 Years legacy</a></li>
-                        <li class=""><button class="hover:text-orange-300 transition-all ease-out duration-200" id="othersToggle">OTHERS <span class="text-sm"><i id="othersIcon" class="fa-solid fa-chevron-down transition-transform duration-300"></i></span></button>
-                            <ul
-                                id="othersAccordion"
-                                class="mt-1 ml-4 space-y-3 text-sm
-                                    max-h-0 overflow-hidden
-                                    transition-all duration-300"
-                            >
-                                <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">OYEP</a></li>
-                                <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">OSEAL</a></li>
-                                <li><a href="https://www.teffest.com/" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">TEFFEST</a></li>
-                                <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">Double Doors</a></li>
-                            </ul>
-                        </li>
-                        <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="about.html">About</a></li>
-                        <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header> 
-        <div class="relative z-10 h-full w-full flex items-end py-10 md:pl-10 pl-5">
-            <div class="flex justify-between w-full gap-10">
-
-                <!-- LEFT -->
-                <div class="space-y-7 animate-fadeUp opacity-0 font-inter">
-                <h1 class="md:text-[60px] sm:text-[40px] text-[30px] font-semibold leading-none">
-                    A MOTHER’S LOVE
-                </h1>
-
-                <div class="flex items-center gap-3">
-                    <i class="fa-solid fa-star text-amber-300"></i>
-                    <p>9.2 | 1055</p>
-
-                    <div class="ml-3 px-5 py-2 flex items-center gap-3 text-sm rounded-full bg-white/10 backdrop-blur-md border border-white/20">
-                    <span>1h 42m</span>
-                    <span class="opacity-60">•</span>
-                    <span>Family, Drama</span>
-                    <span class="opacity-60">•</span>
-                    <span>2025</span>
-                    </div>
-                </div>
-
-                <p class="text-sm opacity-90 animate-fadeUp delay-200">
-                    Next showing Today 3:15pm at B & B Omaha Oakview Plaza 14
-                </p>
-
-                <button
-                    class="animate-fadeUp delay-300 bg-[#E7B005] hover:bg-amber-500 transition-all duration-300 hover:scale-105 px-6 py-3 rounded-md shadow-lg"
-                >
-                    More Details
-                </button>
-                </div>
-
-                <!-- RIGHT -->
-                <div class="w-[45%] md:block hidden space-y-6 font-archivo animate-fadeUp delay-500 opacity-0">
-                <div class="w-full">
-                            <h4 class="text-white font-medium text-xl mb-3">Posters</h4>
-
-                            <div
-                                class="group relative flex gap-4 overflow-x-scroll 
-                                    whitespace-nowrap w-full scroll-smooth scrollbar-hide"
-                            >
-                                <img
-                                    src="public/herobg.webp"
-                                    class="
-                                        w-36 h-20 flex-none object-cover rounded-lg
-                                        ring-1 ring-white/10 object-[center_0%]
-                                        shadow-[0_20px_40px_rgba(0,0,0,0.6)]
-                                        transition-all duration-500 ease-out
-                                        hover:scale-110
-                                        hover:-translate-y-1
-                                        hover:ring-[#E7B005]
-                                        hover:shadow-[0_30px_60px_rgba(231,176,5,0.35)]
-                                    "
-                                    />
-
-                                    <img
-                                        src="public/1.png"
-                                        class="
-                                        w-36 h-20 flex-none object-cover object-[center_0%] rounded-lg
-                                            ring-1 ring-white/10
-                                            shadow-[0_20px_40px_rgba(0,0,0,0.6)]
-                                            transition-all duration-500 ease-out
-                                            hover:scale-110
-                                            hover:-translate-y-1
-                                            hover:ring-[#E7B005]
-                                            hover:shadow-[0_30px_60px_rgba(231,176,5,0.35)]
-                                        "
-                                        />
-
-                                        <img
-                                        src="public/1.png"
-                                        class="
-                                        w-36 h-20 flex-none object-cover object-[center_0%] rounded-lg
-                                            ring-1 ring-white/10
-                                            shadow-[0_20px_40px_rgba(0,0,0,0.6)]
-                                            transition-all duration-500 ease-out
-                                            hover:scale-110
-                                            hover:-translate-y-1
-                                            hover:ring-[#E7B005]
-                                            hover:shadow-[0_30px_60px_rgba(231,176,5,0.35)]
-                                        "
-                                        />
-                                        <img
-                                        src="public/1.png"
-                                        class="
-                                        w-36 h-20 flex-none object-cover object-[center_0%] rounded-lg
-                                            ring-1 ring-white/10
-                                            shadow-[0_20px_40px_rgba(0,0,0,0.6)]
-                                            transition-all duration-500 ease-out
-                                            hover:scale-110
-                                            hover:-translate-y-1
-                                            hover:ring-[#E7B005]
-                                            hover:shadow-[0_30px_60px_rgba(231,176,5,0.35)]
-                                        "
-                                        />
-                                        <img
-                                        src="public/1.png"
-                                        class="
-                                        w-36 h-20 flex-none object-cover object-[center_0%] rounded-lg
-                                            ring-1 ring-white/10
-                                            shadow-[0_20px_40px_rgba(0,0,0,0.6)]
-                                            transition-all duration-500 ease-out
-                                            hover:scale-110
-                                            hover:-translate-y-1
-                                            hover:ring-[#E7B005]
-                                            hover:shadow-[0_30px_60px_rgba(231,176,5,0.35)]
-                                        "
-                                        />
-                                        <img
-                                        src="public/2.png"
-                                        class="
-                                            w-36 h-20 flex-none object-cover object-[center_110%] rounded-lg
-                                            ring-1 ring-white/10
-                                            shadow-[0_20px_40px_rgba(0,0,0,0.6)]
-                                            transition-all duration-500 ease-out
-                                            hover:scale-110
-                                            hover:-translate-y-1
-                                            hover:ring-[#E7B005]
-                                            hover:shadow-[0_30px_60px_rgba(231,176,5,0.35)]
-                                        "
-                                        />
-
-                                        
-
-                                        <img
-                                        src="public/3aa.jpg"
-                                        class="
-                                        w-36 h-20 flex-none object-cover  rounded-lg
-                                            ring-1 ring-white/10
-                                            shadow-[0_20px_40px_rgba(0,0,0,0.6)]
-                                            transition-all duration-500 ease-out
-                                            hover:scale-110
-                                            hover:-translate-y-1
-                                            hover:ring-[#E7B005]
-                                            hover:shadow-[0_30px_60px_rgba(231,176,5,0.35)]
-                                        "
-                                        />
-                            </div>
-                        </div>
-
-                <!-- Cast -->
-                <div class="space-y-4 text-white">
-                            <h4 class="text-white font-medium text-xl leading-none tracking-wide">
-                                Top Cast
-                            </h4>
-
-                            <div class="flex flex-wrap">
-                                <!-- Cast Item -->    
-                                <div
-                                class="group relative text-center flex items-center flex-col"
-                                >
-                                <img
-                                    src="public/i1.png"
-                                    alt=""
-                                    class="
-                                    w-14 h-14 rounded-full object-cover
-                                    ring-2 ring-white/10
-                                    transition-all duration-300
-                                    group-hover:scale-110
-                                    group-hover:ring-[#E7B005]
-                                    "
-                                />
-                                <span class="text-xs tracking-wider w-20  mt-2">Omotola Jalade-Ekeinde</span>
-                                <!-- glow -->
-                                <div
-                                    class="
-                                    absolute inset-0 rounded-full
-                                    bg-[#E7B005]/30 blur-md opacity-0
-                                    group-hover:opacity-100
-                                    transition-opacity duration-300
-                                    -z-10
-                                    "
-                                ></div>
-                                </div>
-
-                                <!-- duplicate cast items -->
-                                <div class="group relative flex-shrink-0  text-center  flex items-center flex-col">
-                                <img src="public/i2.png" class="w-14 h-14 rounded-full object-[center_10%] object-cover ring-2 ring-white/10 transition-all duration-300 group-hover:scale-110 group-hover:ring-[#E7B005]" />
-                                <span class="text-xs tracking-wider  w-20 mt-2">Olumide  Oworu</span>
-                                <div class="absolute inset-0 rounded-full bg-[#E7B005]/30 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-                                </div>
-
-                                <div class="group relative flex-shrink-0  text-center  flex items-center  flex-col">
-                                <img src="public/i3.png" class="w-14 h-14 rounded-full object-cover ring-2 ring-white/10 transition-all duration-300 group-hover:scale-110 group-hover:ring-[#E7B005]" />
-                                <span class="text-xs tracking-wider w-20 mt-2">Noray Nehita</span>
-                                <div class="absolute inset-0 rounded-full bg-[#E7B005]/30 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-                                </div>
-
-                                <div class="group relative flex-shrink-0  text-center  flex items-center  flex-col">
-                                <img src="public/i4.png" class="w-14 h-14 rounded-full object-cover ring-2 ring-white/10 transition-all duration-300 group-hover:scale-110 group-hover:ring-[#E7B005]" />
-                                <span class="text-xs tracking-wider mt-2 w-20">Nosa Rex</span>
-                                <div class="absolute inset-0 rounded-full bg-[#E7B005]/30 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-                                </div>
-
-                                <div class="group relative flex-shrink-0  text-center  flex items-center  flex-col">
-                                <img src="public/i5.png" class="w-14 h-14 bg-white object-[center_10%] rounded-full object-cover ring-2 ring-white/10 transition-all duration-300 group-hover:scale-110 group-hover:ring-[#E7B005]" />
-                                <span class="text-xs tracking-wider w-20 mt-2">Ifeanyi Kalu</span>
-                                <div class="absolute inset-0 rounded-full bg-[#E7B005]/30 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-                                </div>
-
-                                <!-- View All -->
-                                <a
-                                href="details.html"
-                                class="
-                                    ml-2 mt-2 flex-shrink-0
-                                    px-4 h-9
-                                    inline-flex items-center justify-center
-                                    rounded-full
-                                    text-sm font-medium
-                                    text-white
-                                    bg-[#E7B005]
-                                    hover:bg-amber-500
-                                    transition-all duration-300
-                                    hover:scale-105
-                                    shadow-lg shadow-black/30
-                                "
-                                >
-                                View all →
-                                </a>
-                            </div>
-                        </div>
-
-                </div>
-            </div>
-        </div>
+        </header> 
     </div>
+
+    <section class="relative h-screen min-h-[600px]">
+            <!-- Slides -->
+            <ul id="hero-slides" class="h-full w-full relative">
+            
+            <!-- VIDEO SLIDE -->
+            <li class="hero-slide active">
+                <video
+                class="absolute inset-0 w-full h-full object-cover"
+                src="public/ml teaser.mp4"
+                muted
+                playsinline
+                ></video>
+            </li>
+
+            <!-- IMAGE SLIDE -->
+            <li class="hero-slide">
+                <img
+                src="public/motherlovenew.jpeg"
+                alt="Collection image 1"
+                class="absolute inset-0 w-full h-full object-cover"
+                />
+            </li>
+
+            <!-- IMAGE SLIDE -->
+            <li class="hero-slide">
+                <img
+                src="public/picc.jpg"
+                alt="Collection image 2"
+                class="absolute inset-0 w-full h-full object-cover"
+                />
+            </li>
+          </ul>
+          
+          <!-- Content -->
+          <div class="absolute md:bottom-0 bottom-24 md:left-0 left-0 right-0 z-10 max-w-7xl mx-auto px-6">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/10"></div>
+                 <div class="relative z-10  w-full flex items-end pt-10 md:px-16 px-5">
+                      <div class="flex justify-between items-end w-full pb-14 pt-10 h-screen text-white">
+                          <!-- LEFT -->
+                          <div class="space-y-3 pt-10 animate-fadeUp opacity-0 font-inter flex flex-col justify-between h-full">
+                            <div>
+                              <h3 class="text-sm tracking-[0.5em] font-anton">REDHOT CONCEPTS</h3>
+                            </div>
+                            <div class="space-y-5">         
+                              <div class="flex items-center gap-3">
+                                  <p class="tracking-widest md:text-sm text-xs text-gray-400">COMING UP SOON</p>
+                              </div>
+                              <h1 class="md:text-[80px] sm:text-[50px] text-[50px] tracking-wide leading-none font-anton">
+                                  A MOTHER’S <span class="text-outline uppercase">LOVE</span> 
+                              </h1>
+                              <div class="space-x-5 animate-fadeUp">
+                                <button  class="delay-300 bg-amber-500 text-sm hover:bg-amber-500 border-2 border-amber-500 transition-all duration-300 hover:scale-105 px-6 py-2 shadow-lg">
+                                    More Details
+                                </button>
+                                <button  class="animate-fadeUp delay-150 text-sm bg-transparent border-2 border-white hover:bg-gray-500 transition-all duration-300 hover:scale-105 px-6 py-2">
+                                    Learn More
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- RIGHT -->
+                          <div class=" md:block hidden items-end justify-end w-2/5 space-y-6 font-archivo animate-fadeUp delay-500 opacity-0">
+                            <div class="flex items-end justify-center flex-col mb-10">
+                              <div class="flex items-start flex-col justify-start">
+                                <p class="text-xs uppercase tracking-widest text-white mb-2 font-inter">MOVIE SCENEs</p>
+                                <div class="space-y-2">
+                                  <img data-aos="fade-up" data-aos-delay="100" src="public/m1.jpg" class="w-44 h-20 object-cover rounded-sm" alt="">
+                                  <img data-aos="fade-up" data-aos-delay="200" src="public/m2.jpg" class="w-44 h-20 object-cover rounded-sm" alt="">
+                                  <img data-aos="fade-up" data-aos-delay="300" src="public/m3.jpg" class="w-44 h-20 object-cover rounded-sm" alt="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="uppercase text-xs flex gap-2 flex-wrap  text-end">
+                              <p class="tracking-widest">omotola jalade ekeinde</p><span class="opacity-60">•</span>
+                              <p class="tracking-widest">Olumide  Oworu</p><span class="opacity-60">•</span>
+                              <p class="tracking-widest">BABA REX</p><span class="opacity-60">•</span>
+                              <p class="tracking-widest">lilian afegbia</p><span class="opacity-60">•</span>
+                              <p class="tracking-widest">NORAY NEHITA</p><span class="opacity-60">•</span>
+                              <p class="tracking-widest">Ifeanyi kalu</p>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+
+            <!-- Arrows -->
+            <button id="prevSlide" class="hero-arrow z-20 md:left-10 left-4"><i class="fa-solid fa-chevron-left"></i></button>
+            <button id="nextSlide" class="hero-arrow z-20 md:right-10 right-4"><i class="fa-solid fa-chevron-right"></i></button>
+
+            <!-- Pagination -->
+            <div id="hero-pagination" class="hero-pagination"></div>
+
+    </section>
 
     <section class="relative w-full py-20 bg-[#0d0d0d] overflow-hidden">
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_#1f1f1f,_transparent_70%)] opacity-40"></div>
@@ -617,7 +480,7 @@
       </div>
     </section>
 
-    <section class="w-full  py-20">
+    <section class="w-full  py-20"> 
       <div class="max-w-7xl mx-auto px-4 md:px-8">
         <!-- Header -->
         <header class="mb-14 flex items-end justify-between">
@@ -875,13 +738,11 @@
 
     <section data-aos="fade-up" data-aos-duration="1200"
       class="relative min-h-screen bg-gradient-to-br from-neutral-900 via-neutral-800 to-[#0d0d0d] overflow-hidden rounded-3xl animate-[float_6s_ease-in-out_infinite]">
-      <!-- ambient glow -->
       <div class="absolute -top-32 -left-32 w-[500px] h-[500px] bg-orange-500/10 blur-[120px]"></div>
       <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-sky-500/10 blur-[120px]"></div>
 
       <div class="relative max-w-7xl mx-auto px-8 py-24 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
-        <!-- LEFT CONTENT -->
         <div class="space-y-10">
 
           <img
@@ -1123,7 +984,7 @@
 
       <div class="mt-16 flex justify-center md:hidden">
           <a
-            href="#"
+            href="legacy.html"
             class="px-8 py-4 bg-[#E19403] uppercase text-white text-sm font-medium font-geist hover:bg-amber-600 transition"
           >
             View Legacy
@@ -1138,8 +999,7 @@
 
       <div
         data-aos="fade-up"
-        class="relative max-w-5xl mx-auto px-6 text-center space-y-10"
-      >
+        class="relative max-w-5xl mx-auto px-6 text-center space-y-10">
 
         <!-- Subtle preface -->
         <span class="block text-xs uppercase tracking-[0.45em] text-amber-400 font-geist">
@@ -1266,16 +1126,16 @@
 
 
  <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-out-cubic',
-            once: true, 
-        });
-    </script>
+    AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true, 
+    });
+</script>
 
-    <script>
+<script>
   const menuBtn = document.getElementById('menuBtn');
-  const navbar = document.getElementById('navbar');
+  const mobileMenu = document.getElementById('mobileMenu');
 
   let open = false;
 
@@ -1283,18 +1143,16 @@
     open = !open;
 
     if (open) {
-      navbar.style.maxHeight = '480px';
+      mobileMenu.classList.remove('hidden');
     } else {
-      navbar.style.maxHeight = '70px'; 
+      mobileMenu.classList.add('hidden');
     }
+
     menuBtn.innerHTML = open
-        ? '<i class="fa-solid fa-xmark"></i>'
-        : '<i class="fa-solid fa-bars"></i>';
+      ? '<i class="fa-solid fa-xmark"></i>'
+      : '<i class="fa-solid fa-bars"></i>';
   });
-
 </script>
-
-
 
   <script>
   const items = document.querySelectorAll(".press-item");
@@ -1337,6 +1195,76 @@
       dropdown.classList.add('opacity-0', 'invisible');
     }
   });
+</script>
+
+<script>
+  const slides = document.querySelectorAll('.hero-slide');
+  const pagination = document.getElementById('hero-pagination');
+  const nextBtn = document.getElementById('nextSlide');
+  const prevBtn = document.getElementById('prevSlide');
+
+  let index = 0;
+  let autoplay;
+
+  // Create pagination dots (1 per slide)
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'hero-dot';
+    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+    dot.addEventListener('click', () => goToSlide(i));
+    pagination.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll('.hero-dot');
+
+  function showSlide(i) {
+    slides.forEach((slide, idx) => {
+      slide.classList.toggle('active', idx === i);
+
+      const video = slide.querySelector('video');
+      if (video) {
+        idx === i ? video.play() : video.pause();
+      }
+    });
+
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === i);
+    });
+
+    index = i;
+  }
+
+  function nextSlide() {
+    showSlide((index + 1) % slides.length);
+  }
+
+  function prevSlide() {
+    showSlide((index - 1 + slides.length) % slides.length);
+  }
+
+  function goToSlide(i) {
+    showSlide(i);
+    resetAutoplay();
+  }
+
+  function resetAutoplay() {
+    clearInterval(autoplay);
+    autoplay = setInterval(nextSlide, 5000);
+  }
+
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+    resetAutoplay();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    prevSlide();
+    resetAutoplay();
+  });
+
+  // Init
+  showSlide(0);
+  autoplay = setInterval(nextSlide, 5000);
 </script>
 
 <script>
@@ -1428,7 +1356,6 @@
   const quoteText = document.getElementById("quoteText");
   const quoteAuthor = document.getElementById("quoteAuthor");
 
-  let index = 0;
 
   setInterval(() => {
     // Animate out
