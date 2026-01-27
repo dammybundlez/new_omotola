@@ -553,9 +553,7 @@
         <footer class="space-y-16">
 
           <!-- Brand -->
-          <h1 class="text-center text-[#E2C75A] font-bold font-athelas text-5xl sm:text-7xl md:text-7xl lg:text-[7.5rem] uppercase">
-            Redhot Concepts
-          </h1>
+         
 
           <!-- Footer Info -->
           <div class="flex flex-col md:flex-row justify-between gap-12 font-geist">
@@ -619,6 +617,44 @@
 
   items.forEach(item => observer.observe(item));
 </script>
+ <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const navbar = document.getElementById('navbar');
+
+        let open = false;
+
+        menuBtn.addEventListener('click', () => {
+            open = !open;
+
+            if (open) {
+            navbar.style.maxHeight = '480px';
+            } else {
+            navbar.style.maxHeight = '70px'; 
+            }
+            menuBtn.innerHTML = open
+                ? '<i class="fa-solid fa-xmark"></i>'
+                : '<i class="fa-solid fa-bars"></i>';
+        });
+    </script>
+
+    <script>
+    document.querySelectorAll(".scroll-section").forEach(section => {
+
+        const container = section.querySelector(".scroll-container");
+        const leftBtn = section.querySelector(".scroll-left");
+        const rightBtn = section.querySelector(".scroll-right");
+
+        leftBtn.addEventListener("click", () => {
+            container.scrollBy({ left: -350, behavior: "smooth" });
+        });
+
+        rightBtn.addEventListener("click", () => {
+            container.scrollBy({ left: 350, behavior: "smooth" });
+        });
+
+    });
+    </script>
+
 
 </body>
 </html>
