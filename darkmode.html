@@ -15,7 +15,7 @@
            <div id="navbar" class="">
                <div class="flex justify-between items-center px-4">
                    <a href="index.html">
-                       <img src="/public/img124.webp" class="w-10 md:w-10 text-[#0D0D0D]"/>
+                       <img src="/public/img124.webp" class="w-10 md:w-14 text-[#0D0D0D]"/>
                    </a>
    
                    <button id="menuBtn" class="md:hidden text-amber-500 text-2xl">
@@ -24,9 +24,9 @@
    
                    <nav class="hidden md:flex text-sm">
                        <ul class="flex items-center text-white gap-10 uppercase">
-                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="films.html">Films</a></li>
-                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="news.html">News</a></li>
-                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="legacy.html">30 Years legacy</a></li>
+                           <li class="hover:text-orange-300 transition-all ease-out duration-200 tracking-widest"><a href="films.html">Films</a></li>
+                           <li class="hover:text-orange-300 transition-all ease-out duration-200 tracking-widest"><a href="news.html">News</a></li>
+                           <li class="hover:text-orange-300 transition-all ease-out duration-200 tracking-widest"><a href="legacy.html">30 Years legacy</a></li>
                            <li class="relative group">
                                <a class="hover:text-orange-300 transition-all duration-200 flex items-center gap-2" 
                                    id="othersBtn" 
@@ -53,8 +53,8 @@
                                    </ul>
                                </div>
                            </li>
-                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="about.html">About</a></li>
-                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="#contact">Contact</a></li>
+                           <li class="hover:text-orange-300 transition-all ease-out duration-200 tracking-widest"><a href="about.html">About</a></li>
+                           <li class="hover:text-orange-300 transition-all ease-out duration-200 tracking-widest"><a href="#contact">Contact</a></li>
                        </ul>
                    </nav>
                </div>
@@ -125,12 +125,10 @@
               </div>        
 
             </div>
-
-
         <button
           id="closeHero"
           onclick="restoreHero()"
-          class="absolute top-20 right-6 z-50 hidden
+          class="absolute top-24 right-6 z-50 hidden
                 size-8 pb-1
                 flex items-center justify-center
                 rounded-full
@@ -160,7 +158,7 @@
                 data-time="2h 46min"
                 data-date="14 Feb 2026"
                 data-rate="13+"
-                class="group relative w-[180px] h-[350px]"
+                class="group relative w-[280px] h-[350px]"
               >
               <div class="overflow-hidden
                       transform-gpu origin-center
@@ -189,6 +187,7 @@
               </div>
                 <!-- COLOR BASE -->
               </figure>
+
               <figure data-aos="fade-up" data-aos-delay="250" 
                 data-img="/public/Road Rogue.webp"
                 onclick="swapHero(this)"
@@ -199,7 +198,7 @@
                 data-time="2h 46min"
                 data-date="14 Feb 2026"
                 data-rate="13+"
-                class="group relative w-[180px] h-[350px]"
+                class="group relative w-[280px] h-[350px]"
               >
                 <div class="overflow-hidden
                       transform-gpu origin-center
@@ -227,43 +226,6 @@
                         alt=""
                       />
                 </div>
-              </figure>
-              <figure data-aos="fade-up" data-aos-delay="400" 
-                data-img="/public/film4.webp"
-                onclick="swapHero(this)"
-                data-title="Alter Ego"
-                data-country="USA, Nigeria"
-                data-studio="RedHotConcepts"
-                data-time="2h 46min"
-                data-date="14 Feb 2017"
-                data-rate="13+"
-                class="group relative w-[180px] h-[350px]"
-              >
-                <div class="overflow-hidden
-                      transform-gpu origin-center
-                      transition-transform duration-1000
-                      ease-[cubic-bezier(.19,1,.22,1)]
-                      hover:scale-y-[1.25] hover:z-10 h-full w-full">
-                      <img
-                        src="/public/film4.webp"
-                        class="absolute inset-0 w-full h-full object-cover"
-                        alt=""
-                      />
-      
-                      <!-- GRAYSCALE OVERLAY (reveals bottom → top) -->
-                      <img
-                        src="/public/film4.webp"
-                        class="
-                          absolute inset-0 w-full h-full object-cover
-                          grayscale
-                          [clip-path:inset(0_0_0_0)]
-                          transition-[clip-path] duration-1000
-                          ease-[cubic-bezier(.19,1,.22,1)]
-                          group-hover:[clip-path:inset(0_0_100%_0)]
-                        "
-                        alt=""
-                      />
-                    </div>
               </figure>
             </div>
           </div>
@@ -368,34 +330,27 @@
 
         <!-- frame 01 -->
         <figure class="relative group">
-          <div class="absolute -inset-3 border border-white/10"></div>
+          
           <img
             src="public/legacy2.webp"
             alt="Film still"
-            class="w-full h-[420px] object-cover object-[center_15%]
-                  grayscale contrast-125
-                  group-hover:grayscale-0
+            class="w-full h-full object-cover object-[center_15%]
+                  
                   transition duration-700"
           />
-          <figcaption class="absolute bottom-4 left-4 text-xs uppercase tracking-widest text-white/60">
-            omotola jalade
-          </figcaption>
+          
         </figure>
 
         <!-- frame 02 -->
-        <figure class="relative group translate-y-10">
-          <div class="absolute -inset-3 border border-white/10"></div>
+        <figure class="relative group ">
           <img
             src="public/legacy4.webp"
             alt="Film still"
-            class="w-full h-[420px] object-cover object-[center_0%]
-                  grayscale contrast-125
-                  group-hover:grayscale-0
+            class="w-full h-full object-cover object-[center_0%]
+                  
                   transition duration-700"
           />
-          <figcaption class="absolute bottom-4 left-4 text-xs uppercase tracking-widest text-white/60">
-            Omotola Jalade-Ekeinde
-          </figcaption>
+          
         </figure>
 
       </div>
@@ -407,7 +362,7 @@
       <div class="w-full mx-auto px-4 md:px-8 flex flex-col gap-12">
         <header class="flex justify-between items-center gap-4">
           <h2 class="text-xl md:text-3xl font-semibold uppercase font-geist tracking-wide text-white">
-            Featuamber Film
+            Featured Film
           </h2>
 
           <a href="films.html"
@@ -1188,12 +1143,6 @@
 
         <!-- BRAND + FOOTER -->
         <footer class="space-y-16">
-
-          <!-- Brand -->
-          <h1 class="text-center text-[#E2C75A] font-bold font-athelas text-5xl sm:text-7xl md:text-7xl lg:text-[7.5rem] uppercase">
-            Redhot Concepts
-          </h1>
-
           <!-- Footer Info -->
           <div class="flex flex-col md:flex-row justify-between gap-12 font-geist">
 
@@ -1230,7 +1179,6 @@
 
       </div>
     </section>
-
 
  <script>
         AOS.init({
