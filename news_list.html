@@ -1,116 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="output.css">
-  <script src="https://kit.fontawesome.com/c4993cb090.js" crossorigin="anonymous"></script>
-  <title>Omotola . News</title>
-</head>
-
-<body class="bg-[#0d0d0d] text-white">
-  <header id="mainHeader" class="fixed top-0 w-full z-50 pr-4 md:pr-14 md:pl-6 py-4 md:py-1 transition-all duration-500">
-  <div class="flex justify-between items-center">
-
-    <!-- Logo -->
-    <a id="logoWrap" href="index.html"
-     class="relative flex items-center justify-center w-20 h-10 md:w-28 md:h-[5rem] p-2 rounded-md transition-all duration-300">
-        <img id="logoWhite"
-            src="public/img124.webp"
-            class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-100"
-            alt="Logo White"/>
-
-        <img id="logoRed"
-            src="public/redbg.png"
-            class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-0"
-            alt="Logo Red"/>
-    </a>
-
-
-    <!-- Desktop Nav -->
-    <nav id="desktopNav" class="hidden md:flex items-center nav-fade">
-      <ul class="flex items-center text-white gap-8 uppercase font-inter">
-        <li><a href="films.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Films</a></li>
-        <li><a href="news.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">News</a></li>
-        <li><a href="legacy.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">30 Years legacy</a></li>
-        <li class="relative group tracking-wide text-sm">
-          <a class="hover:text-orange-300 flex items-center gap-2" >Affiliates <i class="fa-solid fa-chevron-down text-sm"></i></a>
-          <div class="absolute top-full left-1/2 -translate-x-1/2 w-[300px] px-2 py-2 bg-white rounded-3xl shadow-lg invisible group-hover:visible transition-all duration-300">
-            <ul class="text-stone-500 flex flex-col gap-2">
-              <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 block px-4 py-1">OYEP</a></li>
-              <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 block px-4 py-1">OSEAL</a></li>
-              <li><a href="https://www.teffest.com/" class="hover:text-orange-300 block px-4 py-1">TEFFEST</a></li>
-              <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 block px-4 py-1">DOUBLE DOORS</a></li>
-            </ul>
-          </div>
-        </li>
-        <li><a href="about.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">About</a></li>
-        <li><a href="contact.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Hamburger -->
-    <button id="menuBtn" class="md:hidden text-white text-3xl hover:text-amber-400 transition-all">
-      <span><i class="fa-solid fa-bars"></i></span>
-    </button>
-
-  </div>
-
-  <!-- Mobile Menu -->
-  <nav id="mobileMenu" class="fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-lg z-50 flex flex-col items-center justify-center transform translate-y-full opacity-0">
-    <button id="mobileClose" class="absolute top-8 right-8 text-white text-3xl hover:text-amber-400 transition-all"><i class="fa-solid fa-xmark"></i></button>
-    <ul id="mobileMenuList" class="flex flex-col justify-center items-center gap-8 text-center font-geist">
-      <li class="menu-item opacity-0 translate-y-6"><a href="films.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">Films</a></li>
-      <li class="menu-item opacity-0 translate-y-6"><a href="news.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">News</a></li>
-      <li class="menu-item opacity-0 translate-y-6"><a href="legacy.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">30 Years Legacy</a></li>
-      <li class="menu-item opacity-0 translate-y-6">
-        <button id="othersToggle" class="flex items-center justify-center text-3xl font-bold uppercase hover:text-amber-400 gap-2 transition-all duration-300">
-          Affiliates <i id="othersIcon" class="fa-solid fa-chevron-down transition-transform duration-300"></i>
-        </button>
-        <ul id="othersAccordion" class="mt-4 max-h-0 overflow-hidden flex flex-col gap-3 transition-all duration-300">
-          <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400">OYEP</a></li>
-          <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400">OSEAL</a></li>
-          <li><a href="https://www.teffest.com/" class="hover:text-amber-400">TEFFEST</a></li>
-          <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400">DOUBLE DOORS</a></li>
-        </ul>
-      </li>
-      <li class="menu-item opacity-0 translate-y-6"><a href="about.html" class="text-3xl font-bold uppercase hover:text-amber-400">About</a></li>
-      <li class="menu-item opacity-0 translate-y-6"><a href="contact.html" class="text-3xl font-bold uppercase hover:text-amber-400">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-  <section class="relative overflow-hidden md:px-14 px-4">
-    <!-- <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_#1f1f1f,_transparent_70%)] opacity-40"></div> -->
-
-    <div class="relative mx-auto">
-      <!-- Header -->
-      <header class="relative w-full py-20  flex items-center justify-center text-center">
-        <div class="max-w-3xl space-y-6">
-
-          <!-- Subtitle / Micro-header -->
-          <span class="block text-xs uppercase tracking-[0.45em] text-amber-400 font-geist">
-            Public Record
-          </span>
-
-          <!-- Main Title -->
-          <h2 class="reveal reveal-up text-3xl md:text-6xl font-light uppercase tracking-tight text-white font-geist">
-            News <span class="text-zinc-600">•</span> Press <span class="text-zinc-600">•</span> Interviews
-          </h2>
-
-          <!-- Description -->
-          <p class="text-zinc-400 text-lg md:text-xl leading-relaxed font-geist">
-            A curated archive of global recognition, defining moments, and conversations that shaped a legacy beyond the
-            screen.
-          </p>
-
-          <!-- Divider -->
-          <div class="mx-auto h-px w-24 bg-zinc-700"></div>
-
-        </div>
-      </header>
-      <ul id="pressTimeline" class="gap-10 py-10 grid sm:grid-cols-2 grid-cols-1">
 
         <li class="press-item relative grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-8 pl-6 border-l border-zinc-800
                     opacity-0 translate-y-16 scale-95
@@ -120,7 +7,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-svaff.html" class="hover:text-amber-400 transition">Silicon Valley African Film Festival Selection</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               "Mother's Love" selected for screening at the Silicon Valley African Film Festival (SVAFF).
             </p>
             <a href="news-svaff.html"
@@ -131,7 +18,7 @@
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-svaff.html">
                 <img src="public/m3.jpg" alt="Silicon Valley African Film Festival Selection"
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]"/>
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
@@ -145,7 +32,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-socials.html" class="hover:text-amber-400 transition">Social Media Highlights</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               Catch the latest buzz and reactions on social media regarding Omotola's TIFF feature.
             </p>
             <a href="news-socials.html"
@@ -156,7 +43,7 @@
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-socials.html">
                 <img src="public/motherlovenew.jpeg" alt="Social Media Highlights"
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]" />
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
@@ -170,7 +57,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-nollywire.html" class="hover:text-amber-400 transition">Nollywire: Mother's Love</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               Cast and Crew details for Omotola Jalade-Ekeinde's directorial debut.
             </p>
             <a href="news-nollywire.html"
@@ -181,7 +68,7 @@
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-nollywire.html">
                 <img src="public/picc.jpg" alt="Nollywire: Mother's Love"
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]" />
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
@@ -195,7 +82,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-blackfilmwire.html" class="hover:text-amber-400 transition">30-Year Film Journey & Mother's Love Premiere</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               Omotola Jalade-Ekeinde made history this week at the Toronto International Film Festival, where her directorial debut screened as part of the official Industry Market program.
             </p>
             <a href="news-blackfilmwire.html"
@@ -206,7 +93,7 @@
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-blackfilmwire.html">
                 <img src="public/m2.jpg" alt="30-Year Film Journey & Mother's Love Premiere"
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]" />
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
@@ -220,7 +107,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-thenation.html" class="hover:text-amber-400 transition">Omosexy makes directorial debut with Mother’s Love</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               The Nation Newspaper covers Omotola's transition behind the camera.
             </p>
             <a href="news-thenation.html"
@@ -231,7 +118,7 @@
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-thenation.html">
                 <img src="public/picc.jpg" alt="Omosexy makes directorial debut with Mother’s Love"
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]" />
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
@@ -245,7 +132,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-afrocritik.html" class="hover:text-amber-400 transition">In Conversation With Omotola Jalade Ekeinde</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               "People often think that independent or contemporary women cannot fulfil traditional roles... But that is not true. You can be all of it."
             </p>
             <a href="news-afrocritik.html"
@@ -256,7 +143,7 @@
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-afrocritik.html">
                 <img src="public/motherlovenew.jpeg" alt="In Conversation With Omotola Jalade Ekeinde"
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]" />
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
@@ -270,7 +157,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-pm-express.html" class="hover:text-amber-400 transition">A Bold Leap Into Storytelling</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               Omotola Jalade Ekeinde’s Directorial Debut is a bold leap into storytelling at TIFF.
             </p>
             <a href="news-pm-express.html"
@@ -281,7 +168,7 @@
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-pm-express.html">
                 <img src="public/m3.jpg" alt="A Bold Leap Into Storytelling"
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]" />
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
@@ -295,7 +182,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-marie-claire.html" class="hover:text-amber-400 transition">Marie Claire: Our Stories Matter</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               Nigerian films debuting at TIFF’s 50th edition remind us that our stories matter.
             </p>
             <a href="news-marie-claire.html"
@@ -306,7 +193,7 @@
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-marie-claire.html">
                 <img src="public/m2.jpg" alt="Marie Claire: Our Stories Matter"
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]" />
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
@@ -320,7 +207,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-thecable.html" class="hover:text-amber-400 transition">Omotola debuts as director with ‘Mother’s Love’</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               Celebrating the 50th anniversary of the Toronto International Film Festival with a major directorial debut.
             </p>
             <a href="news-thecable.html"
@@ -331,7 +218,7 @@
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-thecable.html">
                 <img src="public/m1.jpg" alt="Omotola debuts as director with ‘Mother’s Love’"
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]" />
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
@@ -345,7 +232,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-tiff-36ng.html" class="hover:text-amber-400 transition">Omotola Premieres Directorial Debut "Mother's Love" at TIFF</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               Omotola Jalade-Ekeinde has spent over three decades in front of the camera. Now, she’s stepped into an entirely new role, this time behind the camera, premiering "Mother's Love" at the 50th Toronto International Film Festival.
             </p>
             <a href="news-tiff-36ng.html"
@@ -355,8 +242,8 @@
           </div>
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-tiff-36ng.html">
-                <img src="public/beffta.png" alt="Omotola Premieres Directorial Debut "Mother's Love" at TIFF"
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]" />
+                <img src="public/motherlovenew.jpeg" alt="Omotola Premieres Directorial Debut "Mother's Love" at TIFF"
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
@@ -370,7 +257,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-bellanaija.html" class="hover:text-amber-400 transition">BellaNaija: Omotola's Directorial Debut "Mother's Love"</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               Omotola Jalade-Ekeinde steps behind the camera for "Mother’s Love," her directorial debut.
             </p>
             <a href="news-bellanaija.html"
@@ -381,7 +268,7 @@
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-bellanaija.html">
                 <img src="public/picc.jpg" alt="BellaNaija: Omotola's Directorial Debut "Mother's Love""
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]" />
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
@@ -395,7 +282,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-tiff-official.html" class="hover:text-amber-400 transition">Official Selection: Mother's Love at TIFF</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               "Mother's Love" selected for the 50th Toronto International Film Festival.
             </p>
             <a href="news-tiff-official.html"
@@ -406,7 +293,7 @@
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-tiff-official.html">
                 <img src="public/m1.jpg" alt="Official Selection: Mother's Love at TIFF"
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]" />
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
@@ -420,7 +307,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-birthday-47.html" class="hover:text-amber-400 transition">Omotola Jalade stuns in sultry photos as she celebrate her 47th birthday</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               It is Omotola Jalade‘s birthday today, and the star is giving us the gift of a truly jaw-dropping look...
             </p>
             <a href="news-birthday-47.html"
@@ -431,7 +318,7 @@
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-birthday-47.html">
                 <img src="public/birthday.jpg" alt="Omotola Jalade stuns in sultry photos as she celebrate her 47th birthday"
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]" />
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
@@ -445,7 +332,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-filmmaker.html" class="hover:text-amber-400 transition">Filmmaker meets film scholar: Omotola Jalade-Ekeinde in conversation with Rejoice Abutsa</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               At the recently concluded Silicon Valley African Film Festival (SVAFF), Omotola premiered her directorial debut, Mother’s Love...
             </p>
             <a href="news-filmmaker.html"
@@ -456,7 +343,7 @@
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-filmmaker.html">
                 <img src="public/OIP.webp" alt="Filmmaker meets film scholar: Omotola Jalade-Ekeinde in conversation with Rejoice Abutsa"
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]" />
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
@@ -470,7 +357,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-ankara.html" class="hover:text-amber-400 transition">Omotola Wore Ankara Crop Top and Matching Skirt at Time100 Impact Awards</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               Omotola made a stunning fashion statement at the inaugural Time100 Impact Awards Africa in Kigali, Rwanda...
             </p>
             <a href="news-ankara.html"
@@ -481,7 +368,7 @@
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-ankara.html">
                 <img src="public/100impactwawards.jpg" alt="Omotola Wore Ankara Crop Top and Matching Skirt at Time100 Impact Awards"
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]" />
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
@@ -495,7 +382,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-young-people.html" class="hover:text-amber-400 transition">Young people must not argue with parents when choosing life partners – Omotola Jalade-Ekeinde</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               Nigerian actress Omotola Jalade-Ekeinde has advised young people not to argue with their parents when it comes to the selection of their life partners.
             </p>
             <a href="news-young-people.html"
@@ -506,7 +393,7 @@
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-young-people.html">
                 <img src="public/youungpeople.jpg" alt="Young people must not argue with parents when choosing life partners – Omotola Jalade-Ekeinde"
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]" />
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
@@ -520,7 +407,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-time100.html" class="hover:text-amber-400 transition">TIME 100 Most Influential People</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               Omotola Jalade-Ekeinde is named among the world’s most influential individuals, marking a historic moment of global recognition for Nollywood.
             </p>
             <a href="news-time100.html"
@@ -531,7 +418,7 @@
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-time100.html">
                 <img src="public/2013_time100_jalade.webp" alt="TIME 100 Most Influential People"
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]" />
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
@@ -545,7 +432,7 @@
             <h3 class="text-2xl md:text-3xl font-light text-white leading-snug font-geist line-clamp-2 capitalize">
               <a href="news-skye-bank.html" class="hover:text-amber-400 transition">DAZZLE AT SKYE BANK’S CELEBRITY TAKES 2</a>
             </h3>
-            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3 font-inter">
+            <p class="mt-4 max-w-3xl text-zinc-400 leading-relaxed line-clamp-3">
               When it comes to acting, Omotola has got the talent. Appearing in the ongoing reality show, Celebrity Takes 2...
             </p>
             <a href="news-skye-bank.html"
@@ -556,293 +443,9 @@
           <figure class="relative overflow-hidden rounded-lg group h-48 w-full">
             <a href="news-skye-bank.html">
                 <img src="public/2007.jpg" alt="DAZZLE AT SKYE BANK’S CELEBRITY TAKES 2"
-                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out object-[center_0%]" />
+                class="h-full w-full object-cover md:grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
             </a>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
           </figure>
         </li>
-          </ul>
-    </div>
-  </section>
-
-  <section class="relative w-full sm:px-6 md:py-20 md:px-14 py-10 px-5 bg-black overflow-hidden">
-
-    <!-- Atmospheric background -->
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_#1a1a1a,_transparent_65%)] opacity-40"></div>
-    <div class="pointer-events-none absolute inset-0 bg-[url('public/grain.png')] opacity-[0.06] mix-blend-overlay">
-    </div>
-
-    <div data-aos="fade-up" class="relative max-w-5xl mx-auto px-6 text-center space-y-10">
-
-      <!-- Subtle preface -->
-      <span class="block text-xs uppercase tracking-[0.45em] text-amber-400 font-geist">
-        The Work Continues
-      </span>
-
-      <!-- Statement -->
-      <h2 class="text-3xl md:text-5xl lg:text-6xl font-light leading-tight tracking-tight text-white font-geist">
-        We are not here to chase attention.
-        <br />
-        <span class="text-amber-400">
-          We are here to build legacy.
-        </span>
-      </h2>
-
-      <!-- Divider -->
-      <div class="mx-auto h-px w-28 bg-zinc-700"></div>
-
-      <!-- Supporting line -->
-      <p class="max-w-3xl mx-auto text-zinc-400 text-lg md:text-xl leading-relaxed font-geist">
-        Through structure, ownership, and uncompromising craft,
-        Redhot Concepts exists to ensure African stories are not
-        merely seen — but remembered, respected, and preserved
-        for generations.
-      </p>
-
-      <!-- Signature -->
-      <p class="pt-8 text-sm uppercase tracking-[0.4em] text-zinc-500 font-geist">
-        Redhot Concepts
-      </p>
-
-    </div>
-  </section>
     
-  <footer class="w-full py-16 border-t border-amber-400 flex flex-col items-center gap-7 px-4 text-center reveal reveal-up">
-    <nav class="w-full max-w-4xl">
-      <ul
-        class="flex flex-wrap justify-center gap-6 md:gap-12 text-sm uppercase tracking-widest text-white/80 font-geist">
-        <li><a href="index.html" class="hover:text-amber-400 transition-colors">Home</a></li>
-        <li><a href="about.html" class="hover:text-amber-400 transition-colors">About</a></li>
-        <li><a href="films.html" class="hover:text-amber-400 transition-colors">Films</a></li>
-        <li><a href="legacy.html" class="hover:text-amber-400 transition-colors">30yrs legacy</a></li>
-        <li><a href="#" class="hover:text-amber-400 transition-colors">Affiliate</a></li>
-        <li><a href="contact.html" class="hover:text-amber-400 transition-colors">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="reveal reveal-up stagger-1 flex flex-col items-center gap-2">
-      <p class="text-zinc-400 text-xs font-semibold uppercase">Email</p>
-      <a href="mailto:hello@redhotconcepts.com"
-        class="text-amber-400 text-xl md:text-2xl font-normal font-inter hover:underline hover-glow">hello@redhotconcepts.com</a>
-    </div>
-
-    <div class="reveal reveal-up stagger-2 flex flex-wrap justify-center items-center gap-8 text-2xl text-white">
-      <a href="https://www.youtube.com/@RedHotConceptTV" target="_blank" rel="noopener noreferrer" class="hover-lift"
-        aria-label="YouTube">
-        <i class="fa-brands fa-youtube hover:text-red-600 transition-colors cursor-pointer"></i>
-      </a>
-      <a href="https://www.instagram.com/redhotconcepts?igsh=bTBwaWEwNTJtemp0" target="_blank" rel="noopener noreferrer"
-        class="hover-lift" aria-label="Instagram">
-        <i class="fa-brands fa-instagram hover:text-pink-600 transition-colors cursor-pointer"></i>
-      </a>
-      <a href="https://x.com/redhot_concept?t=Q4aHP6bGxqztv0k9isMVQw&s=09" target="_blank" rel="noopener noreferrer"
-        class="hover-lift" aria-label="X">
-        <i class="fa-brands fa-x-twitter hover:text-blue-400 transition-colors cursor-pointer"></i>
-      </a>
-    </div>
-
-    <div class="text-white text-sm font-normal font-poppins opacity-60">
-      ©2026 RedHot Concepts. All Rights Reserved.
-    </div>
-  </footer>
-
-  <div id="cursor-spotlight">
-    <div class="outer"></div>
-    <div class="inner"></div>
-  </div>
-
-
-  <script>
-    const scrollAnimationObserverOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const scrollAnimationObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          if (entry.target.classList.contains('press-item')) {
-            entry.target.classList.remove("opacity-0", "translate-y-16", "scale-95");
-            entry.target.classList.add("opacity-100", "translate-y-0", "scale-100");
-          }
-          scrollAnimationObserver.unobserve(entry.target);
-        }
-      });
-    }, scrollAnimationObserverOptions);
-
-    document.querySelectorAll('.reveal, .press-item').forEach(el => {
-      scrollAnimationObserver.observe(el);
-    });
-  </script>
-
-  <script>
-    document.querySelectorAll(".scroll-section").forEach(section => {
-
-      const container = section.querySelector(".scroll-container");
-      const leftBtn = section.querySelector(".scroll-left");
-      const rightBtn = section.querySelector(".scroll-right");
-
-      leftBtn.addEventListener("click", () => {
-        container.scrollBy({ left: -350, behavior: "smooth" });
-      });
-
-      rightBtn.addEventListener("click", () => {
-        container.scrollBy({ left: 350, behavior: "smooth" });
-      });
-
-    });
-  </script>
-
-
-<script>
-    const cursor = document.getElementById("cursor-spotlight");
-    const outer = cursor.querySelector('.outer');
-    const inner = cursor.querySelector('.inner');
-    const cursorSize = outer.offsetWidth; // 25px
-
-    let mouseX = 0, mouseY = 0;
-    let outerX = 0, outerY = 0;
-    let innerX = 0, innerY = 0;
-
-    const outerSpeed = 0.2; // outer ring speed
-    const innerSpeed = 0.15; // inner dot slower speed
-
-    document.addEventListener("mousemove", e => {
-      mouseX = e.clientX - cursorSize / 2;
-      mouseY = e.clientY - cursorSize / 2;
-    });
-
-    function animateCursor() {
-      // Outer ring follows mouse quickly
-      outerX += (mouseX - outerX) * outerSpeed;
-      outerY += (mouseY - outerY) * outerSpeed;
-      outer.style.transform = `translate3d(${outerX}px, ${outerY}px, 0)`;
-
-      // Inner dot follows outer slowly
-      innerX += (outerX - innerX) * innerSpeed;
-      innerY += (outerY - innerY) * innerSpeed;
-      inner.style.transform = `translate3d(${innerX}px, ${innerY}px, 0)`;
-
-      requestAnimationFrame(animateCursor);
-    }
-
-    animateCursor();
-  </script>
-
-<script>
-  let lastScrollY = window.scrollY;
-
-const header = document.getElementById("mainHeader");
-const desktopNav = document.getElementById("desktopNav");
-const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-const mobileClose = document.getElementById("mobileClose");
-const othersToggle = document.getElementById("othersToggle");
-const othersAccordion = document.getElementById("othersAccordion");
-const othersIcon = document.getElementById("othersIcon");
-const logoWrap = document.getElementById("logoWrap");
-const logoWhite = document.getElementById("logoWhite");
-const logoRed = document.getElementById("logoRed");
-
-function showNavLinks() {
-  desktopNav.classList.remove("hidden");
-  requestAnimationFrame(() => {
-    desktopNav.classList.add("nav-visible");
-  });
-}
-
-function hideNavLinks() {
-  desktopNav.classList.remove("nav-visible");
-}
-
-function onScroll() {
-  const currentScroll = window.scrollY;
-
-  /* =======================
-     TOP OF PAGE
-  ======================= */
-  if (currentScroll === 0) {
-    header.classList.add("nav-hidden");
-    header.classList.remove("glass-nav");
-
-    logoWrap.classList.remove("scale-90");
-
-    logoWhite.style.opacity = "1";
-    logoRed.style.opacity = "0";
-
-    hideNavLinks();
-    return;
-  }
-
-  /* =======================
-     ANYWHERE ELSE
-  ======================= */
-  header.classList.remove("nav-hidden");
-  header.classList.add("glass-nav");
-
-  logoWrap.classList.add("scale-90");
-
-  logoWhite.style.opacity = "0";
-  logoRed.style.opacity = "1";
-
-  if (window.innerWidth >= 768) {
-    showNavLinks();
-  }
-
-  lastScrollY = currentScroll;
-}
-
-onScroll();
-window.addEventListener("scroll", onScroll);
-
-/* =======================
-   RESPONSIVE SYNC
-======================= */
-window.addEventListener("resize", () => {
-  if (window.innerWidth < 768) {
-    desktopNav.classList.add("hidden");
-    desktopNav.classList.remove("nav-visible");
-  } else {
-    desktopNav.classList.remove("hidden");
-    onScroll();
-  }
-});
-
-menuBtn.addEventListener("click", () => {
-    menuBtn.classList.toggle("active");
-    if(mobileMenu.classList.contains("translate-y-full")) openMobileMenu();
-    else closeMobileMenu();
-  });
-
-  mobileClose.addEventListener("click", closeMobileMenu);
-
-  function openMobileMenu(){
-    mobileMenu.classList.remove("translate-y-full","opacity-0");
-    mobileMenu.classList.add("translate-y-0","opacity-100");
-
-    const items = document.querySelectorAll("#mobileMenu .menu-item");
-    items.forEach((el,i)=>{ el.style.transitionDelay=`${i*0.1}s`; el.classList.remove("opacity-0","translate-y-6"); el.classList.add("opacity-100","translate-y-0"); });
-  }
-
-  function closeMobileMenu(){
-    mobileMenu.classList.remove("translate-y-0","opacity-100");
-    mobileMenu.classList.add("translate-y-full","opacity-0");
-
-    const items = document.querySelectorAll("#mobileMenu .menu-item");
-    items.forEach(el=>{ el.style.transitionDelay="0s"; el.classList.add("opacity-0","translate-y-6"); el.classList.remove("opacity-100","translate-y-0"); });
-
-    menuBtn.classList.remove("active");
-  }
-
-  othersToggle?.addEventListener("click", ()=>{
-    if(othersAccordion.style.maxHeight && othersAccordion.style.maxHeight !== "0px"){
-      othersAccordion.style.maxHeight="0px"; othersIcon.classList.remove("rotate-180");
-    } else {
-      othersAccordion.style.maxHeight=othersAccordion.scrollHeight+"px"; othersIcon.classList.add("rotate-180");
-    }
-  });
-</script>
-</body>
-
-</html>

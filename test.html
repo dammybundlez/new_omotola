@@ -1,865 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="output.css">
-    <script src="https://kit.fontawesome.com/c4993cb090.js" crossorigin="anonymous"></script>
-    <title>JOVADI</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omotola Jalade Ekeinde — A Legacy Etched in Time</title>
+  <link rel="stylesheet" href="output.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+    <style>
+        .flip-text {
+  perspective: 1000px;
+}
+
+.flip-text {
+  display: inline-block;
+  transform-origin: 50% 100%;
+  transform: rotateX(90deg);
+  opacity: 0;
+  filter: blur(6px);
+}
+
+/* When visible → animate */
+.flip-text.is-visible  {
+  animation: flipReveal 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+/* Stagger */
+.flip-text.is-visible span:nth-child(1) { animation-delay: 0.1s; }
+.flip-text.is-visible span:nth-child(2) { animation-delay: 0.3s; }
+.flip-text.is-visible  { animation-delay: 0.5s; }
+
+@keyframes flipReveal {
+  0% {
+    transform: rotateX(90deg);
+    opacity: 0;
+    filter: blur(6px);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+    </style>
 </head>
 <body>
-    <header class="relative bg-black">
-        <!-- Navigation -->
-        <nav class="fixed top-0 left-0 w-full z-20 bg-black/90">
-            <div class="mx-auto md:px-20 px-4 h-16 flex items-center justify-between">
-            
-                <!-- Brand + Links -->
-                <div class="flex items-center gap-12">
-                    <img src="public/logo.png" alt="Jovadi logo" class="h-7" />
-                </div>
-                
-                <ul class="hidden md:flex items-center gap-8 text-xs font-medium tracking-[2.4px]  text-white">
-                <li class="relative">
-                    <!-- Shop Button -->
-                    <button
-                        class="dropdown-toggle relative uppercase tracking-[2.4px] text-xs font-medium text-white font-avenir
-                                after:absolute after:left-0 after:-bottom-1
-                                after:h-[1px] after:w-0 after:bg-white
-                                after:transition-all
-                                hover:after:w-full after:duration-500 after:ease-[cubic-bezier(0.4,0,0.2,1)]"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            data-target="shopDropdown"
-                        >
-                        Shop
-                    </button>
 
-                    <!-- Full-width Dropdown -->
-                    <div
-                        id="shopDropdown"
-                        class="
-                        dropdown
-                        fixed left-0 top-[65px] z-[9999] w-screen h-[60vh]
-                        bg-white border-t border-neutral-200 shadow-xl
-                        opacity-0 translate-y-[-12px] pointer-events-none
-                        transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
-                        "
-                    >
-                        <div class="mx-auto max-w-7xl px-20 py-12 grid grid-cols-1 lg:grid-cols-5 gap-5 font-didot">
-                            <!-- Categories -->
-                            <nav aria-label="Shop categories" class="max-w-xl">
-                                <h3 class="text-xl font-medium uppercase tracking-wide text-neutral-800 mb-6">
-                                By Category
-                                </h3>
-                                <ul class="space-y-4 text-base text-neutral-700 capitalize">
-                                <li><a href="#" class="hover:underline">Earrings</a></li>
-                                <li><a href="#" class="hover:underline">Rings</a></li>
-                                <li><a href="#" class="hover:underline">Bracelets</a></li>
-                                <li><a href="#" class="hover:underline">Necklaces</a></li>
-                                </ul>
-                            </nav>
+  <!-- ================= HERO ================= -->
+  <h2
+  class="flip-text uppercase font-geist font-medium text-sm md:text-base tracking-[0.4em] text-amber-400 text-center"
+  data-flip
+>
+  jome sweet home
+</h2>
 
-                            <!-- Gifts -->
-                            <nav aria-label="Gift collections" class="max-w-xl">
-                                <h3 class="text-xl font-medium uppercase tracking-wide text-neutral-800 mb-6">
-                                Gifts
-                                </h3>
-                                <ul class="space-y-4 text-sm text-neutral-700 text-base text-neutral-700 capitalize">
-                                <li><a href="#" class="hover:underline">Birthday</a></li>
-                                <li><a href="#" class="hover:underline">Valentine</a></li>
-                                <li><a href="#" class="hover:underline">Anniversary</a></li>
-                                <li><a href="#" class="hover:underline">Gift Card</a></li>
-                                </ul>
-                            </nav>
 
-                            <nav aria-label="Gift collections" class="max-w-xl">
-                                <h3 class="text-xl font-medium uppercase tracking-wide text-neutral-800 mb-6">
-                                Featured
-                                </h3>
-                                <ul class="space-y-4 text-sm text-neutral-700 text-base text-neutral-700 capitalize">
-                                <li><a href="#" class="hover:underline">Birthday</a></li>
-                                <li><a href="#" class="hover:underline">Valentine</a></li>
-                                <li><a href="#" class="hover:underline">Anniversary</a></li>
-                                <li><a href="#" class="hover:underline">Gift Card</a></li>
-                                </ul>
-                            </nav>
 
-                            <!-- Images -->
-                            <figure class="hidden lg:block">
-                                <img src="public/3.png" class="w-full h-full object-cover" />
-                            </figure>
 
-                            <figure class="hidden lg:block">
-                                <img src="public/5.png" class="w-full h-full object-cover" />
-                            </figure>
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>
+      © <span>Omotola Jalade Ekeinde</span> — Legacy. Influence. Impact.
+    </p>
+  </footer>
 
-                        </div>
-                    </div>
-                </li>
+  <!-- ================= JS ================= -->
+<script>
+  const flipTexts = document.querySelectorAll('[data-flip]');
 
-                <li class="relative">
-                    <button
-                    class="dropdown-toggle relative uppercase tracking-[2.4px] text-xs font-medium text-white font-avenir
-                                after:absolute after:left-0 after:-bottom-1
-                                after:h-[1px] after:w-0 after:bg-white
-                                after:transition-all
-                                hover:after:w-full after:duration-500 after:ease-[cubic-bezier(0.4,0,0.2,1)]"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    data-target="collectionsDropdown"
-                    >
-                    Collections
-                    </button>
+  const flipObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target); // run once
+        }
+      });
+    },
+    {
+      threshold: 0.4, // sweet cinematic timing
+    }
+  );
 
-                    <div
-                    id="collectionsDropdown"
-                    class="dropdown fixed left-0 top-[65px] z-[9999] w-screen bg-white border-t border-neutral-200 shadow-xl opacity-0 translate-y-[-12px] pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                    >
-                        <div class="mx-auto max-w-7xl px-20 py-12 grid grid-cols-1 lg:grid-cols-4 gap-5 font-didot">
-                            <!-- Categories -->
-                            <nav aria-label="Shop categories" class="max-w-xl">
-                                <h3 class="text-xl font-medium uppercase tracking-wide text-neutral-800 mb-6">
-                                    ALL COLLECTIONS
-                                </h3>
-                                <ul class="space-y-4 text-sm text-neutral-700 text-base text-neutral-700 capitalize">
-                                <li><a href="#" class="hover:underline">Carousel of Dreams</a></li>
-                                <li><a href="#" class="hover:underline">Black Tie</a></li>
-                                <li><a href="#" class="hover:underline">Winter Dreams</a></li>
-                                <li><a href="#" class="hover:underline">Luminous</a></li>
-                                <li><a href="#" class="hover:underline">Fire and Ice</a></li>
-                                <li><a href="#" class="hover:underline">Out of Eden</a></li>
-                                </ul>
-                            </nav>
-
-                            <!-- Gifts -->
-                            <nav aria-label="Gift collections" class="max-w-xl">
-                                <h3 class="text-xl font-medium uppercase tracking-wide text-neutral-800 mb-6">
-                                    ALL COLLECTIONS
-                                </h3>
-                                <ul class="space-y-4 text-sm text-neutral-700 text-base text-neutral-700 capitalize">
-                                <li><a href="#" class="hover:underline">Carousel of Dreams</a></li>
-                                <li><a href="#" class="hover:underline">Black Tie</a></li>
-                                <li><a href="#" class="hover:underline">Winter Dreams</a></li>
-                                <li><a href="#" class="hover:underline">Luminous</a></li>
-                                <li><a href="#" class="hover:underline">Fire and Ice</a></li>
-                                <li><a href="#" class="hover:underline">Out of Eden</a></li>
-                                </ul>
-                            </nav>
-
-                        
-                            <!-- Images -->
-                            <figure class="hidden lg:block">
-                                <img src="public/twopieces.png" class="w-full h-full object-cover" />
-                            </figure>
-
-                            <figure class="hidden lg:block">
-                                <img src="public/6.png" class="w-full h-full object-cover" />
-                            </figure>
-
-                        </div>
-                    </div>
-                </li>
-
-                <li>
-                <button
-                    class="dropdown-toggle relative uppercase tracking-[2.4px] text-xs font-medium text-white font-avenir
-                                after:absolute after:left-0 after:-bottom-1
-                                after:h-[1px] after:w-0 after:bg-white
-                                after:transition-all
-                                hover:after:w-full after:duration-500 after:ease-[cubic-bezier(0.4,0,0.2,1)]"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    data-target="aboutDropdown"
-                    >
-                    About Jovadi
-                    </button>
-                    <div
-                    id="aboutDropdown"
-                    class="dropdown h-[80vh] fixed left-0 top-[65px] z-[9999] w-screen bg-white border-t border-neutral-200 shadow-xl opacity-0 translate-y-[-12px] pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                    >
-                        <div class="max-w-6xl mt-8 mx-auto md:px-6  px-4 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 font-athelas">
-                        <!-- Image -->
-                        <div class="w-full lg:w-1/2">
-                        <img
-                            src="public/about-us-pic.jpg"
-                            alt="About Jovadi"
-                            class="w-full h-[400px] object-cover"
-                        />
-                        </div>
-
-                        <!-- Content -->
-                        <div class="w-full lg:w-1/2 flex flex-col gap-3">
-                        <!-- Section Label -->
-                        <span class="text-stone-500 text-xs uppercase tracking-wider">About Us</span>
-
-                        <!-- Heading -->
-                        <h2 class="text-xl md:text-3xl font-semibold  text-black leading-tight">
-                            Created for Women Who Define Themselves.
-                        </h2>
-
-                        <!-- Description -->
-                        <div class="flex flex-col gap-4 text-stone-500 text-sm  leading-relaxed">
-                            <p>
-                            <span class="font-bold font-lora">JOVADI</span> represents the intersection of sculptural artistry and timeless elegance. Each piece is meticulously crafted to embody feminine strength and grace, designed for the woman who writes her own story.
-                            </p>
-                            <p>
-                            Our collections celebrate individuality through refined design, where every curve and contour speaks to the power of self-expression.
-                            </p>
-                        </div>
-
-                        <!-- Link -->
-                        <a href="#story" class="inline-flex flex-col gap-1 group w-max">
-                            <span class="text-stone-500 text-sm ">Discover Our Story</span>
-                            <span class="block w-24 h-[1px] bg-amber-400 transition-all group-hover:w-32"></span>
-                        </a>
-                        </div>
-                        </div>
-                    </div>
-                </li>
-
-                <li><a href="#" class=" relative uppercase tracking-[2.4px] text-xs font-medium text-white font-avenir
-                                after:absolute after:left-0 after:-bottom-1
-                                after:h-[1px] after:w-0 after:bg-white
-                                after:transition-all
-                                hover:after:w-full after:duration-500 after:ease-[cubic-bezier(0.4,0,0.2,1)]">OUR WORLD</a></li>
-                </ul>
-            
-            <!-- Icons -->
-            <div class="items-center gap-7 hidden md:flex ">
-                <button aria-label="Search" class="">
-                    <i class="fa-regular fa-user text-white"></i>
-                </button>
-                <button aria-label="Account" class="">
-                    <i class="fa-solid fa-magnifying-glass text-white "></i>
-                </button>
-                <button aria-label="Cart" class="">
-                    <i class="fa-solid fa-bag-shopping text-white"></i>
-                </button>
-            </div>
-            <button
-                id="mobileMenuToggle"
-                class="md:hidden text-white text-xl"
-                aria-label="Open menu"
-                >
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            </div>
-        </nav>
-
-        <div
-            id="mobileMenu" class="
-                    fixed inset-0 z-[99999] bg-black text-white
-                    translate-y-full opacity-0
-                    transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]
-                    md:hidden
-                    ">
-                <div class="px-4 pt-6 flex justify-between items-center">
-                    <img src="public/logo.png" class="h-7" />
-                    <button id="mobileMenuClose" class="text-xl">
-                    <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-
-                <ul class="mt-10 divide-y divide-white/20 text-sm tracking-widest uppercase">
-
-                    <!-- SHOP -->
-                    <li>
-                    <button
-                        class="accordion-toggle w-full uppercase flex justify-between items-center px-4 py-5"
-                        data-accordion="shop"
-                    >
-                        Shop
-                        <span class="transition-transform duration-500 text-lg">+</span>
-                    </button>
-
-                    <div
-                        class="accordion-content max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                        data-content="shop"
-                    >
-                        <ul class="px-6 pb-6 space-y-6 text-xs text-white/80 capitalize">
-                        <li>Earrings</li>
-                        <li>Rings</li>
-                        <li>Bracelets</li>
-                        <li>Necklaces</li>
-                        </ul>
-                    </div>
-                    </li>
-
-                    <!-- COLLECTIONS -->
-                    <li>
-                    <button
-                        class="accordion-toggle w-full flex uppercase justify-between items-center px-4 py-5"
-                        data-accordion="collections"
-                    >
-                        Collections
-                        <span class="transition-transform duration-500 text-lg">+</span>
-                    </button>
-
-                    <div
-                        class="accordion-content max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                        data-content="collections"
-                    >
-                        <ul class="px-4 pb-6 space-y-6 text-xs text-white/80 capitalize">
-                        <li>Carousel of Dreams</li>
-                        <li>Black Tie</li>
-                        <li>Winter Dreams</li>
-                        <li>Luminous</li>
-                        <li>Out of Eden</li>
-                        </ul>
-                    </div>
-                    </li>
-                    <li>
-                    <button
-                        class="accordion-toggle w-full flex uppercase justify-between items-center px-4 py-5"
-                        data-accordion="about"
-                    >
-                        About Jovadi
-                        <span class="transition-transform duration-500 text-lg">+</span>
-                    </button>
-
-                    <div
-                        class="accordion-content max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                        data-content="about"
-                    >
-                        <p class="px-4 pb-6 text-xs text-white/70 leading-relaxed">
-                        Sculptural luxury jewelry crafted for women who define themselves.
-                        </p>
-                    </div>
-
-                    </li>
-
-                    <li class="px-4 py-5">Our World</li>
-                </ul>
-
-                <div class="mt-10 px-6 flex items-center gap-7">
-                    <button aria-label="Search" class="">
-                            <i class="fa-regular fa-user text-white"></i>
-                    </button>
-                    <button aria-label="Account" class="">
-                        <i class="fa-solid fa-magnifying-glass text-white "></i>
-                    </button>
-                    <button aria-label="Cart" class="">
-                        <i class="fa-solid fa-bag-shopping text-white"></i>
-                    </button>
-                </div>
-        </div>
-        <!-- Hero -->
-        <section class="relative h-screen min-h-[600px]">
-            <!-- Slides -->
-            <ul id="hero-slides" class="h-full w-full relative">
-            
-            <!-- VIDEO SLIDE -->
-            <li class="hero-slide active">
-                <video
-                class="absolute inset-0 w-full h-full object-cover"
-                src="public/ml teaser.mp4"
-                muted
-                playsinline
-                ></video>
-            </li>
-
-            <!-- IMAGE SLIDE -->
-            <li class="hero-slide">
-                <img
-                src="public/motherlovenew.jpeg"
-                alt="Collection image 1"
-                class="absolute inset-0 w-full h-full object-cover"
-                />
-            </li>
-
-            <!-- IMAGE SLIDE -->
-            <li class="hero-slide">
-                <img
-                src="public/picc.jpg"
-                alt="Collection image 2"
-                class="absolute inset-0 w-full h-full object-cover"
-                />
-            </li>
-          </ul>
-          
-          <!-- Overlay -->
-          
-          
-          <!-- Content -->
-          <div class="absolute md:bottom-0 bottom-24 md:left-0 left-0 right-0 z-10 max-w-7xl mx-auto px-6">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/10"></div>
-                 <div class="relative z-10  w-full flex items-end pt-10 md:px-16 px-5">
-                      <div class="flex justify-between items-end w-full pb-14 pt-10 h-screen text-white">
-                          <!-- LEFT -->
-                          <div class="space-y-3 pt-10 animate-fadeUp opacity-0 font-inter flex flex-col justify-between h-full">
-                            <div>
-                              <h3 class="text-sm tracking-[0.5em] font-anton">REDHOT CONCEPTS</h3>
-                            </div>
-                            <div class="space-y-5">         
-                              <div class="flex items-center gap-3">
-                                  <p class="tracking-widest md:text-sm text-xs text-gray-400">COMING UP SOON</p>
-                              </div>
-                              <h1 class="md:text-[80px] sm:text-[50px] text-[50px] tracking-wide leading-none font-anton">
-                                  A MOTHER’S <span class="text-outline uppercase">LOVE</span> 
-                              </h1>
-                              <div class="space-x-5 animate-fadeUp">
-                                <button  class="delay-300 bg-[#a98004] text-sm hover:bg-amber-500 border-2 border-[#a98004] transition-all duration-300 hover:scale-105 px-6 py-2 shadow-lg">
-                                    More Details
-                                </button>
-                                <button  class="animate-fadeUp delay-150 text-sm bg-transparent border-2 border-white hover:bg-gray-500 transition-all duration-300 hover:scale-105 px-6 py-2">
-                                    Learn More
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-
-                          <!-- RIGHT -->
-                          <div class=" md:block hidden items-end justify-end w-2/5 space-y-6 font-archivo animate-fadeUp delay-500 opacity-0">
-                            <div class="flex items-end justify-center flex-col mb-10">
-                              <div class="flex items-start flex-col justify-start">
-                                <p class="text-xs uppercase tracking-widest text-white mb-2 font-inter">MOVIE SCENEs</p>
-                                <div class="space-y-2">
-                                  <img data-aos="fade-up" data-aos-delay="100" src="public/m1.jpg" class="w-44 h-20 object-cover rounded-sm" alt="">
-                                  <img data-aos="fade-up" data-aos-delay="200" src="public/m2.jpg" class="w-44 h-20 object-cover rounded-sm" alt="">
-                                  <img data-aos="fade-up" data-aos-delay="300" src="public/m3.jpg" class="w-44 h-20 object-cover rounded-sm" alt="">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="uppercase text-xs flex gap-2 flex-wrap  text-end">
-                              <p class="tracking-widest">omotola jalade ekeinde</p><span class="opacity-60">•</span>
-                              <p class="tracking-widest">Olumide  Oworu</p><span class="opacity-60">•</span>
-                              <p class="tracking-widest">BABA REX</p><span class="opacity-60">•</span>
-                              <p class="tracking-widest">lilian afegbia</p><span class="opacity-60">•</span>
-                              <p class="tracking-widest">NORAY NEHITA</p><span class="opacity-60">•</span>
-                              <p class="tracking-widest">Ifeanyi kalu</p>
-                            </div>
-                          </div>
-                      </div>
-                  </div>
-            </div>
-
-            <!-- Arrows -->
-            <button id="prevSlide" class="hero-arrow z-20 md:left-10 left-4"><i class="fa-solid fa-chevron-left"></i></button>
-            <button id="nextSlide" class="hero-arrow z-20 md:right-10 right-4"><i class="fa-solid fa-chevron-right"></i></button>
-
-            <!-- Pagination -->
-            <div id="hero-pagination" class="hero-pagination"></div>
-
-        </section>
-    </header>
-
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col gap-12">
-            
-            <!-- Section Title -->
-            <header class="text-center">
-            <h2 class="text-lg md:text-xl font-bold font-athelas uppercase tracking-wide text-black">
-                Discover Our Collection Just For You
-            </h2>
-            </header>
-
-            <!-- Products Grid -->
-            <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            <!-- Product Card -->
-            <li class="flex flex-col items-center gap-4">
-                <figure class="w-full aspect-square overflow-hidden bg-white">
-                <img
-                    src="public/1.jpg"
-                    alt="Lady Bird Ring"
-                    class="w-full h-full object-cover"
-                />
-                </figure>
-                <figcaption class="text-center text-sm font-athelas uppercase tracking-wide text-black">
-                Lady Bird Ring
-                </figcaption>
-            </li>
-
-            <li class="flex flex-col items-center gap-4">
-                <figure class="w-full aspect-square overflow-hidden bg-white">
-                <img
-                    src="public/2.jpg"
-                    alt="Topaz Flower Ring"
-                    class="w-full h-full object-cover"
-                />
-                </figure>
-                <figcaption class="text-center text-sm font-athelas uppercase tracking-wide text-black">
-                Topaz Flower Ring
-                </figcaption>
-            </li>
-
-            <li class="flex flex-col items-center gap-4">
-                <figure class="w-full aspect-square overflow-hidden bg-white">
-                <img
-                    src="public/3.png"
-                    alt="Out of Eden Ring"
-                    class="w-full h-full object-cover"
-                />
-                </figure>
-                <figcaption class="text-center text-sm font-athelas uppercase tracking-wide text-black">
-                Out of Eden Ring
-                </figcaption>
-            </li>
-
-            <li class="flex flex-col items-center gap-4">
-                <figure class="w-full aspect-square overflow-hidden bg-white">
-                <img
-                    src="public/4.jpg"
-                    alt="Grand Rosa Ring Black and White Diamonds"
-                    class="w-full h-full object-cover"
-                />
-                </figure>
-                <figcaption class="text-center text-sm font-athelas uppercase tracking-wide text-black">
-                Grand Rosa Ring Black & White Diamonds
-                </figcaption>
-            </li>
-
-            </ul>
-
-            <!-- CTA -->
-            <div class="flex justify-center">
-            <a
-                href="#collections"
-                class="inline-flex items-center justify-center h-12 px-8 bg-black text-white text-base  tracking-tight hover:bg-neutral-900 transition font-avenir"
-            >
-                Discover More
-            </a>
-            </div>
-
-        </div>
-    </section>
-
-    <section
-        class="py-20"
-        aria-labelledby="collections-heading"
-        >
-        <h2 id="collections-heading" class="sr-only">
-            Featured Collections
-        </h2>
-
-        <div class="flex flex-col lg:flex-row">
-            <!-- Collection 1 -->
-            <article class="w-full lg:w-1/2 flex-1">
-            <figure class="bg-[url('public/twopieces.png')] min-h-[640px] lg:min-h-[720px] w-full bg-cover bg-center bg-no-repeat flex items-end justify-center bg-black">
-                <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/10 to-transparent"></div>
-                <!-- Text Container -->
-                <figcaption
-                class="text-center flex flex-col items-center mb-20 justify-center"
-                >
-                <h3 class="text-4xl md:text-6xl text-white font-athelas italic tracking-wide">
-                    Sculpted in Grace.
-                </h3>
-                <p class="mt-2 text-xs tracking-widest text-white font-avenir font-medium">
-                    SIGNATURE COLLECTION
-                </p>
-                </figcaption>
-            </figure>
-            </article>
-
-            <article class="w-full lg:w-1/2 flex-1">
-            <figure class=" bg-[url('/public/model4.jpg')] min-h-[640px] lg:min-h-[720px] w-full bg-cover bg-center bg-no-repeat flex items-end justify-center bg-black">
-                <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/20 to-transparent"></div>
-                <!-- Text Container -->
-                <figcaption
-                class="text-center flex flex-col items-center mb-20 justify-center"
-                >
-                <h3 class="text-4xl md:text-6xl text-white font-athelas italic tracking-wide">
-                    The Radiance of You.
-                </h3>
-                <p class="mt-2 text-xs tracking-widest text-white font-avenir font-medium">
-                    GOLD COLLECTION
-                </p>
-                </figcaption>
-            </figure>
-            </article>    
-        </div>
-    </section>
-
-    <section class="py-10">
-        <img src="public/ring.jpg" alt="" class="object-cover w-full h-[600px]" />
-    </section>
-
-    <section class="bg-white py-20">
-        <div class="max-w-6xl mx-auto px-4 md:px-6 flex flex-col  lg:flex-row items-center gap-12 lg:gap-16 font-athelas">
-            <!-- Image -->
-            <div class="w-full lg:w-1/2">
-            <img
-                src="public/about-us-pic.jpg"
-                alt="About Jovadi"
-                class="w-full h-[500px] object-cover"
-            />
-            </div>
-
-            <!-- Content -->
-            <div class="w-full lg:w-1/2 flex flex-col gap-3">
-            <!-- Section Label -->
-            <span class="text-stone-500 text-sm  uppercase tracking-wider">About Us</span>
-
-            <!-- Heading -->
-            <h2 class="text-3xl md:text-4xl font-semibold  text-black leading-tight">
-                Created for Women Who Define Themselves.
-            </h2>
-
-            <!-- Description -->
-            <div class="flex flex-col gap-4 text-stone-500 text-lg  leading-relaxed">
-                <p>
-                <span class="font-bold">JOVADI</span> represents the intersection of sculptural artistry and timeless elegance. Each piece is meticulously crafted to embody feminine strength and grace, designed for the woman who writes her own story.
-                </p>
-                <p>
-                Our collections celebrate individuality through refined design, where every curve and contour speaks to the power of self-expression.
-                </p>
-            </div>
-
-            <!-- Link -->
-            <a href="#story" class="inline-flex flex-col gap-1 group w-max">
-                <span class="text-stone-500 text-sm ">Discover Our Story</span>
-                <span class="block w-24 h-[1px] bg-amber-400 transition-all group-hover:w-32"></span>
-            </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-stone-100 py-20">
-        <div class="max-w-2xl mx-auto px-4 text-center flex flex-col gap-12">
-            <!-- Heading -->
-            <div class="flex flex-col gap-4">
-            <h2 class="text-4xl md:text-5xl font-semibold font-lora  text-black leading-tight">
-                Join the Circle of JOVADI
-            </h2>
-            <p class="text-base md:text-lg text-zinc-800 font-avenir leading-relaxed">
-                Be the first to discover new collections and exclusive offers
-            </p>
-            </div>
-
-            <!-- Form -->
-            <form class="flex flex-col sm:flex-row justify-center items-center gap-4 w-full">
-            <label for="email" class="sr-only">Email address</label>
-            <input
-                type="email"
-                id="email"
-                placeholder="Your email address"
-                class="w-full sm:w-72 h-12 px-4 border border-stone-300 text-stone-700 placeholder-stone-500 placeholder:font-avenir focus:outline-none focus:ring-2 focus:ring-black"
-            />
-            <button
-                type="submit"
-                class="w-full sm:w-36 h-12 bg-black font-avenir text-white text-base  hover:bg-gray-900 transition"
-            >
-                SUBSCRIBE
-            </button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="bg-black text-stone-100 py-10">
-        <div class="max-w-6xl mx-auto px-4 md:px-6 flex flex-col gap-10">
-            <!-- Top Section: Logo + Links -->
-            <div class="flex flex-col md:flex-row md: gap-8 md:gap-40 border-b border-zinc-800 pb-6">
-            
-                <!-- Brand Info -->
-                <div class="flex flex-col gap-3">
-                    <h2 class="text-white text-2xl font-lora  uppercase">JOVADI</h2>
-                    <p class="text-stone-100 text-sm md:w-56 w-full font-inter">
-                    Sculptural luxury jewelry for women who define themselves.
-                    </p>
-                </div>
-
-                <!-- Navigation Links -->
-                <div class="flex flex-col sm:flex-row w-full sm:justify-between md:justify-start flex-wrap gap-8 md:gap-[157px]">
-                    <!-- Shop -->
-                    <nav class="flex flex-col gap-4">
-                    <h3 class="text-white text-base uppercase font-avenir">Shop</h3>
-                    <ul class="flex flex-col gap-4 text-stone-100 text-sm font-inter">
-                        <li><a href="#">All Collections</a></li>
-                        <li><a href="#">Signature Pieces</a></li>
-                        <li><a href="#">Gold Collection</a></li>
-                        <li><a href="#">New Arrivals</a></li>
-                    </ul>
-                    </nav>
-
-                    <!-- About -->
-                    <nav class="flex flex-col gap-4">
-                    <h3 class="text-white text-base uppercase font-avenir">About</h3>
-                    <ul class="flex flex-col gap-4 text-stone-100 text-sm font-inter">
-                        <li><a href="#">Our Story</a></li>
-                        <li><a href="#">All Craftmanship</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">All Press</a></li>
-                    </ul>
-                    </nav>
-
-                    <!-- Support -->
-                    <nav class="flex flex-col gap-4">
-                    <h3 class="text-white text-base uppercase font-avenir">Support</h3>
-                    <ul class="flex flex-col gap-4 text-stone-100 text-sm font-inter">
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Care Guide</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                    </nav>
-                </div>
-            </div>
-
-            <!-- Bottom Section: Legal -->
-            <div class="flex flex-col sm:flex-row justify-between items-center font-inter gap-4 pt-4">
-            <p class="text-stone-100 text-xs sm:text-[13px]">&copy; 2025 JOVADI. All rights reserved.</p>
-            <div class="flex gap-4 text-stone-300 text-xs sm:text-[13px]">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-            </div>
-            </div>
-        </div>
-    </footer>
+  flipTexts.forEach(el => flipObserver.observe(el));
+</script>
 
 </body>
-
-<script>
-  const slides = document.querySelectorAll('.hero-slide');
-  const pagination = document.getElementById('hero-pagination');
-  const nextBtn = document.getElementById('nextSlide');
-  const prevBtn = document.getElementById('prevSlide');
-
-  let index = 0;
-  let autoplay;
-
-  // Create pagination dots (1 per slide)
-  slides.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.className = 'hero-dot';
-    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-    dot.addEventListener('click', () => goToSlide(i));
-    pagination.appendChild(dot);
-  });
-
-  const dots = document.querySelectorAll('.hero-dot');
-
-  function showSlide(i) {
-    slides.forEach((slide, idx) => {
-      slide.classList.toggle('active', idx === i);
-
-      const video = slide.querySelector('video');
-      if (video) {
-        idx === i ? video.play() : video.pause();
-      }
-    });
-
-    dots.forEach((dot, idx) => {
-      dot.classList.toggle('active', idx === i);
-    });
-
-    index = i;
-  }
-
-  function nextSlide() {
-    showSlide((index + 1) % slides.length);
-  }
-
-  function prevSlide() {
-    showSlide((index - 1 + slides.length) % slides.length);
-  }
-
-  function goToSlide(i) {
-    showSlide(i);
-    resetAutoplay();
-  }
-
-  function resetAutoplay() {
-    clearInterval(autoplay);
-    autoplay = setInterval(nextSlide, 5000);
-  }
-
-  nextBtn.addEventListener('click', () => {
-    nextSlide();
-    resetAutoplay();
-  });
-
-  prevBtn.addEventListener('click', () => {
-    prevSlide();
-    resetAutoplay();
-  });
-
-  // Init
-  showSlide(0);
-  autoplay = setInterval(nextSlide, 5000);
-</script>
-
-<script>
-   document.addEventListener("DOMContentLoaded", () => {
-  const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
-
-  dropdownToggles.forEach((btn) => {
-    const targetId = btn.dataset.target;
-    const dropdown = document.getElementById(targetId);
-
-    // Toggle dropdown
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation(); // prevent immediate close
-
-      const isOpen = dropdown.classList.contains("opacity-100");
-
-      // Close all dropdowns first
-      document.querySelectorAll(".dropdown").forEach((dd) => {
-        dd.classList.remove("opacity-100", "translate-y-0", "pointer-events-auto");
-        dd.classList.add("opacity-0", "translate-y-[-12px]", "pointer-events-none");
-        const relatedBtn = document.querySelector(`[data-target="${dd.id}"]`);
-        if (relatedBtn) relatedBtn.setAttribute("aria-expanded", "false");
-      });
-
-      // Toggle clicked dropdown
-      if (!isOpen) {
-        dropdown.classList.add("opacity-100", "translate-y-0", "pointer-events-auto");
-        dropdown.classList.remove("opacity-0", "translate-y-[-12px]", "pointer-events-none");
-        btn.setAttribute("aria-expanded", "true");
-      }
-    });
-  });
-
-  // Close dropdown when clicking outside
-  document.addEventListener("click", (e) => {
-    document.querySelectorAll(".dropdown").forEach((dd) => {
-      dd.classList.remove("opacity-100", "translate-y-0", "pointer-events-auto");
-      dd.classList.add("opacity-0", "translate-y-[-12px]", "pointer-events-none");
-      const relatedBtn = document.querySelector(`[data-target="${dd.id}"]`);
-      if (relatedBtn) relatedBtn.setAttribute("aria-expanded", "false");
-    });
-  });
-});
-
-</script>
-
-<script>
-  // Mobile menu toggle
-  const mobileMenu = document.getElementById("mobileMenu");
-  const openBtn = document.getElementById("mobileMenuToggle");
-  const closeBtn = document.getElementById("mobileMenuClose");
-
-  openBtn?.addEventListener("click", () => {
-    mobileMenu.classList.remove("translate-y-full", "opacity-0");
-  });
-
-  closeBtn?.addEventListener("click", () => {
-    mobileMenu.classList.add("translate-y-full", "opacity-0");
-  });
-
-  // Accordion logic
-  document.querySelectorAll(".accordion-toggle").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const target = btn.dataset.accordion;
-      const content = document.querySelector(`[data-content="${target}"]`);
-      const icon = btn.querySelector("span");
-
-      const isOpen = content.style.maxHeight;
-
-      // Close all
-      document.querySelectorAll(".accordion-content").forEach(c => {
-        c.style.maxHeight = null;
-      });
-      document.querySelectorAll(".accordion-toggle span").forEach(i => {
-        i.style.transform = "rotate(0deg)";
-      });
-
-      // Open current
-      if (!isOpen) {
-        content.style.maxHeight = content.scrollHeight + "px";
-        icon.style.transform = "rotate(45deg)";
-      }
-    });
-  });
-</script>
-
 </html>

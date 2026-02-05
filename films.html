@@ -10,82 +10,78 @@
     <title>Omotola . Films</title>
 </head>
 <body class="bg-[#0d0d0d]">
-    <div class="pb-10">
-        <header class="fixed w-full z-50 top-0 bg-[#0D0D0D] text-white px-4 md:px-6 py-2 shadow-sm font-geist font-normal">
-           <div id="navbar" class="">
-               <div class="flex justify-between items-center px-4">
-                   <a href="darkmode.html">
-                       <img src="/public/img124.webp" class="w-10 md:w-10 text-[#0D0D0D] "/>
-                   </a>
-   
-                   <button id="menuBtn" class="md:hidden text-amber-500 text-2xl">
-                       <i class="fa-solid fa-bars"></i>
-                   </button>
-   
-                   <nav class="hidden md:flex text-sm">
-                       <ul class="flex items-center text-white gap-10 uppercase">
-                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="films.html">Films</a></li>
-                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="news.html">News</a></li>
-                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="legacy.html">30 Years legacy</a></li>
-                           <li class="relative group">
-                               <a class="hover:text-orange-300 transition-all duration-200 flex items-center gap-2" 
-                                   id="othersBtn" 
-                                   aria-expanded="false"
-                                   href="#">Others <span class="text-sm pl-2"><i class="fa-solid fa-chevron-down"></i></span>
-                               </a>
-                               <div
-                                   id="othersDropdown"
-                                   class="absolute top-full mt-4 left-[-130px] -translate-x-1/2 w-[430px] px-2 py-2 rounded-3xl bg-white shadow-[0_8px_32px_rgba(0,0,0,0.35)] invisible group-hover:visible
-                                       transition-all duration-300 z-[999px]">
-                                   <ul class="relative text-stone-500 text-base font-normal font-geist leading-relaxed">
-                                      <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
-                                        <a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 px-4 transition-all duration-200">OYEP</a>  <br><br>
-                                      </li>
-                                      <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
-                                        <a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 px-4 transition-all duration-200">OSEAL</a>  <br><br>
-                                      </li>
-                                      <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
-                                        <a href="https://www.teffest.com/" class="hover:text-orange-300 px-4 transition-all duration-200">TEFFEST</a>  <br><br>
-                                      </li>
-                                      <li class="hover:bg-[#FFFAEF] rounded-3xl hover:text-[#0D0D0D] flex items-center">
-                                        <a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 px-4 transition-all duration-200">DOUBLE DOORS</a>  <br><br>
-                                      </li>
-                                   </ul>
-                               </div>
-                           </li>
-                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="about.html">About</a></li>
-                           <li class="hover:text-orange-300 transition-all ease-out duration-200"><a href="#contact">Contact</a></li>
-                       </ul>
-                   </nav>
-               </div>
-   
-               <nav id="mobileMenu" class="hidden text-white pb-6 h-full ease-out transition-all duration-300">
-                   <ul class="flex flex-col  gap-y-3 uppercase p-6 text-white">
-                      <li class=""><a href="films.html" class="hover:text-orange-300 transition-all ease-out duration-200">Films</a></li>
-                      <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="news.html">News</a></li>
-                      <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="legacy.html">30 Years legacy</a></li>
-                      <li class=""><button class="hover:text-orange-300 transition-all ease-out duration-200" id="othersToggle">OTHERS <span class="text-sm"><i id="othersIcon" class="fa-solid fa-chevron-down transition-transform duration-300"></i></span></button>
-                          <ul
-                              id="othersAccordion"
-                              class="mt-1 ml-4 space-y-3 text-sm
-                                  max-h-0 overflow-hidden
-                                  transition-all duration-300"
-                          >
-                              <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">OYEP</a></li>
-                              <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">OSEAL</a></li>
-                              <li><a href="https://www.teffest.com/" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">TEFFEST</a></li>
-                              <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 transition-all ease-out duration-200" href="#">Double Doors</a></li>
-                          </ul>
-                      </li>
-                      <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="about.html">About</a></li>
-                      <li class=""><a class="hover:text-orange-300 transition-all ease-out duration-200" href="#contact">Contact</a></li>
-                   </ul>
-               </nav>
-           </div>
-       </header> 
-    </div>
+    <header id="mainHeader" class="fixed top-0 w-full z-50 pr-4 md:pr-14 md:pl-6 py-4 md:py-1 transition-all duration-500">
+  <div class="flex justify-between items-center">
 
-    <section class="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8 py-10">
+    <!-- Logo -->
+    <a id="logoWrap" href="index.html"
+     class="relative flex items-center justify-center w-20 h-10 md:w-28 md:h-[5rem] p-2 rounded-md transition-all duration-300">
+        <img id="logoWhite"
+            src="public/img124.webp"
+            class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-100"
+            alt="Logo White"/>
+
+        <img id="logoRed"
+            src="public/redbg.png"
+            class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-0"
+            alt="Logo Red"/>
+    </a>
+
+
+    <!-- Desktop Nav -->
+    <nav id="desktopNav" class="hidden md:flex items-center nav-fade">
+      <ul class="flex items-center text-white gap-8 uppercase font-inter">
+        <li><a href="films.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Films</a></li>
+        <li><a href="news.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">News</a></li>
+        <li><a href="legacy.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">30 Years legacy</a></li>
+        <li class="relative group tracking-wide text-sm">
+          <a class="hover:text-orange-300 flex items-center gap-2" >Affiliates <i class="fa-solid fa-chevron-down text-sm"></i></a>
+          <div class="absolute top-full left-1/2 -translate-x-1/2 w-[300px] px-2 py-2 bg-white rounded-3xl shadow-lg invisible group-hover:visible transition-all duration-300">
+            <ul class="text-stone-500 flex flex-col gap-2">
+              <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 block px-4 py-1">OYEP</a></li>
+              <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 block px-4 py-1">OSEAL</a></li>
+              <li><a href="https://www.teffest.com/" class="hover:text-orange-300 block px-4 py-1">TEFFEST</a></li>
+              <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 block px-4 py-1">DOUBLE DOORS</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="about.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">About</a></li>
+        <li><a href="contact.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger -->
+    <button id="menuBtn" class="md:hidden text-white text-3xl hover:text-amber-400 transition-all">
+      <span><i class="fa-solid fa-bars"></i></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav id="mobileMenu" class="fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-lg z-50 flex flex-col items-center justify-center transform translate-y-full opacity-0">
+    <button id="mobileClose" class="absolute top-8 right-8 text-white text-3xl hover:text-amber-400 transition-all"><i class="fa-solid fa-xmark"></i></button>
+    <ul id="mobileMenuList" class="flex flex-col justify-center items-center gap-8 text-center font-geist text-white">
+      <li class="menu-item opacity-0 translate-y-6"><a href="films.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">Films</a></li>
+      <li class="menu-item opacity-0 translate-y-6"><a href="news.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">News</a></li>
+      <li class="menu-item opacity-0 translate-y-6"><a href="legacy.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">30 Years Legacy</a></li>
+      <li class="menu-item opacity-0 translate-y-6">
+        <button id="othersToggle" class="flex items-center justify-center text-3xl font-bold uppercase hover:text-amber-400 gap-2 transition-all duration-300">
+          Affiliates <i id="othersIcon" class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+        </button>
+        <ul id="othersAccordion" class="mt-4 max-h-0 overflow-hidden flex flex-col gap-3 transition-all duration-300">
+          <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400">OYEP</a></li>
+          <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400">OSEAL</a></li>
+          <li><a href="https://www.teffest.com/" class="hover:text-amber-400">TEFFEST</a></li>
+          <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400">DOUBLE DOORS</a></li>
+        </ul>
+      </li>
+      <li class="menu-item opacity-0 translate-y-6"><a href="about.html" class="text-3xl font-bold uppercase hover:text-amber-400">About</a></li>
+      <li class="menu-item opacity-0 translate-y-6"><a href="contact.html" class="text-3xl font-bold uppercase hover:text-amber-400">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+    <section class="max-w-7xl mx-auto  px-4 sm:px-6 md:px-14 py-10">
         <!-- Section Heading -->
         <div class="w-full py-10 flex flex-col items-center text-center">
           <header class="space-y-4">
@@ -127,9 +123,9 @@
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-4 lg:px-8 py-12 bg-[#252423]">
+    <section class="max-w-7xl mx-auto px-4 md:px-14 py-12 bg-[#252423]">
       <header class="mb-6">
-        <h2 class="text-xl font-semibold uppercase text-white font-geist">
+        <h2 class="text-xl font-semibold uppercase text-white font-geist tracking-wide">
           Other Films & Features
         </h2>
       </header>
@@ -154,13 +150,13 @@
           <tbody class="divide-y divide-white/5">
 
   <!-- 1990s -->
-  <tr class="group transition-all duration-500 hover:bg-white/[0.04]">
+  <!-- <tr class="group transition-all duration-500 hover:bg-white/[0.04]">
     <td class="py-5 px-6 text-zinc-400">1995</td>
     <td class="py-5 px-6"><span class="block text-base text-white group-hover:text-amber-400 transition">Venom of Justice</span></td>
     <td class="py-5 px-6 text-zinc-500">—</td>
     <td class="py-5 px-6 text-zinc-400">Drama</td>
     <td class="py-5 px-6 text-xs italic text-zinc-500">Not on IMDb</td>
-  </tr>
+  </tr> -->
 
   <tr class="group transition-all duration-500 hover:bg-white/[0.04]">
     <td class="py-5 px-6 text-zinc-400">1996</td>
@@ -179,7 +175,7 @@
     </td>
   </tr>
 
-  <tr class="group transition-all duration-500 hover:bg-white/[0.04]">
+  <!-- <tr class="group transition-all duration-500 hover:bg-white/[0.04]">
     <td class="py-5 px-6 text-zinc-400">1998</td>
     <td class="py-5 px-6"><span class="block text-base text-white group-hover:text-amber-400 transition">Scores to Settle</span></td>
     <td class="py-5 px-6 text-zinc-500">—</td>
@@ -203,7 +199,7 @@
     <td class="py-5 px-6 text-xs italic text-zinc-500">Not on IMDb</td>
   </tr>
 
-  <!-- 2000s -->
+
   <tr class="group transition-all duration-500 hover:bg-white/[0.04]">
     <td class="py-5 px-6 text-zinc-400">2000</td>
     <td class="py-5 px-6"><span class="block text-base text-white group-hover:text-amber-400 transition">Roseline</span></td>
@@ -226,7 +222,7 @@
     <td class="py-5 px-6 text-zinc-300">Mary</td>
     <td class="py-5 px-6 text-zinc-400">Romance</td>
     <td class="py-5 px-6 text-xs italic text-zinc-500">Not on IMDb</td>
-  </tr>
+  </tr> -->
 
   <tr class="group transition-all duration-500 hover:bg-white/[0.04]">
     <td class="py-5 px-6 text-zinc-400">2003</td>
@@ -313,7 +309,7 @@
 
     </section>
 
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 py-20">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 md:px-14 space-y-8 py-20">
       <header class="flex justify-between itemw-center">
         <h2 class="text-xl md:text-3xl font-semibold uppercase font-geist text-white tracking-wide">
           Career Milestones: The Iconic Timeline
@@ -324,7 +320,7 @@
           </a>
       </header>
 
-      <div class="bg-[#252423]  border-neutral-100 rounded-sm">
+      <div class="bg-[#252423]  border-neutral-100 rounded-xl">
             <div class=" overflow-y-auto scroll-smooth p-6 md:p-10 no-scrollbar scrollbar-hide">
               <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10">
                 <ol class="space-y-6">
@@ -379,7 +375,7 @@
 
       <div class="mt-16 flex justify-center md:hidden">
           <a
-            href="#"
+            href="legacy.html"
             class="px-8 py-4 bg-[#E19403] uppercase text-white text-sm font-medium font-geist hover:bg-amber-600 transition"
           >
             View Legacy
@@ -387,7 +383,7 @@
         </div>
     </section>
 
-    <section class="relative w-full py-40 bg-black overflow-hidden">
+    <section class="relative w-full sm:px-6 md:py-20 md:px-14 py-10 px-5 bg-black overflow-hidden">
 
       <!-- Atmospheric background -->
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_#1a1a1a,_transparent_65%)] opacity-40"></div>
@@ -395,7 +391,7 @@
 
       <div
         data-aos="fade-up"
-        class="relative max-w-5xl mx-auto px-6 text-center space-y-16"
+        class="relative max-w-5xl mx-auto px-6 text-center space-y-10"
       >
 
         <!-- Subtle preface -->
@@ -432,85 +428,50 @@
 
       </div>
     </section>
+    
+    <footer class="w-full py-16 border-t border-amber-400 flex flex-col items-center gap-7 px-4 text-center reveal reveal-up">
+      <nav class="w-full max-w-4xl">
+        <ul
+          class="flex flex-wrap justify-center gap-6 md:gap-12 text-sm uppercase tracking-widest text-white/80 font-geist">
+          <li><a href="index.html" class="hover:text-amber-400 transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-amber-400 transition-colors">About</a></li>
+          <li><a href="films.html" class="hover:text-amber-400 transition-colors">Films</a></li>
+          <li><a href="legacy.html" class="hover:text-amber-400 transition-colors">30yrs legacy</a></li>
+          <li><a href="#" class="hover:text-amber-400 transition-colors">Affiliate</a></li>
+          <li><a href="contact" class="hover:text-amber-400 transition-colors">Contact</a></li>
+        </ul>
+      </nav>
 
-
-    <section class="bg-white text-[#0D0D0D] scroll-mt-20" id="contact">
-      <div class="max-w-7xl mx-auto px-6 py-8 space-y-24">
-        <header class="space-y-10">
-          <h2 class=" text-xl font-semibold uppercase font-geist">
-            Contact
-          </h2>
-
-          <form class="space-y-12">
-            <fieldset class="grid grid-cols-1 md:grid-cols-2 gap-10">
-              
-              <label class="flex flex-col gap-3">
-                <input
-                  type="text" placeholder="Enter Name"
-                  class="bg-transparent border-b py-2 border-zinc-600 focus:outline-none focus:border-white transition placeholder:text-neutral-500"
-                />
-              </label>
-
-              <label class="flex flex-col gap-3">
-                <input
-                  type="email" placeholder="Enter Email Address"
-                  class="bg-transparent border-b py-2 border-zinc-600 focus:outline-none focus:border-white transition placeholder:text-neutral-500"
-                />
-              </label>
-
-            </fieldset>
-
-            <label class="flex flex-col gap-3">
-              <textarea
-                rows="1" placeholder="Your Message"
-                class="bg-transparent border-b py-2 border-zinc-600 resize-none focus:outline-none focus:border-white transition placeholder:text-neutral-500"
-              ></textarea>
-            </label>
-
-            <button
-              type="submit"
-              class="inline-flex items-center gap-x-4 bg-[#0D0D0D] text-white px-8 py-3 uppercase font-medium font-geist hover:bg-black transition"
-            >
-              Send
-              <span aria-hidden><i class="fa-solid fa-arrow-right"></i></span>
-            </button>
-          </form>
-        </header>
-
-        <!-- BRAND + FOOTER -->
-        <footer class="space-y-16">
-
-          <!-- Footer Info -->
-          <div class="flex flex-col md:flex-row justify-between gap-12 font-geist">
-
-            <!-- Socials -->
-            <nav aria-label="Social media links" class="space-y-4">
-              <h3 class="text-sm font-semibold uppercase text-[#171717]">
-                Socials
-              </h3>
-              <ul class="flex items-center gap-10 text-2xl text-[#0D0D0D]">
-                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
-              </ul>
-            </nav>
-
-            <!-- Email -->
-            <address class="not-italic text-right space-y-4 flex flex-col">
-              <p class="text-sm font-semibold uppercase text-[#171717]">
-                Email
-              </p>
-              <a
-                href="mailto:hello@redhotconcept.com"
-                class="text-xl font-inter hover:underline"
-              >
-                hello@redhotconcept.com
-              </a>
-            </address>
-
-          </div>
-        </footer>
-
+      <div class="reveal reveal-up stagger-1 flex flex-col items-center gap-2">
+        <p class="text-zinc-400 text-xs font-semibold uppercase">Email</p>
+        <a href="mailto:hello@redhotconcepts.com"
+          class="text-amber-400 text-xl md:text-2xl font-normal font-inter hover:underline hover-glow">hello@redhotconcepts.com</a>
       </div>
-    </section>
+
+      <div class="reveal reveal-up stagger-2 flex flex-wrap justify-center items-center gap-8 text-2xl text-white">
+        <a href="https://www.youtube.com/@RedHotConceptTV" target="_blank" rel="noopener noreferrer" class="hover-lift"
+          aria-label="YouTube">
+          <i class="fa-brands fa-youtube hover:text-red-600 transition-colors cursor-pointer"></i>
+        </a>
+        <a href="https://www.instagram.com/redhotconcepts?igsh=bTBwaWEwNTJtemp0" target="_blank" rel="noopener noreferrer"
+          class="hover-lift" aria-label="Instagram">
+          <i class="fa-brands fa-instagram hover:text-pink-600 transition-colors cursor-pointer"></i>
+        </a>
+        <a href="https://x.com/redhot_concept?t=Q4aHP6bGxqztv0k9isMVQw&s=09" target="_blank" rel="noopener noreferrer"
+          class="hover-lift" aria-label="X">
+          <i class="fa-brands fa-x-twitter hover:text-blue-400 transition-colors cursor-pointer"></i>
+        </a>
+      </div>
+
+      <div class="text-white text-sm font-normal font-poppins opacity-60">
+        ©2026 RedHot Concepts. All Rights Reserved.
+      </div>
+    </footer>
+
+     <div id="cursor-spotlight">
+      <div class="outer"></div>
+      <div class="inner"></div>
+    </div>
 
     <script>
         AOS.init({
@@ -520,26 +481,7 @@
         });
     </script>
 
-<script>
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
 
-  let open = false;
-
-  menuBtn.addEventListener('click', () => {
-    open = !open;
-
-    if (open) {
-      mobileMenu.classList.remove('hidden');
-    } else {
-      mobileMenu.classList.add('hidden');
-    }
-
-    menuBtn.innerHTML = open
-      ? '<i class="fa-solid fa-xmark"></i>'
-      : '<i class="fa-solid fa-bars"></i>';
-  });
-</script>
 
 <script>
   const btn = document.getElementById('othersBtn');
@@ -830,38 +772,154 @@ renderCards(cards);
 
 </script>
 
-<!-- <script>
-  const API_KEY = "40b2ab7a749699b9daf43522ab5cc2a0";
-const PERSON_ID = 1082406; // Omotola Jalade-Ekeinde TMDB ID
-const IMG = "https://image.tmdb.org/t/p/w500";
+<script>
+    const cursor = document.getElementById("cursor-spotlight");
+    const outer = cursor.querySelector('.outer');
+    const inner = cursor.querySelector('.inner');
+    const cursorSize = outer.offsetWidth; // 25px
 
-async function loadMovies() {
-  const res = await fetch(
-    `https://api.themoviedb.org/3/person/${PERSON_ID}/movie_credits?api_key=${API_KEY}`
-  );
-  const data = await res.json();
+    let mouseX = 0, mouseY = 0;
+    let outerX = 0, outerY = 0;
+    let innerX = 0, innerY = 0;
 
-  const movies = data.cast.sort(
-    (a, b) => (b.release_date || "").localeCompare(a.release_date || "")
-  );
+    const outerSpeed = 0.2; // outer ring speed
+    const innerSpeed = 0.15; // inner dot slower speed
 
-  const container = document.getElementById("movies");
+    document.addEventListener("mousemove", e => {
+      mouseX = e.clientX - cursorSize / 2;
+      mouseY = e.clientY - cursorSize / 2;
+    });
 
-  movies.forEach(movie => {
-    if (!movie.poster_path) return;
+    function animateCursor() {
+      // Outer ring follows mouse quickly
+      outerX += (mouseX - outerX) * outerSpeed;
+      outerY += (mouseY - outerY) * outerSpeed;
+      outer.style.transform = `translate3d(${outerX}px, ${outerY}px, 0)`;
 
-    container.innerHTML += `
-      <div>
-        <img src="${IMG + movie.poster_path}" alt="${movie.title}">
-        <h3>${movie.title}</h3>
-        <p>${movie.release_date?.slice(0,4) || "—"}</p>
-      </div>
-    `;
+      // Inner dot follows outer slowly
+      innerX += (outerX - innerX) * innerSpeed;
+      innerY += (outerY - innerY) * innerSpeed;
+      inner.style.transform = `translate3d(${innerX}px, ${innerY}px, 0)`;
+
+      requestAnimationFrame(animateCursor);
+    }
+
+    animateCursor();
+  </script>
+
+  <script>
+  let lastScrollY = window.scrollY;
+
+const header = document.getElementById("mainHeader");
+const desktopNav = document.getElementById("desktopNav");
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const mobileClose = document.getElementById("mobileClose");
+const othersToggle = document.getElementById("othersToggle");
+const othersAccordion = document.getElementById("othersAccordion");
+const othersIcon = document.getElementById("othersIcon");
+const logoWrap = document.getElementById("logoWrap");
+const logoWhite = document.getElementById("logoWhite");
+const logoRed = document.getElementById("logoRed");
+
+function showNavLinks() {
+  desktopNav.classList.remove("hidden");
+  requestAnimationFrame(() => {
+    desktopNav.classList.add("nav-visible");
   });
 }
 
-loadMovies();
+function hideNavLinks() {
+  desktopNav.classList.remove("nav-visible");
+}
 
-</script> -->
+function onScroll() {
+  const currentScroll = window.scrollY;
+
+  /* =======================
+     TOP OF PAGE
+  ======================= */
+  if (currentScroll === 0) {
+    header.classList.add("nav-hidden");
+    header.classList.remove("glass-nav");
+
+    logoWrap.classList.remove("scale-90");
+
+    logoWhite.style.opacity = "1";
+    logoRed.style.opacity = "0";
+
+    hideNavLinks();
+    return;
+  }
+
+  /* =======================
+     ANYWHERE ELSE
+  ======================= */
+  header.classList.remove("nav-hidden");
+  header.classList.add("glass-nav");
+
+  logoWrap.classList.add("scale-90");
+
+  logoWhite.style.opacity = "0";
+  logoRed.style.opacity = "1";
+
+  if (window.innerWidth >= 768) {
+    showNavLinks();
+  }
+
+  lastScrollY = currentScroll;
+}
+
+onScroll();
+window.addEventListener("scroll", onScroll);
+
+/* =======================
+   RESPONSIVE SYNC
+======================= */
+window.addEventListener("resize", () => {
+  if (window.innerWidth < 768) {
+    desktopNav.classList.add("hidden");
+    desktopNav.classList.remove("nav-visible");
+  } else {
+    desktopNav.classList.remove("hidden");
+    onScroll();
+  }
+});
+
+menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    if(mobileMenu.classList.contains("translate-y-full")) openMobileMenu();
+    else closeMobileMenu();
+  });
+
+  mobileClose.addEventListener("click", closeMobileMenu);
+
+  function openMobileMenu(){
+    mobileMenu.classList.remove("translate-y-full","opacity-0");
+    mobileMenu.classList.add("translate-y-0","opacity-100");
+
+    const items = document.querySelectorAll("#mobileMenu .menu-item");
+    items.forEach((el,i)=>{ el.style.transitionDelay=`${i*0.1}s`; el.classList.remove("opacity-0","translate-y-6"); el.classList.add("opacity-100","translate-y-0"); });
+  }
+
+  function closeMobileMenu(){
+    mobileMenu.classList.remove("translate-y-0","opacity-100");
+    mobileMenu.classList.add("translate-y-full","opacity-0");
+
+    const items = document.querySelectorAll("#mobileMenu .menu-item");
+    items.forEach(el=>{ el.style.transitionDelay="0s"; el.classList.add("opacity-0","translate-y-6"); el.classList.remove("opacity-100","translate-y-0"); });
+
+    menuBtn.classList.remove("active");
+  }
+
+  othersToggle?.addEventListener("click", ()=>{
+    if(othersAccordion.style.maxHeight && othersAccordion.style.maxHeight !== "0px"){
+      othersAccordion.style.maxHeight="0px"; othersIcon.classList.remove("rotate-180");
+    } else {
+      othersAccordion.style.maxHeight=othersAccordion.scrollHeight+"px"; othersIcon.classList.add("rotate-180");
+    }
+  });
+</script>
+
 </body>
 </html>
