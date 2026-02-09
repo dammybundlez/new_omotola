@@ -447,9 +447,8 @@ html {
 }
 
 /* Stagger */
-.flip-text.is-visible span:nth-child(1) { animation-delay: 0.1s; }
-.flip-text.is-visible span:nth-child(2) { animation-delay: 0.3s; }
-.flip-text.is-visible  { animation-delay: 0.5s; }
+
+.flip-text.is-visible  { animation-delay: 1s; }
 
 @keyframes flipReveal {
   0% {
@@ -465,4 +464,92 @@ html {
     opacity: 1;
     filter: blur(0);
   }
+}
+
+@keyframes imageDrift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-60%);
+  }
+}
+
+.animate-imageDrift {
+  animation: imageDrift 90s linear infinite;
+}
+
+.animate-imageDrift:hover {
+  animation-play-state: paused;
+}
+
+
+.marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 0.5rem;
+  width: max-content;
+  animation: marquee 200s linear infinite;
+}
+
+.marquee-reverse .marquee-track {
+  animation-direction: reverse;
+  animation-duration: 220s;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.archive-btn.active {
+  background: black;
+  color: white;
+}
+
+.scrollbar-elegant::-webkit-scrollbar-thumb {
+  opacity: 0;
+}
+.scrollbar-elegant:hover::-webkit-scrollbar-thumb {
+  opacity: 1;
+}
+
+/* Hide default scrollbar background */
+.scrollbar-elegant::-webkit-scrollbar {
+  height: 6px;
+}
+
+/* Track */
+.scrollbar-elegant::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Thumb */
+.scrollbar-elegant::-webkit-scrollbar-thumb {
+  background-color: rgba(190, 104, 7, 0.35); /* amber-600 */
+  border-radius: 999px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover */
+.scrollbar-elegant:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(214, 135, 46, 0.65);
+}
+
+/* Firefox */
+.scrollbar-elegant {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(217,119,6,0.5) transparent;
 }

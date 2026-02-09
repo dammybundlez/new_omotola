@@ -11,7 +11,7 @@
   <title>RedHot Concepts</title>
 </head>
 
-<body class="bg-[#0d0d0d] ">
+<body class="bg-[#0b0b0e] ">
   <header id="mainHeader" class="fixed top-0 w-full z-50 pr-6 md:pl-6 md:pr-14 py-4 md:py-1 transition-all duration-500">
     <div class="flex justify-between items-center">
 
@@ -171,19 +171,15 @@
     <div id="hero-pagination" class="hero-pagination"></div>
   </section>
 
-  <div>
-    <div class="reveal reveal-scale">
-      <img src="public/30.jpeg" alt="" class="w-full h-auto hover-scale cursor-pointer">
-    </div>
-  </div>
-
   <main class="md:px-14 px-6 py-10 space-y-10">
+
+    <!-- movies -->
     <section class="w-full md:py-20 py-10 reveal reveal-up">
       <div class="md:space-y-8 scroll-section">
         <div class="scroll-section flex  justify-between items-center gap-10 w-full">
-          <div class="flex justify-between items-center gap-10 w-full mb-2">
-            <div class="reveal reveal-left w-full ">
-              <h1 class="text-amber-400 text-xl md:text-4xl uppercase font-bold font-inter flip-text" data-flip>
+          <div class="flex justify-between items-center gap-10 w-full mb-4 ">
+            <div class="reveal reveal-left w-full flip-text" data-flip>
+              <h1 class="text-amber-400 text-xl md:text-4xl uppercase font-bold font-inter" data-flip>
                 Movies
               </h1>
               <a href="films.html" class="flex items-center gap-3 cursor-pointer hover-glow">
@@ -227,13 +223,13 @@
                     transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] min-w-[260px] md:min-w-[320px] lg:min-w-[350px] snap-start "
             >
               <!-- Image Wrapper -->
-              <div class="relative overflow-hidden rounded-xl">
+              <div class="relative overflow-hidden rounded-lg">
                 <!-- Image -->
                 <img
                   src="public/herobg.webp"
                   alt="Road Rogue"
-                  class="w-full aspect-[201/256] object-cover h-[350px]
-                        transition-transform duration-[1200ms]
+                  class="w-full aspect-[201/256] object-cover h-[250px]
+                        transition-transform duration-[1200ms] object-[center_0%]
                         group-hover:scale-105"
                 />
 
@@ -274,13 +270,13 @@
                     transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] min-w-[260px] md:min-w-[320px] lg:min-w-[350px] snap-start"
             >
               <!-- Image Wrapper -->
-              <div class="relative overflow-hidden rounded-xl">
+              <div class="relative overflow-hidden rounded-lg">
                 <!-- Image -->
                 <img
                   src="public/Road Rogue.webp"
                   alt="Road Rogue"
-                  class="w-full aspect-[201/256] h-[350px] object-cover
-                        transition-transform duration-[1200ms]
+                  class="w-full aspect-[201/256] h-[250px] object-cover
+                        transition-transform duration-[1200ms] object-[center_0%]
                         group-hover:scale-105"
                 />
 
@@ -320,49 +316,88 @@
       </div>
     </section>
 
-    <section>
-      <div class="bg-black px-10 py-10 rounded-2xl flex flex-col md:flex-row justify-between items-center w-full md:h-[700px] h-full overflow-hidden">
-        <div class="md:w-3/5 w-full flex flex-col md:justify-start justify-center items-center md:items-start text-center md:text-left gap-10">
-          <img class="reveal reveal-left stagger-1 w-[196px] h-[139px]" src="public/esemunch.png" />
+    <!-- about section -->
+    <section class="relative bg-black py-24 px-5 md:px-14 rounded-xl overflow-hidden font-geist tracking-wide">
 
-          <h1
-            class="reveal reveal-up stagger-2 text-neutral-50 text-3xl md:text-7xl font-normal font-geist tracking-wide leading-tight">
-            Your Favorite Meal is just 1 Tap Away
-          </h1>
+      <!-- Atmosphere -->
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_#1a1a1a,_transparent_65%)] opacity-40"></div>
+      <div class="pointer-events-none absolute inset-0 bg-[url('/grain.png')] opacity-[0.05] mix-blend-overlay"></div>
 
-          <p class="reveal reveal-up stagger-3 text-neutral-50 text-base md:text-lg font-normal font-geist tracking-wide">
-            Your favorite meal is only a single tap away, ready to be delivered to your doorstep with just a click!
+      <div class="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+        <!-- Text -->
+        <div class="space-y-10">
+
+          <span class="block text-xs uppercase tracking-[0.45em] text-amber-400">
+            About RedHot Concepts
+          </span>
+
+          <h2 class="text-white text-4xl md:text-6xl font-light leading-tight">
+            Built for Ownership.
+            <br />
+            <span class="text-amber-400">
+              Designed for Legacy.
+            </span>
+          </h2>
+
+          <div class="h-px w-20 bg-zinc-700"></div>
+
+          <p class="text-zinc-300 text-lg leading-relaxed max-w-xl">
+            RedHot Concepts Ltd is a brand management and production company
+            structured to develop, protect, and elevate African creative
+            intellectual property. We operate at the intersection of
+            storytelling, strategy, and long-term cultural value.
           </p>
-          <div class="reveal reveal-up stagger-4 flex items-center flex-row gap-4 md:gap-5 ">
-            <div class="bg-white px-4 py-2 rounded-lg flex items-center gap-4 cursor-pointer hover-lift">
-              <i class="fa-brands fa-apple md:text-3xl text-xl"></i>
-              <div class="font-bold font-archivo tracking-wide">
-                <p class="text-xs">Available on the</p>
-                <p class="md:text-xl">App Store</p>
-              </div>
-            </div>
-            <div class="bg-white px-4 py-2 rounded-lg flex items-center gap-4 cursor-pointer hover-lift">
-              <i class="fa-brands fa-google-play md:text-2xl text-lg"></i>
-              <div class="font-bold font-archivo tracking-wide flex flex-col">
-                <p class="text-xs uppercase">Get it On</p>
-                <p class="md:text-xl">Google Play</p>
-              </div>
-            </div>
+
+          <p class="text-zinc-400 text-base leading-relaxed max-w-xl">
+            Our work spans film, television, brand development, and original
+            content — guided by a single principle: African stories must be
+            owned, controlled, and presented at global standards without
+            dilution.
+          </p>
+
+          <p class="text-zinc-400 text-base leading-relaxed max-w-xl">
+            We do not chase visibility. We build structure. We do not follow
+            trends. We create institutions. Every production, partnership,
+            and platform under RedHot exists to endure — commercially,
+            culturally, and generationally.
+          </p>
+
+          <p class="pt-4 text-sm uppercase tracking-[0.35em] text-zinc-500">
+            RedHot Concepts
+          </p>
+        </div>
+
+        <!-- Visual -->
+        <div class="relative">
+
+          <div class="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+            <img
+              src="public/about11.webp"
+              alt="RedHot studio environment"
+              class="h-full w-full object-cover object-[center_0%]"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
           </div>
+
+          <div class="absolute -bottom-6 left-4 bg-black/80 backdrop-blur-md px-6 py-4 rounded-xl border border-white/10">
+            <p class="text-amber-400 text-xs uppercase tracking-[0.35em]">
+              Film • Television • Brand Architecture
+            </p>
+          </div>   
         </div>
-        <div
-          class="reveal reveal-right stagger-2 mt-10 md:mt-0 md:w-2/5 w-full h-full flex justify-center items-center">
-          <img src="public/eseimage.jpeg" class="max-w-full max-h-full object-contain"
-            alt="Phone">
-        </div>
+        <a href="about.html" class="absolute right-1 bottom-1 delay-300 text-white bg-amber-500 text-sm hover:bg-amber-500 border-2 border-amber-500 transition-all duration-300 hover:scale-105 px-6 py-2 shadow-lg">
+          Learn More
+        </a>
+
       </div>
     </section>
 
     <section class="w-full md:py-10 py-5 md:px-2">
       <div class="scroll-section md:space-y-4">
         <div class="flex justify-between items-center gap-10 w-full mb-2">
-          <div class="reveal reveal-left w-full ">
-            <h1 class="flip-text text-amber-400 text-xl md:text-4xl uppercase font-bold font-inter" data-flip>
+          <div class="reveal reveal-left w-full flip-text" data-flip>
+            <h1 class=" text-amber-400 text-xl md:text-4xl uppercase font-bold font-inter">
               News
             </h1>
             <a href="news.html" class="flex items-center gap-3 cursor-pointer hover-glow">
@@ -555,19 +590,106 @@
       </div>
     </section>
 
+  <section>
+    <div class="bg-black px-6 py-10 rounded-2xl flex flex-col md:flex-row justify-between items-center w-full md:h-[700px] h-full overflow-hidden">
+      <div class="md:w-3/5 w-full flex flex-col md:justify-start justify-center items-start md:items-start text-left md:text-left gap-y-10">
+        <img class="reveal reveal-left stagger-1 w-[196px] h-[139px]" src="public/esemunch.png" />
+
+        <h1
+          class="reveal reveal-up stagger-2 text-neutral-50 text-3xl md:text-7xl font-normal font-geist tracking-wide leading-tight">
+          Your Favorite Meal is just 1 Tap Away
+        </h1>
+
+        <p class="reveal reveal-up stagger-3 text-neutral-50 text-sm md:text-lg font-normal font-geist tracking-wide">
+          Your favorite meal is only a single tap away, ready to be delivered to your doorstep with just a click!
+        </p>
+        <div class="reveal reveal-up stagger-4 flex items-center md:flex-row flex-col gap-4 md:gap-5 ">
+          <div class="bg-white px-4 py-2 rounded-lg flex items-center gap-4 cursor-pointer hover-lift">
+            <i class="fa-brands fa-apple md:text-3xl text-xl"></i>
+            <div class="font-bold font-archivo tracking-wide">
+              <p class="text-xs">Available on the</p>
+              <p class="md:text-xl">App Store</p>
+            </div>
+          </div>
+          <div class="bg-white px-4 py-2 rounded-lg flex items-center gap-4 cursor-pointer hover-lift">
+            <i class="fa-brands fa-google-play md:text-2xl text-lg"></i>
+            <div class="font-bold font-archivo tracking-wide flex flex-col">
+              <p class="text-xs uppercase">Get it On</p>
+              <p class="md:text-xl">Google Play</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="reveal reveal-right stagger-2 mt-10 md:mt-0 md:w-2/5 w-full h-full md:flex hidden justify-center items-center">
+        <img src="public/eseimage.jpeg" class="max-w-full max-h-full object-contain"
+          alt="Phone">
+      </div>
+    </div>
+  </section>
+
+  <section class="relative bg-white py-20 rounded-xl overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 mb-14 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+      <div>
+        <p class="text-xs uppercase tracking-[0.4em] text-amber-600 mb-4">
+          Cast & Crew
+        </p>
+        <h2 class="text-4xl md:text-5xl font-light text-black leading-tight">
+          Behind The Scenes <br>
+          <span class="block text-amber-600">Movies & Series</span>
+        </h2>
+      </div>
+
+      <!-- Toggle Buttons -->
+      <div class="flex gap-3">
+        <button
+          data-set="a"
+          class="archive-btn active px-6 py-2 rounded-full border border-black/20 text-sm uppercase tracking-wide transition hover:bg-black hover:text-white"
+        >
+          A Mother's Love
+        </button>
+        <button
+          data-set="b"
+          class="archive-btn px-6 py-2 rounded-full border border-black/20 text-sm uppercase tracking-wide transition hover:bg-black hover:text-white"
+        >
+          Road Rogue
+        </button>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+
+      <!-- Row 1 -->
+      <div class="marquee group" data-row="1">
+        <div class="marquee-track">
+          
+        </div>
+      </div>
+
+      <!-- Row 2 (reverse direction) -->
+      <div class="marquee marquee-reverse group" data-row="2">
+        <div class="marquee-track">
+          
+        </div>
+      </div>
+
+    </div>
+  </section>
+
     <section
-  class="relative flex flex-col items-center px-4 py-10 md:py-20 space-y-12 md:space-y-2 overflow-hidden reveal reveal-up"
->
-  <!-- Heading -->
+      class="relative flex flex-col items-center px-4 py-10 md:py-20 space-y-1 md:space-y-2 overflow-hidden reveal reveal-up"
+    >
+      <!-- Heading -->
   <h2
-    class="uppercase font-geist font-medium text-sm md:text-base tracking-[0.4em] text-amber-400 text-center"
+    class="uppercase font-geist font-medium text-xs md:text-base tracking-[0.4em] text-amber-400 text-center"
   >
     Our Portfolio Affiliate
   </h2>
 
   <!-- Logos wrapper -->
   <div
-    class="relative flex flex-row items-center justify-center gap-x-10 md:gap-x-28 w-full max-w-6xl mx-auto"
+    class="relative flex  flex-row items-center justify-center gap-x-10 md:gap-x-28 w-full max-w-6xl mx-auto"
   >
     <div
       class="reveal reveal-up stagger-1 group flex items-center justify-center md:h-48 transition-all duration-500 hover-lift"
@@ -689,7 +811,117 @@
 
   <script src="script.js"></script>
 
-  <script>
+ 
+
+<script>
+  const slides = document.querySelectorAll('.hero-slide');
+  const pagination = document.getElementById('hero-pagination');
+  const nextBtn = document.getElementById('nextSlide');
+  const prevBtn = document.getElementById('prevSlide');
+
+  let index = 0;
+  let autoplay;
+
+  // Create pagination dots (1 per slide)
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'hero-dot';
+    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+    dot.addEventListener('click', () => goToSlide(i));
+    pagination.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll('.hero-dot');
+
+  function showSlide(i) {
+    slides.forEach((slide, idx) => {
+      slide.classList.toggle('active', idx === i);
+
+      const video = slide.querySelector('video');
+      if (video) {
+        idx === i ? video.play() : video.pause();
+      }
+    });
+
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === i);
+    });
+
+    index = i;
+  }
+
+  function nextSlide() {
+    showSlide((index + 1) % slides.length);
+  }
+
+  function prevSlide() {
+    showSlide((index - 1 + slides.length) % slides.length);
+  }
+
+  function goToSlide(i) {
+    showSlide(i);
+    resetAutoplay();
+  }
+
+  function resetAutoplay() {
+    clearInterval(autoplay);
+    autoplay = setInterval(nextSlide, 5000);
+  }
+
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+    resetAutoplay();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    prevSlide();
+    resetAutoplay();
+  });
+
+  // Init
+  showSlide(0);
+  autoplay = setInterval(nextSlide, 5000);
+</script>
+
+ <script>
+    document.querySelectorAll(".scroll-section").forEach(section => {
+
+      const container = section.querySelector(".scroll-container");
+      const leftBtn = section.querySelector(".scroll-left");
+      const rightBtn = section.querySelector(".scroll-right");
+
+      leftBtn.addEventListener("click", () => {
+        container.scrollBy({ left: -350, behavior: "smooth" });
+      });
+
+      rightBtn.addEventListener("click", () => {
+        container.scrollBy({ left: 350, behavior: "smooth" });
+      });
+
+    });
+  </script>
+
+ <script>
+  const flipTexts = document.querySelectorAll('[data-flip]');
+
+  const flipObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target); // run once
+        }
+      });
+    },
+    {
+      threshold: 0.4, // sweet cinematic timing
+    }
+  );
+
+  flipTexts.forEach(el => flipObserver.observe(el));
+</script>
+
+ <script>
   let lastScrollY = window.scrollY;
 
 const header = document.getElementById("mainHeader");
@@ -804,110 +1036,72 @@ menuBtn.addEventListener("click", () => {
 </script>
 
 <script>
-  const slides = document.querySelectorAll('.hero-slide');
-  const pagination = document.getElementById('hero-pagination');
-  const nextBtn = document.getElementById('nextSlide');
-  const prevBtn = document.getElementById('prevSlide');
+  const imageSets = {
+    a: [
+      "/public/ml_bts/Ml_1.10.1.jpg",
+      "/public/ml_bts/Ml_1.15.1.jpg",
+      "/public/ml_bts/Ml_1.15.2.jpg",
+      "/public/ml_bts/Ml_1.15.3.jpg",
+      "/public/ml_bts/Ml_1.41.1.jpg",
+      "/public/ml_bts/Ml_1.43.1.jpg",
+      "/public/ml_bts/Ml_1.52.1.jpg",
+      "/public/ml_bts/Ml_1.64.1.jpg",
+      "/public/ml_bts/Ml_1.70.1.jpg",
+      "/public/ml_bts/Ml_1.80.1.jpg",
+      "/public/ml_bts/Ml_1.82.1.jpg",
+      "/public/ml_bts/Ml_1.83.1.jpg",
+      "/public/ml_bts/Ml_1.102.1.jpg",
+      "/public/ml_bts/Ml_1.106.1.jpg",
+      "/public/ml_bts/Ml_1.118.1.jpg",
+      "/public/ml_bts/Ml_1.129.1.jpg",
+      "/public/ml_bts/Ml_1.162.1.jpg",
+      "/public/ml_bts/Ml_1.168.1.jpg",
+      "/public/ml_bts/Ml_1.193.1.jpg",
+      "/public/ml_bts/Ml_1.232.1.jpg",
+    ],
+    b: [
+      "/public/rr/rr1.jpeg",
+      "/public/rr/rr2.jpeg",
+      "/public/rr/rr3.jpeg",
+      "/public/rr/rr4.jpeg",
+      "/public/rr/rr5.jpeg",
+      "/public/rr/rr6.jpeg",
+      "/public/rr/rr7.jpeg",
+      "/public/rr/rr8.jpeg",
+    ],
+  };
 
-  let index = 0;
-  let autoplay;
+  const tracks = document.querySelectorAll(".marquee-track");
+  const buttons = document.querySelectorAll(".archive-btn");
 
-  // Create pagination dots (1 per slide)
-  slides.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.className = 'hero-dot';
-    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-    dot.addEventListener('click', () => goToSlide(i));
-    pagination.appendChild(dot);
+  function renderSet(key) {
+    tracks.forEach(track => {
+      track.innerHTML = "";
+
+      [...imageSets[key], ...imageSets[key]].forEach(src => {
+        const item = document.createElement("div");
+        item.className = "marquee-item";
+
+        item.innerHTML = `
+          <img
+            src="${src}"
+            class="h-40 md:h-52 md:w-[300px] sm:w-[230px] w-[180px] object-[center_20%] object-cover rounded-xl md:grayscale transition duration-700 hover:grayscale-0"
+          />
+        `;
+        track.appendChild(item);
+      });
+    });
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      renderSet(btn.dataset.set);
+    });
   });
 
-  const dots = document.querySelectorAll('.hero-dot');
-
-  function showSlide(i) {
-    slides.forEach((slide, idx) => {
-      slide.classList.toggle('active', idx === i);
-
-      const video = slide.querySelector('video');
-      if (video) {
-        idx === i ? video.play() : video.pause();
-      }
-    });
-
-    dots.forEach((dot, idx) => {
-      dot.classList.toggle('active', idx === i);
-    });
-
-    index = i;
-  }
-
-  function nextSlide() {
-    showSlide((index + 1) % slides.length);
-  }
-
-  function prevSlide() {
-    showSlide((index - 1 + slides.length) % slides.length);
-  }
-
-  function goToSlide(i) {
-    showSlide(i);
-    resetAutoplay();
-  }
-
-  function resetAutoplay() {
-    clearInterval(autoplay);
-    autoplay = setInterval(nextSlide, 5000);
-  }
-
-  nextBtn.addEventListener('click', () => {
-    nextSlide();
-    resetAutoplay();
-  });
-
-  prevBtn.addEventListener('click', () => {
-    prevSlide();
-    resetAutoplay();
-  });
-
-  // Init
-  showSlide(0);
-  autoplay = setInterval(nextSlide, 5000);
-</script>
-
- <script>
-    document.querySelectorAll(".scroll-section").forEach(section => {
-
-      const container = section.querySelector(".scroll-container");
-      const leftBtn = section.querySelector(".scroll-left");
-      const rightBtn = section.querySelector(".scroll-right");
-
-      leftBtn.addEventListener("click", () => {
-        container.scrollBy({ left: -350, behavior: "smooth" });
-      });
-
-      rightBtn.addEventListener("click", () => {
-        container.scrollBy({ left: 350, behavior: "smooth" });
-      });
-
-    });
-  </script>
- <script>
-  const flipTexts = document.querySelectorAll('[data-flip]');
-
-  const flipObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target); // run once
-        }
-      });
-    },
-    {
-      threshold: 0.4, // sweet cinematic timing
-    }
-  );
-
-  flipTexts.forEach(el => flipObserver.observe(el));
+  renderSet("a");
 </script>
 
 </body>
