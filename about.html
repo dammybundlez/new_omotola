@@ -81,7 +81,7 @@
       </ul>
     </nav>
   </header>
-    <section class="relative max-w-7xl mx-auto md:mt-20 px-6 md:px-14 md:py-1 py-10 overflow-hidden tracking-wide">
+    <section class="relative mx-auto md:mt-20 px-6 md:px-14 md:py-1 py-10 overflow-hidden tracking-wide">
       <!-- Header -->
       <header class="relative md:mb-[5.1rem] my-20 text-center">
         <span class="block mb-4 text-xs tracking-[0.35em] uppercase text-amber-400">
@@ -165,87 +165,102 @@
           </p>
         </article>
 
-        <section class="bg-black py-14">
-          <div class="max-w-6xl mx-auto px-6">
+        <section class="relative my-10 space-y-20 md:px-14 px-4 overflow-hidden tracking-wide">
+  <!-- Ambient atmosphere -->
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_#1a1a1a,_transparent_60%)] opacity-40"></div>
+      <div class="pointer-events-none absolute inset-0 bg-[url('/grain.png')] opacity-[0.05] mix-blend-overlay"></div>
 
-            <!-- Section Title -->
-            <header class="mb-16 text-center">
-              <h2 class="text-3xl md:text-4xl uppercase tracking-[0.4em] font-light text-white">
-                Our Moments
-              </h2>
-            </header>
+      <!-- Chapter Header -->
+      <header class="relative text-center md:max-w-4xl mx-auto space-y-6">
+        <span class="block text-xs tracking-[0.35em] uppercase text-amber-400">
+          Studio Process
+        </span>
 
-            <!-- Cinematic Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <h2 class="text-white font-light uppercase text-4xl md:text-6xl tracking-tight font-geist">
+          Behind the Scenes
+        </h2>
 
-              <!-- Image 1 -->
-              <figure class="relative group overflow-hidden rounded-2xl">
-                <img
-                  src="public/about1.webp"
-                  alt="Production moment one"
-                  class="w-full h-[420px] object-cover object-center grayscale group-hover:grayscale-0 
-                        group-hover:scale-105 transition duration-700 ease-out"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-              </figure>
+        <p class="text-zinc-400 text-lg md:text-xl font-geist">
+          A quiet commitment to craft, discipline, and cinematic intention.
+        </p>
 
-              <!-- Image 2 -->
-              <figure class="relative group overflow-hidden rounded-2xl">
-                <img
-                  src="public/about2.webp"
-                  alt="Production moment two"
-                  class="w-full h-[420px] object-cover object-center grayscale group-hover:grayscale-0 
-                        group-hover:scale-105 transition duration-700 ease-out"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-              </figure>
+        <div class="mx-auto h-px w-24 bg-zinc-700"></div>
+      </header>
 
-              <!-- Image 3 -->
-              <figure class="relative group overflow-hidden rounded-2xl">
-                <img
-                  src="public/about3.webp"
-                  alt="Production moment three"
-                  class="w-full h-[420px] object-cover object-center grayscale group-hover:grayscale-0 
-                        group-hover:scale-105 transition duration-700 ease-out"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-              </figure>
+      <!-- Slideshow -->
+      <!-- Image Procession -->
+      <div class="relative w-full overflow-hidden">
+        <!-- Gradient masks -->
+        <div class="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10"></div>
+        <div class="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10"></div>
 
-              <!-- Image 4 -->
-              <figure class="relative group overflow-hidden rounded-2xl">
-                <img
-                  src="public/about4.webp"
-                  alt="Production moment four"
-                  class="w-full h-[420px] object-cover object-center grayscale group-hover:grayscale-0 
-                        group-hover:scale-105 transition duration-700 ease-out"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-              </figure>
+        <!-- Film strip -->
+        <div
+          class="relative flex gap-8 w-max px-4 md:px-0
+                animate-imageDrift"
+        >
 
-              <!-- Image 5 -->
-              <figure class="relative group overflow-hidden rounded-2xl ">
-                <img
-                  src="public/about5.webp"
-                  alt="Production moment five"
-                  class="w-full h-[420px] object-cover object-center grayscale group-hover:grayscale-0 
-                        group-hover:scale-105 transition duration-700 ease-out"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-              </figure>
+          <!-- Film Still -->
+          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
+            <img
+              src="./public/about1.webp"
+              alt="Behind the scenes"
+              class="h-full w-full object-cover object-[center_0%] grayscale
+                    transition duration-700 ease-out
+                    group-hover:grayscale-0 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          </figure>
 
-              <!-- Image 6 -->
-              <figure class="relative group overflow-hidden rounded-2xl">
-                <img
-                  src="public/about6.webp"
-                  alt="Production moment six"
-                  class="w-full h-[420px] object-cover object-center grayscale group-hover:grayscale-0 
-                        group-hover:scale-105 transition duration-700 ease-out"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-              </figure>
-            </div>
-          </div>
-        </section>
+          <!-- Duplicate this block for each image -->
+          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
+            <img src="./public/about2.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          </figure>
+
+          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
+            <img src="./public/about3.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          </figure>
+          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
+            <img src="./public/about4.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          </figure>
+          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
+            <img src="./public/about5.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          </figure>
+          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
+            <img src="./public/about6.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          </figure>
+          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
+            <img src="./public/about7.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          </figure>
+          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
+            <img src="./public/about8.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          </figure>
+          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
+            <img src="./public/about9.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          </figure>
+          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
+            <img src="./public/about10.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          </figure>
+          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
+            <img src="./public/about11.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          </figure>
+          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
+            <img src="./public/about12.web" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          </figure>
+        </div>
+      </div>
+    </section>
       </div>
 
       <section class="relative px-4 sm:px-6 md:px-14 py-10 md:space-y-20 text-white overflow-hidden font-geist">
@@ -444,105 +459,6 @@
           </ol>
         </article>
 
-    </section>
-
-    <section class="relative my-10 space-y-20 md:px-14 px-4 overflow-hidden tracking-wide">
-  <!-- Ambient atmosphere -->
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_#1a1a1a,_transparent_60%)] opacity-40"></div>
-      <div class="pointer-events-none absolute inset-0 bg-[url('/grain.png')] opacity-[0.05] mix-blend-overlay"></div>
-
-      <!-- Chapter Header -->
-      <header class="relative text-center md:max-w-4xl mx-auto space-y-6">
-        <span class="block text-xs tracking-[0.35em] uppercase text-amber-400">
-          Studio Process
-        </span>
-
-        <h2 class="text-white font-light uppercase text-4xl md:text-6xl tracking-tight font-geist">
-          Behind the Scenes
-        </h2>
-
-        <p class="text-zinc-400 text-lg md:text-xl font-geist">
-          A quiet commitment to craft, discipline, and cinematic intention.
-        </p>
-
-        <div class="mx-auto h-px w-24 bg-zinc-700"></div>
-      </header>
-
-      <!-- Slideshow -->
-      <!-- Image Procession -->
-      <div class="relative w-full overflow-hidden">
-        <!-- Gradient masks -->
-        <div class="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10"></div>
-        <div class="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10"></div>
-
-        <!-- Film strip -->
-        <div
-          class="relative flex gap-8 w-max px-4 md:px-0
-                animate-imageDrift"
-        >
-
-          <!-- Film Still -->
-          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
-            <img
-              src="./public/about1.webp"
-              alt="Behind the scenes"
-              class="h-full w-full object-cover object-[center_0%] grayscale
-                    transition duration-700 ease-out
-                    group-hover:grayscale-0 group-hover:scale-105"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-          </figure>
-
-          <!-- Duplicate this block for each image -->
-          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
-            <img src="./public/about2.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-          </figure>
-
-          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
-            <img src="./public/about3.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-          </figure>
-          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
-            <img src="./public/about4.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-          </figure>
-          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
-            <img src="./public/about5.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-          </figure>
-          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
-            <img src="./public/about6.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-          </figure>
-          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
-            <img src="./public/about7.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-          </figure>
-          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
-            <img src="./public/about8.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-          </figure>
-          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
-            <img src="./public/about9.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-          </figure>
-          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
-            <img src="./public/about10.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-          </figure>
-          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
-            <img src="./public/about11.webp" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-          </figure>
-          <figure class="group relative w-[280px] md:w-[360px] aspect-[3/2] overflow-hidden rounded-xl bg-zinc-900 shrink-0">
-            <img src="./public/about12.web" class="h-full w-full object-cover object-[center_0%] grayscale group-hover:grayscale-0 transition duration-700 ease-out" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-          </figure>
-
-          <!-- Continue for all images -->
-        </div>
-      </div>
     </section>
 
     <section class="relative w-full sm:px-6 md:py-20 md:px-14 py-10 px-5 bg-black overflow-hidden tracking-wide">

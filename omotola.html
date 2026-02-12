@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omtola 30 years legacy</title>
+    <link rel="stylesheet" href="output.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <header id="mainHeader" class="fixed top-0 w-full z-50 pr-4 md:pl-6 md:pr-14 py-4 md:py-1 transition-all duration-500">
+    <div class="flex justify-between items-center">
+
+      <!-- Logo -->
+      <a id="logoWrap" href="index.html"
+      class="relative flex items-center justify-center w-20 h-10 md:w-28 md:h-[5rem] p-2 rounded-md transition-all duration-300">
+          <img id="logoWhite"
+              src="public/img124.webp"
+              class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-100"
+              alt="Logo White"/>
+
+          <img id="logoRed"
+              src="public/redbg.png"
+              class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-0"
+              alt="Logo Red"/>
+      </a>
+
+
+      <!-- Desktop Nav -->
+      <nav id="desktopNav" class="hidden md:flex items-center ">
+        <ul class="flex items-center text-white gap-8 uppercase font-inter">
+           <li><a href="index.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Home</a></li>
+            <li><a href="films.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Films</a></li>
+            <!-- <li><a href="news.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">News</a></li> -->
+          <li><a href="legacy.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">30 Years legacy</a></li>
+          <li class="relative group tracking-wide text-sm">
+            <a class="hover:text-orange-300 flex items-center gap-2" >Affiliates <i class="fa-solid fa-chevron-down text-sm"></i></a>
+            <div class="absolute top-full left-1/2 -translate-x-1/2 w-[300px] px-2 py-2 bg-white rounded-3xl shadow-lg invisible group-hover:visible transition-all duration-300">
+              <ul class="text-stone-500 flex flex-col gap-2">
+                <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 block px-4 py-1">OYEP</a></li>
+                <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 block px-4 py-1">OSEAL</a></li>
+                <li><a href="https://www.teffest.com/" class="hover:text-orange-300 block px-4 py-1">TEFFEST</a></li>
+                <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 block px-4 py-1">DOUBLE DOORS</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="about.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">About</a></li>
+          <li><a href="contact.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger -->
+      <button id="menuBtn" class="md:hidden text-white text-3xl hover:text-amber-400 transition-all">
+        <span><i class="fa-solid fa-bars"></i></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobileMenu" class="fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-lg z-50 flex flex-col items-center justify-center transform translate-y-full opacity-0">
+      <button id="mobileClose" class="absolute top-8 right-8 text-white text-3xl hover:text-amber-400 transition-all"><i class="fa-solid fa-xmark"></i></button>
+      <ul id="mobileMenuList" class="flex flex-col justify-center items-center gap-8 text-center font-geist">
+        <li class="menu-item opacity-0 translate-y-6"><a href="films.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">Films</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="news.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">News</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="legacy.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">30 Years Legacy</a></li>
+        <li class="menu-item opacity-0 translate-y-6">
+          <button id="othersToggle" class="flex items-center justify-center text-3xl font-bold uppercase hover:text-amber-400 gap-2 transition-all duration-300">
+            Affiliates <i id="othersIcon" class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+          </button>
+          <ul id="othersAccordion" class="mt-4 max-h-0 overflow-hidden flex flex-col gap-3 transition-all duration-300">
+            <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400">OYEP</a></li>
+            <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400">OSEAL</a></li>
+            <li><a href="https://www.teffest.com/" class="hover:text-amber-400">TEFFEST</a></li>
+            <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400">DOUBLE DOORS</a></li>
+          </ul>
+        </li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="about.html" class="text-3xl font-bold uppercase hover:text-amber-400">About</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="contact.html" class="text-3xl font-bold uppercase hover:text-amber-400">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<!-- Fixed Background Layer -->
+<section class="fixed inset-0 -z-10 flex items-center justify-center bg-white">
+  <h1 class="h-screen w-screen flex items-center justify-center
+             text-[22vw] leading-none uppercase font-black
+             text-white/10 select-none pointer-events-none font-inter">
+    OMOTOLA
+  </h1>
+</section>
+<!-- Big Fixed Background Text -->
+<h1 class="fixed inset-0 flex items-center bg-white justify-center 
+           text-[22vw] leading-none font-extrabold uppercase 
+           text-neutral-200 z-0 pointer-events-none select-none">
+  OMOTOLA
+</h1>
+
+<!-- Image (ON TOP of text) -->
+<div class="relative flex justify-center items-center mt-48 -mb-48 z-40">
+  <img 
+    src="public/omotola_legacy/WhatsApp Image 2026-02-09 at 12.02.21.jpeg" 
+    alt=""
+    class="object-cover h-[700px] w-[750px] rounded-2xl shadow-2xl"
+  >
+</div>
+
+<!-- Scroll Section -->
+<section class="relative bg-[#1a1a1a] h-screen py-40 z-30">
+  <div class="max-w-5xl mx-auto px-6 space-y-24">
+
+    <article>
+      <h2 class="text-4xl font-light mb-6">Cinematic Motion</h2>
+      <p class="text-neutral-600">
+        Content scrolls over the full-height stretched title.
+      </p>
+    </article>
+
+  </div>
+</section>
+ 
+</body>
+
+<script>
+  let lastScrollY = window.scrollY;
+
+const header = document.getElementById("mainHeader");
+const desktopNav = document.getElementById("desktopNav");
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const mobileClose = document.getElementById("mobileClose");
+const othersToggle = document.getElementById("othersToggle");
+const othersAccordion = document.getElementById("othersAccordion");
+const othersIcon = document.getElementById("othersIcon");
+const logoWrap = document.getElementById("logoWrap");
+const logoWhite = document.getElementById("logoWhite");
+const logoRed = document.getElementById("logoRed");
+
+function showNavLinks() {
+  desktopNav.classList.remove("hidden");
+  requestAnimationFrame(() => {
+    desktopNav.classList.add("nav-visible");
+  });
+}
+
+function hideNavLinks() {
+  desktopNav.classList.remove("nav-visible");
+}
+
+function onScroll() {
+  const currentScroll = window.scrollY;
+
+  /* =======================
+     TOP OF PAGE
+  ======================= */
+  if (currentScroll === 0) {
+    header.classList.remove("nav-hidden");
+    header.classList.add("glass-nav");
+
+    logoWrap.classList.remove("scale-90");
+
+    logoWhite.style.opacity = "1";
+    logoRed.style.opacity = "0";
+
+    hideNavLinks();
+    return;
+  }
+
+  /* =======================
+     ANYWHERE ELSE
+  ======================= */
+  header.classList.remove("nav-hidden");
+  header.classList.add("glass-nav");
+
+  logoWrap.classList.add("scale-90");
+
+  logoWhite.style.opacity = "0";
+  logoRed.style.opacity = "1";
+
+  if (window.innerWidth >= 768) {
+    showNavLinks();
+  }
+
+  lastScrollY = currentScroll;
+}
+
+onScroll();
+window.addEventListener("scroll", onScroll);
+
+/* =======================
+   RESPONSIVE SYNC
+======================= */
+window.addEventListener("resize", () => {
+  if (window.innerWidth < 768) {
+    desktopNav.classList.add("hidden");
+    desktopNav.classList.remove("nav-visible");
+  } else {
+    desktopNav.classList.remove("hidden");
+    onScroll();
+  }
+});
+
+menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    if(mobileMenu.classList.contains("translate-y-full")) openMobileMenu();
+    else closeMobileMenu();
+  });
+
+  mobileClose.addEventListener("click", closeMobileMenu);
+
+  function openMobileMenu(){
+    mobileMenu.classList.remove("translate-y-full","opacity-0");
+    mobileMenu.classList.add("translate-y-0","opacity-100");
+
+    const items = document.querySelectorAll("#mobileMenu .menu-item");
+    items.forEach((el,i)=>{ el.style.transitionDelay=`${i*0.1}s`; el.classList.remove("opacity-0","translate-y-6"); el.classList.add("opacity-100","translate-y-0"); });
+  }
+
+  function closeMobileMenu(){
+    mobileMenu.classList.remove("translate-y-0","opacity-100");
+    mobileMenu.classList.add("translate-y-full","opacity-0");
+
+    const items = document.querySelectorAll("#mobileMenu .menu-item");
+    items.forEach(el=>{ el.style.transitionDelay="0s"; el.classList.add("opacity-0","translate-y-6"); el.classList.remove("opacity-100","translate-y-0"); });
+
+    menuBtn.classList.remove("active");
+  }
+
+  othersToggle?.addEventListener("click", ()=>{
+    if(othersAccordion.style.maxHeight && othersAccordion.style.maxHeight !== "0px"){
+      othersAccordion.style.maxHeight="0px"; othersIcon.classList.remove("rotate-180");
+    } else {
+      othersAccordion.style.maxHeight=othersAccordion.scrollHeight+"px"; othersIcon.classList.add("rotate-180");
+    }
+  });
+</script>
+</html>
