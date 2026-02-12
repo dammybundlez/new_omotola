@@ -9,7 +9,7 @@
   <title>Omotola . News</title>
 </head>
 
-<body class="bg-[#0b0b0e] text-white">
+<body class="bg-[#131212] text-white">
   <header id="mainHeader" class="fixed top-0 w-full z-50 pr-4 md:pr-14 md:pl-6 py-4 md:py-1 transition-all duration-500">
   <div class="flex justify-between items-center">
 
@@ -29,10 +29,11 @@
 
 
     <!-- Desktop Nav -->
-    <nav id="desktopNav" class="hidden md:flex items-center nav-fade">
+    <nav id="desktopNav" class="hidden md:flex items-center ">
       <ul class="flex items-center text-white gap-8 uppercase font-inter">
-        <li><a href="films.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Films</a></li>
-        <li><a href="news.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">News</a></li>
+         <li><a href="index.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Home</a></li>
+            <li><a href="films.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Films</a></li>
+            <!-- <li><a href="news.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">News</a></li> -->
         <li><a href="legacy.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">30 Years legacy</a></li>
         <li class="relative group tracking-wide text-sm">
           <a class="hover:text-orange-300 flex items-center gap-2" >Affiliates <i class="fa-solid fa-chevron-down text-sm"></i></a>
@@ -81,7 +82,7 @@
   </nav>
 </header>
 
-  <section class="relative overflow-hidden md:px-14 px-4">
+  <section class="relative overflow-hidden md:mt-20 md:px-14 px-4">
     <!-- <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_#1f1f1f,_transparent_70%)] opacity-40"></div> -->
 
     <div class="relative mx-auto">
@@ -565,7 +566,7 @@
     </div>
   </section>
 
-  <section class="relative w-full bg-[#111111] sm:px-6 md:py-20 md:px-14 py-10 px-5 overflow-hidden tracking-wide">
+  <section class="relative w-full bg-black sm:px-6 md:py-20 md:px-14 py-10 px-5 overflow-hidden tracking-wide">
 
   <!-- Atmospheric background -->
   <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_#1a1a1a,_transparent_65%)] opacity-40"></div>
@@ -768,8 +769,8 @@ function onScroll() {
      TOP OF PAGE
   ======================= */
   if (currentScroll === 0) {
-    header.classList.add("nav-hidden");
-    header.classList.remove("glass-nav");
+    header.classList.remove("nav-hidden");
+    header.classList.add("glass-nav");
 
     logoWrap.classList.remove("scale-90");
 

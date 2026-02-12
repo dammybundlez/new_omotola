@@ -538,18 +538,18 @@ html {
 
 /* Thumb */
 .scrollbar-elegant::-webkit-scrollbar-thumb {
-  background-color: rgba(190, 104, 7, 0.35); /* amber-600 */
+  background-color: rgb(189, 127, 57); /* amber-600 */
   border-radius: 999px;
   transition: background-color 0.3s ease;
 }
 
 /* Hover */
 .scrollbar-elegant:hover::-webkit-scrollbar-thumb {
-  background-color: rgba(214, 135, 46, 0.65);
+  background-color: rgb(151, 104, 51);
 }
 
 /* Firefox */
 .scrollbar-elegant {
   scrollbar-width: thin;
-  scrollbar-color: rgba(217,119,6,0.5) transparent;
+  scrollbar-color: rgb(196, 156, 88) transparent;
 }

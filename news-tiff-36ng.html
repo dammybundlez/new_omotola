@@ -10,13 +10,12 @@
 </head>
 
 <body class="bg-[#0d0d0d] text-white">
-  <div class="md:pb-10">
-     <header id="mainHeader" class="fixed top-0 w-full z-50 pr-6 md:pl-6 md:pr-14 py-4 md:py-1 transition-all duration-500">
+     <header id="mainHeader" class="fixed top-0 w-full z-50 pr-4 md:pr-14 md:pl-6 py-4 md:py-1 transition-all duration-500">
       <div class="flex justify-between items-center">
 
         <!-- Logo -->
         <a id="logoWrap" href="index.html"
-        class="relative flex items-center justify-center w-20 h-10 md:w-28 md:h-[5rem] rounded-md transition-all duration-300">
+        class="relative flex items-center justify-center w-20 h-10 md:w-28 md:h-[5rem] p-2 rounded-md transition-all duration-300">
             <img id="logoWhite"
                 src="public/img124.webp"
                 class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-100"
@@ -30,10 +29,11 @@
 
 
         <!-- Desktop Nav -->
-        <nav id="desktopNav" class="hidden md:flex items-center nav-fade">
-          <ul class="flex items-center text-white gap-x-8 uppercase font-inter">
-            <li><a href="films.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Films</a></li>
-            <li><a href="news.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">News</a></li>
+        <nav id="desktopNav" class="hidden md:flex items-center ">
+          <ul class="flex items-center text-white gap-8 uppercase font-inter">
+            <li><a href="index.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Home</a></li>
+                <li><a href="films.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Films</a></li>
+                <!-- <li><a href="news.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">News</a></li> -->
             <li><a href="legacy.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">30 Years legacy</a></li>
             <li class="relative group tracking-wide text-sm">
               <a class="hover:text-orange-300 flex items-center gap-2" >Affiliates <i class="fa-solid fa-chevron-down text-sm"></i></a>
@@ -61,7 +61,7 @@
       <!-- Mobile Menu -->
       <nav id="mobileMenu" class="fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-lg z-50 flex flex-col items-center justify-center transform translate-y-full opacity-0">
         <button id="mobileClose" class="absolute top-8 right-8 text-white text-3xl hover:text-amber-400 transition-all"><i class="fa-solid fa-xmark"></i></button>
-        <ul id="mobileMenuList" class="text-white flex flex-col justify-center items-center gap-8 text-center font-geist">
+        <ul id="mobileMenuList" class="flex flex-col justify-center items-center gap-8 text-center font-geist">
           <li class="menu-item opacity-0 translate-y-6"><a href="films.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">Films</a></li>
           <li class="menu-item opacity-0 translate-y-6"><a href="news.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">News</a></li>
           <li class="menu-item opacity-0 translate-y-6"><a href="legacy.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">30 Years Legacy</a></li>
@@ -77,11 +77,10 @@
             </ul>
           </li>
           <li class="menu-item opacity-0 translate-y-6"><a href="about.html" class="text-3xl font-bold uppercase hover:text-amber-400">About</a></li>
-          <li class="menu-item opacity-0 translate-y-6"><a href="contact" class="text-3xl font-bold uppercase hover:text-amber-400">Contact</a></li>
+          <li class="menu-item opacity-0 translate-y-6"><a href="contact.html" class="text-3xl font-bold uppercase hover:text-amber-400">Contact</a></li>
         </ul>
       </nav>
     </header>
-
 
     <main class="md:px-6 pb-20 space-y-10 min-h-screen mt-40">
 

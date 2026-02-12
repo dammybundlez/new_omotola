@@ -11,76 +11,77 @@
 </head>
 <body class="bg-[#0b0b0e] text-white">
    <header id="mainHeader" class="fixed top-0 w-full z-50 pr-4 md:pl-6 md:pr-14 py-4 md:py-1 transition-all duration-500">
-  <div class="flex justify-between items-center">
+    <div class="flex justify-between items-center">
 
-    <!-- Logo -->
-    <a id="logoWrap" href="index.html"
-     class="relative flex items-center justify-center w-20 h-10 md:w-28 md:h-[5rem] p-2 rounded-md transition-all duration-300">
-        <img id="logoWhite"
-            src="public/img124.webp"
-            class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-100"
-            alt="Logo White"/>
+      <!-- Logo -->
+      <a id="logoWrap" href="index.html"
+      class="relative flex items-center justify-center w-20 h-10 md:w-28 md:h-[5rem] p-2 rounded-md transition-all duration-300">
+          <img id="logoWhite"
+              src="public/img124.webp"
+              class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-100"
+              alt="Logo White"/>
 
-        <img id="logoRed"
-            src="public/redbg.png"
-            class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-0"
-            alt="Logo Red"/>
-    </a>
+          <img id="logoRed"
+              src="public/redbg.png"
+              class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-0"
+              alt="Logo Red"/>
+      </a>
 
 
-    <!-- Desktop Nav -->
-    <nav id="desktopNav" class="hidden md:flex items-center nav-fade">
-      <ul class="flex items-center text-white gap-8 uppercase font-inter">
-        <li><a href="films.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Films</a></li>
-        <li><a href="news.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">News</a></li>
-        <li><a href="legacy.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">30 Years legacy</a></li>
-        <li class="relative group tracking-wide text-sm">
-          <a class="hover:text-orange-300 flex items-center gap-2" >Affiliates <i class="fa-solid fa-chevron-down text-sm"></i></a>
-          <div class="absolute top-full left-1/2 -translate-x-1/2 w-[300px] px-2 py-2 bg-white rounded-3xl shadow-lg invisible group-hover:visible transition-all duration-300">
-            <ul class="text-stone-500 flex flex-col gap-2">
-              <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 block px-4 py-1">OYEP</a></li>
-              <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 block px-4 py-1">OSEAL</a></li>
-              <li><a href="https://www.teffest.com/" class="hover:text-orange-300 block px-4 py-1">TEFFEST</a></li>
-              <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 block px-4 py-1">DOUBLE DOORS</a></li>
-            </ul>
-          </div>
+      <!-- Desktop Nav -->
+      <nav id="desktopNav" class="hidden md:flex items-center ">
+        <ul class="flex items-center text-white gap-8 uppercase font-inter">
+           <li><a href="index.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Home</a></li>
+            <li><a href="films.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Films</a></li>
+            <!-- <li><a href="news.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">News</a></li> -->
+          <li><a href="legacy.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">30 Years legacy</a></li>
+          <li class="relative group tracking-wide text-sm">
+            <a class="hover:text-orange-300 flex items-center gap-2" >Affiliates <i class="fa-solid fa-chevron-down text-sm"></i></a>
+            <div class="absolute top-full left-1/2 -translate-x-1/2 w-[300px] px-2 py-2 bg-white rounded-3xl shadow-lg invisible group-hover:visible transition-all duration-300">
+              <ul class="text-stone-500 flex flex-col gap-2">
+                <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 block px-4 py-1">OYEP</a></li>
+                <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 block px-4 py-1">OSEAL</a></li>
+                <li><a href="https://www.teffest.com/" class="hover:text-orange-300 block px-4 py-1">TEFFEST</a></li>
+                <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 block px-4 py-1">DOUBLE DOORS</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="about.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">About</a></li>
+          <li><a href="contact.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger -->
+      <button id="menuBtn" class="md:hidden text-white text-3xl hover:text-amber-400 transition-all">
+        <span><i class="fa-solid fa-bars"></i></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobileMenu" class="fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-lg z-50 flex flex-col items-center justify-center transform translate-y-full opacity-0">
+      <button id="mobileClose" class="absolute top-8 right-8 text-white text-3xl hover:text-amber-400 transition-all"><i class="fa-solid fa-xmark"></i></button>
+      <ul id="mobileMenuList" class="flex flex-col justify-center items-center gap-8 text-center font-geist">
+        <li class="menu-item opacity-0 translate-y-6"><a href="films.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">Films</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="news.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">News</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="legacy.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">30 Years Legacy</a></li>
+        <li class="menu-item opacity-0 translate-y-6">
+          <button id="othersToggle" class="flex items-center justify-center text-3xl font-bold uppercase hover:text-amber-400 gap-2 transition-all duration-300">
+            Affiliates <i id="othersIcon" class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+          </button>
+          <ul id="othersAccordion" class="mt-4 max-h-0 overflow-hidden flex flex-col gap-3 transition-all duration-300">
+            <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400">OYEP</a></li>
+            <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400">OSEAL</a></li>
+            <li><a href="https://www.teffest.com/" class="hover:text-amber-400">TEFFEST</a></li>
+            <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400">DOUBLE DOORS</a></li>
+          </ul>
         </li>
-        <li><a href="about.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">About</a></li>
-        <li><a href="contact.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Contact</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="about.html" class="text-3xl font-bold uppercase hover:text-amber-400">About</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="contact.html" class="text-3xl font-bold uppercase hover:text-amber-400">Contact</a></li>
       </ul>
     </nav>
-
-    <!-- Hamburger -->
-    <button id="menuBtn" class="md:hidden text-white text-3xl hover:text-amber-400 transition-all">
-      <span><i class="fa-solid fa-bars"></i></span>
-    </button>
-
-  </div>
-
-  <!-- Mobile Menu -->
-  <nav id="mobileMenu" class="fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-lg z-50 flex flex-col items-center justify-center transform translate-y-full opacity-0">
-    <button id="mobileClose" class="absolute top-8 right-8 text-white text-3xl hover:text-amber-400 transition-all"><i class="fa-solid fa-xmark"></i></button>
-    <ul id="mobileMenuList" class="flex flex-col justify-center items-center gap-8 text-center font-geist">
-      <li class="menu-item opacity-0 translate-y-6"><a href="films.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">Films</a></li>
-      <li class="menu-item opacity-0 translate-y-6"><a href="news.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">News</a></li>
-      <li class="menu-item opacity-0 translate-y-6"><a href="legacy.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">30 Years Legacy</a></li>
-      <li class="menu-item opacity-0 translate-y-6">
-        <button id="othersToggle" class="flex items-center justify-center text-3xl font-bold uppercase hover:text-amber-400 gap-2 transition-all duration-300">
-          Affiliates <i id="othersIcon" class="fa-solid fa-chevron-down transition-transform duration-300"></i>
-        </button>
-        <ul id="othersAccordion" class="mt-4 max-h-0 overflow-hidden flex flex-col gap-3 transition-all duration-300">
-          <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400">OYEP</a></li>
-          <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400">OSEAL</a></li>
-          <li><a href="https://www.teffest.com/" class="hover:text-amber-400">TEFFEST</a></li>
-          <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400">DOUBLE DOORS</a></li>
-        </ul>
-      </li>
-      <li class="menu-item opacity-0 translate-y-6"><a href="about.html" class="text-3xl font-bold uppercase hover:text-amber-400">About</a></li>
-      <li class="menu-item opacity-0 translate-y-6"><a href="contact.html" class="text-3xl font-bold uppercase hover:text-amber-400">Contact</a></li>
-    </ul>
-  </nav>
   </header>
-    <section class="relative max-w-7xl mx-auto px-6 md:px-14 md:py-20 py-10 overflow-hidden tracking-wide">
+    <section class="relative max-w-7xl mx-auto md:mt-20 px-6 md:px-14 md:py-1 py-10 overflow-hidden tracking-wide">
       <!-- Header -->
       <header class="relative md:mb-[5.1rem] my-20 text-center">
         <span class="block mb-4 text-xs tracking-[0.35em] uppercase text-amber-400">
@@ -122,7 +123,7 @@
           class="relative group overflow-hidden rounded-xl"
         >
           <img
-            src="/public/beffta.png"
+            src="/public/about11.webp"
             alt="Redhot Concepts studio portrait"
             class="w-full h-[320px] object-cover object-[center_20%] md:grayscale group-hover:grayscale-0
                   transition duration-700 ease-out"
@@ -139,7 +140,7 @@
 
         <article
           data-aos="fade-up"
-          class="relative max-w-4xl mx-auto pl-6 border-l border-zinc-800 space-y-8"
+          class="relative  mx-auto pl-6 border-l border-zinc-800 space-y-8"
         >
           <h3 class="text-zinc-400 text-2xl font-semibold uppercase font-geist">
             Our Story — The Need for Ownership
@@ -164,22 +165,87 @@
           </p>
         </article>
 
-        <!-- Wide Film Still -->
-        <figure
-          data-aos="fade-up"
-          data-aos-delay="100"
-          class=" relative group overflow-hidden rounded-2xl "
-        >
-          <img
-            src="/public/fa.png"
-            alt="Redhot Concepts production still"
-            class="w-full md:h-[420px] object-cover  object-[center_20%] md:grayscale group-hover:grayscale-0
-                  transition duration-700 ease-out"
-          />
+        <section class="bg-black py-14">
+          <div class="max-w-6xl mx-auto px-6">
 
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-        </figure>
+            <!-- Section Title -->
+            <header class="mb-16 text-center">
+              <h2 class="text-3xl md:text-4xl uppercase tracking-[0.4em] font-light text-white">
+                Our Moments
+              </h2>
+            </header>
 
+            <!-- Cinematic Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+              <!-- Image 1 -->
+              <figure class="relative group overflow-hidden rounded-2xl">
+                <img
+                  src="public/about1.webp"
+                  alt="Production moment one"
+                  class="w-full h-[420px] object-cover object-center grayscale group-hover:grayscale-0 
+                        group-hover:scale-105 transition duration-700 ease-out"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              </figure>
+
+              <!-- Image 2 -->
+              <figure class="relative group overflow-hidden rounded-2xl">
+                <img
+                  src="public/about2.webp"
+                  alt="Production moment two"
+                  class="w-full h-[420px] object-cover object-center grayscale group-hover:grayscale-0 
+                        group-hover:scale-105 transition duration-700 ease-out"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              </figure>
+
+              <!-- Image 3 -->
+              <figure class="relative group overflow-hidden rounded-2xl">
+                <img
+                  src="public/about3.webp"
+                  alt="Production moment three"
+                  class="w-full h-[420px] object-cover object-center grayscale group-hover:grayscale-0 
+                        group-hover:scale-105 transition duration-700 ease-out"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              </figure>
+
+              <!-- Image 4 -->
+              <figure class="relative group overflow-hidden rounded-2xl">
+                <img
+                  src="public/about4.webp"
+                  alt="Production moment four"
+                  class="w-full h-[420px] object-cover object-center grayscale group-hover:grayscale-0 
+                        group-hover:scale-105 transition duration-700 ease-out"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              </figure>
+
+              <!-- Image 5 -->
+              <figure class="relative group overflow-hidden rounded-2xl ">
+                <img
+                  src="public/about5.webp"
+                  alt="Production moment five"
+                  class="w-full h-[420px] object-cover object-center grayscale group-hover:grayscale-0 
+                        group-hover:scale-105 transition duration-700 ease-out"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              </figure>
+
+              <!-- Image 6 -->
+              <figure class="relative group overflow-hidden rounded-2xl">
+                <img
+                  src="public/about6.webp"
+                  alt="Production moment six"
+                  class="w-full h-[420px] object-cover object-center grayscale group-hover:grayscale-0 
+                        group-hover:scale-105 transition duration-700 ease-out"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              </figure>
+            </div>
+          </div>
+        </section>
       </div>
 
       <section class="relative px-4 sm:px-6 md:px-14 py-10 md:space-y-20 text-white overflow-hidden font-geist">
@@ -222,58 +288,13 @@
               <ul class="space-y-2">
                 <li>• Mother’s Love</li>
                 <li>• Road Rogue (RR)</li>
-                <li>• <em>Omotola: The Real Me</em> (OTRM) - A reality television series documenting Omotola’s life and evolving journey.
-</li>
+                <li>• <em>Omotola: The Real Me</em> (OTRM) - A reality television series documenting Omotola’s life and evolving journey.</li>
                 <li>• Multiple feature films in development</li>
                 <li>• <em>The Smoke</em> — 28-episode soap opera (post-production)</li>
               </ul>
             </div>
           </div>
         </section>
-
-
-        <section class="relative z-10 max-w-5xl mx-auto space-y-6">
-          <h3 class="text-xl md:text-3xl font-bold uppercase tracking-wider text-amber-400 reveal reveal-up">
-            Double Doors Studios
-          </h3>
-
-          <p class="text-white/90 text-lg leading-relaxed reveal reveal-up stagger-1">
-            An entertainment real estate company dedicated to creating purpose-built spaces that support creativity,
-            production, collaboration, and artistic excellence within the entertainment industry.
-          </p>
-        </section>
-
-
-        <section class="relative z-10 max-w-5xl mx-auto space-y-8">
-        <h3 class="text-xl md:text-3xl font-bold uppercase tracking-wider text-amber-400 reveal reveal-up">
-          TEFFEST
-        </h3>
-
-        <p class="text-white/90 text-lg leading-relaxed reveal reveal-up stagger-1">
-          An annual global fair and festival designed to elevate the business of entertainment—bridging Africa with the world
-          through global standards, training, collaboration, and opportunity.
-        </p>
-
-        <div class="space-y-3 reveal reveal-up stagger-2">
-          <p class="font-semibold text-amber-400 uppercase tracking-wide">TEFFEST Platforms</p>
-          <ul class="space-y-2 text-white/90">
-            <li>• The TEFFEST Festival</li>
-            <li>• The TEFFEST Annual Magazine</li>
-            <li>• TEFFEST Masterclasses (training, conferences, exhibitions)</li>
-          </ul>
-
-          <a href="https://www.teffest.com" target="_blank"
-            class="inline-block mt-4 text-amber-400 underline tracking-wide hover:text-amber-300 transition">
-            Visit teffest.com
-          </a>
-        </div>
-      </section>
-
-
-      <section class="relative z-10 max-w-5xl mx-auto space-y-6">
-        <h3 class="text-xl md:text-3xl font-bold uppercase tracking-wider text-amber-400 reveal reveal-up">
-          OSEAL
-        </h3>
 
         <p class="text-white/90 text-lg leading-relaxed reveal reveal-up stagger-1">
           Omotola Skills, Entertainment & Lifestyle Coaching Institute—focused on skill development, creative education,
@@ -649,8 +670,8 @@ function onScroll() {
      TOP OF PAGE
   ======================= */
   if (currentScroll === 0) {
-    header.classList.add("nav-hidden");
-    header.classList.remove("glass-nav");
+    header.classList.remove("nav-hidden");
+    header.classList.add("glass-nav");
 
     logoWrap.classList.remove("scale-90");
 

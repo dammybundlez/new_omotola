@@ -33,8 +33,9 @@
       <!-- Desktop Nav -->
       <nav id="desktopNav" class="hidden md:flex items-center nav-fade">
         <ul class="flex items-center text-white gap-x-8 uppercase font-inter">
+          <li><a href="index.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Home</a></li>
           <li><a href="films.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Films</a></li>
-          <li><a href="news.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">News</a></li>
+          <!-- <li><a href="news.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">News</a></li> -->
           <li><a href="legacy.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">30 Years legacy</a></li>
           <li class="relative group tracking-wide text-sm">
             <a class="hover:text-orange-300 flex items-center gap-2" >Affiliates <i class="fa-solid fa-chevron-down text-sm"></i></a>
@@ -122,7 +123,7 @@
               </h1>
               <div class="space-x-5 animate-fadeUp">
                 <button
-                  class="delay-300 bg-amber-500 text-sm hover:bg-amber-500 border-2 border-amber-500 transition-all duration-300 hover:scale-105 px-6 py-2 shadow-lg">
+                  class="delay-300 bg-amber-600 text-sm hover:bg-amber-500 border-2 border-amber-600 transition-all rounded-ss-lg rounded-ee-lg duration-300 hover:scale-105 px-6 py-2 shadow-lg">
                   More Details
                 </button>
                 <button
@@ -174,7 +175,7 @@
   <main class="md:px-14 px-6 py-10 space-y-10">
 
     <!-- movies -->
-    <section class="w-full md:py-20 py-10 reveal reveal-up">
+    <section class="w-full md:py-14 py-10 reveal reveal-up">
       <div class="md:space-y-8 scroll-section">
         <div class="scroll-section flex  justify-between items-center gap-10 w-full">
           <div class="flex justify-between items-center gap-10 w-full mb-4 ">
@@ -323,9 +324,8 @@
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_#1a1a1a,_transparent_65%)] opacity-40"></div>
       <div class="pointer-events-none absolute inset-0 bg-[url('/grain.png')] opacity-[0.05] mix-blend-overlay"></div>
 
-      <div class="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div class="relative mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
-        <!-- Text -->
         <div class="space-y-10">
 
           <span class="block text-xs uppercase tracking-[0.45em] text-amber-400">
@@ -386,10 +386,6 @@
             </p>
           </div>   
         </div>
-        <a href="about.html" class="absolute right-1 bottom-1 delay-300 text-white bg-amber-500 text-sm hover:bg-amber-500 border-2 border-amber-500 transition-all duration-300 hover:scale-105 px-6 py-2 shadow-lg">
-          Learn More
-        </a>
-
       </div>
     </section>
 
@@ -591,7 +587,7 @@
     </section>
 
   <section>
-    <div class="bg-black px-6 py-10 rounded-2xl flex flex-col md:flex-row justify-between items-center w-full md:h-[700px] h-full overflow-hidden">
+    <div class="bg-black px-6 py-10 md:px-14 rounded-2xl flex flex-col md:flex-row justify-between items-center w-full md:h-[700px] h-full overflow-hidden">
       <div class="md:w-3/5 w-full flex flex-col md:justify-start justify-center items-start md:items-start text-left md:text-left gap-y-10">
         <img class="reveal reveal-left stagger-1 w-[196px] h-[139px]" src="public/esemunch.png" />
 
@@ -677,7 +673,7 @@
     </div>
   </section>
 
-    <section
+  <section
       class="relative flex flex-col items-center px-4 py-10 md:py-20 space-y-1 md:space-y-2 overflow-hidden reveal reveal-up"
     >
       <!-- Heading -->
@@ -688,12 +684,12 @@
   </h2>
 
   <!-- Logos wrapper -->
-  <div
-    class="relative flex  flex-row items-center justify-center gap-x-10 md:gap-x-28 w-full max-w-6xl mx-auto"
-  >
-    <div
-      class="reveal reveal-up stagger-1 group flex items-center justify-center md:h-48 transition-all duration-500 hover-lift"
-    >
+  <div class="w-full max-w-6xl mx-auto flex flex-col items-center gap-y-6">
+
+  <!-- TOP ROW (3 Logos) -->
+  <div class="flex flex-row items-center justify-center gap-x-10 md:gap-x-28 w-full">
+
+    <div class="reveal reveal-up stagger-1 group flex items-center justify-center md:h-48 transition-all duration-500 hover-lift">
       <img
         src="public/oyep.webp"
         class="h-full w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-500 ease-out object-contain"
@@ -701,9 +697,7 @@
       />
     </div>
 
-    <div
-      class="reveal reveal-up stagger-2 group flex items-center justify-center md:h-56 transition-all duration-500 hover-lift"
-    >
+    <div class="reveal reveal-up stagger-2 group flex items-center justify-center md:h-56 transition-all duration-500 hover-lift">
       <img
         src="public/teffest.webp"
         class="h-full w-auto mt-12 md:mt-20 hover:opacity-100 hover:scale-105 transition-all duration-500 ease-out object-contain"
@@ -711,17 +705,32 @@
       />
     </div>
 
-    <div
-      class="reveal reveal-up stagger-3 group flex items-center justify-center md:h-48 transition-all duration-500 hover-lift"
-    >
+    <div class="reveal reveal-up stagger-3 group flex items-center justify-center md:h-48 transition-all duration-500 hover-lift">
       <img
         src="public/galg.webp"
         class="h-full w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-500 ease-out object-contain"
         alt="GALG"
       />
     </div>
+
   </div>
-</section>
+
+  <!-- BOTTOM ROW (Brand Text Centered) -->
+  <div class="flex justify-center items-center text-center gap-x-20 w-full">
+
+    <h2 class="text-2xl md:text-3xl uppercase tracking-[0.2em] font-light text-neutral-900 bg-amber-200  rounded-ss-2xl rounded-ee-2xl px-4 py-1 rounded">
+      OSEAL
+    </h2>
+
+    <h2 class="text-2xl md:text-3xl uppercase tracking-[0.6em] font-extralight text-neutral-400">
+      DOUBLEDOOR
+    </h2>
+
+  </div>
+
+</div>
+
+  </section>
 
 
     <div id="exitModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 px-4"
