@@ -12,86 +12,125 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-    <style>
-        .flip-text {
-  perspective: 1000px;
-}
-
-.flip-text {
-  display: inline-block;
-  transform-origin: 50% 100%;
-  transform: rotateX(90deg);
-  opacity: 0;
-  filter: blur(6px);
-}
-
-/* When visible → animate */
-.flip-text.is-visible  {
-  animation: flipReveal 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-}
-
-/* Stagger */
-.flip-text.is-visible span:nth-child(1) { animation-delay: 0.1s; }
-.flip-text.is-visible span:nth-child(2) { animation-delay: 0.3s; }
-.flip-text.is-visible  { animation-delay: 0.5s; }
-
-@keyframes flipReveal {
-  0% {
-    transform: rotateX(90deg);
-    opacity: 0;
-    filter: blur(6px);
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotateX(0deg);
-    opacity: 1;
-    filter: blur(0);
-  }
-}
-
-    </style>
 </head>
 <body>
+<section class="relative py-20 px-6 md:px-14 bg-black  overflow-hidden font-inter">
+  <div class=" mx-auto grid gap-12">
 
-  <!-- ================= HERO ================= -->
-  <h2
-  class="flip-text uppercase font-geist font-medium text-sm md:text-base tracking-[0.4em] text-amber-400 text-center"
-  data-flip
->
-  jome sweet home
-</h2>
+    <!-- Section Title -->
+    <h2 class="text-4xl md:text-5xl font-bold uppercase text-white mb-5">
+      Films
+    </h2>
 
+    <!-- Film List -->
+    <ul class="space-y-6 uppercase rounded-lg">
+      <!-- Film Item -->
+      <li class="film-item group relative flex items-center gap-4 cursor-pointer">
+        <!-- Dot -->
+        <span class="w-3 h-3 bg-white rounded-full flex-shrink-0 transition-colors duration-500 group-hover:bg-amber-400 animate-pulse"></span>
 
+        <!-- Title -->
+        <span class="text-white/80 group-hover:text-amber-400 font-semibold text-xl md:text-4xl transition-colors duration-500">
+          Blood Sisters (2011)
+        </span>
 
+        <!-- Banner Image -->
+        <img src="public/film5.webp"
+             class="film-banner absolute right-0 -translate-x-1/2 top-0 h-48 w-36 md:h-56 md:w-44 object-cover rounded-2xl shadow-2xl opacity-0 pointer-events-none transition-all duration-500 group-hover:opacity-100 group-hover:scale-105 group-hover:rotate-1">
 
-  <!-- ================= FOOTER ================= -->
-  <footer>
-    <p>
-      © <span>Omotola Jalade Ekeinde</span> — Legacy. Influence. Impact.
-    </p>
-  </footer>
+        <!-- Info Overlay -->
+        <div class="film-info absolute bottom-0 right-0 -translate-x-1/2 bg-black/70 px-3 py-2 rounded opacity-0 pointer-events-none text-sm text-white transition-opacity duration-500 group-hover:opacity-100">
+          Director: Kenneth Gyang | Awards: Best Actress
+        </div>
+      </li>
 
-  <!-- ================= JS ================= -->
+      <li class="film-item group relative flex items-center gap-4 cursor-pointer">
+        <span class="w-3 h-3 bg-white rounded-full flex-shrink-0 transition-colors duration-500 group-hover:bg-amber-400 animate-pulse"></span>
+        <span class="text-white/80 group-hover:text-amber-400 font-semibold text-xl md:text-4xl transition-colors duration-500">
+          Alter Ego (2017)
+        </span>
+        <img src="public/film4.webp"
+             class="film-banner absolute right-0 -translate-x-1/2 top-0 h-48 w-36 md:h-56 md:w-44 object-cover rounded-2xl shadow-2xl opacity-0 pointer-events-none transition-all duration-500 group-hover:opacity-100 group-hover:scale-105 group-hover:rotate-1">
+        <div class="film-info absolute bottom-0 right-0 -translate-x-1/2 bg-black/70 px-3 py-2 rounded opacity-0 pointer-events-none text-sm text-white transition-opacity duration-500 group-hover:opacity-100">
+          Director: Moses Inwang | Awards: AMVCA Best Actress
+        </div>
+      </li>
+
+      <li class="film-item group relative flex items-center gap-4 cursor-pointer">
+        <span class="w-3 h-3 bg-white rounded-full flex-shrink-0 transition-colors duration-500 group-hover:bg-amber-400 animate-pulse"></span>
+        <span class="text-white/80 group-hover:text-amber-400 font-semibold text-xl md:text-4xl transition-colors duration-500">
+          The Last Fight to Abuja (2012)
+        </span>
+        <img src="public/film7.webp"
+             class="film-banner absolute right-0 -translate-x-1/2 top-0 h-48 w-36 md:h-56 md:w-44 object-cover rounded-2xl shadow-2xl opacity-0 pointer-events-none transition-all duration-500 group-hover:opacity-100 group-hover:scale-105 group-hover:rotate-1">
+        <div class="film-info absolute bottom-0 right-0 -translate-x-1/2 bg-black/70 px-3 py-2 rounded opacity-0 pointer-events-none text-sm text-white transition-opacity duration-500 group-hover:opacity-100">
+          Director: Charles Uwagbai | Awards: Best Drama
+        </div>
+      </li>
+
+      <li class="film-item group relative flex items-center gap-4 cursor-pointer">
+        <span class="w-3 h-3 bg-white rounded-full flex-shrink-0 transition-colors duration-500 group-hover:bg-amber-400 animate-pulse"></span>
+        <span class="text-white/80 group-hover:text-amber-400 font-semibold text-xl md:text-4xl transition-colors duration-500">
+          The Ties That Bind (2014)
+        </span>
+        <img src="public/film8.webp"
+             class="film-banner absolute right-0 -translate-x-1/2 bottom-0 h-48 w-36 md:h-56 md:w-44 object-cover rounded-2xl shadow-2xl opacity-0 pointer-events-none transition-all duration-500 group-hover:opacity-100 group-hover:scale-105 group-hover:rotate-1">
+        <div class="film-info absolute bottom-0 right-0 -translate-x-1/2 bg-black/70 px-3 py-2 rounded opacity-0 pointer-events-none text-sm text-white transition-opacity duration-500 group-hover:opacity-100">
+          Director: Kunle Afolayan | Awards: Best Ensemble
+        </div>
+      </li>
+      <li class="film-item group relative flex items-center gap-4 cursor-pointer">
+        <span class="w-3 h-3 bg-white rounded-full flex-shrink-0 transition-colors duration-500 group-hover:bg-amber-400 animate-pulse"></span>
+        <span class="text-white/80 group-hover:text-amber-400 font-semibold text-xl md:text-4xl transition-colors duration-500">
+          ije: The Journey (2010)
+        </span>
+        <img src="public/ije.jpg"
+             class="film-banner absolute right-0 -translate-x-1/2 bottom-0 h-48 w-36 md:h-56 md:w-44 object-cover rounded-2xl shadow-2xl opacity-0 pointer-events-none transition-all duration-500 group-hover:opacity-100 group-hover:scale-105 group-hover:rotate-1">
+        <div class="film-info absolute bottom-0 right-0 -translate-x-1/2 bg-black/70 px-3 py-2 rounded opacity-0 pointer-events-none text-sm text-white transition-opacity duration-500 group-hover:opacity-100">
+          Director: Chineze Anyaene | Awards: Best Actress 
+        </div>
+      </li>
+      <li class="film-item group relative flex items-center gap-4 cursor-pointer">
+        <span class="w-3 h-3 bg-white rounded-full flex-shrink-0 transition-colors duration-500 group-hover:bg-amber-400 animate-pulse"></span>
+        <span class="text-white/80 group-hover:text-amber-400 font-semibold text-xl md:text-4xl transition-colors duration-500">
+          A Private Storm(2010)
+        </span>
+        <img src="public/privatestorm.webp"
+             class="film-banner absolute right-0 -translate-x-1/2 bottom-0 h-48 w-36 md:h-56 md:w-44 object-cover rounded-2xl shadow-2xl opacity-0 pointer-events-none transition-all duration-500 group-hover:opacity-100 group-hover:scale-105 group-hover:rotate-1">
+        <div class="film-info absolute bottom-0 right-0 -translate-x-1/2 bg-black/70 px-3 py-2 rounded opacity-0 pointer-events-none text-sm text-white transition-opacity duration-500 group-hover:opacity-100">
+          Director: Lancelot Oduwa | Awards: Best Actress-Africa Collaboration
+        </div>
+      </li>
+      <li class="film-item group relative flex items-center gap-4 cursor-pointer">
+        <span class="w-3 h-3 bg-white rounded-full flex-shrink-0 transition-colors duration-500 group-hover:bg-amber-400 animate-pulse"></span>
+        <span class="text-white/80 group-hover:text-amber-400 font-semibold text-xl md:text-4xl transition-colors duration-500">
+          LockDown(2021)
+        </span>
+        <img src="public/privatestorm.webp"
+             class="film-banner absolute right-0 -translate-x-1/2 bottom-0 h-48 w-36 md:h-56 md:w-44 object-cover rounded-2xl shadow-2xl opacity-0 pointer-events-none transition-all duration-500 group-hover:opacity-100 group-hover:scale-105 group-hover:rotate-1">
+        <div class="film-info absolute bottom-0 right-0 -translate-x-1/2 bg-black/70 px-3 py-2 rounded opacity-0 pointer-events-none text-sm text-white transition-opacity duration-500 group-hover:opacity-100">
+          Director: Moses Inwang | Awards: Public Choice Awards
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
 <script>
-  const flipTexts = document.querySelectorAll('[data-flip]');
+  const filmItems = document.querySelectorAll('.film-item');
 
-  const flipObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target); // run once
-        }
-      });
-    },
-    {
-      threshold: 0.4, // sweet cinematic timing
-    }
-  );
+  filmItems.forEach(item => {
+    const banner = item.querySelector('.film-banner' );
 
-  flipTexts.forEach(el => flipObserver.observe(el));
+    item.addEventListener('mouseenter', () => {
+      new Audio('/sounds/hover.mp3').play();
+      banner.style.opacity = 1;
+    });
+
+    item.addEventListener('mouseleave', () => {
+      banner.style.opacity = 0;
+    });
+  });
 </script>
 
 </body>

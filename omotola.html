@@ -9,119 +9,623 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-     <header id="mainHeader" class="fixed top-0 w-full z-50 pr-4 md:pl-6 md:pr-14 py-4 md:py-1 transition-all duration-500">
-    <div class="flex justify-between items-center">
 
-      <!-- Logo -->
-      <a id="logoWrap" href="index.html"
-      class="relative flex items-center justify-center w-20 h-10 md:w-28 md:h-[5rem] p-2 rounded-md transition-all duration-300">
-          <img id="logoWhite"
-              src="public/img124.webp"
-              class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-100"
-              alt="Logo White"/>
+<body>    
+    <section class="fixed inset-0 -z-10 flex items-center h-screen justify-center">
+         <img src="public/frame.png" alt="" class="h-screen">
+    </section>
 
-          <img id="logoRed"
-              src="public/redbg.png"
-              class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-0"
-              alt="Logo Red"/>
-      </a>
-
-
-      <!-- Desktop Nav -->
-      <nav id="desktopNav" class="hidden md:flex items-center ">
-        <ul class="flex items-center text-white gap-8 uppercase font-inter">
-           <li><a href="index.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Home</a></li>
-            <li><a href="films.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Films</a></li>
-            <!-- <li><a href="news.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">News</a></li> -->
-          <li><a href="legacy.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">30 Years legacy</a></li>
-          <li class="relative group tracking-wide text-sm">
-            <a class="hover:text-orange-300 flex items-center gap-2" >Affiliates <i class="fa-solid fa-chevron-down text-sm"></i></a>
-            <div class="absolute top-full left-1/2 -translate-x-1/2 w-[300px] px-2 py-2 bg-white rounded-3xl shadow-lg invisible group-hover:visible transition-all duration-300">
-              <ul class="text-stone-500 flex flex-col gap-2">
-                <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 block px-4 py-1">OYEP</a></li>
-                <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 block px-4 py-1">OSEAL</a></li>
-                <li><a href="https://www.teffest.com/" class="hover:text-orange-300 block px-4 py-1">TEFFEST</a></li>
-                <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 block px-4 py-1">DOUBLE DOORS</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="about.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">About</a></li>
-          <li><a href="contact.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Contact</a></li>
-        </ul>
-      </nav>
-
-      <!-- Hamburger -->
-      <button id="menuBtn" class="md:hidden text-white text-3xl hover:text-amber-400 transition-all">
-        <span><i class="fa-solid fa-bars"></i></span>
-      </button>
-
+    <div class="relative flex justify-center items-center mt-48 -mb-72 z-40">
+        <img 
+            src="public/legacy5.png" 
+            alt=""
+            class="object-cover h-[700px] w-[650px] rounded-[5rem] object-[center_0%] shadow-2xl"
+        >
     </div>
 
-    <!-- Mobile Menu -->
-    <nav id="mobileMenu" class="fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-lg z-50 flex flex-col items-center justify-center transform translate-y-full opacity-0">
-      <button id="mobileClose" class="absolute top-8 right-8 text-white text-3xl hover:text-amber-400 transition-all"><i class="fa-solid fa-xmark"></i></button>
-      <ul id="mobileMenuList" class="flex flex-col justify-center items-center gap-8 text-center font-geist">
-        <li class="menu-item opacity-0 translate-y-6"><a href="films.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">Films</a></li>
-        <li class="menu-item opacity-0 translate-y-6"><a href="news.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">News</a></li>
-        <li class="menu-item opacity-0 translate-y-6"><a href="legacy.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">30 Years Legacy</a></li>
-        <li class="menu-item opacity-0 translate-y-6">
-          <button id="othersToggle" class="flex items-center justify-center text-3xl font-bold uppercase hover:text-amber-400 gap-2 transition-all duration-300">
-            Affiliates <i id="othersIcon" class="fa-solid fa-chevron-down transition-transform duration-300"></i>
-          </button>
-          <ul id="othersAccordion" class="mt-4 max-h-0 overflow-hidden flex flex-col gap-3 transition-all duration-300">
-            <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400">OYEP</a></li>
-            <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400">OSEAL</a></li>
-            <li><a href="https://www.teffest.com/" class="hover:text-amber-400">TEFFEST</a></li>
-            <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400">DOUBLE DOORS</a></li>
-          </ul>
-        </li>
-        <li class="menu-item opacity-0 translate-y-6"><a href="about.html" class="text-3xl font-bold uppercase hover:text-amber-400">About</a></li>
-        <li class="menu-item opacity-0 translate-y-6"><a href="contact.html" class="text-3xl font-bold uppercase hover:text-amber-400">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-<!-- Fixed Background Layer -->
-<section class="fixed inset-0 -z-10 flex items-center justify-center bg-white">
-  <h1 class="h-screen w-screen flex items-center justify-center
-             text-[22vw] leading-none uppercase font-black
-             text-white/10 select-none pointer-events-none font-inter">
-    OMOTOLA
-  </h1>
-</section>
-<!-- Big Fixed Background Text -->
-<h1 class="fixed inset-0 flex items-center bg-white justify-center 
-           text-[22vw] leading-none font-extrabold uppercase 
-           text-neutral-200 z-0 pointer-events-none select-none">
-  OMOTOLA
-</h1>
+    <section class="relative w-full overflow-hidden bg-black py-32 md:py-40 md:px-14 px-2">
+        <div class="relative z-10 px-6 mt-52"> 
+            <p class="text-xs md:text-sm font-geist uppercase tracking-[0.35em] text-amber-400/80 text-center mb-4 font-light">
+                Redhot Concepts Celebrating Omotola’s 30-Year Legacy
+            </p>
+            <h2 class="text-center font-inter text-5xl md:text-7xl uppercase font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-500 to-orange-500  drop-shadow-[0_15px_40px_rgba(224,158,35,0.35)] tracking-tight mb-20">
+                30 Years of Legacy
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-1 gap-y-8 items-center justify-center">
+                <div class="space-y-4 text-white/90 text-lg leading-relaxed font-light font-geist">
+                    <p>
+                    Experience the remarkable evolution of
+                    <span class="text-amber-400 font-medium">
+                        Omotola Jalade Ekeinde
+                    </span>,
+                    an enduring symbol of African cinema and a commanding presence on the global stage.
+                    From defining performances that transformed Nollywood to advocacy that echoes beyond borders,
+                    her journey is marked by grace, strength, and lasting impact.
+                    </p>
 
-<!-- Image (ON TOP of text) -->
-<div class="relative flex justify-center items-center mt-48 -mb-48 z-40">
-  <img 
-    src="public/omotola_legacy/WhatsApp Image 2026-02-09 at 12.02.21.jpeg" 
-    alt=""
-    class="object-cover h-[700px] w-[750px] rounded-2xl shadow-2xl"
-  >
-</div>
+                    <p>
+                    Over three decades, she has elevated storytelling,
+                    empowered emerging voices, and helped carry African narratives
+                    into the heart of the international spotlight.
+                    </p>
 
-<!-- Scroll Section -->
-<section class="relative bg-[#1a1a1a] h-screen py-40 z-30">
-  <div class="max-w-5xl mx-auto px-6 space-y-24">
+                    <!-- CTA -->
+                    <!-- <div class="pt-6">
+                    <button
+                        class="px-10 py-4
+                            bg-gradient-to-r from-amber-400 to-orange-500
+                            text-black uppercase tracking-[0.2em]
+                            font-semibold text-sm
+                            shadow-2xl shadow-amber-500/20
+                            transition-all duration-500
+                            hover:scale-105 hover:shadow-amber-400/30">
+                        Explore the Legacy
+                    </button>
+                    </div> -->
 
-    <article>
-      <h2 class="text-4xl font-light mb-6">Cinematic Motion</h2>
-      <p class="text-neutral-600">
-        Content scrolls over the full-height stretched title.
-      </p>
-    </article>
+                </div>
 
-  </div>
-</section>
- 
+                <div class="relative h-[450px] text-center flex items-center justify-center rounded-3xl overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.6)]">
+                    <img
+                    src="public/omotola_legacy/WhatsApp Image 2026-02-09 at 12.02.21.jpeg"
+                    alt="Omotola Legacy"
+                    class="relative w-full h-[full] object-cover
+                            scale-110 hover:scale-125
+                            transition duration-[2000ms] ease-out"
+                    />
+
+                </div>
+            </div>
+
+            <div class="mt-10 flex gap-6 items-center justify-center opacity-80">
+                <img src="public/omotola_legacy/WhatsApp Image 2026-02-09 at 12.02.16.jpeg"
+                    class="h-96 w-full object-cover rounded-2xl
+                            hover:scale-105 transition duration-700" />
+
+                <img src="public/omotola_legacy/WhatsApp Image 2026-02-09 at 12.02.21.jpeg"
+                    class="h-96 w-full object-cover rounded-2xl
+                            hover:scale-105 transition duration-700" />
+            </div>
+        </div>
+    </section>
+
+    <section class="relative overflow-hidden py-32 md:px-14 px-2 text-white">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img 
+            src="public/omotola_legacy/WhatsApp Image 2026-02-09 at 12.02.22 (2).jpeg"
+            alt="Omotola portrait"
+            class="w-full h-full object-cover object-center scale-105"
+            />
+            <div class="absolute inset-0 bg-black/70"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black"></div>
+        </div>
+
+        <!-- Grain Texture -->
+        <div class="absolute inset-0 bg-[url('/public/grain.png')] opacity-[0.05]"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center font-inter">
+
+            <!-- Text Block -->
+            <div class="space-y-10">
+
+            <h2 class="text-4xl md:text-5xl font-extralight tracking-wide text-amber-400">
+                A Legacy in Motion
+            </h2>
+
+            <div class="space-y-8 text-lg md:text-xl leading-[2.2rem] text-white/85 font-light">
+
+                <p class="reveal reveal-up">
+                For over three decades, Omotola Jalade-Ekeinde has remained
+                a defining force in African cinema — a presence that commands
+                the screen and reshapes global perspectives of African storytelling.
+                </p>
+
+                <p class="reveal reveal-up stagger-1 text-white/70">
+                As Nollywood rose into international prominence, she stood at its
+                forefront, carrying powerful narratives beyond borders and
+                redefining the image of a global artist from the continent.
+                </p>
+
+                <p class="reveal reveal-up stagger-2 text-white/60">
+                Actress. Director. Singer. Humanitarian. Cultural architect.
+                Her influence extends far beyond performance — it is a legacy
+                etched into the evolving story of world cinema.
+                </p>
+
+            </div>
+
+            </div>
+
+            <!-- Cinematic Image Composition -->
+            <div class="relative hidden lg:block h-[650px]">
+
+            <!-- Large Image -->
+            <div class="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                src="public/omotola_legacy/WhatsApp Image 2026-02-09 at 12.02.16.jpeg"
+                class="w-full h-full object-cover object-[center_30%] scale-105 hover:scale-110 transition duration-1000"
+                alt=""
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/40"></div>
+            </div>
+
+            <!-- Floating Small Still -->
+            <div class="absolute -bottom-12 -left-12 w-48 h-60 rounded-xl overflow-hidden shadow-xl border border-white/10 backdrop-blur-sm">
+                <img 
+                src="public/omotola_legacy/WhatsApp Image 2026-02-09 at 12.02.21.jpeg"
+                class="w-full h-full object-cover"
+                alt=""
+                />
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative bg-black text-white py-28 md:px-14 px-2 overflow-hidden">
+
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(224,158,35,0.08),transparent_60%)]"></div>
+
+        <div class="relative max-w-6xl mx-auto px-6 font-inter">
+            <header class="mb-20 text-center">
+            <h2 class="text-3xl md:text-4xl font-light uppercase tracking-[0.25em] text-white/90">
+                Career Milestones
+            </h2>
+            <p class="text-amber-400 mt-3 text-sm tracking-widest uppercase">
+                Three Decades of Influence
+            </p>
+            </header>
+
+            <div class="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-20">
+
+            <!-- Timeline -->
+            <div class="relative">
+
+                <!-- Vertical spine -->
+                <div class="absolute left-6 top-0 bottom-0 w-px bg-white/10"></div>
+
+                <ol class="space-y-20 font-geist">
+
+                <!-- Timeline Item -->
+                <li class="relative group pl-20">
+
+                    <!-- Dot -->
+                    <div class="absolute left-4 top-3 w-4 h-4 rounded-full bg-amber-400 shadow-lg shadow-amber-500/30 group-hover:scale-150 transition"></div>
+
+                    <!-- Watermark Year -->
+                    <span class="absolute -left-2 -top-10 text-[120px] font-bold text-white/10 select-none">
+                    1996
+                    </span>
+
+                    <time class="text-xs uppercase tracking-widest text-white/70">
+                    1996
+                    </time>
+
+                    <h3 class="text-2xl md:text-3xl font-light mt-3 group-hover:text-amber-400 transition">
+                    The Breakthrough
+                    </h3>
+
+                    <p class="mt-4 text-white/70 leading-relaxed max-w-xl">
+                    A defining performance in <em>Mortal Inheritance</em> established
+                    her as a commanding screen presence and earned Best Actress
+                    Overall at THEMA Awards.
+                    </p>
+
+                </li>
+
+                <li class="relative group pl-20">
+
+                    <!-- Dot -->
+                    <div class="absolute left-4 top-3 w-4 h-4 rounded-full bg-amber-400 shadow-lg shadow-amber-500/30 group-hover:scale-150 transition"></div>
+
+                    <!-- Watermark Year -->
+                    <span class="absolute -left-2 -top-10 text-[120px] font-bold text-white/10 select-none">
+                    1998
+                    </span>
+
+                    <time class="text-xs uppercase tracking-widest text-white/70">
+                    1998
+                    </time>
+
+                    <h3 class="text-2xl md:text-3xl font-light mt-3 group-hover:text-amber-400 transition">
+                    The Star Ascends
+                    </h3>
+
+                    <p class="mt-4 text-white/70 leading-relaxed max-w-xl">
+                    A string of powerful performances solidified her status as one of Nollywood’s most bankable and compelling screen figures, expanding her audience across West Africa and beyond.
+                    </p>
+
+                </li>
+
+                <li class="relative group pl-20">
+
+                    <!-- Dot -->
+                    <div class="absolute left-4 top-3 w-4 h-4 rounded-full bg-amber-400 shadow-lg shadow-amber-500/30 group-hover:scale-150 transition"></div>
+
+                    <!-- Watermark Year -->
+                    <span class="absolute -left-2 -top-10 text-[120px] font-bold text-white/10 select-none">
+                    2004
+                    </span>
+
+                    <time class="text-xs uppercase tracking-widest text-white/70">
+                    2004
+                    </time>
+
+                    <h3 class="text-2xl md:text-3xl font-light mt-3 group-hover:text-amber-400 transition">
+                    International Recognition
+                    </h3>
+
+                    <p class="mt-4 text-white/70 leading-relaxed max-w-xl">
+                    Her influence began to transcend national boundaries as she gained global visibility, appearing in international conversations about the rapid growth and cultural power of African cinema.
+                    </p>
+
+                </li>
+
+                <li class="relative group pl-20">
+
+                    <!-- Dot -->
+                    <div class="absolute left-4 top-3 w-4 h-4 rounded-full bg-amber-400 shadow-lg shadow-amber-500/30 group-hover:scale-150 transition"></div>
+
+                    <!-- Watermark Year -->
+                    <span class="absolute -left-2 -top-10 text-[120px] font-bold text-white/10 select-none">
+                    2011
+                    </span>
+
+                    <time class="text-xs uppercase tracking-widest text-white/70">
+                    2011
+                    </time>
+
+                    <h3 class="text-2xl md:text-3xl font-light mt-3 group-hover:text-amber-400 transition">
+                    Humanitarian & Advocate
+                    </h3>
+
+                    <p class="mt-4 text-white/70 leading-relaxed max-w-xl">
+                    Stepping boldly beyond the screen, she amplified her voice for widows, youth empowerment, and social justice — reshaping what it means to be a public figure in modern Africa.
+                    </p>
+
+                </li>
+
+                <li class="relative group pl-20">
+
+                    <!-- Dot -->
+                    <div class="absolute left-4 top-3 w-4 h-4 rounded-full bg-amber-400 shadow-lg shadow-amber-500/30 group-hover:scale-150 transition"></div>
+
+                    <!-- Watermark Year -->
+                    <span class="absolute -left-2 -top-10 text-[120px] font-bold text-white/10 select-none">
+                    2013
+                    </span>
+
+                    <time class="text-xs uppercase tracking-widest text-white/70">
+                    2013
+                    </time>
+
+                    <h3 class="text-2xl md:text-3xl font-light mt-3 group-hover:text-amber-400 transition">
+                    Global Cultural Icon
+                    </h3>
+
+                    <p class="mt-4 text-white/70 leading-relaxed max-w-xl">
+                    Named among influential global personalities, her presence extended into worldwide platforms representing Nigerian excellence on stages once distant from Nollywood’s origins.
+                    </p>
+
+                </li>
+                <li class="relative group pl-20">
+
+                    <!-- Dot -->
+                    <div class="absolute left-4 top-3 w-4 h-4 rounded-full bg-amber-400 shadow-lg shadow-amber-500/30 group-hover:scale-150 transition"></div>
+
+                    <!-- Watermark Year -->
+                    <span class="absolute -left-2 -top-10 text-[120px] font-bold text-white/10 select-none">
+                    2013
+                    </span>
+
+                    <time class="text-xs uppercase tracking-widest text-white/70">
+                    2013
+                    </time>
+
+                    <h3 class="text-2xl md:text-3xl font-light mt-3 group-hover:text-amber-400 transition">
+                    Global Acknowledgment
+                    </h3>
+
+                    <p class="mt-4 text-white/70 leading-relaxed max-w-xl">
+                    Named one of the 100 Most Influential People in the World by TIME Magazine, becoming one of the few Nollywood figures to receive global recognition at that level.
+                    </p>
+
+                </li>
+
+                <li class="relative group pl-20">
+
+                    <!-- Dot -->
+                    <div class="absolute left-4 top-3 w-4 h-4 rounded-full bg-amber-400 shadow-lg shadow-amber-500/30 group-hover:scale-150 transition"></div>
+
+                    <!-- Watermark Year -->
+                    <span class="absolute -left-2 -top-10 text-[120px] font-bold text-white/10 select-none">
+                    2014
+                    </span>
+
+                    <time class="text-xs uppercase tracking-widest text-white/70">
+                    2014
+                    </time>
+
+                    <h3 class="text-2xl md:text-3xl font-light mt-3 group-hover:text-amber-400 transition">
+                    Hollywood Crossover
+                    </h3>
+
+                    <p class="mt-4 text-white/70 leading-relaxed max-w-xl">
+                        Appeared in the U.S. television series Hit the Floor, marking a significant international screen credit and expanding her presence beyond African cinema. 
+                    </p>
+
+                </li>
+
+
+                <li class="relative group pl-20">
+
+                    <!-- Dot -->
+                    <div class="absolute left-4 top-3 w-4 h-4 rounded-full bg-amber-400 shadow-lg shadow-amber-500/30 group-hover:scale-150 transition"></div>
+
+                    <!-- Watermark Year -->
+                    <span class="absolute -left-2 -top-10 text-[120px] font-bold text-white/10 select-none">
+                    2018
+                    </span>
+
+                    <time class="text-xs uppercase tracking-widest text-white/70">
+                    2018
+                    </time>
+
+                    <h3 class="text-2xl md:text-3xl font-light mt-3 group-hover:text-amber-400 transition">
+                    Producer & Industry Leader
+                    </h3>
+
+                    <p class="mt-4 text-white/70 leading-relaxed max-w-xl">
+                    Embracing leadership behind the scenes, she helped shape projects that elevated storytelling standards, contributing to a new era of professionalism within the industry.
+                    </p>
+
+                </li>
+
+
+                <li class="relative group pl-20">
+
+                    <!-- Dot -->
+                    <div class="absolute left-4 top-3 w-4 h-4 rounded-full bg-amber-400 shadow-lg shadow-amber-500/30 group-hover:scale-150 transition"></div>
+
+                    <!-- Watermark Year -->
+                    <span class="absolute -left-2 -top-10 text-[120px] font-bold text-white/10 select-none">
+                    2021
+                    </span>
+
+                    <time class="text-xs uppercase tracking-widest text-white/70">
+                    2021
+                    </time>
+
+                    <h3 class="text-2xl md:text-3xl font-light mt-3 group-hover:text-amber-400 transition">
+                    Legacy in the Digital Age
+                    </h3>
+
+                    <p class="mt-4 text-white/70 leading-relaxed max-w-xl">
+                    With the rise of streaming platforms and digital distribution, her body of work reached new generations — proving timeless relevance in a rapidly evolving media landscape.
+                    </p>
+
+                </li>
+
+
+                <li class="relative group pl-20">
+
+                    <!-- Dot -->
+                    <div class="absolute left-4 top-3 w-4 h-4 rounded-full bg-amber-400 shadow-lg shadow-amber-500/30 group-hover:scale-150 transition"></div>
+
+                    <!-- Watermark Year -->
+                    <span class="absolute -left-2 -top-10 text-[120px] font-bold text-white/10 select-none">
+                    2025
+                    </span>
+
+                    <time class="text-xs uppercase tracking-widest text-white/70">
+                    2025
+                    </time>
+
+                    <h3 class="text-2xl md:text-3xl font-light mt-3 group-hover:text-amber-400 transition">
+                    30 years of Excellence
+                    </h3>
+
+                    <p class="mt-4 text-white/70 leading-relaxed max-w-xl">
+                    With the rise of streaming platforms and digital distribution, her body of work reached new generations, proving timeless relevance in a rapidly evolving media landscape.
+                    </p>
+
+                </li>
+
+                <!-- Repeat structure for other years -->
+
+                </ol>
+            </div>
+            <ul class="space-y-8 font-geist">
+                <li class="reveal reveal-up stagger-1 space-y-2">
+                    <p class="font-bold text-amber-400 text-lg md:text-xl drop-shadow-sm">
+                    United Nations World Food Programme (WFP)
+                    </p>
+                    <p class="text-white/90 text-base md:text-xl leading-relaxed drop-shadow-sm">
+                    Appointed Goodwill Ambassador in 2005, she has supported anti-hunger initiatives across Africa,
+                    including official missions to Sierra Leone and Liberia, advocating for maternal health
+                    and food security programs.
+                    </p>
+                </li>
+
+                <li class="reveal reveal-up stagger-2 space-y-2">
+                    <p class="font-bold text-amber-400 text-lg md:text-xl drop-shadow-sm">
+                    Omotola Youth Empowerment Programme (OYEP)
+                    </p>
+                    <p class="text-white/90 text-base md:text-xl leading-relaxed drop-shadow-sm">
+                    Founder of OYEP, an initiative focused on youth empowerment through entrepreneurship training,
+                    leadership conventions, and support programs for widows and vulnerable communities in Nigeria.
+                    </p>
+                </li>
+
+                <li class="reveal reveal-up stagger-3 space-y-2">
+                    <p class="font-bold text-amber-400 text-lg md:text-xl drop-shadow-sm">
+                    Amnesty International
+                    </p>
+                    <p class="text-white/90 text-base md:text-xl leading-relaxed drop-shadow-sm">
+                    Publicly supported advocacy efforts addressing human rights, gender equality,
+                    and environmental accountability in the Niger Delta region.
+                    </p>
+                </li>
+                <figure class="hidden lg:block sticky top-24 mt-28 h-[600px] overflow-hidden rounded-2xl shadow-2xl shadow-black/60">
+    
+                    <!-- Film overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 z-10"></div>
+    
+                    <img
+                    src="public/100.png"
+                    alt="Omotola cinematic portrait"
+                    class="w-full h-full object-cover scale-105 hover:scale-110 transition duration-1000"
+                    />
+    
+                    <!-- Caption -->
+                    <figcaption class="absolute bottom-8 left-8 z-20">
+                    <p class="text-xs tracking-widest uppercase text-amber-400">
+                        Legacy in Motion
+                    </p>
+                    </figcaption>
+    
+                </figure>
+            </ul>
+            </div>
+
+            <div class="mt-4 md:mt-16 font-inter mx-auto md:text-center space-y-6 ">
+                <div class="w-24 h-px bg-amber-400 mx-auto"></div>
+
+                <p class="text-sm md:text-base leading-relaxed text-white/80 font-light">
+                    Known across continents as <span class="text-amber-400 font-medium">Omo Sexy</span>,
+                    Omotola Jalade-Ekeinde represents a rare convergence of elegance,
+                    power, and cultural transformation.
+                </p>
+
+                <p class="text-sm md:text-base leading-relaxed text-white/70">
+                    Performances in landmark titles such as <span class="text-amber-400 font-medium">Ties That Bind, Alter Ego,
+                    and Mortal Inheritance</span> secured her multiple honors including Actress of the Year,
+                    Best Actress, and Best Actress Overall. Across her career,
+                    she has accumulated an extraordinary body of recognitions for both performance excellence and cultural influence.
+                </p>
+
+                <p class="text-sm md:text-base leading-relaxed text-white/70">
+                    From award-winning performances in defining Nollywood titles
+                    to humanitarian initiatives that uplift widows and youth,
+                    her influence extends beyond cinema into social architecture.
+                </p>
+
+                <p class="text-sm md:text-base leading-relaxed text-white/70">
+                    Today she stands not only as an actress, but as a
+                    <span class="text-amber-400 font-medium">global cultural envoy</span>,
+                    bridging art, activism, and generational legacy.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-20 px-2 md:px-20 bg-black overflow-hidden font-inter">
+        <div class="grid gap-12">
+
+            <!-- Section Title -->
+            <h2 class="text-4xl md:text-5xl font-bold uppercase text-white mb-5">
+            Films
+            </h2>
+
+            <!-- Film List -->
+            <ul class="space-y-6 uppercase rounded-lg">
+            <!-- Film Item -->
+            <li class="film-item group relative flex items-center gap-4 cursor-pointer">
+                <!-- Dot -->
+                <span class="w-3 h-3 bg-white rounded-full flex-shrink-0 transition-colors duration-500 group-hover:bg-amber-400 animate-pulse"></span>
+
+                <!-- Title -->
+                <span class="text-white/80 group-hover:text-amber-400 font-semibold text-xl md:text-4xl transition-colors duration-500">
+                Blood Sisters (2011)
+                </span>
+
+                <!-- Banner Image -->
+                <img src="public/film5.webp"
+                    class="film-banner absolute right-0 -translate-x-1/2 top-0 h-48 w-36 md:h-56 md:w-44 object-cover rounded-2xl shadow-2xl opacity-0 pointer-events-none transition-all duration-500 group-hover:opacity-100 group-hover:scale-105 group-hover:rotate-1">
+
+                <!-- Info Overlay -->
+                <div class="film-info absolute bottom-0 right-0 -translate-x-1/2 bg-black/70 px-3 py-2 rounded opacity-0 pointer-events-none text-sm text-white transition-opacity duration-500 group-hover:opacity-100">
+                Director: Kenneth Gyang | Awards: Best Actress
+                </div>
+            </li>
+
+            <li class="film-item group relative flex items-center gap-4 cursor-pointer">
+                <span class="w-3 h-3 bg-white rounded-full flex-shrink-0 transition-colors duration-500 group-hover:bg-amber-400 animate-pulse"></span>
+                <span class="text-white/80 group-hover:text-amber-400 font-semibold text-xl md:text-4xl transition-colors duration-500">
+                Alter Ego (2017)
+                </span>
+                <img src="public/film4.webp"
+                    class="film-banner absolute right-0 -translate-x-1/2 top-0 h-48 w-36 md:h-56 md:w-44 object-cover rounded-2xl shadow-2xl opacity-0 pointer-events-none transition-all duration-500 group-hover:opacity-100 group-hover:scale-105 group-hover:rotate-1">
+                <div class="film-info absolute bottom-0 right-0 -translate-x-1/2 bg-black/70 px-3 py-2 rounded opacity-0 pointer-events-none text-sm text-white transition-opacity duration-500 group-hover:opacity-100">
+                Director: Moses Inwang | Awards: AMVCA Best Actress
+                </div>
+            </li>
+
+            <li class="film-item group relative flex items-center gap-4 cursor-pointer">
+                <span class="w-3 h-3 bg-white rounded-full flex-shrink-0 transition-colors duration-500 group-hover:bg-amber-400 animate-pulse"></span>
+                <span class="text-white/80 group-hover:text-amber-400 font-semibold text-xl md:text-4xl transition-colors duration-500">
+                The Last Fight to Abuja (2012)
+                </span>
+                <img src="public/film7.webp"
+                    class="film-banner absolute right-0 -translate-x-1/2 top-0 h-48 w-36 md:h-56 md:w-44 object-cover rounded-2xl shadow-2xl opacity-0 pointer-events-none transition-all duration-500 group-hover:opacity-100 group-hover:scale-105 group-hover:rotate-1">
+                <div class="film-info absolute bottom-0 right-0 -translate-x-1/2 bg-black/70 px-3 py-2 rounded opacity-0 pointer-events-none text-sm text-white transition-opacity duration-500 group-hover:opacity-100">
+                Director: Charles Uwagbai | Awards: Best Drama
+                </div>
+            </li>
+
+            <li class="film-item group relative flex items-center gap-4 cursor-pointer">
+                <span class="w-3 h-3 bg-white rounded-full flex-shrink-0 transition-colors duration-500 group-hover:bg-amber-400 animate-pulse"></span>
+                <span class="text-white/80 group-hover:text-amber-400 font-semibold text-xl md:text-4xl transition-colors duration-500">
+                The Ties That Bind (2014)
+                </span>
+                <img src="public/film8.webp"
+                    class="film-banner absolute right-0 -translate-x-1/2 bottom-0 h-48 w-36 md:h-56 md:w-44 object-cover rounded-2xl shadow-2xl opacity-0 pointer-events-none transition-all duration-500 group-hover:opacity-100 group-hover:scale-105 group-hover:rotate-1">
+                <div class="film-info absolute bottom-0 right-0 -translate-x-1/2 bg-black/70 px-3 py-2 rounded opacity-0 pointer-events-none text-sm text-white transition-opacity duration-500 group-hover:opacity-100">
+                Director: Kunle Afolayan | Awards: Best Ensemble
+                </div>
+            </li>
+            <li class="film-item group relative flex items-center gap-4 cursor-pointer">
+                <span class="w-3 h-3 bg-white rounded-full flex-shrink-0 transition-colors duration-500 group-hover:bg-amber-400 animate-pulse"></span>
+                <span class="text-white/80 group-hover:text-amber-400 font-semibold text-xl md:text-4xl transition-colors duration-500">
+                ije: The Journey (2010)
+                </span>
+                <img src="public/ije.jpg"
+                    class="film-banner absolute right-0 -translate-x-1/2 bottom-0 h-48 w-36 md:h-56 md:w-44 object-cover rounded-2xl shadow-2xl opacity-0 pointer-events-none transition-all duration-500 group-hover:opacity-100 group-hover:scale-105 group-hover:rotate-1">
+                <div class="film-info absolute bottom-0 right-0 -translate-x-1/2 bg-black/70 px-3 py-2 rounded opacity-0 pointer-events-none text-sm text-white transition-opacity duration-500 group-hover:opacity-100">
+                Director: Chineze Anyaene | Awards: Best Actress 
+                </div>
+            </li>
+            <li class="film-item group relative flex items-center gap-4 cursor-pointer">
+                <span class="w-3 h-3 bg-white rounded-full flex-shrink-0 transition-colors duration-500 group-hover:bg-amber-400 animate-pulse"></span>
+                <span class="text-white/80 group-hover:text-amber-400 font-semibold text-xl md:text-4xl transition-colors duration-500">
+                A Private Storm(2010)
+                </span>
+                <img src="public/privatestorm.webp"
+                    class="film-banner absolute right-0 -translate-x-1/2 bottom-0 h-48 w-36 md:h-56 md:w-44 object-cover rounded-2xl shadow-2xl opacity-0 pointer-events-none transition-all duration-500 group-hover:opacity-100 group-hover:scale-105 group-hover:rotate-1">
+                <div class="film-info absolute bottom-0 right-0 -translate-x-1/2 bg-black/70 px-3 py-2 rounded opacity-0 pointer-events-none text-sm text-white transition-opacity duration-500 group-hover:opacity-100">
+                Director: Lancelot Oduwa | Awards: Best Actress-Africa Collaboration
+                </div>
+            </li>
+            <li class="film-item group relative flex items-center gap-4 cursor-pointer">
+                <span class="w-3 h-3 bg-white rounded-full flex-shrink-0 transition-colors duration-500 group-hover:bg-amber-400 animate-pulse"></span>
+                <span class="text-white/80 group-hover:text-amber-400 font-semibold text-xl md:text-4xl transition-colors duration-500">
+                LockDown(2021)
+                </span>
+                <img src="public/privatestorm.webp"
+                    class="film-banner absolute right-0 -translate-x-1/2 bottom-0 h-48 w-36 md:h-56 md:w-44 object-cover rounded-2xl shadow-2xl opacity-0 pointer-events-none transition-all duration-500 group-hover:opacity-100 group-hover:scale-105 group-hover:rotate-1">
+                <div class="film-info absolute bottom-0 right-0 -translate-x-1/2 bg-black/70 px-3 py-2 rounded opacity-0 pointer-events-none text-sm text-white transition-opacity duration-500 group-hover:opacity-100">
+                Director: Moses Inwang | Awards: Public Choice Awards
+                </div>
+            </li>
+            </ul>
+        </div>
+    </section>
+
+
 </body>
 
-<script>
+ <script>
   let lastScrollY = window.scrollY;
 
 const header = document.getElementById("mainHeader");
@@ -154,8 +658,8 @@ function onScroll() {
      TOP OF PAGE
   ======================= */
   if (currentScroll === 0) {
-    header.classList.remove("nav-hidden");
-    header.classList.add("glass-nav");
+    header.classList.add("nav-hidden");
+    header.classList.remove("glass-nav");
 
     logoWrap.classList.remove("scale-90");
 
@@ -232,6 +736,23 @@ menuBtn.addEventListener("click", () => {
     } else {
       othersAccordion.style.maxHeight=othersAccordion.scrollHeight+"px"; othersIcon.classList.add("rotate-180");
     }
+  });
+</script>
+
+<script>
+  const filmItems = document.querySelectorAll('.film-item');
+
+  filmItems.forEach(item => {
+    const banner = item.querySelector('.film-banner' );
+
+    item.addEventListener('mouseenter', () => {
+      new Audio('/sounds/hover.mp3').play();
+      banner.style.opacity = 1;
+    });
+
+    item.addEventListener('mouseleave', () => {
+      banner.style.opacity = 0;
+    });
   });
 </script>
 </html>
