@@ -385,7 +385,7 @@
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
           </div>
 
-          <div class="absolute -bottom-6 left-20 bg-black/80 backdrop-blur-md px-6 py-4 rounded-xl border border-white/10">
+          <div class="hidden md:absolute -bottom-6 left-20 bg-black/80 backdrop-blur-md px-6 py-4 rounded-xl border border-white/10">
             <p class="text-amber-400 text-xs uppercase tracking-[0.35em]">
               Film • Television • Brand Architecture
             </p>
@@ -646,13 +646,13 @@
       <div class="flex gap-3">
         <button
           data-set="a"
-          class="archive-btn active px-6 py-2 rounded-full border border-black/20 text-sm uppercase tracking-wide transition hover:bg-black hover:text-white"
+          class="archive-btn active px-6 py-2 rounded-full border border-black/20 sm:text-sm text-xs uppercase tracking-wide transition hover:bg-black hover:text-white"
         >
           A Mother's Love
         </button>
         <button
           data-set="b"
-          class="archive-btn px-6 py-2 rounded-full border border-black/20 text-sm uppercase tracking-wide transition hover:bg-black hover:text-white"
+          class="archive-btn px-6 py-2 rounded-full border border-black/20 sm:text-sm text-xs uppercase tracking-wide transition hover:bg-black hover:text-white"
         >
           Road Rogue
         </button>
@@ -721,13 +721,13 @@
   </div>
 
   <!-- BOTTOM ROW (Brand Text Centered) -->
-  <div class="flex justify-center items-center text-center gap-x-20 w-full">
+  <div class="flex justify-center items-center text-center gap-x-4 md:gap-x-20 w-full">
 
-    <h2 class="text-2xl md:text-3xl uppercase tracking-[0.2em] font-light text-neutral-900 bg-amber-200  rounded-ss-2xl rounded-ee-2xl px-4 py-1 rounded">
+    <h2 class="text-sm md:text-3xl uppercase tracking-[0.2em] font-light text-neutral-900 bg-amber-200  rounded-ss-2xl rounded-ee-2xl px-4 py-1 rounded">
       OSEAL
     </h2>
 
-    <h2 class="text-2xl md:text-3xl uppercase tracking-[0.6em] font-extralight text-neutral-400">
+    <h2 class="text-sm md:text-3xl uppercase tracking-[0.6em] font-extralight text-neutral-400">
       DOUBLEDOOR
     </h2>
 
@@ -815,6 +815,10 @@
 
     <div class="text-white text-sm font-normal font-inter tracking-wide opacity-60">
       ©2026 RedHot Concepts. All Rights Reserved.
+    </div>
+
+    <div class="text-white inline-flex items-center gap-2 text-sm font-normal font-inter tracking-wide opacity-60">
+      Designed and Developed by <a href="/nextdaysite.com" target="_blank" class="text-amber-400 hover:underline"><img src="public/nds.png" alt=""></a>
     </div>
   </footer>
 
