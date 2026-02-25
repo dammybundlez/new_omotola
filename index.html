@@ -32,7 +32,7 @@
 
 
       <!-- Desktop Nav -->
-      <nav id="desktopNav" class="hidden md:flex items-center nav-fade">
+      <nav id="desktopNav" class="hidden md:flex items-center">
         <ul class="flex items-center text-white gap-x-8 uppercase font-inter">
           <li><a href="/" class="hover:text-orange-300 transition-all text-sm tracking-wide">Home</a></li>
           <li><a href="films.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Films</a></li>
@@ -107,8 +107,8 @@
       </li>
     </ul>
 
-    <div class="absolute md:bottom-0 bottom-0 md:left-0 left-0 right-0 z-10 max-w-7xl mx-auto px-6">
-      <div class="relative z-10  flex items-end pt-10 pb-4 md:px-16 px-3">
+    <div class="absolute md:bottom-0 bottom-0 md:left-0 md:right-0 left-0 right-0 z-10 mx-auto px-6">
+      <div class="relative z-10  flex items-end pt-10 pb-4 md:px-14 px-3">
         <div class="flex justify-between items-end w-full pb-14 pt-24 h-screen text-white">
           <!-- LEFT -->
           <div class="space-y-3 pt-14 animate-fadeUp opacity-0 font-inter flex flex-col justify-between h-full">
@@ -137,7 +137,7 @@
 
           <!-- RIGHT -->
           <div
-            class=" md:block hidden items-end justify-end w-2/5 space-y-6 font-archivo animate-fadeUp delay-500 opacity-0">
+            class=" md:block hidden items-end justify-end md:w-2/4 space-y-6 font-archivo animate-fadeUp delay-500 opacity-0">
             <div class="flex items-end justify-center flex-col mb-10">
               <div class="flex items-start flex-col justify-start">
                 <p class="text-xs uppercase tracking-widest text-white mb-2 font-inter">MOVIE SCENEs</p>
@@ -154,7 +154,7 @@
                 </div>
               </div>
             </div>
-            <div class="uppercase text-xs flex gap-2 flex-wrap text-end">
+            <div class="uppercase text-xs flex gap-2 flex-wrap text-end items-end justify-end">
               <p class="tracking-widest">omotola jalade ekeinde</p><span class="opacity-60">•</span>
               <p class="tracking-widest">Olumide Oworu</p><span class="opacity-60">•</span>
               <p class="tracking-widest">BABA REX</p><span class="opacity-60">•</span>
@@ -208,68 +208,53 @@
 
         <div class="relative justify-between w-full flex flex-col lg:flex-row gap-10">
           <div id="scrollContainer" class="scroll-container lg:w-full overflow-x-auto overflow-y-hidden scrollbar-hide snap-x snap-mandatory flex gap-6 scroll-smooth w-full">
-            <!-- <div
-              class="min-w-[260px] md:min-w-[350px] lg:min-w-[420px] snap-start flex-shrink-0 cursor-pointer hover-lift"
-              onclick="openModal()">
-              <div class="relative">
-                <img src="public/herobg.webp"
-                  class="w-[420px] h-[16rem] brightness-75 md:h-[20rem] object-cover object-[center_0%] rounded hover-scale">
-              </div>
-              <p class="text-white text-2xl font-inter tracking-wide mt-3">A Mother's Love</p>
-            </div> -->
-
-            <!-- <div class="min-w-[260px] md:min-w-[350px] lg:min-w-[420px] snap-start flex-shrink-0 hover-lift">
-              <div class="relative">
-                <img src="public/Road Rogue.webp"
-                  class="w-[420px] h-[16rem] brightness-75 md:h-[20rem] object-cover object-[center_0%] rounded hover-scale">
-              </div>
-              <p class="text-white text-2xl font-inter tracking-wide mt-3">Road Rogue</p>
-            </div> -->
-            <figure class="group relative flex flex-col gap-6 overflow-hidden
-                    transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] min-w-[260px] md:min-w-[320px] lg:min-w-[350px] snap-start "
-            >
-              <!-- Image Wrapper -->
-              <div class="relative overflow-hidden rounded-lg">
-                <!-- Image -->
-                <img
-                  src="public/herobg.webp"
-                  alt="mother Love"
-                  class="w-full aspect-[201/256] object-cover h-[250px] md:h-[300px]
-                        transition-transform duration-[1200ms] object-[center_0%]
-                        group-hover:scale-105"
-                />
-
-                <!-- Cinematic Overlay -->
-                <div
-                  class="pointer-events-none absolute inset-0
-                        bg-gradient-to-t from-black/80 via-black/30 to-transparent
-                        opacity-80"
-                ></div>
-
-                <!-- Film Grain (optional but 🔥) -->
-                <div
-                  class="pointer-events-none absolute inset-0 opacity-[0.08]
-                        mix-blend-overlay
-                        bg-[url('public/herobg.webp')]"
-                ></div>
-              </div>
-
-              <!-- Caption -->
-              <figcaption
-                class="relative z-10 text-base font-medium text-white font-geist uppercase leading-5
-                      tracking-wide transition-all duration-500
-                      group-hover:text-amber-400"
+            <a href="details.html">
+              <figure class="group relative flex flex-col gap-6 overflow-hidden
+                      transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] min-w-[260px] md:min-w-[320px] lg:min-w-[350px] snap-start "
               >
-                A Mother's Love
-              </figcaption>
-
-              <!-- Subtle Accent Line -->
-              <span
-                class="absolute bottom-0 left-0 h-[2px] w-0 bg-amber-400
-                      transition-all duration-700
-                      group-hover:w-full"
-              ></span>
-            </figure>
+                <!-- Image Wrapper -->
+                <div class="relative overflow-hidden rounded-lg">
+                  <!-- Image -->
+                  <img
+                    src="public/herobg.webp"
+                    alt="mother Love"
+                    class="w-full aspect-[201/256] object-cover h-[250px] md:h-[300px]
+                          transition-transform duration-[1200ms] object-[center_0%]
+                          group-hover:scale-105"
+                  />
+  
+                  <!-- Cinematic Overlay -->
+                  <div
+                    class="pointer-events-none absolute inset-0
+                          bg-gradient-to-t from-black/80 via-black/30 to-transparent
+                          opacity-80"
+                  ></div>
+  
+                  <!-- Film Grain (optional but 🔥) -->
+                  <div
+                    class="pointer-events-none absolute inset-0 opacity-[0.08]
+                          mix-blend-overlay
+                          bg-[url('public/herobg.webp')]"
+                  ></div>
+                </div>
+  
+                <!-- Caption -->
+                <figcaption
+                  class="relative z-10 text-base font-medium text-white font-geist uppercase leading-5
+                        tracking-wide transition-all duration-500
+                        group-hover:text-amber-400"
+                >
+                  A Mother's Love
+                </figcaption>
+  
+                <!-- Subtle Accent Line -->
+                <span
+                  class="absolute bottom-0 left-0 h-[2px] w-0 bg-amber-400
+                        transition-all duration-700
+                        group-hover:w-full"
+                ></span>
+              </figure>
+            </a>
             
             <figure
               class="group relative flex flex-col gap-6 overflow-hidden
@@ -792,11 +777,7 @@
       </ul>
     </nav>
 
-    <div class="reveal reveal-up stagger-1 flex flex-col items-center gap-2">
-      <p class="text-zinc-400 text-xs font-semibold uppercase">Email</p>
-      <a href="mailto:contact@redhotconcepts.com"
-        class="text-amber-400 text-xl md:text-2xl font-normal font-inter hover:underline hover-glow">contact@redhotconcepts.com</a>
-    </div>
+    
 
     <div class="reveal reveal-up stagger-2 flex flex-wrap justify-center items-center gap-8 text-2xl text-white">
       <a href="https://www.youtube.com/@RedHotConceptTV" target="_blank" rel="noopener noreferrer" class="hover-lift"
@@ -967,11 +948,9 @@ function hideNavLinks() {
 function onScroll() {
   const currentScroll = window.scrollY;
 
-  /* =======================
-     TOP OF PAGE
-  ======================= */
+
   if (currentScroll === 0) {
-    header.classList.add("nav-hidden");
+    // header.classList.remove("nav-hidden");
     header.classList.remove("glass-nav");
 
     logoWrap.classList.remove("scale-90");
@@ -983,9 +962,6 @@ function onScroll() {
     return;
   }
 
-  /* =======================
-     ANYWHERE ELSE
-  ======================= */
   header.classList.remove("nav-hidden");
   header.classList.add("glass-nav");
 
