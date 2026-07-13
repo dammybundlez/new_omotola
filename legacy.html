@@ -6,1548 +6,529 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="output.css">
   <script src="https://kit.fontawesome.com/c4993cb090.js" crossorigin="anonymous"></script>
-  <link rel="shortcut icon" href="public/redbg.png" type="image/x-icon">
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <link rel="shortcut icon" href="public_optimized/redbg.webp" type="image/webp">
   <title>Omotola . Legacy</title>
 </head>
 
-<body class="bg-[#0b0b0e] text-white">
-  <header id="mainHeader" class="fixed top-0 w-full z-50 pr-4 md:pl-6 md:pr-14 py-4 md:py-1 transition-all duration-500">
-  <div class="flex justify-between items-center">
-
-    <!-- Logo -->
-    <a id="logoWrap" href="/"
-     class="relative flex items-center justify-center w-20 h-10 md:w-28 md:h-[5rem] p-2 rounded-md transition-all duration-300">
-        <img id="logoWhite"
-            src="public/img124.webp"
-            class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-100"
-            alt="Logo White"/>
-
-        <img id="logoRed"
-            src="public/redbg.png"
-            class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-0"
-            alt="Logo Red"/>
-    </a>
-
-
-    <!-- Desktop Nav -->
-    <nav id="desktopNav" class="hidden md:flex items-center nav-fade">
-      <ul class="flex items-center text-white gap-8 uppercase font-inter">
-         <li><a href="/" class="hover:text-orange-300 transition-all text-sm tracking-wide">Home</a></li>
-            <li><a href="films.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Films</a></li>
-            <!-- <li><a href="news.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">News</a></li> -->
-        <li><a href="legacy.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">30 Years legacy</a></li>
-        <li class="relative group tracking-wide text-sm">
-          <a class="hover:text-orange-300 flex items-center gap-2" >Affiliates <i class="fa-solid fa-chevron-down text-sm"></i></a>
-          <div class="absolute top-full left-1/2 -translate-x-1/2 w-[300px] px-2 py-2 bg-white rounded-3xl shadow-lg invisible group-hover:visible transition-all duration-300">
-            <ul class="text-stone-500 flex flex-col gap-2">
-              <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 block px-4 py-1">OYEP</a></li>
-              <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 block px-4 py-1">OSEAL</a></li>
-              <li><a href="https://www.teffest.com/" class="hover:text-orange-300 block px-4 py-1">TEFFEST</a></li>
-              <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 block px-4 py-1">DOUBLE DOORS</a></li>
-            </ul>
-          </div>
+<body class="bg-cinema-950 text-white">
+  <div class="grain-overlay pointer-events-none fixed inset-0 z-0 opacity-[0.04]"></div>
+  <div id="scrollProgress" class="fixed top-0 left-0 z-[60] h-[2px] bg-amber-400/70" style="width:0%"></div>
+  <header id="mainHeader" class="fixed top-0 w-full z-50 px-6 md:px-14 py-5 transition-all duration-700">
+    <div class="max-w-[1440px] mx-auto flex justify-between items-center">
+      <a href="/" class="relative flex items-center justify-center w-20 h-10 md:w-28 md:h-16 rounded-md transition-all duration-300 group">
+        <img id="logoWhite" src="public/img124.webp" class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-100 group-hover:opacity-80" alt="RedHot Concepts">
+        <img id="logoRed" src="public_optimized/redbg.webp" class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-0" alt="RedHot Concepts">
+      </a>
+      <nav id="desktopNav" class="hidden md:flex items-center">
+        <ul class="flex items-center text-white/80 gap-9 uppercase font-display text-[11px] tracking-[0.2em]">
+          <li><a href="/" class="hover:text-amber-400 transition-all duration-300">Home</a></li>
+          <li><a href="films.html" class="hover:text-amber-400 transition-all duration-300">Films</a></li>
+          <li><a href="legacy.html" class="text-amber-400 transition-all duration-300">Legacy</a></li>
+          <li class="relative group">
+            <a class="hover:text-amber-400 flex items-center gap-1.5 cursor-pointer transition-all duration-300">Affiliates <i class="fa-solid fa-chevron-down text-[8px]"></i></a>
+            <div class="absolute top-full left-1/2 -translate-x-1/2 w-[240px] px-2 py-3 bg-cinema-900/95 backdrop-blur-xl border border-white/5 rounded-xl shadow-2xl invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-1">
+              <ul class="text-white/70 flex flex-col gap-0.5">
+                <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400 hover:bg-white/5 block px-4 py-2.5 rounded-lg transition text-[11px] tracking-[0.15em] uppercase">OYEP</a></li>
+                <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400 hover:bg-white/5 block px-4 py-2.5 rounded-lg transition text-[11px] tracking-[0.15em] uppercase">OSEAL</a></li>
+                <li><a href="https://www.teffest.com/" class="hover:text-amber-400 hover:bg-white/5 block px-4 py-2.5 rounded-lg transition text-[11px] tracking-[0.15em] uppercase">TEFFEST</a></li>
+                <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400 hover:bg-white/5 block px-4 py-2.5 rounded-lg transition text-[11px] tracking-[0.15em] uppercase">Double Door</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="about.html" class="hover:text-amber-400 transition-all duration-300">About</a></li>
+          <li><a href="contact.html" class="hover:text-amber-400 transition-all duration-300">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="menuBtn" class="md:hidden text-white text-xl hover:text-amber-400 transition-all">
+        <span><i class="fa-solid fa-bars"></i></span>
+      </button>
+    </div>
+    <nav id="mobileMenu" class="fixed top-0 left-0 w-full h-screen bg-cinema-950/95 backdrop-blur-2xl z-50 flex flex-col items-center justify-center translate-y-full opacity-0 transition-all duration-500">
+      <button id="mobileClose" class="absolute top-8 right-8 text-white text-3xl hover:text-amber-400 transition-all"><i class="fa-solid fa-xmark"></i></button>
+      <ul class="text-white flex flex-col items-center gap-8 font-display">
+        <li class="menu-item opacity-0 translate-y-6"><a href="films.html" class="text-3xl font-bold uppercase hover:text-amber-400 tracking-wider">Films</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="news.html" class="text-3xl font-bold uppercase hover:text-amber-400 tracking-wider">News</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="legacy.html" class="text-3xl font-bold uppercase hover:text-amber-400 tracking-wider">Legacy</a></li>
+        <li class="menu-item opacity-0 translate-y-6">
+          <button id="othersToggle" class="flex items-center text-3xl font-bold uppercase hover:text-amber-400 gap-2">
+            Affiliates <i id="othersIcon" class="fa-solid fa-chevron-down text-xl transition-transform duration-300"></i>
+          </button>
+          <ul id="othersAccordion" class="mt-4 max-h-0 overflow-hidden flex flex-col gap-3 transition-all duration-300 text-xl text-center">
+            <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400">OYEP</a></li>
+            <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400">OSEAL</a></li>
+            <li><a href="https://www.teffest.com/" class="hover:text-amber-400">TEFFEST</a></li>
+            <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400">DOUBLE DOOR</a></li>
+          </ul>
         </li>
-        <li><a href="about.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">About</a></li>
-        <li><a href="contact.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Contact</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="about.html" class="text-3xl font-bold uppercase hover:text-amber-400">About</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="contact.html" class="text-3xl font-bold uppercase hover:text-amber-400">Contact</a></li>
       </ul>
     </nav>
+  </header>
+  <main class="overflow-hidden">
 
-    <!-- Hamburger -->
-    <button id="menuBtn" class="md:hidden text-white text-3xl hover:text-amber-400 transition-all">
-      <span><i class="fa-solid fa-bars"></i></span>
-    </button>
-
-  </div>
-
-  <!-- Mobile Menu -->
-  <nav id="mobileMenu" class="fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-lg z-50 flex flex-col items-center justify-center transform translate-y-full opacity-0">
-    <button id="mobileClose" class="absolute top-8 right-8 text-white text-3xl hover:text-amber-400 transition-all"><i class="fa-solid fa-xmark"></i></button>
-    <ul id="mobileMenuList" class="flex flex-col justify-center items-center gap-8 text-center font-geist">
-      <li class="menu-item opacity-0 translate-y-6"><a href="films.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">Films</a></li>
-      <li class="menu-item opacity-0 translate-y-6"><a href="news.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">News</a></li>
-      <li class="menu-item opacity-0 translate-y-6"><a href="legacy.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">30 Years Legacy</a></li>
-      <li class="menu-item opacity-0 translate-y-6">
-        <button id="othersToggle" class="flex items-center justify-center text-3xl font-bold uppercase hover:text-amber-400 gap-2 transition-all duration-300">
-          Affiliates <i id="othersIcon" class="fa-solid fa-chevron-down transition-transform duration-300"></i>
-        </button>
-        <ul id="othersAccordion" class="mt-4 max-h-0 overflow-hidden flex flex-col gap-3 transition-all duration-300">
-          <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400">OYEP</a></li>
-          <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400">OSEAL</a></li>
-          <li><a href="https://www.teffest.com/" class="hover:text-amber-400">TEFFEST</a></li>
-          <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400">DOUBLE DOORS</a></li>
-        </ul>
-      </li>
-      <li class="menu-item opacity-0 translate-y-6"><a href="about.html" class="text-3xl font-bold uppercase hover:text-amber-400">About</a></li>
-      <li class="menu-item opacity-0 translate-y-6"><a href="contact.html" class="text-3xl font-bold uppercase hover:text-amber-400">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-  <section
-  class="reveal reveal-up relative w-full overflow-hidden py-20 md:px-8 bg-black
-         before:absolute before:inset-0
-         before:bg-gradient-to-b before:from-amber-500/50 before:via-black before:to-black
-         after:absolute after:inset-0 after:bg-[url('/public/grain.png')] after:opacity-[0.04]"
->
-  <div class="relative z-10 mx-auto px-6 mt-10">
-
-    <!-- Header -->
-    <header class="flex flex-col items-center text-center gap-6 mb-20">
-
-      <p class="text-sm uppercase tracking-wider text-neutral-200 font-geist">
-        Redhot Concepts Celebrating Omotola’s 30-Year Legacy
-      </p>
-
-      <img
-        src="public/frame30.png"
-        alt="Portrait still"
-        class="h-64 w-auto object-cover transition duration-700 hover:scale-105"
-      />
-
-      <h2
-        class="text-[#E09E23] text-4xl md:text-5xl font-extrabold font-geist uppercase tracking-[0.10em]"
-      >
-        30 Years Legacy
-      </h2>
-
-      <!-- <button
-        class="px-8 py-4 bg-gradient-to-r from-amber-400 to-orange-500
-               text-black font-geist uppercase tracking-wider font-medium
-               shadow-xl transition-all duration-500 hover:scale-110"
-      >
-        Explore 30-Year Legacy
-     </button> -->
-
-    </header>
-
-    <!-- Main Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-
-      <!-- LEFT TEXT -->
-      <article class="lg:col-span-4 space-y-8">
-
-        <p class="text-white/90 text-lg leading-relaxed font-light font-geist">
-          Delve into the extraordinary journey of
-          <span class="text-amber-400 font-medium">
-            Omotola Jalade Ekeinde
-          </span>,
-          a cinematic icon and cultural trailblazer whose influence spans
-          decades of African and global storytelling.
-        </p>
-        <p class="text-white/90 text-lg leading-relaxed font-light font-geist">
-          She has not only redefined the landscape of African cinema but has also used her platform to effect positive change in communities across the globe. <br><br> Born in Nigeria and now residing in Los Angeles, California, Omotola Jalade-Ekeinde remains one of Africa’s most globally recognized cultural exports.
-        </p>
-       
-
-        <!-- Small supporting images -->
-        <div class="grid grid-cols-2 gap-4">
-
-          <!-- Image 1 -->
-          <img
-            src="public/image 159.png"
-            class="w-full h-full object-cover rounded-xl
-                   hover:scale-105 transition duration-700 shadow-lg"
-          />
-
-          <!-- Image 2 -->
-          <img
-            src="public/image 163.png"
-            class="w-full h-full object-cover rounded-xl
-                   hover:scale-105 transition duration-700 shadow-lg"
-          />
-
-        </div>
-
-      </article>
-
-      <!-- RIGHT IMAGE COMPOSITION -->
-      <div class="lg:col-span-8 grid grid-cols-12 gap-4 h-[720px]">
-
-        <!-- HERO IMAGE (Image 3) -->
-        <div class="col-span-7 row-span-2 relative rounded-2xl overflow-hidden shadow-2xl">
-
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
-
-          <img
-            src="public/image 160.png"
-            class="w-full h-full object-cover hover:scale-110 transition duration-1000"
-          />
-
-        </div>
-
-
-        <!-- TOP RIGHT IMAGE (Image 4) -->
-        <div class="col-span-5 rounded-2xl overflow-hidden shadow-xl">
-
-          <img
-            src="public/image 162.png"
-            class="w-full h-full object-cover hover:scale-110 transition duration-700"
-          />
-
-        </div>
-
-
-        <!-- BOTTOM RIGHT IMAGE (Image 5) -->
-        <div class="col-span-5 rounded-2xl overflow-hidden shadow-xl">
-
-          <img
-            src="public/image 165.png"
-            class="w-full h-full object-cover hover:scale-110 transition duration-700"
-          />
-
-        </div>
-
+    <!-- ===== REEL 1: OPENING TITLE ===== -->
+    <section class="relative w-full min-h-screen overflow-hidden bg-cinema-950">
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-cinema-950"></div>
+        <div class="absolute inset-0 bg-[url('public_optimized/legacy-img160.webp')] bg-cover bg-[center_30%] scale-110"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-cinema-950 via-cinema-950/70 to-cinema-950/30"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_40%,_#07070a_100%)]"></div>
       </div>
-    </div>
-  </div>
-</section>
+      <div class="absolute top-28 left-6 md:left-14 z-10 reveal">
+        <span class="text-[10px] md:text-xs uppercase tracking-[0.4em] text-amber-400/50 font-geist">A RedHot Concepts Presentation</span>
+      </div>
+      <div class="absolute bottom-24 md:bottom-40 left-0 right-0 z-10 px-6 md:px-14">
+        <div class="max-w-7xl mx-auto">
+          <div class="reveal">
+            <h1 class="text-7xl md:text-9xl lg:text-[11rem] font-display font-bold text-white leading-[0.8] tracking-tight">
+              30
+            </h1>
+          </div>
+          <div class="reveal stagger-1">
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-display font-light text-white/90 tracking-[0.08em] -mt-2 md:-mt-4">
+              YEARS
+            </h2>
+          </div>
+          <div class="reveal stagger-2 mt-1 md:mt-2">
+            <p class="text-lg md:text-2xl font-geist text-amber-400/80 tracking-[0.3em] uppercase">Of Legacy</p>
+          </div>
+          <div class="reveal stagger-3 mt-8 flex flex-wrap gap-3 text-white/30 text-[10px] uppercase tracking-[0.25em] font-geist">
+            <span class="flex items-center gap-2"><span class="w-6 h-px bg-amber-400/30"></span>Omotola Jalade Ekeinde</span>
+            <span class="flex items-center gap-2"><span class="w-6 h-px bg-amber-400/30"></span>1995 &mdash; 2025</span>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 reveal stagger-4">
+        <span class="text-white/20 text-[10px] uppercase tracking-[0.3em] font-geist">Scroll</span>
+        <div class="w-px h-10 bg-gradient-to-b from-amber-400/40 to-transparent"></div>
+      </div>
+    </section>
 
+    <!-- ===== REEL 2: BY THE NUMBERS ===== -->
+    <section class="relative px-6 md:px-14 py-20 md:py-28 bg-cinema-950 border-t border-white/5">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,_#e09e2306,_transparent_60%)] pointer-events-none"></div>
+      <div class="relative max-w-7xl mx-auto">
+        <div class="reveal text-center mb-14 md:mb-20">
+          <span class="text-[10px] md:text-xs uppercase tracking-[0.4em] text-amber-400/50 font-geist">By the Numbers</span>
+          <div class="w-12 h-px bg-amber-400/30 mx-auto mt-4"></div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-12">
+          <div class="reveal reveal-up text-center space-y-3">
+            <div class="text-5xl md:text-7xl font-display font-bold text-white leading-none"><span class="counter" data-target="300" data-delay="0">0</span><span class="text-amber-400">+</span></div>
+            <p class="text-white/40 text-[11px] uppercase tracking-[0.25em] font-geist">Film &amp; TV<br/>Appearances</p>
+          </div>
+          <div class="reveal reveal-up stagger-1 text-center space-y-3">
+            <div class="text-5xl md:text-7xl font-display font-bold text-white leading-none"><span class="counter" data-target="50" data-delay="200">0</span><span class="text-amber-400">+</span></div>
+            <p class="text-white/40 text-[11px] uppercase tracking-[0.25em] font-geist">Major<br/>Awards &amp; Honors</p>
+          </div>
+          <div class="reveal reveal-up stagger-2 text-center space-y-3">
+            <div class="text-5xl md:text-7xl font-display font-bold text-white leading-none"><span class="counter" data-target="2" data-delay="400">0</span></div>
+            <p class="text-white/40 text-[11px] uppercase tracking-[0.25em] font-geist">TIME 100 &amp;<br/>MFR Honors</p>
+          </div>
+          <div class="reveal reveal-up stagger-3 text-center space-y-3">
+            <div class="text-5xl md:text-7xl font-display font-bold text-white leading-none"><span class="counter" data-target="20" data-delay="600">0</span></div>
+            <p class="text-white/40 text-[11px] uppercase tracking-[0.25em] font-geist">Years of<br/>Humanitarian Work</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class=" mx-auto px-4 sm:px-6 md:px-14 space-y-8 py-16">
-    <header class="reveal reveal-up">
-      <h2 class="text-white text-xl font-semibold uppercase font-geist tracking-wider flip-text" data-flip>
-        Career Milestones: The Iconic Timeline
-      </h2>
-    </header>
+    <!-- ===== REEL 3: THE WOMAN ===== -->
+    <section class="relative px-6 md:px-14 py-24 md:py-36 bg-cinema-950 overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_0%_50%,_#e09e2306,_transparent_50%)] pointer-events-none"></div>
+      <div class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-20 items-center">
+        <div class="lg:col-span-5 space-y-8">
+          <div class="reveal-left">
+            <span class="text-[10px] md:text-xs uppercase tracking-[0.4em] text-amber-400/60 font-geist">Reel 3</span>
+          </div>
+          <h2 class="reveal-left stagger-1 text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight">
+            The Woman<br/>
+            <span class="text-amber-400 font-light">Behind the Legend</span>
+          </h2>
+          <div class="reveal-left stagger-2 w-16 h-px bg-amber-400/30"></div>
+          <div class="reveal-left stagger-3 space-y-5 text-white/60 text-base md:text-lg leading-relaxed font-geist">
+            <p>Born on February 7, 1978, in Lagos, Omotola Jalade Ekeinde entered an industry that would never be the same.</p>
+            <p>Her breakout in <em class="text-white/80 not-italic font-medium">Mortal Inheritance</em> (1996) announced a talent so commanding it would reshape Nollywood's identity. Over the next three decades, she became more than an actress&mdash;a cultural architect, humanitarian, and the face of African cinema worldwide.</p>
+          </div>
+          <blockquote class="reveal-left stagger-4 relative pl-6 border-l-2 border-amber-400/40">
+            <p class="text-lg md:text-xl font-display text-white/80 italic leading-relaxed">&ldquo;She carried African narratives beyond borders, redefining what it means to be a global artist from the continent.&rdquo;</p>
+          </blockquote>
+        </div>
+        <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+          <div class="col-span-2 rounded-2xl overflow-hidden group shadow-2xl">
+            <div class="aspect-[16/9] relative">
+              <img src="public_optimized/IMG_0532.webp" alt="" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-1000" />
+              <div class="absolute inset-0 bg-gradient-to-t from-cinema-950/60 to-transparent"></div>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden group shadow-xl">
+            <img src="public_optimized/legacy-img163.webp" alt="" loading="lazy" class="w-full h-40 md:h-52 object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700" />
+          </div>
+          <div class="rounded-xl overflow-hidden group shadow-xl">
+            <img src="public_optimized/legacy-img159.webp" alt="" loading="lazy" class="w-full h-40 md:h-52 object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="reveal reveal-up bg-[#252423]  border-neutral-100 rounded-sm font-shantell">
-      <div class=" overflow-y-auto scroll-smooth p-6 md:p-10 no-scrollbar scrollbar-hide transition-all">
-        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10">
-          <ol class="space-y-6">
-            <!-- <li data-aos="fade-up" class="relative group">
-                    <div class="absolute -left-3 top-2 w-3 h-3 rounded-full bg-amber-500 animate-pulse"></div>
-                    <article class="flex gap-6 items-center p-4 rounded-lg bg-[#1a1a1a]/80 shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:bg-[#2a2a2a]/80">
-                      <time class="w-16 shrink-0 text-[#C6BEAD] group-hover:text-[#B98E3E] font-bold text-xs uppercase">1996</time>
-                      <p class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold uppercase leading-snug">
-                        Stars in Mortal Inheritance, wins Best Actress Overall at THEMA 1997.
-                      </p>
-                    </article>
-                  </li>
-                  <li data-aos="fade-up" class="relative group">
-                    <div class="absolute -left-3 top-2 w-3 h-3 rounded-full bg-amber-500 animate-pulse"></div>
-                    <article class="flex gap-6 items-center p-4 rounded-lg bg-[#1a1a1a]/80 shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:bg-[#2a2a2a]/80">
-                      <time class="w-16 shrink-0 text-[#C6BEAD] group-hover:text-[#B98E3E] font-bold text-xs uppercase">1996</time>
-                      <p class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold uppercase leading-snug">
-                        Stars in Mortal Inheritance, wins Best Actress Overall at THEMA 1997.
-                      </p>
-                    </article>
-                  </li>
-                  <li data-aos="fade-up" class="relative group">
-                    <div class="absolute -left-3 top-2 w-3 h-3 rounded-full bg-amber-500 animate-pulse"></div>
-                    <article class="flex gap-6 items-center p-4 rounded-lg bg-[#1a1a1a]/80 shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:bg-[#2a2a2a]/80">
-                      <time class="w-16 shrink-0 text-[#C6BEAD] group-hover:text-[#B98E3E] font-bold text-xs uppercase">1996</time>
-                      <p class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold uppercase leading-snug">
-                        Stars in Mortal Inheritance, wins Best Actress Overall at THEMA 1997.
-                      </p>
-                    </article>
-                  </li> -->
+    <!-- ===== REEL 4: CHAPTER DIVIDER ===== -->
+    <section class="relative py-20 md:py-28 bg-cinema-950 overflow-hidden">
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="text-[15vw] md:text-[12vw] font-display font-bold text-white/[0.015] select-none tracking-tighter leading-none">THE JOURNEY</div>
+      </div>
+      <div class="relative z-10 text-center px-6">
+        <div class="reveal">
+          <span class="text-[10px] md:text-xs uppercase tracking-[0.5em] text-amber-400/40 font-geist">&mdash; &bull; &mdash;</span>
+        </div>
+        <h3 class="reveal stagger-1 mt-6 text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white">The Journey</h3>
+        <p class="reveal stagger-2 mt-4 text-white/40 text-sm font-geist tracking-wide max-w-md mx-auto">From Lagos to the global stage &mdash; a timeline of milestones</p>
+      </div>
+    </section>
 
-            <li class="reveal reveal-up stagger-1 space-y-4 group cursor-default">
-              <article class="flex gap-6 items-center">
-                <time
-                  class="w-16 shrink-0 group-hover:text-[#B98E3E] font-shantell text-[#C6BEAD] text-xs font-semibold uppercase">
-                  1996
-                </time>
-                <p
-                  class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold font-shantell uppercase leading-snug">
-                  The Breakthrough: Stars in the critically acclaimed Mortal Inheritance.
-                  Wins Best Actress Overall at THEMA 1997.
-                </p>
+    <!-- ===== REEL 5: TIMELINE ===== -->
+    <section class="relative px-6 md:px-14 py-20 md:py-28 bg-cinema-950 overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,_#e09e2306,_transparent_60%)] pointer-events-none"></div>
+      <div class="relative max-w-5xl mx-auto">
+        <div class="relative">
+          <div class="absolute left-[18px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-amber-400/30 via-amber-400/10 to-transparent md:-translate-x-px"></div>
+          <ol class="relative space-y-16">
+            <li class="reveal-left relative md:w-1/2 md:pr-12 md:ml-0 pl-14 md:pl-0 group">
+              <div class="absolute left-2 md:right-0 md:left-auto top-1 w-[10px] h-[10px] rounded-full bg-amber-400 shadow-[0_0_16px_rgba(234,179,8,0.4)] ring-4 ring-cinema-950 md:translate-x-[29px]"></div>
+              <article class="bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:bg-white/[0.04] hover:border-amber-400/20 transition-all duration-500">
+                <span class="text-amber-400 font-display font-bold text-2xl md:text-3xl">1996</span>
+                <h3 class="text-white font-display text-lg md:text-xl font-semibold mt-2">The Breakthrough</h3>
+                <p class="text-white/50 font-geist text-sm md:text-base leading-relaxed mt-2">Stars in <em class="text-white/70 not-italic">Mortal Inheritance</em>. Wins Best Actress Overall at THEMA 1997.</p>
               </article>
-              <hr class="border-neutral-200" />
             </li>
-
-            <li class="reveal reveal-up stagger-2 space-y-4 group cursor-default">
-              <article class="flex gap-6 items-center">
-                <time
-                  class="w-16 shrink-0 group-hover:text-[#B98E3E] font-shantell text-[#C6BEAD] text-xs font-semibold uppercase">
-                  2003
-                </time>
-                <p
-                  class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold font-shantell uppercase leading-snug">
-                  The Dominance: Cemented as a major force with blockbuster hits like
-                  Blood Sisters.
-                </p>
+            <li class="reveal-right relative md:w-1/2 md:pl-12 md:ml-auto pl-14 group">
+              <div class="absolute left-2 md:left-0 top-1 w-[10px] h-[10px] rounded-full bg-amber-400 shadow-[0_0_16px_rgba(234,179,8,0.4)] ring-4 ring-cinema-950 md:-translate-x-[29px]"></div>
+              <article class="bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:bg-white/[0.04] hover:border-amber-400/20 transition-all duration-500">
+                <span class="text-amber-400 font-display font-bold text-2xl md:text-3xl">2005</span>
+                <h3 class="text-white font-display text-lg md:text-xl font-semibold mt-2">Humanitarian Pivot</h3>
+                <p class="text-white/50 font-geist text-sm md:text-base leading-relaxed mt-2">Appointed UN World Food Programme Goodwill Ambassador. Launches debut album <em class="text-white/70 not-italic">GBA</em>.</p>
               </article>
-              <hr class="border-neutral-200" />
             </li>
-
-            <li class="reveal reveal-up stagger-3 space-y-4 group cursor-default">
-              <article class="flex gap-6 items-center">
-                <time
-                  class="w-16 shrink-0 group-hover:text-[#B98E3E] font-shantell text-[#C6BEAD] text-xs font-semibold uppercase">
-                  2005
-                </time>
-                <p
-                  class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold font-shantell uppercase leading-snug">
-                  The Humanitarian Pivot: Becomes WFP Goodwill Ambassador and launches
-                  debut album GBA.
-                </p>
+            <li class="reveal-left relative md:w-1/2 md:pr-12 md:ml-0 pl-14 md:pl-0 group">
+              <div class="absolute left-2 md:right-0 md:left-auto top-1 w-[10px] h-[10px] rounded-full bg-amber-400 shadow-[0_0_16px_rgba(234,179,8,0.4)] ring-4 ring-cinema-950 md:translate-x-[29px]"></div>
+              <article class="bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:bg-white/[0.04] hover:border-amber-400/20 transition-all duration-500">
+                <span class="text-amber-400 font-display font-bold text-2xl md:text-3xl">2010</span>
+                <h3 class="text-white font-display text-lg md:text-xl font-semibold mt-2">Global Box Office</h3>
+                <p class="text-white/50 font-geist text-sm md:text-base leading-relaxed mt-2">Co-stars in <em class="text-white/70 not-italic">Ije: The Journey</em>, the highest-grossing Nollywood film at the time.</p>
               </article>
-              <hr class="border-neutral-200" />
             </li>
-
-            <li class="reveal reveal-up stagger-4 space-y-4 group cursor-default">
-              <article class="flex gap-6 items-center">
-                <time
-                  class="w-16 shrink-0 group-hover:text-[#B98E3E] font-shantell text-[#C6BEAD] text-xs font-semibold uppercase">
-                  2010
-                </time>
-                <p
-                  class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold font-shantell uppercase leading-snug">
-                  The Global Film: Co-stars in Ije: The Journey, the highest-grossing
-                  Nollywood film at the time.
-                </p>
+            <li class="reveal-right relative md:w-1/2 md:pl-12 md:ml-auto pl-14 group">
+              <div class="absolute left-2 md:left-0 top-1 w-[10px] h-[10px] rounded-full bg-amber-400 shadow-[0_0_16px_rgba(234,179,8,0.4)] ring-4 ring-cinema-950 md:-translate-x-[29px]"></div>
+              <article class="bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:bg-white/[0.04] hover:border-amber-400/20 transition-all duration-500">
+                <span class="text-amber-400 font-display font-bold text-2xl md:text-3xl">2012</span>
+                <h3 class="text-white font-display text-lg md:text-xl font-semibold mt-2">Reality TV Pioneer</h3>
+                <p class="text-white/50 font-geist text-sm md:text-base leading-relaxed mt-2">Launches Nigeria's first reality series, <em class="text-white/70 not-italic">Omotola: The Real Me</em>.</p>
               </article>
-              <hr class="border-neutral-200" />
             </li>
-
-            <li class="reveal reveal-up stagger-5 space-y-4 group cursor-default">
-              <article class="flex gap-6 items-center">
-                <time
-                  class="w-16 shrink-0 group-hover:text-[#B98E3E] font-shantell text-[#C6BEAD] text-xs font-semibold uppercase">
-                  2012
-                </time>
-                <p
-                  class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold font-shantell uppercase leading-snug">
-                  Reality TV Pioneer: Launches Nigeria’s first reality show,
-                  Omotola: The Real Me.
-                </p>
+            <li class="reveal-left relative md:w-1/2 md:pr-12 md:ml-0 pl-14 md:pl-0 group">
+              <div class="absolute left-2 md:right-0 md:left-auto top-1 w-[10px] h-[10px] rounded-full bg-amber-400 shadow-[0_0_16px_rgba(234,179,8,0.4)] ring-4 ring-cinema-950 md:translate-x-[29px]"></div>
+              <article class="bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:bg-white/[0.04] hover:border-amber-400/20 transition-all duration-500">
+                <span class="text-amber-400 font-display font-bold text-2xl md:text-3xl">2013</span>
+                <h3 class="text-white font-display text-lg md:text-xl font-semibold mt-2">TIME 100</h3>
+                <p class="text-white/50 font-geist text-sm md:text-base leading-relaxed mt-2">First Nigerian actress named among TIME Magazine's 100 Most Influential People.</p>
               </article>
-              <hr class="border-neutral-200" />
             </li>
-
-            <li class="reveal reveal-up stagger-1 space-y-4 group cursor-default">
-              <article class="flex gap-6 items-center">
-                <time
-                  class="w-16 shrink-0 group-hover:text-[#B98E3E] font-shantell text-[#C6BEAD] text-xs font-semibold uppercase">
-                  2013
-                </time>
-                <p
-                  class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold font-shantell uppercase leading-snug">
-                  TIME 100 Global Icon: First Nigerian actress named among
-                  TIME Magazine’s 100 Most Influential People.
-                </p>
+            <li class="reveal-right relative md:w-1/2 md:pl-12 md:ml-auto pl-14 group">
+              <div class="absolute left-2 md:left-0 top-1 w-[10px] h-[10px] rounded-full bg-amber-400 shadow-[0_0_16px_rgba(234,179,8,0.4)] ring-4 ring-cinema-950 md:-translate-x-[29px]"></div>
+              <article class="bg-white/[0.02] border-white/5 rounded-xl p-6 hover:bg-white/[0.04] hover:border-amber-400/20 transition-all duration-500 border">
+                <span class="text-amber-400 font-display font-bold text-2xl md:text-3xl">2014</span>
+                <h3 class="text-white font-display text-lg md:text-xl font-semibold mt-2">National Honor</h3>
+                <p class="text-white/50 font-geist text-sm md:text-base leading-relaxed mt-2">Awarded Member of the Order of the Federal Republic (MFR), one of Nigeria's highest honors.</p>
               </article>
-              <hr class="border-neutral-200" />
             </li>
-
-            <li class="reveal reveal-up stagger-2 space-y-4 group cursor-default">
-              <article class="flex gap-6 items-center">
-                <time
-                  class="w-16 shrink-0 group-hover:text-[#B98E3E] font-shantell text-[#C6BEAD] text-xs font-semibold uppercase">
-                  2014
-                </time>
-                <p
-                  class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold font-shantell uppercase leading-snug">
-                  National Honor: Conferred with Member of the Order of the Federal Republic (MFR)
-                  by the Nigerian government.
-                </p>
+            <li class="reveal-left relative md:w-1/2 md:pr-12 md:ml-0 pl-14 md:pl-0 group">
+              <div class="absolute left-2 md:right-0 md:left-auto top-1 w-[10px] h-[10px] rounded-full bg-amber-400 shadow-[0_0_16px_rgba(234,179,8,0.4)] ring-4 ring-cinema-950 md:translate-x-[29px]"></div>
+              <article class="bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:bg-white/[0.04] hover:border-amber-400/20 transition-all duration-500">
+                <span class="text-amber-400 font-display font-bold text-2xl md:text-3xl">2018</span>
+                <h3 class="text-white font-display text-lg md:text-xl font-semibold mt-2">The Academy</h3>
+                <p class="text-white/50 font-geist text-sm md:text-base leading-relaxed mt-2">Invited to join the Academy of Motion Picture Arts and Sciences as a voting member.</p>
               </article>
-              <hr class="border-neutral-200" />
             </li>
-
-            <li class="reveal reveal-up stagger-3 space-y-4 group cursor-default">
-              <article class="flex gap-6 items-center">
-                <time
-                  class="w-16 shrink-0 group-hover:text-[#B98E3E] font-shantell text-[#C6BEAD] text-xs font-semibold uppercase">
-                  2017
-                </time>
-                <p
-                  class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold font-shantell uppercase leading-snug">
-                  The Cinematic Resurgence: Wins AMVCA Best Actress for Alter Ego.
-                </p>
-              </article>
-              <hr class="border-neutral-200" />
-            </li>
-
-            <li class="reveal reveal-up stagger-4 space-y-4 group cursor-default">
-              <article class="flex gap-6 items-center">
-                <time
-                  class="w-16 shrink-0 group-hover:text-[#B98E3E] font-shantell text-[#C6BEAD] text-xs font-semibold uppercase">
-                  2018
-                </time>
-                <p
-                  class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold font-shantell uppercase leading-snug">
-                  The Oscars Invitation: Invited to join the Academy of Motion Picture Arts
-                  and Sciences.
-                </p>
-              </article>
-              <hr class="border-neutral-200" />
-            </li>
-
-            <li class="reveal reveal-up stagger-5 space-y-4 group cursor-default">
-              <article class="flex gap-6 items-center">
-                <time
-                  class="w-16 shrink-0 group-hover:text-[#B98E3E] font-shantell text-[#C6BEAD] text-xs font-semibold uppercase">
-                  2019
-                </time>
-                <p
-                  class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold font-shantell uppercase leading-snug">
-                  The Entrepreneur: Founds TEFFEST, empowering the African creative economy.
-                </p>
-              </article>
-              <hr class="border-neutral-200" />
-            </li>
-
-            <li class="reveal reveal-up stagger-5 space-y-4 group cursor-default">
-              <article class="flex gap-6 items-center">
-                <time
-                  class="w-16 shrink-0 group-hover:text-[#B98E3E] font-shantell text-[#C6BEAD] text-xs font-semibold uppercase">
-                  2025
-                </time>
-                <p
-                  class="text-[#C6BEAD] group-hover:text-[#B98E3E] text-lg md:text-2xl font-bold font-shantell uppercase leading-snug">
-                  Three Decades of Impact: Celebrates 30 years in entertainment and leads
-                  Nollywood’s global integration via Redhot Concepts.
-                </p>
+            <li class="reveal-right relative md:w-1/2 md:pl-12 md:ml-auto pl-14 group">
+              <div class="absolute left-2 md:left-0 top-1 w-[10px] h-[10px] rounded-full bg-amber-400 shadow-[0_0_16px_rgba(234,179,8,0.4)] ring-4 ring-cinema-950 md:-translate-x-[29px]"></div>
+              <article class="bg-white/[0.02] border border-amber-400/20 rounded-xl p-6 hover:bg-white/[0.04] hover:border-amber-400/40 transition-all duration-500">
+                <span class="text-amber-400 font-display font-bold text-2xl md:text-3xl">2025</span>
+                <h3 class="text-white font-display text-lg md:text-xl font-semibold mt-2">Three Decades</h3>
+                <p class="text-white/50 font-geist text-sm md:text-base leading-relaxed mt-2">Celebrates 30 years in entertainment, leading Nollywood's global integration via Redhot Concepts.</p>
               </article>
             </li>
           </ol>
-
-          <figure class="hidden lg:block w-56 border border-gray-200 bg-white p-3 sticky top-6 self-start">
-            <img src="public/film4.webp" alt="Career milestone visual" class="w-full h-full object-cover" />
-          </figure>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="reveal reveal-up relative ">
-      <!-- Accent rule -->
-      <span class="block w-16 h-px bg-amber-400 mb-8"></span>
+    <!-- ===== REEL 6: THE ARCHIVE ===== -->
+    <section class="relative py-20 md:py-28 bg-cinema-950 overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,_#e09e2306,_transparent_50%)] pointer-events-none"></div>
+      <div class="relative px-6 md:px-14 max-w-7xl mx-auto">
+        <div class="reveal text-center mb-14">
+          <span class="text-[10px] md:text-xs uppercase tracking-[0.4em] text-amber-400/50 font-geist">The Archive</span>
+          <h2 class="reveal stagger-1 mt-4 text-3xl md:text-5xl lg:text-6xl font-display font-bold text-white">Moments That Define <span class="text-amber-400 font-light">an Era</span></h2>
+          <div class="w-12 h-px bg-amber-400/30 mx-auto mt-6"></div>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-white/5 max-w-[1600px] mx-auto">
+        <div class="group relative aspect-[3/4] overflow-hidden bg-cinema-900 cursor-pointer">
+          <img src="public_optimized/legacy-img165.webp" alt="" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-cinema-950/80 via-transparent to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-[10px] uppercase tracking-[0.2em] text-white/40 font-geist opacity-0 group-hover:opacity-100 transition-opacity duration-500">Archive &bull; 001</span>
+        </div>
+        <div class="group relative aspect-[3/4] overflow-hidden bg-cinema-900 cursor-pointer">
+          <img src="public_optimized/legacy1.webp" alt="" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-cinema-950/80 via-transparent to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-[10px] uppercase tracking-[0.2em] text-white/40 font-geist opacity-0 group-hover:opacity-100 transition-opacity duration-500">Archive &bull; 002</span>
+        </div>
+        <div class="group relative aspect-[3/4] overflow-hidden bg-cinema-900 cursor-pointer">
+          <img src="public_optimized/100.webp" alt="" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-cinema-950/80 via-transparent to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-[10px] uppercase tracking-[0.2em] text-white/40 font-geist opacity-0 group-hover:opacity-100 transition-opacity duration-500">Archive &bull; 003</span>
+        </div>
+        <div class="group relative aspect-[3/4] overflow-hidden bg-cinema-900 cursor-pointer">
+          <img src="public_optimized/legacy-img162.webp" alt="" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-cinema-950/80 via-transparent to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-[10px] uppercase tracking-[0.2em] text-white/40 font-geist opacity-0 group-hover:opacity-100 transition-opacity duration-500">Archive &bull; 004</span>
+        </div>
+        <div class="group relative aspect-[3/4] overflow-hidden bg-cinema-900 cursor-pointer">
+          <img src="public_optimized/legacy-img0531.webp" alt="" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-cinema-950/80 via-transparent to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-[10px] uppercase tracking-[0.2em] text-white/40 font-geist opacity-0 group-hover:opacity-100 transition-opacity duration-500">Archive &bull; 005</span>
+        </div>
+        <div class="group relative aspect-[3/4] overflow-hidden bg-cinema-900 cursor-pointer">
+          <img src="public_optimized/legacy5.webp" alt="" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-cinema-950/80 via-transparent to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-[10px] uppercase tracking-[0.2em] text-white/40 font-geist opacity-0 group-hover:opacity-100 transition-opacity duration-500">Archive &bull; 006</span>
+        </div>
+        <div class="group relative aspect-[3/4] overflow-hidden bg-cinema-900 cursor-pointer">
+          <img src="public_optimized/youungpeople.webp" alt="" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-cinema-950/80 via-transparent to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-[10px] uppercase tracking-[0.2em] text-white/40 font-geist opacity-0 group-hover:opacity-100 transition-opacity duration-500">Archive &bull; 007</span>
+        </div>
+        <div class="group relative aspect-[3/4] overflow-hidden bg-cinema-900 cursor-pointer">
+          <img src="public_optimized/leg2.webp" alt="" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-cinema-950/80 via-transparent to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-[10px] uppercase tracking-[0.2em] text-white/40 font-geist opacity-0 group-hover:opacity-100 transition-opacity duration-500">Archive &bull; 008</span>
+        </div>
+        <div class="group relative aspect-[3/4] overflow-hidden bg-cinema-900 cursor-pointer md:block hidden">
+          <img src="public_optimized/about12.webp" alt="" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-cinema-950/80 via-transparent to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-[10px] uppercase tracking-[0.2em] text-white/40 font-geist opacity-0 group-hover:opacity-100 transition-opacity duration-500">Archive &bull; 009</span>
+        </div>
+        <div class="group relative aspect-[3/4] overflow-hidden bg-cinema-900 cursor-pointer md:block hidden">
+          <img src="public_optimized/birthday.webp" alt="" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-cinema-950/80 via-transparent to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-[10px] uppercase tracking-[0.2em] text-white/40 font-geist opacity-0 group-hover:opacity-100 transition-opacity duration-500">Archive &bull; 010</span>
+        </div>
+        <div class="group relative aspect-[3/4] overflow-hidden bg-cinema-900 cursor-pointer md:block hidden">
+          <img src="public_optimized/IMG_0532.webp" alt="" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-cinema-950/80 via-transparent to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-[10px] uppercase tracking-[0.2em] text-white/40 font-geist opacity-0 group-hover:opacity-100 transition-opacity duration-500">Archive &bull; 011</span>
+        </div>
+        <div class="group relative aspect-[3/4] overflow-hidden bg-cinema-900 cursor-pointer md:block hidden">
+          <img src="public_optimized/legacy-img159.webp" alt="" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-cinema-950/80 via-transparent to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-[10px] uppercase tracking-[0.2em] text-white/40 font-geist opacity-0 group-hover:opacity-100 transition-opacity duration-500">Archive &bull; 012</span>
+        </div>
+      </div>
+    </section>
 
-      <p class="text-white text-base md:text-lg tracking-wide leading-relaxed font-geist space-y-6">
-        <span class="block">
-          Popularly known as <span class="text-amber-400 font-semibold">Omo Sexy</span>, Omotola Jalade-Ekeinde
-          has long been admired as one of the most iconic, curvaceous, and captivating actresses
-          in the industry. Her screen presence and emotional depth have earned her critical acclaim
-          and numerous award nominations across Nollywood’s most defining films.
-        </span>
+    <!-- ===== REEL 7: THE ACCLAIM ===== -->
+    <section class="relative px-6 md:px-14 py-24 md:py-32 bg-cinema-950 overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,_#e09e2306,_transparent_60%)] pointer-events-none"></div>
+      <div class="relative max-w-5xl mx-auto">
+        <div class="reveal text-center mb-16">
+          <span class="text-[10px] md:text-xs uppercase tracking-[0.4em] text-amber-400/50 font-geist">Reel 7</span>
+          <h2 class="reveal stagger-1 mt-4 text-3xl md:text-5xl lg:text-6xl font-display font-bold text-white">The <span class="text-amber-400 font-light">Acclaim</span></h2>
+          <p class="reveal stagger-2 mt-4 text-white/40 text-sm font-geist max-w-lg mx-auto">Selected honors spanning a three-decade career</p>
+          <div class="w-12 h-px bg-amber-400/30 mx-auto mt-6"></div>
+        </div>
+        <div class="reveal space-y-px max-w-3xl mx-auto">
+          <div class="flex items-center justify-between px-6 py-5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors duration-300 rounded-t-lg">
+            <div class="flex items-center gap-6">
+              <span class="text-amber-400 font-display font-bold text-lg md:text-xl w-14 shrink-0">1997</span>
+              <div>
+                <p class="text-white font-display text-sm md:text-base">THEMA Awards</p>
+                <p class="text-white/40 font-geist text-xs">Best Actress (Overall) &bull; Mortal Inheritance</p>
+              </div>
+            </div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-emerald-400 font-geist shrink-0">Won</span>
+          </div>
+          <div class="flex items-center justify-between px-6 py-5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors duration-300">
+            <div class="flex items-center gap-6">
+              <span class="text-amber-400 font-display font-bold text-lg md:text-xl w-14 shrink-0">2005</span>
+              <div>
+                <p class="text-white font-display text-sm md:text-base">AMAA</p>
+                <p class="text-white/40 font-geist text-xs">Best Supporting Actress</p>
+              </div>
+            </div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-emerald-400 font-geist shrink-0">Won</span>
+          </div>
+          <div class="flex items-center justify-between px-6 py-5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors duration-300">
+            <div class="flex items-center gap-6">
+              <span class="text-amber-400 font-display font-bold text-lg md:text-xl w-14 shrink-0">2012</span>
+              <div>
+                <p class="text-white font-display text-sm md:text-base">Eloy Awards</p>
+                <p class="text-white/40 font-geist text-xs">Actress of the Year &bull; Ties That Bind</p>
+              </div>
+            </div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-emerald-400 font-geist shrink-0">Won</span>
+          </div>
+          <div class="flex items-center justify-between px-6 py-5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors duration-300">
+            <div class="flex items-center gap-6">
+              <span class="text-amber-400 font-display font-bold text-lg md:text-xl w-14 shrink-0">2013</span>
+              <div>
+                <p class="text-white font-display text-sm md:text-base">TIME 100</p>
+                <p class="text-white/40 font-geist text-xs">Most Influential People in the World</p>
+              </div>
+            </div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-amber-400 font-geist shrink-0">Honored</span>
+          </div>
+          <div class="flex items-center justify-between px-6 py-5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors duration-300">
+            <div class="flex items-center gap-6">
+              <span class="text-amber-400 font-display font-bold text-lg md:text-xl w-14 shrink-0">2014</span>
+              <div>
+                <p class="text-white font-display text-sm md:text-base">MFR National Honor</p>
+                <p class="text-white/40 font-geist text-xs">Member of the Order of the Federal Republic</p>
+              </div>
+            </div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-amber-400 font-geist shrink-0">Conferred</span>
+          </div>
+          <div class="flex items-center justify-between px-6 py-5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors duration-300">
+            <div class="flex items-center gap-6">
+              <span class="text-amber-400 font-display font-bold text-lg md:text-xl w-14 shrink-0">2017</span>
+              <div>
+                <p class="text-white font-display text-sm md:text-base">BON Awards</p>
+                <p class="text-white/40 font-geist text-xs">Lifetime Achievement Award</p>
+              </div>
+            </div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-emerald-400 font-geist shrink-0">Won</span>
+          </div>
+          <div class="flex items-center justify-between px-6 py-5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors duration-300">
+            <div class="flex items-center gap-6">
+              <span class="text-amber-400 font-display font-bold text-lg md:text-xl w-14 shrink-0">2018</span>
+              <div>
+                <p class="text-white font-display text-sm md:text-base">AMVCA</p>
+                <p class="text-white/40 font-geist text-xs">Best Actress in a Movie/TV Series &bull; Alter Ego</p>
+              </div>
+            </div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-emerald-400 font-geist shrink-0">Won</span>
+          </div>
+          <div class="flex items-center justify-between px-6 py-5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors duration-300 rounded-b-lg">
+            <div class="flex items-center gap-6">
+              <span class="text-amber-400 font-display font-bold text-lg md:text-xl w-14 shrink-0">2018</span>
+              <div>
+                <p class="text-white font-display text-sm md:text-base">Academy of Motion Pictures</p>
+                <p class="text-white/40 font-geist text-xs">Invited as a Voting Member</p>
+              </div>
+            </div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-amber-400 font-geist shrink-0">Inducted</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <span class="block">
-          Performances in landmark titles such as
-          <em class="text-zinc-200">Ties That Bind</em>,
-          <em class="text-zinc-200">Alter Ego</em>, and
-          <em class="text-zinc-200">Mortal Inheritance</em>
-          secured her multiple honors including
-          <strong class="text-white">Actress of the Year</strong>,
-          <strong class="text-white">Best Actress</strong>,
-          and <strong class="text-white">Best Actress Overall</strong>.
-          Across her career, she has accumulated an extraordinary body of recognitions for both
-          performance excellence and cultural influence.
-        </span>
-
-        <span class="block">
-          Beyond cinema, Omotola’s impact extends into humanitarian work through the
-          <strong class="text-white">Omotola Youth Empowerment Project (OYEP)</strong>.
-          One of its most poignant initiatives is the
-          <span class="italic text-zinc-200">20 Widows Makeover</span>,
-          created in honor of her late mother, who lived as a widow for a decade.
-        </span>
-
-        <span class="block">
-          The initiative received national recognition with a nomination for
-          <strong class="text-white">Best Charity/Cause Connected Event</strong>
-          at the Nigerian Event Awards in 2012—cementing OYEP as both a social and cultural force.
-        </span>
-
-        <span class="block">
-          Today, Omotola stands as a
-          <span class="text-amber-400 font-semibold">United Nations World Food Programme Ambassador</span>,
-          an advocate for the
-          <span class="text-amber-400 font-semibold">Sustainable Development Goals (SDGs)</span>,
-          and an active
-          <span class="text-amber-400 font-semibold">Amnesty International</span>
-          campaigner—bridging art, activism, and global responsibility.
-        </span>
-      </p>
-    </div>
-
-  </section>
-
-  <section class="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-14 py-20 overflow-hidden">
-    <!-- Subtle grain -->
-    <div class="pointer-events-none absolute inset-0 opacity-[0.05] mix-blend-overlay bg-[url('public/grain.png')]">
-    </div>
-
-    <!-- Section Intro -->
-    <header class="reveal reveal-up mb-12 text-center">
-      <span class="block text-xs uppercase tracking-[0.35em] text-amber-400">
-        Visual Archive
-      </span>
-      <h2 class="mt-4 text-white text-2xl md:text-4xl font-light font-geist flip-text" data-flip>
-        Moments That Define an Era
-      </h2>
-    </header>
-
-    <!-- Horizontal Gallery -->
-    <div class="reveal reveal-up flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 no-scrollbar">
-
-      <!-- Card -->
-       <figure class="group relative flex-shrink-0 snap-start w-[240px] sm:w-[280px] md:w-[320px]
-             aspect-[3/5] overflow-hidden rounded-xl
-             bg-zinc-900 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]
-             transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]
-             hover:-translate-y-2">
-        <img src="public/100.png" alt="Omotola legacy still" class="absolute inset-0 h-full w-full object-cover
-               md:grayscale group-hover:grayscale-0 transition duration-700" />
-
-        <!-- Cinematic overlay -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-
-        <!-- Caption -->
-        <figcaption class="absolute bottom-4 left-4 right-4 text-xs uppercase tracking-widest
-               text-zinc-300 opacity-0 group-hover:opacity-100 transition">
-          A Legacy of First
-        </figcaption>
-      </figure>
-
-       <figure class="group relative flex-shrink-0 snap-start w-[240px] sm:w-[280px] md:w-[320px]
-             aspect-[3/5] overflow-hidden rounded-xl
-             bg-zinc-900 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]
-             transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]
-             hover:-translate-y-2">
-        <img src="public/OMOSEXY.jpg" alt="Omotola legacy still" class="absolute inset-0 h-full w-full object-cover
-               md:grayscale group-hover:grayscale-0 transition duration-700" />
-
-        <!-- Cinematic overlay -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-
-        <!-- Caption -->
-        <figcaption class="absolute bottom-4 left-4 right-4 text-xs uppercase tracking-widest
-               text-zinc-300 opacity-0 group-hover:opacity-100 transition">
-          A Legacy of First
-        </figcaption>
-      </figure>
-
-      <figure class="group relative flex-shrink-0 snap-start w-[240px] sm:w-[280px] md:w-[320px]
-             aspect-[3/5] overflow-hidden rounded-xl
-             bg-zinc-900 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]
-             transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]
-             hover:-translate-y-2">
-        <img src="public/legacy1.webp" alt="Omotola legacy still" class="absolute inset-0 h-full w-full object-cover
-               md:grayscale group-hover:grayscale-0 transition duration-700" />
-
-        <!-- Cinematic overlay -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-
-        <!-- Caption -->
-        <figcaption class="absolute bottom-4 left-4 right-4 text-xs uppercase tracking-widest
-               text-zinc-300 opacity-0 group-hover:opacity-100 transition">
-          A Legacy of First
-        </figcaption>
-      </figure>
-
-      <figure class="group relative flex-shrink-0 snap-start w-[240px] sm:w-[280px] md:w-[320px]
-             aspect-[3/5] overflow-hidden rounded-xl
-             bg-zinc-900 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]
-             transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]
-             hover:-translate-y-2">
-        <img src="public/IMG_0532.PNG" alt="Omotola legacy still" class="absolute inset-0 h-full w-full object-cover
-               md:grayscale group-hover:grayscale-0 transition duration-700" />
-
-        <!-- Cinematic overlay -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-
-        <!-- Caption -->
-        <figcaption class="absolute bottom-4 left-4 right-4 text-xs uppercase tracking-widest
-               text-zinc-300 opacity-0 group-hover:opacity-100 transition">
-          Career Archive
-        </figcaption>
-      </figure>
-
-      <figure class="group relative flex-shrink-0 snap-start w-[240px] sm:w-[280px] md:w-[320px]
-             aspect-[3/5] overflow-hidden rounded-xl
-             bg-zinc-900 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]
-             transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]
-             hover:-translate-y-2">
-        <img src="public/legacy3.webp" alt="Omotola legacy still" class="absolute inset-0 h-full w-full object-cover
-               md:grayscale group-hover:grayscale-0 transition duration-700" />
-
-        <!-- Cinematic overlay -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-
-        <!-- Caption -->
-        <figcaption class="absolute bottom-4 left-4 right-4 text-xs uppercase tracking-widest
-               text-zinc-300 opacity-0 group-hover:opacity-100 transition">
-          Career Archive
-        </figcaption>
-      </figure>
-
-      <figure class="group relative flex-shrink-0 snap-start w-[240px] sm:w-[280px] md:w-[320px]
-             aspect-[3/5] overflow-hidden rounded-xl
-             bg-zinc-900 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]
-             transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]
-             hover:-translate-y-2">
-        <img src="public/IMG_0531 (1).PNG" alt="Omotola legacy still" class="absolute inset-0 h-full w-full object-cover
-               md:grayscale object-[center_0%] group-hover:grayscale-0 transition duration-700" />
-
-        <!-- Cinematic overlay -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-
-        <!-- Caption -->
-        <figcaption class="absolute bottom-4 left-4 right-4 text-xs uppercase tracking-widest
-               text-zinc-300 opacity-0 group-hover:opacity-100 transition">
-          Career Archive
-        </figcaption>
-      </figure>
-
-      <figure class="group relative flex-shrink-0 snap-start w-[240px] sm:w-[280px] md:w-[320px]
-             aspect-[3/5] overflow-hidden rounded-xl
-             bg-zinc-900 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]
-             transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]
-             hover:-translate-y-2">
-        <img src="public/youungpeople.jpg" alt="Omotola legacy still" class="absolute inset-0 h-full w-full object-cover
-               md:grayscale group-hover:grayscale-0 transition duration-700" />
-
-        <!-- Cinematic overlay -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-
-        <!-- Caption -->
-        <figcaption class="absolute bottom-4 left-4 right-4 text-xs uppercase tracking-widest
-               text-zinc-300 opacity-0 group-hover:opacity-100 transition">
-          Career Archive
-        </figcaption>
-      </figure>
-      <figure class="group relative flex-shrink-0 snap-start w-[240px] sm:w-[280px] md:w-[320px]
-             aspect-[3/5] overflow-hidden rounded-xl
-             bg-zinc-900 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]
-             transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]
-             hover:-translate-y-2">
-        <img src="public/legacy5.png" alt="Omotola legacy still" class="absolute inset-0 h-full w-full object-cover
-               md:grayscale group-hover:grayscale-0 transition duration-700" />
-
-        <!-- Cinematic overlay -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-
-        <!-- Caption -->
-        <figcaption class="absolute bottom-4 left-4 right-4 text-xs uppercase tracking-widest
-               text-zinc-300 opacity-0 group-hover:opacity-100 transition">
-          Career Archive
-        </figcaption>
-      </figure>
-
-      <figure class="group relative flex-shrink-0 snap-start w-[240px] sm:w-[280px] md:w-[320px]
-             aspect-[3/5] overflow-hidden rounded-xl
-             bg-zinc-900 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]
-             transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]
-             hover:-translate-y-2">
-        <img src="public/about12.webp" alt="Omotola legacy still" class="absolute inset-0 h-full w-full object-cover
-               md:grayscale group-hover:grayscale-0 transition duration-700" />
-
-        <!-- Cinematic overlay -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-
-        <!-- Caption -->
-        <figcaption class="absolute bottom-4 left-4 right-4 text-xs uppercase tracking-widest
-               text-zinc-300 opacity-0 group-hover:opacity-100 transition">
-          Career Archive
-        </figcaption>
-      </figure>
-      <figure class="group relative flex-shrink-0 snap-start w-[240px] sm:w-[280px] md:w-[320px]
-             aspect-[3/5] overflow-hidden rounded-xl
-             bg-zinc-900 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]
-             transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]
-             hover:-translate-y-2">
-        <img src="public/birthday.jpg" alt="Omotola legacy still" class="absolute inset-0 h-full w-full object-cover
-               md:grayscale group-hover:grayscale-0 transition duration-700" />
-
-        <!-- Cinematic overlay -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-
-        <!-- Caption -->
-        <figcaption class="absolute bottom-4 left-4 right-4 text-xs uppercase tracking-widest
-               text-zinc-300 opacity-0 group-hover:opacity-100 transition">
-          Career Archive
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="relative px-4 sm:px-6 md:px-14 py-24 overflow-hidden font-geist text-white bg-black">
-    <!-- Cinematic background glows -->
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute top-0 left-10 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl animate-pulseSlow"></div>
-      <div class="absolute bottom-20 right-0 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl animate-pulseSlow delay-2000"></div>
-    </div>
-
-    <div class="relative z-10  mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-
-      <!-- LEFT: TEXT CONTENT -->
-      <div class="lg:col-span-6 space-y-14">
-
-        <!-- Header -->
-        <header class="space-y-4">
-          <h2 class="text-3xl md:text-4xl font-extrabold uppercase tracking-wider text-amber-400">
-            Global Impact: The Queen of Nollywood
+    <!-- ===== REEL 8: HUMANITARIAN SPOTLIGHT ===== -->
+    <section class="relative px-6 md:px-14 py-24 md:py-32 bg-cinema-950 overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-[url('public_optimized/avaff1.webp')] bg-cover bg-center opacity-20"></div>
+        <div class="absolute inset-0 bg-cinema-950/80"></div>
+      </div>
+      <div class="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-8">
+          <div class="reveal-left">
+            <span class="text-[10px] md:text-xs uppercase tracking-[0.4em] text-amber-400/50 font-geist">Beyond Cinema</span>
+          </div>
+          <h2 class="reveal-left stagger-1 text-3xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight">
+            The Heart Behind<br/>
+            <span class="text-amber-400 font-light">the Star</span>
           </h2>
-
-          <p class="text-lg md:text-xl leading-relaxed text-white/90">
-            Omotola's career extends far beyond acting; she is a global brand ambassador and a voice
-            for human rights and youth empowerment.
-          </p>
-        </header>
-
-        <!-- Activism List -->
-        <div class="space-y-10">
-
-          <div class="space-y-2">
-            <h3 class="text-amber-400 font-semibold uppercase tracking-wide">
-              United Nations World Food Programme
-            </h3>
-            <p class="text-white/80 leading-relaxed">
-              Serving as a Goodwill Ambassador since 2005, she has undertaken missions
-              to Sierra Leone and Liberia to raise awareness for hunger and maternal health.
-            </p>
+          <div class="reveal-left stagger-2 w-16 h-px bg-amber-400/30"></div>
+          <div class="reveal-left stagger-3 space-y-5 text-white/60 text-base md:text-lg leading-relaxed font-geist">
+            <p>From the UN World Food Programme to the Omotola Youth Empowerment Programme (OYEP), her humanitarian work mirrors the depth of her screen presence.</p>
+            <p>In 2025, she received an official Certificate of Recognition from the California State Assembly at SVAFF &mdash; a testament to her enduring global impact.</p>
           </div>
-
-          <div class="space-y-2">
-            <h3 class="text-amber-400 font-semibold uppercase tracking-wide">
-              OYEP (Omotola Youth Empowerment Programme)
-            </h3>
-            <p class="text-white/80 leading-relaxed">
-              Founded to empower youth through skill acquisition, conventions,
-              and social advocacy.
-            </p>
+          <div class="reveal-left stagger-4 flex flex-wrap gap-4">
+            <a href="https://red-hot.vercel.app/Oyep.html" target="_blank" class="btn-outline text-xs">Learn About OYEP</a>
+            <a href="contact.html" class="btn-primary text-xs">Get in Touch</a>
           </div>
-
-          <div class="space-y-2">
-            <h3 class="text-amber-400 font-semibold uppercase tracking-wide">
-              Amnesty International
-            </h3>
-            <p class="text-white/80 leading-relaxed">
-              Active involvement in campaigns advocating for human dignity,
-              gender equality, and corporate accountability in the Niger Delta.
-            </p>
+        </div>
+        <div class="reveal-right grid grid-cols-2 gap-4">
+          <div class="rounded-2xl overflow-hidden group shadow-2xl">
+            <img src="public_optimized/avaff.webp" alt="" loading="lazy" class="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition duration-700" />
           </div>
-
-          <div class="space-y-2">
-            <h3 class="text-amber-400 font-semibold uppercase tracking-wide">
-              SVAFF Recognition 
-            </h3>
-            <p class="text-white/80 leading-relaxed">           
-              Nigerian screen icon Omotola Jalade Ekeinde has received an official Certificate
-               of Recognition from the California State Assembly, presented at the 16th Annual 
-               Silicon Valley African Film Festival (SVAFF) on October 12, 2025
-            </p>
+          <div class="rounded-2xl overflow-hidden group shadow-2xl mt-8">
+            <img src="public_optimized/avaff1.webp" alt="" loading="lazy" class="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition duration-700" />
           </div>
-
         </div>
-
       </div>
+    </section>
 
-
-      <!-- RIGHT: IMAGE COMPOSITION -->
-      <div class="lg:col-span-6 grid grid-cols-2 gap-6 h-[720px]">
-
-        <!-- Large Image -->
-        <div class="col-span-2 lg:col-span-2 h-[420px] rounded-2xl overflow-hidden shadow-2xl relative group">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
-          <img
-            src="public/legacy1.webp"
-            alt="Global Impact"
-            class="w-full h-full object-[center_0%] object-cover group-hover:scale-110 transition duration-1000"
-          />
+    <!-- ===== REEL 9: CLOSING TITLE ===== -->
+    <section class="relative min-h-screen flex items-center justify-center bg-cinema-950 overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#e09e2308,_transparent_60%)] pointer-events-none"></div>
+      <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        <div class="reveal">
+          <span class="text-[10px] md:text-xs uppercase tracking-[0.5em] text-amber-400/40 font-geist">The Legacy Continues</span>
         </div>
-
-        <!-- Bottom Left Image -->
-        <div class="rounded-2xl overflow-hidden shadow-xl relative group">
-          <img
-            src="public/avaff1.jpg"
-            alt="Humanitarian Work"
-            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-          />
-        </div>
-
-        <!-- Bottom Right Image -->
-        <div class="rounded-2xl overflow-hidden shadow-xl relative group">
-          <img
-            src="public/avaff.jpg"
-            alt="Youth Empowerment"
-            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-          />
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <section class="relative px-4 sm:px-6 md:px-14 py-28 text-center text-white overflow-hidden">
-  
-  <!-- ambient glow -->
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute top-10 left-1/2 -translate-x-1/2 w-96 h-96 bg-amber-500/10 blur-3xl rounded-full animate-pulseSlow"></div>
-    </div>
-  <div class="relative mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-
-    <div class="relative z-10 mx-auto space-y-8">
-      <h1 class="text-3xl md:text-6xl font-extrabold uppercase tracking-widest text-amber-400 flip-text" data-flip>
-        A Legacy Etched in Time
-      </h1>
-      <!-- rotating / fading lines -->
-      <div class="space-y-2 text-lg md:text-2xl font-light text-white/90">
-        <p class="fade-line">She arrived quietly.</p>
-        <p class="fade-line delay-1">Then changed everything.</p>
-      </div>
-    </div>
-
-    <div class="">
-      <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
-
-        <!-- cinematic overlay -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 pointer-events-none"></div>
-
-        <video
-          controls
-          preload="metadata"
-          poster="public/100.png"
-          class="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-[center_0%] object-cover"
-        >
-          <source src="public/dance.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-
-      </div>
-
-      <!-- Optional caption -->
-      <p class="text-sm text-white/60 mt-4 text-center">
-        Omotola Jalade-Ekeinde > Cultural Icon and Global Force
-      </p>
-
-    </div>
-  </div>
-  </section>
-
-<section class="px-4 sm:px-6 md:px-14 md:py-20 py-6 text-white">
-  <div class="max-w-4xl mx-auto space-y-8 text-lg md:text-xl leading-relaxed text-white/90">
-    <p class="reveal reveal-up">
-      For over three decades, Omotola Jalade-Ekeinde has stood as one of Africa’s most powerful cultural forces—an icon whose influence transcends cinema and reshapes global perception of African storytelling.
-    </p>
-
-    <p class="reveal reveal-up stagger-1">
-      A pioneer of Nollywood’s golden evolution, she carried African narratives beyond borders, redefining what it means to be a global artist from the continent.
-    </p>
-
-    <p class="reveal reveal-up stagger-2">
-      An actress of extraordinary emotional range, Omotola is also a film director, singer, motivational speaker, humanitarian, and cultural architect—leaving an indelible mark on the world’s entertainment landscape.
-    </p>
-
-  </div>
-</section>
-
-
-<section class="px-4 sm:px-6 md:px-14 py-20 text-white">
-  <div class="max-w-4xl mx-auto space-y-10">
-
-    <h2 class="text-xl md:text-3xl font-bold uppercase tracking-wider text-amber-400 reveal reveal-up flip-text" data-flip>
-      Origins & Formation
-    </h2>
-
-    <div class="space-y-6 text-white/90 text-lg leading-relaxed">
-      <p class="reveal reveal-up stagger-1">
-        Born on February 7, 1978, in Lagos State, Omotola was raised in a disciplined, values-driven household by Oluwatoyin Jalade and Oluwashola Jalade.
-      </p>
-
-      <p class="reveal reveal-up stagger-2">
-        Her academic path—from Chrisland School to Yaba College of Technology—initially pointed toward business leadership, before destiny redirected her toward the arts.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section class="relative px-4 sm:px-6 md:px-14 py-24 bg-white/5 text-white overflow-hidden">
-
-  <!-- subtle glow -->
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute top-20 left-10 w-56 h-56 bg-amber-500/10 blur-3xl rounded-full"></div>
-  </div>
-
-  <div class="relative mx-auto max-w-4xl flex justify-center text-center items-center">
-
-    <!-- LEFT: TEXT CONTENT -->
-    <div class="lg:col-span-5 space-y-10">
-
-      <h2 class="text-2xl md:text-4xl font-bold uppercase tracking-wider text-amber-400 ">
-        The Rise of a Cultural Powerhouse
-      </h2>
-
-      <p class="text-lg text-white/90 leading-relaxed ">
-        Her breakout performance in
-        <span class="text-amber-400 font-semibold">Mortal Inheritance</span>
-        announced the arrival of a generational talent—one that would redefine Nollywood
-        and reshape African storytelling forever.
-      </p>
-
-      <ul class="space-y-4 text-white/80 reveal reveal-up stagger-1 flex text-left flex-col items-center justify-start">
-
-        <li class="flex items-center gap-3">
-          <span class="text-amber-400">●</span> Over 300 film appearances
-        </li>
-
-        <li class="flex items-center gap-3">
-          <span class="text-amber-400">●</span> First African actor with a reality series
-        </li>
-
-        <li class="flex items-center gap-3">
-          <span class="text-amber-400">●</span> Doctorate in Arts (2019)
-        </li>
-
-        <li class="flex items-center gap-3">
-          <span class="text-amber-400">●</span> TIME 100 honoree
-        </li>
-
-        <li class="flex items-center gap-3">
-          <span class="text-amber-400">●</span> Oscars voting member
-        </li>
-
-      </ul>
-  </div>
-</section>
-
-<section class="relative px-4 sm:px-6 md:px-14 py-24 text-white overflow-hidden">
-
-  <!-- subtle glow -->
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute top-10 right-20 w-56 h-56 bg-amber-500/10 blur-3xl rounded-full"></div>
-  </div>
-
-  <div class="relative mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center justify-center">
-
-    <!-- LEFT: TEXT -->
-    <div class="lg:col-span-5 space-y-10">
-
-      <h2 class="text-2xl md:text-4xl font-bold uppercase tracking-wider text-amber-400 ">
-        Honors, Recognition & Global Impact
-      </h2>
-
-      <div class="space-y-6 text-lg text-white/90 leading-relaxed">
-
-        <p class="reveal reveal-up">
-          In 2014, Omotola was awarded the
-          <span class="text-amber-400 font-semibold">
-            Member of the Order of the Federal Republic (MFR)
-          </span>,
-          one of Nigeria’s highest national honors.
+        <h2 class="reveal stagger-1 mt-8 text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white leading-[0.9]">
+          A Legacy Built<br/>
+          <span class="text-amber-400 font-light">on Meaning</span>
+        </h2>
+        <div class="reveal stagger-2 mx-auto w-16 h-px bg-amber-400/30 my-10"></div>
+        <p class="reveal stagger-3 text-white/50 text-base md:text-lg font-geist max-w-xl mx-auto leading-relaxed">
+          For over three decades, Omotola Jalade Ekeinde has shaped culture, elevated African storytelling, and proven that influence is earned through purpose.
         </p>
-
-        <p class="reveal reveal-up stagger-1">
-          Internationally crowned “The Queen of Nollywood,” her work reshaped African
-          representation and elevated Nollywood onto the global cinematic stage.
+        <p class="reveal stagger-3 text-white/40 text-sm font-geist mt-6 max-w-lg mx-auto">
+          This is not the end of a journey &mdash; it is the foundation of everything still to come.
         </p>
+        <div class="reveal stagger-4 mt-12 flex flex-wrap justify-center gap-4">
+          <a href="films.html" class="btn-primary">Explore Her Films</a>
+          <a href="about.html" class="btn-outline">Discover More</a>
+        </div>
+      </div>
+      <div class="absolute bottom-10 left-0 right-0 text-center">
+        <p class="text-white/10 text-xs font-geist tracking-[0.3em] uppercase">&mdash; &infin; &mdash;</p>
+      </div>
+    </section>
 
-        <p class="reveal reveal-up stagger-2">
-          Her legacy continues to inspire generations of filmmakers, creatives,
-          and cultural leaders across Africa and the diaspora.
-        </p>
+  </main>
+
+  <footer class="w-full border-t border-white/5 py-16 px-6">
+    <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+      <a href="/" class="flex items-center justify-center w-24 h-10 md:w-32 md:h-14 transition-all duration-300 hover:opacity-80">
+        <img src="public/img124.webp" class="w-full h-full object-contain" alt="RedHot Concepts">
+      </a>
+      <nav>
+        <ul class="flex flex-wrap justify-center gap-6 md:gap-10 text-[10px] uppercase tracking-[0.25em] text-white/40 font-display">
+          <li><a href="/" class="hover:text-amber-400 transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-amber-400 transition-colors">About</a></li>
+          <li><a href="films.html" class="hover:text-amber-400 transition-colors">Films</a></li>
+          <li><a href="legacy.html" class="hover:text-amber-400 transition-colors">Legacy</a></li>
+          <li><a href="contact.html" class="hover:text-amber-400 transition-colors">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex gap-6 text-white/30">
+        <a href="https://www.youtube.com/@RedHotConceptTV" target="_blank" rel="noopener noreferrer" class="hover:text-red-500 transition-all hover:scale-110"><i class="fa-brands fa-youtube text-lg"></i></a>
+        <a href="https://www.instagram.com/redhotconcepts" target="_blank" rel="noopener noreferrer" class="hover:text-pink-500 transition-all hover:scale-110"><i class="fa-brands fa-instagram text-lg"></i></a>
+        <a href="https://x.com/redhot_concept" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-all hover:scale-110"><i class="fa-brands fa-x-twitter text-lg"></i></a>
       </div>
     </div>
-
-
-    <div class="lg:col-span-7 grid grid-cols-2 gap-6">
-      <div class="col-span-2  relative rounded-2xl overflow-hidden shadow-2xl group">
-
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
-
-        <img
-          src="public/mfr.jpg"
-          alt="National Honor Award"
-          class="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
-        />
-
-      </div>
-
+    <div class="max-w-[1440px] mx-auto mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-white/20 text-[10px] font-sans tracking-wide">
+      <span>&copy; 2026 RedHot Concepts. All Rights Reserved.</span>
+      <span>Designed &amp; Developed by <a href="https://nextdaysite.com" target="_blank" class="text-amber-400/60 hover:text-amber-400"><img src="public/nds.png" class="h-3 inline" alt="NDS"></a></span>
     </div>
-  </div>
-</section>
+  </footer>
 
-<section class="relative max-w-7xl md:px-14 mx-auto px-6 md:py-20 py-6 space-y-24 overflow-hidden">
-  <!-- Ambient background -->
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_#1b1b1b,_transparent_60%)] opacity-40"></div>
-  <div class="pointer-events-none absolute inset-0 bg-[url('public/grain.png')] opacity-[0.05] mix-blend-overlay">
-  </div>
-
-  <!-- Header -->
-  <header class="reveal reveal-up relative text-center space-y-6 max-w-4xl mx-auto">
-    <span
-      class="reveal reveal-up stagger-1 block text-amber-400 text-xs md:text-sm font-semibold uppercase tracking-[0.35em] font-geist">
-      The Production Philosophy
-    </span>
-
-    <h2
-      class="reveal reveal-up stagger-2 text-4xl md:text-6xl font-light uppercase leading-tight tracking-tight font-geist text-white">
-      African Heart. <br />
-      <span class="text-amber-400">Global Standard.</span>
-    </h2>
-
-    <div class="reveal reveal-up stagger-3 mx-auto h-px w-24 bg-zinc-700"></div>
-  </header>
-
-  <!-- Film Frame -->
-  <figure class="reveal reveal-up stagger-1 relative w-full overflow-hidden rounded-2xl
-              border border-white/10 shadow-[0_40px_120px_-40px_rgba(0,0,0,0.9)]">
-
-    <!-- Film matte -->
-    <div class="absolute inset-0 pointer-events-none
-                    bg-gradient-to-t from-black/40 via-black/10 to-transparent z-10"></div>
-
-    <video controls playsinline class="w-full h-[320px] md:h-[720px] object-cover">
-      <source src="public/omotola vid.mp4" type="video/mp4" />
-    </video>
-
-    <!-- Caption -->
-    <figcaption class="absolute top-6 left-6 z-20 text-xs md:text-sm
-                tracking-[0.25em] uppercase text-white/90 font-geist">
-      30 Years of Omotola
-    </figcaption>
-  </figure>
-</section>
-
-<section class=" mx-auto px-4 sm:px-6 md:px-14 py-8">
-  <header class="reveal reveal-up mb-8">
-    <h2 class="text-xl font-geist font-bold uppercase text-white tracking-wide flip-text" data-flip>
-      Awards & Nominations
-    </h2>
-    <p class="text-white mt-2 text-sm font-geist tracking-wide">
-      Career recognitions, wins, and nominations
-    </p>
-  </header>
-
-  <div class="reveal reveal-up overflow-x-auto rounded-2xl bg-[#252423] shadow-sm">
-    <table class="w-full text-sm text-left  group-hover:text-[#B98E3E] font-shantell text-[#e5d8ba] ">
-      <thead class=" text-xs uppercase tracking-wide">
-        <tr>
-          <th class="px-6 py-4">Year</th>
-          <th class="px-6 py-4">Award</th>
-          <th class="px-6 py-4">Category</th>
-          <th class="px-6 py-4">Work / Recipient</th>
-          <th class="px-6 py-4">Result</th>
-        </tr>
-      </thead>
-
-      <tbody class="divide-y divide-zinc-200 font-shantell ">
-        <!-- 1997 -->
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">1997</td>
-          <td class="px-6 py-4">The Movie Awards (THEMA)</td>
-          <td class="px-6 py-4">Best Actress (English)</td>
-          <td class="px-6 py-4">Mortal Inheritance</td>
-          <td class="px-6 py-4">
-            <span class="badge-win">Won</span>
-          </td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">1997</td>
-          <td class="px-6 py-4">The Movie Awards (THEMA)</td>
-          <td class="px-6 py-4">Best Actress (Overall)</td>
-          <td class="px-6 py-4">Mortal Inheritance</td>
-          <td class="px-6 py-4">
-            <span class="badge-win">Won</span>
-          </td>
-        </tr>
-
-        <!-- 2004 -->
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2004</td>
-          <td class="px-6 py-4">City People Awards for Excellence</td>
-          <td class="px-6 py-4">Best Actress</td>
-          <td class="px-6 py-4">Herself</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2004</td>
-          <td class="px-6 py-4">Global Excellence Recognition Awards</td>
-          <td class="px-6 py-4">Best Actress & Grand Achiever</td>
-          <td class="px-6 py-4">Herself</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2004</td>
-          <td class="px-6 py-4">CEON</td>
-          <td class="px-6 py-4">Best Individual & Symbol of Creativity</td>
-          <td class="px-6 py-4">Herself</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2004</td>
-          <td class="px-6 py-4">NUSEC Awards</td>
-          <td class="px-6 py-4">Best Actress</td>
-          <td class="px-6 py-4">Herself</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-
-        <!-- 2005 -->
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2005</td>
-          <td class="px-6 py-4">Africa Movie Academy Awards (AMAA)</td>
-          <td class="px-6 py-4">Best Supporting Actress</td>
-          <td class="px-6 py-4">Herself</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-
-        <!-- 2006 -->
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2006</td>
-          <td class="px-6 py-4">Youths Benefactor’s Award</td>
-          <td class="px-6 py-4">Most Friendly Actress</td>
-          <td class="px-6 py-4">Herself</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-
-        <!-- 2009 -->
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2009</td>
-          <td class="px-6 py-4">Best of Nollywood Awards</td>
-          <td class="px-6 py-4">Best Actress (Yoruba)</td>
-          <td class="px-6 py-4">Herself</td>
-          <td class="px-6 py-4"><span class="badge-nom">Nominated</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2009</td>
-          <td class="px-6 py-4">Nigeria Entertainment Awards</td>
-          <td class="px-6 py-4">Best Actress</td>
-          <td class="px-6 py-4">Herself</td>
-          <td class="px-6 py-4"><span class="badge-nom">Nominated</span></td>
-        </tr>
-
-        <!-- 2010 -->
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2010</td>
-          <td class="px-6 py-4">Nigeria Entertainment Awards</td>
-          <td class="px-6 py-4">Best Actress Film / Short Story</td>
-          <td class="px-6 py-4">Deepest of Dreams</td>
-          <td class="px-6 py-4"><span class="badge-nom">Nominated</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2010</td>
-          <td class="px-6 py-4">Ghana Movie Awards</td>
-          <td class="px-6 py-4">Best Actress – Africa Collaboration</td>
-          <td class="px-6 py-4">A Private Storm</td>
-          <td class="px-6 py-4"><span class="badge-nom">Nominated</span></td>
-        </tr>
-
-        <!-- 2011 -->
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2011</td>
-          <td class="px-6 py-4">8th Africa Movie Academy Awards</td>
-          <td class="px-6 py-4">Best Supporting Actress</td>
-          <td class="px-6 py-4">Ties That Bind</td>
-          <td class="px-6 py-4"><span class="badge-nom">Nominated</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2011</td>
-          <td class="px-6 py-4">Ghana Movie Awards</td>
-          <td class="px-6 py-4">Best Actress – Africa Collaboration</td>
-          <td class="px-6 py-4">Ties That Bind</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2011</td>
-          <td class="px-6 py-4">Best of Nollywood Awards</td>
-          <td class="px-6 py-4">Best Actress – Leading Role</td>
-          <td class="px-6 py-4">A Private Storm</td>
-          <td class="px-6 py-4"><span class="badge-nom">Nominated</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2011</td>
-          <td class="px-6 py-4">Nigeria Entertainment Award</td>
-          <td class="px-6 py-4">Best Actress – Film/Short Story</td>
-          <td class="px-6 py-4">Ije</td>
-          <td class="px-6 py-4"><span class="badge-nom">Nominated</span></td>
-        </tr>
-
-        <!-- 2012 -->
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2012</td>
-          <td class="px-6 py-4">Eloy Awards</td>
-          <td class="px-6 py-4">Actress of the Year</td>
-          <td class="px-6 py-4">Ties That Bind</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2012</td>
-          <td class="px-6 py-4">Screen Nation Awards</td>
-          <td class="px-6 py-4">Pan African Best Actress</td>
-          <td class="px-6 py-4">Herself</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2012</td>
-          <td class="px-6 py-4">Black Entertainment Film Fashion Television and Arts Awards (BEFFTA)</td>
-          <td class="px-6 py-4">Film Actress Icon</td>
-          <td class="px-6 py-4">Herself</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2012</td>
-          <td class="px-6 py-4">2012 Golden Icons Academy Movie Awards</td>
-          <td class="px-6 py-4">GIAMA Humanitarian Award</td>
-          <td class="px-6 py-4">Omotola Youth Empowerment Foundation</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2012</td>
-          <td class="px-6 py-4">2012 Golden Icons Academy Movie Awards</td>
-          <td class="px-6 py-4">Viewers Choice -Female</td>
-          <td class="px-6 py-4">Herself</td>
-          <td class="px-6 py-4"><span class="badge-nom">Nominated</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2012</td>
-          <td class="px-6 py-4">2012 Nigeria Entertainment Awards</td>
-          <td class="px-6 py-4">Best Actress in A Film</td>
-          <td class="px-6 py-4">Ties That Bind</td>
-          <td class="px-6 py-4"><span class="badge-nom">Nominated</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2012</td>
-          <td class="px-6 py-4">2012 Nollywood Movies Awards</td>
-          <td class="px-6 py-4">Best Actress in a Leading Role</td>
-          <td class="px-6 py-4">A Private Storm</td>
-          <td class="px-6 py-4"><span class="badge-nom">Nominated</span></td>
-        </tr>
-
-        <!-- 2013 -->
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2013</td>
-          <td class="px-6 py-4">Nollywood Movies Awards</td>
-          <td class="px-6 py-4">Popular Online Choice</td>
-          <td class="px-6 py-4">Herself</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2013</td>
-          <td class="px-6 py-4">Music Video and Screen Awards (MVISA)</td>
-          <td class="px-6 py-4">Ebony Vanguard Award</td>
-          <td class="px-6 py-4">Herself</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2013</td>
-          <td class="px-6 py-4">Nigeria Entertainment Awards</td>
-          <td class="px-6 py-4">Best Lead Actress in a Film</td>
-          <td class="px-6 py-4">Last Flight to Abuja</td>
-          <td class="px-6 py-4"><span class="badge-nom">Nominated</span></td>
-        </tr>
-
-        <!-- 2014 -->
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2014</td>
-          <td class="px-6 py-4">MTV Africa Music Awards</td>
-          <td class="px-6 py-4">Personality of the Year</td>
-          <td class="px-6 py-4">Herself</td>
-          <td class="px-6 py-4"><span class="badge-nom">Nominated</span></td>
-        </tr>
-
-        <!-- 2016 -->
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2016</td>
-          <td class="px-6 py-4">City People Social Media Awards</td>
-          <td class="px-6 py-4">Female Entertainment Personality</td>
-          <td class="px-6 py-4">Herself</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-
-        <!-- 2017 -->
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2017</td>
-          <td class="px-6 py-4">Nollywood Travel Film Festival</td>
-          <td class="px-6 py-4">Best Actress</td>
-          <td class="px-6 py-4">Alter Ego</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2017</td>
-          <td class="px-6 py-4">Toronto International Nollywood Film Festival</td>
-          <td class="px-6 py-4">Best Actress</td>
-          <td class="px-6 py-4">Alter exporting</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2017</td>
-          <td class="px-6 py-4">Best of Nollywood Awards</td>
-          <td class="px-6 py-4">Lifetime Achievement Award</td>
-          <td class="px-6 py-4">Herself</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2017</td>
-          <td class="px-6 py-4">Best of Nollywood Awards</td>
-          <td class="px-6 py-4">Best Kiss in a Movie</td>
-          <td class="px-6 py-4">Herself &amp; Kunle Remmy</td>
-          <td class="px-6 py-4"><span class="badge-nom">Nominated</span></td>
-        </tr>
-
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2017</td>
-          <td class="px-6 py-4">City People Movie Awards</td>
-          <td class="px-6 py-4">Best Actress Leading Role (English)</td>
-          <td class="px-6 py-4">Alter Ego</td>
-          <td class="px-6 py-4"><span class="badge-nom">Nominated</span></td>
-        </tr>
-
-        <!-- 2018 -->
-        <tr class="hover:bg-zinc-800">
-          <td class="px-6 py-4 font-medium">2018</td>
-          <td class="px-6 py-4">Africa Magic Viewer's Choice Awards (AMVCA)</td>
-          <td class="px-6 py-4">Best Actress in a Movie / TV Series</td>
-          <td class="px-6 py-4">Alter Ego</td>
-          <td class="px-6 py-4"><span class="badge-win">Won</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="px-4 sm:px-6 md:px-14 py-28 text-center text-white">
-  <div class="max-w-4xl mx-auto space-y-10">
-
-    <h2 class="text-2xl md:text-4xl font-extrabold text-amber-400 reveal reveal-up flip-text" data-flip>
-      Beyond the Screen
-    </h2>
-
-    <p class="text-lg md:text-xl text-white/90 leading-relaxed reveal reveal-up stagger-1">
-      Through OYEP, TEFFEST, humanitarian advocacy, and global leadership, Omotola Jalade-Ekeinde stands not merely as an actress—but as a bridge between art, activism, and responsibility.
-    </p>
-
-    <p class="text-xl md:text-2xl font-semibold text-white reveal reveal-up stagger-2">
-      Her legacy is not just remembered.<br>
-      <span class="text-amber-400">It is still unfolding.</span>
-    </p>
-
-  </div>
-</section>
-
-<section class="relative sm:px-6 md:py-20 md:px-14 py-10 px-5 bg-black overflow-hidden">
-  <!-- Subtle ambient glow -->
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_#1a1a1a,_transparent_70%)] opacity-40"></div>
-
-  <div class="relative max-w-4xl mx-auto text-center space-y-10 font-geist">
-
-    <!-- Section Eyebrow -->
-    <span class="reveal reveal-up block text-xs md:text-sm uppercase tracking-[0.35em] text-amber-400">
-      The Vision Endures
-    </span>
-
-    <!-- Main Statement -->
-    <h2 class="reveal reveal-up stagger-1 text-white text-3xl md:text-5xl lg:text-6xl font-light leading-tight">
-      A legacy built not on moments
-      <br />
-      but on <span class="text-amber-400">meaning.</span>
-    </h2>
-
-    <!-- Divider -->
-    <div class="reveal reveal-up stagger-2 mx-auto h-px w-20 bg-zinc-700"></div>
-
-    <!-- Supporting Copy -->
-    <p class="reveal reveal-up stagger-3 text-zinc-400 text-base md:text-xl leading-relaxed max-w-3xl mx-auto">
-      For over three decades, Omotola Jalade-Ekeinde has shaped culture, elevated
-      African storytelling, and proven that influence is earned through purpose.
-      <br class="hidden md:block" /><br class="hidden md:block" />
-      This is not the end of a journey, it is the foundation of everything still to come.
-    </p>
-
-  </div>
-</section>
-  
-<footer class="w-full py-16 border-t border-amber-400 flex flex-col items-center gap-7 px-4 text-center reveal reveal-up">
-  <nav class="w-full max-w-4xl">
-    <ul
-      class="flex flex-wrap justify-center gap-6 md:gap-12 text-sm uppercase tracking-widest text-white/80 font-geist">
-      <li><a href="/" class="hover:text-amber-400 transition-colors">Home</a></li>
-      <li><a href="about.html" class="hover:text-amber-400 transition-colors">About</a></li>
-      <li><a href="films.html" class="hover:text-amber-400 transition-colors">Films</a></li>
-      <li><a href="legacy.html" class="hover:text-amber-400 transition-colors">30yrs legacy</a></li>
-      <li><a href="#" class="hover:text-amber-400 transition-colors">Affiliate</a></li>
-      <li><a href="contact.html" class="hover:text-amber-400 transition-colors">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="reveal reveal-up stagger-2 flex flex-wrap justify-center items-center gap-8 text-2xl text-white">
-    <a href="https://www.youtube.com/@RedHotConceptTV" target="_blank" rel="noopener noreferrer" class="hover-lift"
-      aria-label="YouTube">
-      <i class="fa-brands fa-youtube hover:text-red-600 transition-colors cursor-pointer"></i>
-    </a>
-    <a href="https://www.instagram.com/redhotconcepts?igsh=bTBwaWEwNTJtemp0" target="_blank" rel="noopener noreferrer"
-      class="hover-lift" aria-label="Instagram">
-      <i class="fa-brands fa-instagram hover:text-pink-600 transition-colors cursor-pointer"></i>
-    </a>
-    <a href="https://x.com/redhot_concept?t=Q4aHP6bGxqztv0k9isMVQw&s=09" target="_blank" rel="noopener noreferrer"
-      class="hover-lift" aria-label="X">
-      <i class="fa-brands fa-x-twitter hover:text-blue-400 transition-colors cursor-pointer"></i>
-    </a>
-  </div>
-
-  <div class="text-white text-sm font-normal font-poppins opacity-60">
-    ©2026 RedHot Concepts. All Rights Reserved.
-  </div>
-
-  <div class="text-white inline-flex items-center gap-2 text-sm font-normal font-inter tracking-wide opacity-60">
-      Designed and Developed by <a href="https://nextdaysite.com" target="_blank" class="text-amber-400 hover:underline"><img src="public/nds.png" alt=""></a>
-    </div>
-</footer>
-
-   <div id="cursor-spotlight">
+  <div id="cursor-spotlight">
     <div class="outer"></div>
     <div class="inner"></div>
   </div>
   <script src="script.js"></script>
-
-  <script>
-  let lastScrollY = window.scrollY;
-
-const header = document.getElementById("mainHeader");
-const desktopNav = document.getElementById("desktopNav");
-const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-const mobileClose = document.getElementById("mobileClose");
-const othersToggle = document.getElementById("othersToggle");
-const othersAccordion = document.getElementById("othersAccordion");
-const othersIcon = document.getElementById("othersIcon");
-const logoWrap = document.getElementById("logoWrap");
-const logoWhite = document.getElementById("logoWhite");
-const logoRed = document.getElementById("logoRed");
-
-function showNavLinks() {
-  desktopNav.classList.remove("hidden");
-  requestAnimationFrame(() => {
-    desktopNav.classList.add("nav-visible");
-  });
-}
-
-function hideNavLinks() {
-  desktopNav.classList.remove("nav-visible");
-}
-
-function onScroll() {
-  const currentScroll = window.scrollY;
-
-  /* =======================
-     TOP OF PAGE
-  ======================= */
-  if (currentScroll === 0) {
-    header.classList.add("nav-hidden");
-    header.classList.remove("glass-nav");
-
-    logoWrap.classList.remove("scale-90");
-
-    logoWhite.style.opacity = "1";
-    logoRed.style.opacity = "0";
-
-    hideNavLinks();
-    return;
-  }
-
-  /* =======================
-     ANYWHERE ELSE
-  ======================= */
-  header.classList.remove("nav-hidden");
-  header.classList.add("glass-nav");
-
-  logoWrap.classList.add("scale-90");
-
-  logoWhite.style.opacity = "0";
-  logoRed.style.opacity = "1";
-
-  if (window.innerWidth >= 768) {
-    showNavLinks();
-  }
-
-  lastScrollY = currentScroll;
-}
-
-onScroll();
-window.addEventListener("scroll", onScroll);
-
-/* =======================
-   RESPONSIVE SYNC
-======================= */
-window.addEventListener("resize", () => {
-  if (window.innerWidth < 768) {
-    desktopNav.classList.add("hidden");
-    desktopNav.classList.remove("nav-visible");
-  } else {
-    desktopNav.classList.remove("hidden");
-    onScroll();
-  }
-});
-
-menuBtn.addEventListener("click", () => {
-    menuBtn.classList.toggle("active");
-    if(mobileMenu.classList.contains("translate-y-full")) openMobileMenu();
-    else closeMobileMenu();
-  });
-
-  mobileClose.addEventListener("click", closeMobileMenu);
-
-  function openMobileMenu(){
-    mobileMenu.classList.remove("translate-y-full","opacity-0");
-    mobileMenu.classList.add("translate-y-0","opacity-100");
-
-    const items = document.querySelectorAll("#mobileMenu .menu-item");
-    items.forEach((el,i)=>{ el.style.transitionDelay=`${i*0.1}s`; el.classList.remove("opacity-0","translate-y-6"); el.classList.add("opacity-100","translate-y-0"); });
-  }
-
-  function closeMobileMenu(){
-    mobileMenu.classList.remove("translate-y-0","opacity-100");
-    mobileMenu.classList.add("translate-y-full","opacity-0");
-
-    const items = document.querySelectorAll("#mobileMenu .menu-item");
-    items.forEach(el=>{ el.style.transitionDelay="0s"; el.classList.add("opacity-0","translate-y-6"); el.classList.remove("opacity-100","translate-y-0"); });
-
-    menuBtn.classList.remove("active");
-  }
-
-  othersToggle?.addEventListener("click", ()=>{
-    if(othersAccordion.style.maxHeight && othersAccordion.style.maxHeight !== "0px"){
-      othersAccordion.style.maxHeight="0px"; othersIcon.classList.remove("rotate-180");
-    } else {
-      othersAccordion.style.maxHeight=othersAccordion.scrollHeight+"px"; othersIcon.classList.add("rotate-180");
-    }
-  });
-</script>
-
-<script>
-  const flipTexts = document.querySelectorAll('[data-flip]');
-
-  const flipObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target); // run once
-        }
-      });
-    },
-    {
-      threshold: 0.4, // sweet cinematic timing
-    }
-  );
-
-  flipTexts.forEach(el => flipObserver.observe(el));
-</script>
 </body>
 
 </html>

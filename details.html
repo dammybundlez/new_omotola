@@ -5,982 +5,538 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/c4993cb090.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
   <link rel="stylesheet" href="output.css">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <link rel="shortcut icon" href="public/redbg.png" type="image/x-icon">
-  <title>RedHot Concepts</title>
+  <link rel="shortcut icon" href="public_optimized/redbg.webp" type="image/webp">
+  <title>RedHot Concepts — A Mother's Love</title>
 </head>
 
-<body class="bg-[#0b0b0e] ">
-  <header id="mainHeader" class="fixed top-0 w-full z-50 pr-4 md:pl-6 md:pr-14 py-4 md:py-1 transition-all duration-500">
-  <div class="flex justify-between items-center">
-
-    <!-- Logo -->
-    <a id="logoWrap" href="/"
-     class="relative flex items-center justify-center w-20 h-10 md:w-28 md:h-[5rem] p-2 rounded-md transition-all duration-300">
-        <img id="logoWhite"
-            src="public/img124.webp"
-            class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-100"
-            alt="Logo White"/>
-
-        <img id="logoRed"
-            src="public/redbg.png"
-            class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-0"
-            alt="Logo Red"/>
-    </a>
-
-
-    <!-- Desktop Nav -->
-    <nav id="desktopNav" class="hidden md:flex items-center ">
-      <ul class="flex items-center text-white gap-8 uppercase font-inter">
-         <li><a href="/" class="hover:text-amber-500 transition-all text-sm tracking-wide">Home</a></li>
-            <li><a href="films.html" class="hover:text-amber-500 transition-all text-sm tracking-wide">Films</a></li>
-            <!-- <li><a href="news.html" class="hover:text-amber-500 transition-all text-sm tracking-wide">News</a></li> -->
-        <li><a href="legacy.html" class="hover:text-amber-500 transition-all text-sm tracking-wide">30 Years legacy</a></li>
-        <li class="relative group tracking-wide text-sm">
-          <a class="hover:text-amber-500 flex items-center gap-2" >Affiliates <i class="fa-solid fa-chevron-down text-sm"></i></a>
-          <div class="absolute top-full left-1/2 -translate-x-1/2 w-[300px] px-2 py-2 bg-white rounded-3xl shadow-lg invisible group-hover:visible transition-all duration-300">
-            <ul class="text-stone-500 flex flex-col gap-2">
-              <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-500 block px-4 py-1">OYEP</a></li>
-              <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-500 block px-4 py-1">OSEAL</a></li>
-              <li><a href="https://www.teffest.com/" class="hover:text-amber-500 block px-4 py-1">TEFFEST</a></li>
-              <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-500 block px-4 py-1">DOUBLE DOORS</a></li>
-            </ul>
-          </div>
+<body class="bg-cinema-950">
+  <div id="scrollProgress" class="fixed top-0 left-0 z-[60] h-[2px] bg-amber-400/70" style="width:0%"></div>
+  <header id="mainHeader" class="fixed top-0 w-full z-50 px-6 md:px-14 py-5 transition-all duration-700">
+    <div class="max-w-[1440px] mx-auto flex justify-between items-center">
+      <a href="/" class="relative flex items-center justify-center w-20 h-10 md:w-28 md:h-16 rounded-md transition-all duration-300 group">
+        <img id="logoWhite" src="public/img124.webp" class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-100 group-hover:opacity-80" alt="RedHot Concepts">
+        <img id="logoRed" src="public_optimized/redbg.webp" class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-0" alt="RedHot Concepts">
+      </a>
+      <nav id="desktopNav" class="hidden md:flex items-center">
+        <ul class="flex items-center text-white/80 gap-9 uppercase font-display text-[11px] tracking-[0.2em]">
+          <li><a href="/" class="hover:text-amber-400 transition-all duration-300">Home</a></li>
+          <li><a href="films.html" class="hover:text-amber-400 transition-all duration-300">Films</a></li>
+          <li><a href="legacy.html" class="hover:text-amber-400 transition-all duration-300">Legacy</a></li>
+          <li class="relative group">
+            <a class="hover:text-amber-400 flex items-center gap-1.5 cursor-pointer transition-all duration-300">Affiliates <i class="fa-solid fa-chevron-down text-[8px]"></i></a>
+            <div class="absolute top-full left-1/2 -translate-x-1/2 w-[240px] px-2 py-3 bg-cinema-900/95 backdrop-blur-xl border border-white/5 rounded-xl shadow-2xl invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-1">
+              <ul class="text-white/70 flex flex-col gap-0.5">
+                <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400 hover:bg-white/5 block px-4 py-2.5 rounded-lg transition text-[11px] tracking-[0.15em] uppercase">OYEP</a></li>
+                <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400 hover:bg-white/5 block px-4 py-2.5 rounded-lg transition text-[11px] tracking-[0.15em] uppercase">OSEAL</a></li>
+                <li><a href="https://www.teffest.com/" class="hover:text-amber-400 hover:bg-white/5 block px-4 py-2.5 rounded-lg transition text-[11px] tracking-[0.15em] uppercase">TEFFEST</a></li>
+                <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400 hover:bg-white/5 block px-4 py-2.5 rounded-lg transition text-[11px] tracking-[0.15em] uppercase">Double Door</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="about.html" class="hover:text-amber-400 transition-all duration-300">About</a></li>
+          <li><a href="contact.html" class="hover:text-amber-400 transition-all duration-300">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="menuBtn" class="md:hidden text-white text-xl hover:text-amber-400 transition-all">
+        <span><i class="fa-solid fa-bars"></i></span>
+      </button>
+    </div>
+    <nav id="mobileMenu" class="fixed top-0 left-0 w-full h-screen bg-cinema-950/95 backdrop-blur-2xl z-50 flex flex-col items-center justify-center translate-y-full opacity-0 transition-all duration-500">
+      <button id="mobileClose" class="absolute top-8 right-8 text-white text-3xl hover:text-amber-400 transition-all"><i class="fa-solid fa-xmark"></i></button>
+      <ul class="text-white flex flex-col items-center gap-8 font-display">
+        <li class="menu-item opacity-0 translate-y-6"><a href="films.html" class="text-3xl font-bold uppercase hover:text-amber-400 tracking-wider">Films</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="news.html" class="text-3xl font-bold uppercase hover:text-amber-400 tracking-wider">News</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="legacy.html" class="text-3xl font-bold uppercase hover:text-amber-400 tracking-wider">Legacy</a></li>
+        <li class="menu-item opacity-0 translate-y-6">
+          <button id="othersToggle" class="flex items-center text-3xl font-bold uppercase hover:text-amber-400 gap-2">
+            Affiliates <i id="othersIcon" class="fa-solid fa-chevron-down text-xl transition-transform duration-300"></i>
+          </button>
+          <ul id="othersAccordion" class="mt-4 max-h-0 overflow-hidden flex flex-col gap-3 transition-all duration-300 text-xl text-center">
+            <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400">OYEP</a></li>
+            <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400">OSEAL</a></li>
+            <li><a href="https://www.teffest.com/" class="hover:text-amber-400">TEFFEST</a></li>
+            <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400">DOUBLE DOOR</a></li>
+          </ul>
         </li>
-        <li><a href="about.html" class="hover:text-amber-500 transition-all text-sm tracking-wide">About</a></li>
-        <li><a href="contact.html" class="hover:text-amber-500 transition-all text-sm tracking-wide">Contact</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="about.html" class="text-3xl font-bold uppercase hover:text-amber-400">About</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="contact.html" class="text-3xl font-bold uppercase hover:text-amber-400">Contact</a></li>
       </ul>
     </nav>
-
-    <!-- Hamburger -->
-    <button id="menuBtn" class="md:hidden text-white text-3xl hover:text-amber-400 transition-all">
-      <span><i class="fa-solid fa-bars"></i></span>
-    </button>
-
-  </div>
-
-  <!-- Mobile Menu -->
-  <nav id="mobileMenu" class="fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-lg z-50 flex flex-col items-center justify-center transform translate-y-full opacity-0">
-    <button id="mobileClose" class="absolute top-8 right-8 text-white text-3xl hover:text-amber-400 transition-all"><i class="fa-solid fa-xmark"></i></button>
-    <ul id="mobileMenuList" class="flex flex-col justify-center items-center gap-8 text-center font-geist">
-      <li class="menu-item opacity-0 translate-y-6"><a href="films.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">Films</a></li>
-      <li class="menu-item opacity-0 translate-y-6"><a href="news.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">News</a></li>
-      <li class="menu-item opacity-0 translate-y-6"><a href="legacy.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">30 Years Legacy</a></li>
-      <li class="menu-item opacity-0 translate-y-6">
-        <button id="othersToggle" class="flex items-center justify-center text-3xl font-bold uppercase hover:text-amber-400 gap-2 transition-all duration-300">
-          Affiliates <i id="othersIcon" class="fa-solid fa-chevron-down transition-transform duration-300"></i>
-        </button>
-        <ul id="othersAccordion" class="mt-4 max-h-0 overflow-hidden flex flex-col gap-3 transition-all duration-300">
-          <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400">OYEP</a></li>
-          <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400">OSEAL</a></li>
-          <li><a href="https://www.teffest.com/" class="hover:text-amber-400">TEFFEST</a></li>
-          <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400">DOUBLE DOORS</a></li>
-        </ul>
-      </li>
-      <li class="menu-item opacity-0 translate-y-6"><a href="about.html" class="text-3xl font-bold uppercase hover:text-amber-400">About</a></li>
-      <li class="menu-item opacity-0 translate-y-6"><a href="contact.html" class="text-3xl font-bold uppercase hover:text-amber-400">Contact</a></li>
-    </ul>
-  </nav>
   </header>
 
   <main>
-    <section class="relative w-full bg-black pt-20 text-neutral-50 overflow-hidden">
+    <!-- ===== REEL 1: OPENING TITLE ===== -->
+    <section class="relative w-full min-h-screen overflow-hidden bg-cinema-950">
+      <!-- Cinematic background -->
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-cinema-950"></div>
+        <img src="public/about2.webp" alt=""
+          class="absolute inset-0 w-full h-full object-cover scale-110 opacity-35"
+          style="object-position: center 30%;" />
+        <div class="absolute inset-0 bg-gradient-to-r from-cinema-950 via-cinema-950/70 to-cinema-950/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-cinema-950 via-cinema-950/40 to-transparent"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,_transparent_20%,_#07070a_100%)]"></div>
+      </div>
+      <div class="grain-overlay absolute inset-0"></div>
 
-        <!-- Background atmosphere -->
-        <div class="absolute inset-0 bg-gradient-to-b from-black via-zinc-900 to-black"></div>
+      <!-- Ambient glow -->
+      <div class="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-amber-400/5 rounded-full blur-[200px] pointer-events-none"></div>
 
-        <div class="relative max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center px-6 lg:px-16 py-20">
+      <!-- Eyebrow label -->
+      <div class="absolute top-28 left-6 md:left-14 z-20 reveal">
+        <span class="text-[10px] md:text-xs uppercase tracking-[0.4em] text-amber-400/50 font-display">RedHot Concepts Presents</span>
+      </div>
 
+      <!-- Main content -->
+      <div class="relative z-10 w-full min-h-screen flex items-center px-6 lg:px-16 pt-20">
+        <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <!-- Left: Info -->
+          <div class="lg:col-span-7 flex flex-col gap-8 reveal">
+            <h1 class="text-amber-400 uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-display leading-[0.85] tracking-tight">
+              A Mother's<br class="hidden sm:block" /> Love
+            </h1>
 
-            <!-- Poster -->
-            <figure class="relative group">
+            <div class="flex flex-wrap gap-x-8 gap-y-2 text-sm md:text-base font-sans text-white/60">
+              <span><span class="text-white/40">Rating</span> <span class="text-white/80">PG-13</span></span>
+              <span><span class="text-white/40">Runtime</span> <span class="text-white/80">1h 42m</span></span>
+              <span><span class="text-white/40">Release</span> <span class="text-white/80">Dec 7, 2025</span></span>
+              <span><span class="text-white/40">Genre</span> <span class="text-white/80">Drama, Family</span></span>
+            </div>
 
-            <!-- Glow effect -->
-            <div class="absolute -inset-4 bg-amber-500/10 blur-3xl opacity-40 group-hover:opacity-60 transition duration-700"></div>
+            <div class="w-20 h-[2px] bg-amber-400/60"></div>
 
-            <!-- Image -->
-            <img
-                src="public/motherlovenew.jpeg"
-                alt="A Mother's Love film poster"
-                class="relative w-full h-[600px] object-cover rounded-md shadow-[0_40px_120px_rgba(0,0,0,0.9)]"
-            />
+            <p class="text-base md:text-lg font-sans leading-relaxed text-white/70 max-w-2xl">
+              A young woman raised in privilege breaks free from her sheltered world during her NYSC year, discovering purpose, resilience, and identity — guided by her mother's enduring love.
+            </p>
 
-            <!-- Gradient overlay -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent rounded-md"></div>
+            <div class="space-y-3 text-sm md:text-base font-sans">
+              <p class="text-white/40">Directed by <span class="text-white font-medium">Omotola Jalade-Ekeinde</span></p>
+              <p class="text-white/40">Produced by <span class="text-white font-medium">Omotola Jalade-Ekeinde</span></p>
+              <p class="text-white/40">Cast <span class="text-white/80">Omotola Jalade-Ekeinde, Olumide Oworu, Noray, Ifeanyi Kalu, Lilian Afegbai, Nosa Rex</span></p>
+            </div>
 
-            <!-- Cinematic caption -->
-            <figcaption class="absolute bottom-10 left-0 right-0 text-center px-6">
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a href="#trailer" class="btn-primary">Watch Trailer</a>
+              <a href="https://www.youtube.com/@RedHotConceptTV" target="_blank" class="btn-outline">About the Director</a>
+            </div>
+          </div>
 
-                <!-- <h1 class="text-amber-500 text-[72px] md:text-[120px] font-normal font-geist leading-none tracking-wide">
-                A Mother’s Love
-                </h1> -->
-
-                <p class="text-neutral-200 text-sm md:text-lg font-inter mt-4 tracking-[0.2em] uppercase">
-                Inspired by True Events
-                </p>
-
-            </figcaption>
-
+          <!-- Right: Poster -->
+          <div class="lg:col-span-5 flex justify-center lg:justify-end reveal-right">
+            <figure class="relative w-full max-w-sm group">
+              <div class="absolute -inset-6 bg-amber-400/10 blur-3xl opacity-30 group-hover:opacity-60 transition duration-700"></div>
+              <img src="public/motherlovenew.jpeg" alt="A Mother's Love film poster"
+                class="relative w-full h-[400px] md:h-[520px] object-cover rounded-lg shadow-[0_40px_120px_rgba(0,0,0,0.9)]" loading="lazy" />
+              <div class="absolute inset-0 rounded-lg bg-gradient-to-t from-cinema-950/40 via-transparent to-transparent"></div>
+              <figcaption class="absolute bottom-6 left-0 right-0 text-center">
+                <p class="text-white/50 text-xs md:text-sm font-sans tracking-[0.2em] uppercase">Inspired by True Events</p>
+              </figcaption>
             </figure>
+          </div>
+        </div>
+      </div>
 
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
+        <span class="text-white/20 text-[10px] uppercase tracking-[0.3em] font-display">Scroll</span>
+        <div class="w-px h-10 bg-gradient-to-b from-amber-400/40 to-transparent"></div>
+      </div>
+    </section>
 
-            <!-- Film Details -->
-            <article class="flex flex-col gap-8">
+    <!-- ===== REEL 2: CHAPTER DIVIDER — THE STORY ===== -->
+    <section class="relative py-8 md:py-12 bg-cinema-950 overflow-hidden">
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="text-[15vw] md:text-[12vw] font-display font-bold text-white/[0.015] select-none tracking-tighter leading-none">SYNOPSIS</div>
+      </div>
+      <div class="relative z-10 text-center px-6">
+        <div class="reveal">
+          <span class="text-[10px] md:text-xs uppercase tracking-[0.5em] text-amber-400/40 font-display">&mdash; &bull; &mdash;</span>
+        </div>
+        <h3 class="reveal stagger-1 mt-4 text-3xl md:text-5xl lg:text-6xl font-display font-bold text-white">The Story</h3>
+        <p class="reveal stagger-2 mt-3 text-white/40 text-sm font-display tracking-wide max-w-lg mx-auto">A coming-of-age tale of identity, sacrifice, and unbreakable bonds</p>
+      </div>
+    </section>
 
-
-            <!-- Title -->
+    <!-- ===== REEL 3: THE STORY ===== -->
+    <section class="relative px-6 md:px-14 py-20 md:py-28 bg-cinema-950 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-cinema-950 via-cinema-900 to-cinema-950"></div>
+      <div class="grain-overlay absolute inset-0"></div>
+      <div class="relative max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row-reverse gap-12 md:gap-16 items-center">
+          <figure class="relative w-full md:w-1/2 group reveal-right">
+            <div class="absolute -inset-6 bg-amber-400/10 blur-3xl opacity-40 group-hover:opacity-60 transition duration-700"></div>
+            <img src="public/about2.webp" alt="Mother's Love Film Scene"
+              class="relative w-full h-auto object-cover rounded-lg shadow-[0_40px_120px_rgba(0,0,0,0.9)]" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-cinema-950 via-cinema-950/20 to-transparent rounded-lg"></div>
+          </figure>
+          <div class="md:w-1/2 flex flex-col gap-8 reveal-left">
             <header class="space-y-4">
-
-                <h2 class="text-amber-500 uppercase text-2xl md:text-4xl font-semibold font-geist leading-none tracking-wide">
-                A Mother’s Love
-                </h2>
-
-                <div class="w-24 h-[2px] bg-amber-500"></div>
-
+              <span class="text-[10px] md:text-xs uppercase tracking-[0.4em] text-amber-400/50 font-display">Film Synopsis</span>
+              <div class="w-20 h-[2px] bg-amber-400"></div>
             </header>
-
-
-            <!-- Metadata -->
-            <section class="grid grid-cols-2 gap-y-3 gap-x-10 text-sm md:text-base font-inter text-neutral-300">
-
-                <p><span class="text-neutral-500">Rating</span><br>PG-13</p>
-
-                <p><span class="text-neutral-500">Runtime</span><br>1h 42m</p>
-
-                <p><span class="text-neutral-500">Release</span><br>Dec 7, 2025</p>
-
-                <p><span class="text-neutral-500">Genre</span><br>Drama, Family</p>
-
-            </section>
-
-
-            <!-- Synopsis -->
-            <section>
-
-                <p class="text-sm md:text-base font-inter leading-relaxed text-neutral-200 max-w-3xl">
-                A young woman raised in privilege breaks free from her sheltered world during her NYSC year, discovering purpose, resilience, and identity — guided by her mother's enduring love.
-                </p>
-
-            </section>
-
-
-            <!-- Credits -->
-            <section class="space-y-6 text-sm md:text-base font-inter">
-
-                <div>
-                <span class="text-neutral-500 block text-sm uppercase tracking-widest mb-1">
-                    Directed By
-                </span>
-                <span class="text-white">Omotola Jalade-Ekeinde</span>
-                </div>
-
-                <div>
-                <span class="text-neutral-500 block text-sm uppercase tracking-widest mb-1">
-                    Produced By
-                </span>
-                <span class="text-white">Omotola Jalade-Ekeinde</span>
-                </div>
-
-                <div>
-                <span class="text-neutral-500 block text-sm uppercase tracking-widest mb-1">
-                    Cast
-                </span>
-                <span class="text-white">
-                    Omotola Jalade-Ekeinde, Olumide Oworu, Noray, Ifeanyi Kalu, Lilian Afegbai, Nosa Rex
-                </span>
-                </div>
-
-            </section>
-
-            <!-- <div class="pt-6">
-
-                <a href="news.html" class="px-8 py-4 border border-amber-500 text-amber-500 uppercase tracking-widest font-inter hover:bg-amber-500 hover:text-black transition duration-300">
-                View Press Kit
-                </a>
-
-            </div> -->
-
-
-            </article>
-
+            <p class="text-sm md:text-base font-sans leading-relaxed text-white/70 max-w-2xl">
+              Mother's Love is a powerful coming-of-age story inspired by real emotional truths. At its heart is a young woman's journey from comfort to self-discovery, set against the backdrop of Nigeria's National Youth Service Corps.
+              <br><br>
+              As she enters unfamiliar territory — geographically, socially, and emotionally — she begins to understand her mother's sacrifices, the meaning of service, and the strength of her own identity.
+              <br><br>
+              Blending emotional depth with cultural authenticity, Mother's Love explores themes of female empowerment, resilience, and transformation — creating a story that is both deeply Nigerian and universally human.
+            </p>
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-amber-400/40 to-transparent"></div>
+            <blockquote class="text-amber-400 text-sm md:text-base font-display italic tracking-wide">
+              A story of identity, sacrifice, and the unbreakable bond between mother and child.
+            </blockquote>
+          </div>
         </div>
-
-        <!-- Bottom cinematic fade -->
-        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
-
+      </div>
     </section>
 
-
-    <section class="relative w-full bg-black text-neutral-50 overflow-hidden">
-
-        <!-- Cinematic background gradient -->
-        <div class="absolute inset-0 bg-gradient-to-b from-black via-zinc-900 to-black"></div>
-
-        <div class="relative max-w-[1600px] mx-auto px-6 lg:px-16 py-20">
-
-            <div class="flex flex-col md:flex-row-reverse gap-12 items-center">
-
-
-            <!-- Poster -->
-            <figure class="relative w-full md:w-1/2 group">
-
-                <!-- Glow -->
-                <div class="absolute -inset-6 bg-amber-500/10 blur-3xl opacity-40 group-hover:opacity-60 transition duration-700"></div>
-
-                <!-- Image -->
-                <img
-                src="public/about2.webp"
-                alt="Mother's Love Film Scene"
-                class="relative w-full h-auto object-cover rounded-md shadow-[0_40px_120px_rgba(0,0,0,0.9)]"
-                >
-
-                <!-- Overlay gradient -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent rounded-md"></div>
-
-            </figure>
-
-
-            <!-- Content -->
-            <article class="md:w-1/2 flex flex-col gap-10">
-
-                <!-- Heading -->
-                <header class="space-y-4">
-
-                <h2 class="text-amber-500 uppercase text-3xl md:text-4xl font-semibold font-geist leading-none tracking-wide">
-                    Film Synopsis
-                </h2>
-
-                <!-- cinematic underline -->
-                <div class="w-20 h-[2px] bg-amber-500"></div>
-
-                </header>
-
-
-                <!-- Synopsis text -->
-                <section>
-
-                <p class="text-sm md:text-base font-inter leading-relaxed text-neutral-300 max-w-2xl">
-                    Mother’s Love is a powerful coming-of-age story inspired by real emotional truths. At its heart is a young woman’s journey from comfort to self-discovery, set against the backdrop of Nigeria’s National Youth Service Corps.
-
-                    <br><br>
-
-                    As she enters unfamiliar territory — geographically, socially, and emotionally — she begins to understand her mother’s sacrifices, the meaning of service, and the strength of her own identity.
-
-                    <br><br>
-
-                    Blending emotional depth with cultural authenticity, Mother’s Love explores themes of female empowerment, resilience, and transformation — creating a story that is both deeply Nigerian and universally human.
-                </p>
-
-                </section>
-
-
-                <!-- subtle cinematic divider -->
-                <div class="w-full h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent"></div>
-
-
-                <!-- optional quote highlight -->
-                <blockquote class="text-amber-500 text-sm md:text-base font-geist italic tracking-wide">
-                A story of identity, sacrifice, and the unbreakable bond between mother and child.
-                </blockquote>
-
-
-            </article>
-
-            </div>
-
+    <!-- ===== REEL 4: DIRECTOR'S VISION ===== -->
+    <section class="relative px-6 md:px-14 py-20 md:py-28 bg-cinema-950 overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,140,0,0.08),transparent_60%)]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(255,255,255,0.04),transparent_60%)]"></div>
+      <div class="grain-overlay absolute inset-0"></div>
+      <div class="relative max-w-7xl mx-auto">
+        <div class="reveal text-center mb-16">
+          <span class="text-[10px] md:text-xs uppercase tracking-[0.4em] text-amber-400/50 font-display">Director's Vision</span>
+          <div class="w-12 h-px bg-amber-400/30 mx-auto mt-4"></div>
         </div>
-
-
-        <!-- bottom fade -->
-        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
-
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <figure class="relative w-full group reveal-left">
+            <div class="absolute -inset-4 bg-gradient-to-tr from-amber-400/10 via-transparent to-transparent blur-2xl opacity-70 group-hover:opacity-100 transition duration-700"></div>
+            <img src="public/legacy5.png" alt="Omotola Jalade-Ekeinde portrait"
+              class="relative w-full h-auto object-cover rounded-lg shadow-[0_40px_120px_rgba(0,0,0,0.8)]" loading="lazy" />
+            <div class="absolute inset-0 rounded-lg bg-gradient-to-t from-cinema-950/70 via-cinema-950/10 to-transparent"></div>
+          </figure>
+          <div class="flex flex-col gap-10 reveal-right">
+            <div class="w-24 h-[1px] bg-amber-400"></div>
+            <header class="flex flex-col gap-4">
+              <h2 class="text-amber-400 uppercase md:text-4xl text-3xl font-semibold font-display leading-none tracking-tight">Omotola Jalade-Ekeinde</h2>
+              <h3 class="text-amber-400/80 uppercase md:text-lg text-base font-display leading-none tracking-wide">Director's Statement</h3>
+            </header>
+            <div class="max-w-3xl font-sans text-sm md:text-base leading-relaxed text-white/70 space-y-5">
+              <p>Mother's Love is more than a film to me, it's a deeply personal journey. As my directorial debut, it draws inspiration from real experiences, not just my own, but from the many untold stories of young Nigerian women finding their place in a complex world.</p>
+              <p>I wanted to tell a coming-of-age story that challenges privilege, confronts identity and ultimately celebrates the quiet strength of women redefining themselves on their own terms.</p>
+              <p>Set against the vibrant, layered backdrop of modern Nigeria, Mother's Love captures both the beauty and the friction of growth, how we wrestle with where we come from in order to discover who we truly are.</p>
+              <p>This film is performance-led, emotionally grounded, and socially aware. It speaks to universal themes of family, resilience, and empowerment while offering a lens into contemporary Nigerian life rarely seen on screen.</p>
+              <p>I believe authentic and bold stories like this deserve a global platform, and I'm honoured to share it with audiences ready to embrace something both intimate and impactful.</p>
+            </div>
+            <footer class="flex flex-col gap-1">
+              <div class="w-16 h-[1px] bg-amber-400 mb-4"></div>
+              <p class="font-sans text-sm md:text-base text-white/80">&ndash; Omotola Jalade-Ekeinde</p>
+              <p class="font-sans text-sm md:text-base text-white/90 font-medium">Co-Writer & Director, Producer, Mother's Love</p>
+            </footer>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- ===== REEL 5: BEHIND THE PRODUCTION ===== -->
+    <section class="relative px-6 md:px-14 py-20 md:py-28 bg-cinema-950 overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(255,140,0,0.08),transparent_60%)]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_85%_80%,rgba(255,255,255,0.04),transparent_60%)]"></div>
+      <div class="grain-overlay absolute inset-0"></div>
+      <div class="relative max-w-7xl mx-auto">
+        <div class="reveal text-center mb-16">
+          <span class="text-[10px] md:text-xs uppercase tracking-[0.4em] text-amber-400/50 font-display">Behind the Production</span>
+          <div class="w-12 h-px bg-amber-400/30 mx-auto mt-4"></div>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="flex flex-col gap-10 reveal-left">
+            <div class="w-24 h-[1px] bg-amber-400"></div>
+            <header class="flex flex-col gap-4">
+              <h2 class="text-amber-400 uppercase md:text-4xl text-3xl font-semibold font-display leading-[0.9] tracking-tight">Co-Producer's Statement</h2>
+            </header>
+            <div class="max-w-3xl text-white/70 text-sm md:text-base font-sans leading-relaxed space-y-5">
+              <p>Mother's Love is a heartfelt exploration of the strength, sacrifice and silent resilience that define motherhood. Co-producing this film alongside Omotola Jalade Ekeinde was a powerful experience, as we sought to tell a story that honours the everyday heroism of women who love fiercely, even in the face of multiple challenges.</p>
+              <p>This film is a tribute to the mothers whose stories often go untold. With sincerity and purpose, we aimed to create a narrative that not only moves audiences but also sparks meaningful reflection on the depth of a mother's love.</p>
+              <p>We are proud to share this story with the world.</p>
+            </div>
+            <footer class="flex flex-col gap-1">
+              <div class="w-16 h-[1px] bg-amber-400 mb-3"></div>
+              <p class="text-white/90 font-bold text-sm md:text-base font-sans">By Tyna Obahiagbon</p>
+              <p class="text-white/60 text-sm md:text-base font-sans">Co-Producer</p>
+            </footer>
+          </div>
+          <figure class="relative w-full group reveal-right">
+            <div class="absolute -inset-4 bg-gradient-to-tr from-amber-400/10 via-transparent to-transparent blur-2xl opacity-70 group-hover:opacity-100 transition duration-700"></div>
+            <img src="public/1.png" alt="Tyna Obahiagbon portrait"
+              class="relative w-full h-auto object-cover rounded-lg shadow-[0_40px_120px_rgba(0,0,0,0.8)]" loading="lazy" />
+            <div class="absolute inset-0 rounded-lg bg-gradient-to-t from-cinema-950/70 via-transparent to-transparent"></div>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-   <section class="relative w-full bg-zinc-950 text-neutral-50 py-24 px-6 lg:px-12 overflow-hidden">
+    <!-- ===== REEL 6: CHAPTER DIVIDER — THE CAST ===== -->
+    <section class="relative py-8 md:py-12 bg-cinema-950 overflow-hidden">
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="text-[15vw] md:text-[12vw] font-display font-bold text-white/[0.015] select-none tracking-tighter leading-none">CAST</div>
+      </div>
+      <div class="relative z-10 text-center px-6">
+        <div class="reveal">
+          <span class="text-[10px] md:text-xs uppercase tracking-[0.5em] text-amber-400/40 font-display">&mdash; &bull; &mdash;</span>
+        </div>
+        <h3 class="reveal stagger-1 mt-4 text-3xl md:text-5xl lg:text-6xl font-display font-bold text-white">The Cast</h3>
+        <p class="reveal stagger-2 mt-3 text-white/40 text-sm font-display tracking-wide max-w-lg mx-auto">The talented ensemble bringing this story to life</p>
+      </div>
+    </section>
 
-  <!-- Cinematic background glow -->
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,140,0,0.08),transparent_60%)]"></div>
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(255,255,255,0.04),transparent_60%)]"></div>
+    <!-- ===== REEL 7: THE CAST ===== -->
+    <section class="relative px-6 md:px-14 py-20 md:py-28 bg-cinema-950 overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,140,0,0.06),transparent_60%)]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(255,255,255,0.03),transparent_60%)]"></div>
+      <div class="grain-overlay absolute inset-0"></div>
+      <div class="relative max-w-7xl mx-auto flex flex-col gap-20 lg:gap-32">
 
-  <div class="relative mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <!-- CAST MEMBER 1: Omotola -->
+        <div class="grid lg:grid-cols-2 gap-12 md:gap-16 items-center reveal">
+          <figure class="relative group">
+            <div class="absolute -inset-4 bg-gradient-to-tr from-amber-400/10 to-transparent blur-2xl opacity-70 group-hover:opacity-100 transition duration-700"></div>
+            <img src="public/72.png" alt="Omotola Jalade-Ekeinde portrait"
+              class="relative w-full h-auto object-cover rounded-lg shadow-[0_40px_120px_rgba(0,0,0,0.9)]" loading="lazy" />
+            <div class="absolute inset-0 rounded-lg bg-gradient-to-t from-cinema-950/70 via-transparent to-transparent"></div>
+          </figure>
+          <div class="flex flex-col gap-6">
+            <h3 class="text-amber-400 font-semibold font-display text-3xl md:text-4xl leading-[0.9] uppercase">Omotola Jalade-Ekeinde</h3>
+            <p class="text-white/90 text-sm md:text-base font-bold font-sans">AS: Labike</p>
+            <div class="flex items-center gap-4 text-white/60 text-sm font-sans">
+              <div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                <a href="https://www.instagram.com/realomosexy?igsh=MXJvanlub3E2bDRhNA=="><img src="public/insta.svg" alt="" loading="lazy" class="w-full h-full"></a>
+              </div>
+              <div>
+                <span class="text-white/80">@realomosexy</span><br>
+                <span class="text-white/40">5.7M followers</span>
+              </div>
+            </div>
+            <p class="text-white/70 text-sm md:text-base font-sans leading-relaxed">Omotola Jalade Ekeinde is a renowned Nigerian actress, singer, philanthropist, and former model. She has starred in numerous Nollywood films and is celebrated for her compelling performances. Her advocacy work and humanitarian efforts have earned her global recognition, making her one of Africa's most influential cinematic voices.</p>
+          </div>
+        </div>
 
-    <!-- Director Image -->
-    <figure class="relative w-full max-w-7xl group">
+        <!-- CAST MEMBER 2: Olumide Oworu (REVERSED) -->
+        <div class="grid lg:grid-cols-2 gap-12 md:gap-16 items-center reveal">
+          <div class="flex flex-col gap-6 lg:order-2">
+            <h3 class="text-amber-400 font-semibold font-display text-3xl md:text-4xl leading-[0.9] uppercase">Olumide Oworu</h3>
+            <p class="text-white/90 text-sm md:text-base font-bold font-sans">AS: Obaro</p>
+            <div class="flex items-center gap-4 text-white/60 text-sm font-sans">
+              <div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                <a href="https://www.instagram.com/olumideoworu?igsh=cG11c2ExMnBiZGph"><img src="public/insta.svg" alt="" loading="lazy" class="w-full h-full"></a>
+              </div>
+              <div>
+                <span class="text-white/80">@olumideoworu</span><br>
+                <span class="text-white/40">467K followers</span>
+              </div>
+            </div>
+            <p class="text-white/70 text-sm md:text-base font-sans leading-relaxed">Olumide Oworu is a versatile Nigerian actor known for his standout performances across television and film. His work reflects a new generation of African storytelling, blending authenticity with global cinematic appeal.</p>
+          </div>
+          <figure class="relative group lg:order-1">
+            <div class="absolute -inset-4 bg-gradient-to-tr from-amber-400/10 to-transparent blur-2xl opacity-70 group-hover:opacity-100 transition duration-700"></div>
+            <img src="public/oworu.png" alt="Olumide Oworu portrait"
+              class="relative w-full h-auto object-cover rounded-lg shadow-[0_40px_120px_rgba(0,0,0,0.9)]" loading="lazy" />
+            <div class="absolute inset-0 rounded-lg bg-gradient-to-t from-cinema-950/70 via-transparent to-transparent"></div>
+          </figure>
+        </div>
 
-      <!-- glow behind image -->
-      <div class="absolute -inset-4 bg-gradient-to-tr from-amber-500/10 via-transparent to-transparent blur-2xl opacity-70 group-hover:opacity-100 transition duration-700"></div>
+        <!-- CAST MEMBER 3: Noray Nehita -->
+        <div class="grid lg:grid-cols-2 gap-12 md:gap-16 items-center reveal">
+          <figure class="relative group">
+            <div class="absolute -inset-4 bg-gradient-to-tr from-amber-400/10 to-transparent blur-2xl opacity-70 group-hover:opacity-100 transition duration-700"></div>
+            <img src="public/noray.png" alt="Noray Nehita portrait"
+              class="relative w-full h-auto object-cover rounded-lg shadow-[0_40px_120px_rgba(0,0,0,0.9)]" loading="lazy" />
+            <div class="absolute inset-0 rounded-lg bg-gradient-to-t from-cinema-950/70 via-transparent to-transparent"></div>
+          </figure>
+          <div class="flex flex-col gap-6">
+            <h3 class="text-amber-400 font-semibold font-display text-3xl md:text-4xl leading-[0.9] uppercase">Noray Nehita</h3>
+            <p class="text-white/90 text-sm md:text-base font-bold font-sans">AS: ADEBISI</p>
+            <div class="flex items-center gap-4 text-white/60 text-sm font-sans">
+              <div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                <a href="https://www.instagram.com/aynoray?igsh=MWxvNXJ4dnJ6a3d6Mg=="><img src="public/insta.svg" alt="" loading="lazy" class="w-full h-full"></a>
+              </div>
+              <div>
+                <span class="text-white/80">@aynorqy</span><br>
+                <span class="text-white/40">5,273 followers</span>
+              </div>
+            </div>
+            <p class="text-white/70 text-sm md:text-base font-sans leading-relaxed">Noray Nehita is an emerging Nigerian actress who made her screen debut in the 2025 drama Mother's Love, directed by Omotola Jalade Ekeinde. Beyond her acting career, Nehita is known for her vibrant presence on social media, where she shares insights into her creative journey and personal experiences.</p>
+          </div>
+        </div>
 
-      <!-- image -->
-      <img
-        src="public/legacy5.png"
-        alt="Omotola Jalade-Ekeinde portrait"
-        class="relative w-full h-auto object-cover rounded-md shadow-[0_40px_120px_rgba(0,0,0,0.8)]"
-      />
+        <!-- CAST MEMBER 4: Ifeanyi Kalu (REVERSED) -->
+        <div class="grid lg:grid-cols-2 gap-12 md:gap-16 items-center reveal">
+          <div class="flex flex-col gap-6 lg:order-2">
+            <h3 class="text-amber-400 font-semibold font-display text-3xl md:text-4xl leading-[0.9] uppercase">Ifeanyi Kalu</h3>
+            <p class="text-white/90 text-sm md:text-base font-bold font-sans">AS: Rotimi Rhode</p>
+            <div class="flex items-center gap-4 text-white/60 text-sm font-sans">
+              <div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                <a href="https://www.instagram.com/ifeanyikalu1?igsh=MXY5ZHp0OHM0dzkxNg=="><img src="public/insta.svg" alt="" loading="lazy" class="w-full h-full"></a>
+              </div>
+              <div>
+                <span class="text-white/80">@ifeanyikalu1</span><br>
+                <span class="text-white/40">150k followers</span>
+              </div>
+            </div>
+            <p class="text-white/70 text-sm md:text-base font-sans leading-relaxed">Ifeanyi Kalu is a multifaceted Nigerian actor, model and fashion designer. Hailing from Nwangele Local Government Area in Imo State, he pursued a degree in Computer Science at Lagos State University before transitioning into the entertainment industry.</p>
+          </div>
+          <figure class="relative group lg:order-1">
+            <div class="absolute -inset-4 bg-gradient-to-tr from-amber-400/10 to-transparent blur-2xl opacity-70 group-hover:opacity-100 transition duration-700"></div>
+            <img src="public/kalu.png" alt="Ifeanyi Kalu portrait"
+              class="relative w-full h-auto object-cover rounded-lg shadow-[0_40px_120px_rgba(0,0,0,0.9)]" loading="lazy" />
+            <div class="absolute inset-0 rounded-lg bg-gradient-to-t from-cinema-950/70 via-transparent to-transparent"></div>
+          </figure>
+        </div>
 
-      <!-- cinematic vignette -->
-      <div class="absolute inset-0 rounded-md bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+        <!-- CAST MEMBER 5: Lilian Afegbai -->
+        <div class="grid lg:grid-cols-2 gap-12 md:gap-16 items-center reveal">
+          <figure class="relative group">
+            <div class="absolute -inset-4 bg-gradient-to-tr from-amber-400/10 to-transparent blur-2xl opacity-70 group-hover:opacity-100 transition duration-700"></div>
+            <img src="public/7 1.png" alt="Lilian Afegbai portrait"
+              class="relative w-full h-auto object-cover rounded-lg shadow-[0_40px_120px_rgba(0,0,0,0.9)]" loading="lazy" />
+            <div class="absolute inset-0 rounded-lg bg-gradient-to-t from-cinema-950/70 via-transparent to-transparent"></div>
+          </figure>
+          <div class="flex flex-col gap-6">
+            <h3 class="text-amber-400 font-semibold font-display text-3xl md:text-4xl leading-[0.9] uppercase">Lilian Afegbai</h3>
+            <p class="text-white/90 text-sm md:text-base font-bold font-sans">AS: Ese</p>
+            <div class="flex items-center gap-4 text-white/60 text-sm font-sans">
+              <div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                <a href="https://www.instagram.com/lillyafe?igsh=MXcyOXhkMnpmbmo5NA=="><img src="public/insta.svg" alt="" loading="lazy" class="w-full h-full"></a>
+              </div>
+              <div>
+                <span class="text-white/80">@lillyafe</span><br>
+                <span class="text-white/40">827k followers</span>
+              </div>
+            </div>
+            <p class="text-white/70 text-sm md:text-base font-sans leading-relaxed">Lilian Afegbai is a Nigerian actress, film producer, and entrepreneur. She gained initial recognition as a housemate on Big Brother Africa in 2014, which served as a springboard into Nollywood. She has since appeared in numerous films and television series, including Tinsel, The Women, Moms at War and Hotel Labamba.</p>
+          </div>
+        </div>
 
-    </figure>
+        <!-- CAST MEMBER 6: Nosa Rex (REVERSED) -->
+        <div class="grid lg:grid-cols-2 gap-12 md:gap-16 items-center reveal">
+          <div class="flex flex-col gap-6 lg:order-2">
+            <h3 class="text-amber-400 font-semibold font-display text-3xl md:text-4xl leading-[0.9] uppercase">Nosa Rex</h3>
+            <p class="text-white/90 text-sm md:text-base font-bold font-sans">AS: James</p>
+            <div class="flex items-center gap-4 text-white/60 text-sm font-sans">
+              <div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                <a href="https://www.instagram.com/babarex0?igsh=YTQ5YWdmeWNsMG5v"><img src="public/insta.svg" alt="" loading="lazy" class="w-full h-full"></a>
+              </div>
+              <div>
+                <span class="text-white/80">@babarex0</span><br>
+                <span class="text-white/40">3M followers</span>
+              </div>
+            </div>
+            <p class="text-white/70 text-sm md:text-base font-sans leading-relaxed">Nosa Rex Okunzuwa, popularly known as Baba Rex, is a celebrated Nigerian actor, producer, and content creator renowned for his dynamic presence in Nollywood. He earned a degree in Mechanical Engineering from Ambrose Alli University before venturing into acting in 2010. His breakout role came with Gazza Treasure and he gained widespread recognition for his portrayal of Terwase in the hit TV series Jenifa's Diary.</p>
+          </div>
+          <figure class="relative group lg:order-1">
+            <div class="absolute -inset-4 bg-gradient-to-tr from-amber-400/10 to-transparent blur-2xl opacity-70 group-hover:opacity-100 transition duration-700"></div>
+            <img src="public/rex.png" alt="Nosa Rex portrait"
+              class="relative w-full h-auto object-cover rounded-lg shadow-[0_40px_120px_rgba(0,0,0,0.9)]" loading="lazy" />
+            <div class="absolute inset-0 rounded-lg bg-gradient-to-t from-cinema-950/70 via-transparent to-transparent"></div>
+          </figure>
+        </div>
 
+      </div>
+    </section>
 
-    <!-- Director Statement -->
-    <article class="relative max-w-7xl flex flex-col gap-12">
+    <!-- ===== REEL 8: THE TRAILER ===== -->
+    <section id="trailer" class="relative w-full h-screen bg-cinema-950 overflow-hidden">
+      <video class="w-full h-full object-cover" controls playsinline>
+        <source src="./public/ml teaser.mp4" type="video/mp4">
+      </video>
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-cinema-950 via-cinema-950/10 to-transparent flex flex-col justify-end p-8 lg:p-24">
+        <h2 class="reveal text-amber-400 font-display uppercase text-3xl lg:text-6xl tracking-wide">Mother's Love</h2>
+        <p class="reveal stagger-1 mt-3 font-sans text-base lg:text-xl max-w-xl text-white/80">A coming-of-age story of resilience, identity and a mother's enduring love.</p>
+      </div>
+    </section>
 
-      <!-- subtle cinematic line -->
-      <div class="w-24 h-[1px] bg-amber-500"></div>
+    <!-- ===== REEL 9: PRODUCTION NOTES ===== -->
+    <section class="relative px-6 md:px-14 py-20 md:py-28 bg-cinema-900 overflow-hidden">
+      <div class="grain-overlay absolute inset-0"></div>
+      <div class="relative max-w-7xl mx-auto">
+        <div class="reveal text-center mb-16">
+          <span class="text-[10px] md:text-xs uppercase tracking-[0.4em] text-amber-400/50 font-display">Behind the Scenes</span>
+          <div class="w-12 h-px bg-amber-400/30 mx-auto mt-4"></div>
+          <h2 class="text-3xl md:text-5xl font-display font-bold text-white mt-6 leading-tight">Production Notes</h2>
+          <p class="text-white/60 text-sm md:text-base mt-4 max-w-2xl mx-auto font-sans">Dive into the meticulous planning, creative choices, and challenges that brought <span class="italic">Mother's Love</span> to life.</p>
+        </div>
 
-      <!-- Header -->
-      <header class="flex flex-col gap-7">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <article class="bg-cinema-950 p-6 md:p-8 rounded-xl border border-white/5 hover:border-amber-400/20 transition-all duration-500 reveal">
+            <h3 class="text-amber-400 text-lg font-bold mb-3 font-display">Script & Storyboarding</h3>
+            <p class="text-white/70 text-sm font-sans leading-relaxed">Every scene was meticulously storyboarded to capture the emotional journey of our protagonist. Special attention was given to the NYSC sequence to maintain authenticity.</p>
+          </article>
+          <article class="bg-cinema-950 p-6 md:p-8 rounded-xl border border-white/5 hover:border-amber-400/20 transition-all duration-500 reveal stagger-1">
+            <h3 class="text-amber-400 text-lg font-bold mb-3 font-display">Cinematography</h3>
+            <p class="text-white/70 text-sm font-sans leading-relaxed">The film employs a rich visual language with warm tones, natural lighting, and dynamic camera angles to immerse viewers in the story's emotional depth.</p>
+          </article>
+          <article class="bg-cinema-950 p-6 md:p-8 rounded-xl border border-white/5 hover:border-amber-400/20 transition-all duration-500 reveal stagger-2">
+            <h3 class="text-amber-400 text-lg font-bold mb-3 font-display">Locations & Set Design</h3>
+            <p class="text-white/70 text-sm font-sans leading-relaxed">Shooting across iconic Nigerian landscapes, every set was designed to reflect both cultural authenticity and cinematic grandeur, creating an immersive experience.</p>
+          </article>
+          <article class="bg-cinema-950 p-6 md:p-8 rounded-xl border border-white/5 hover:border-amber-400/20 transition-all duration-500 reveal">
+            <h3 class="text-amber-400 text-lg font-bold mb-3 font-display">Casting & Performance</h3>
+            <p class="text-white/70 text-sm font-sans leading-relaxed">The cast underwent extensive workshops to capture the nuances of their characters, ensuring performances that resonate with authenticity and emotion.</p>
+          </article>
+          <article class="bg-cinema-950 p-6 md:p-8 rounded-xl border border-white/5 hover:border-amber-400/20 transition-all duration-500 reveal stagger-1">
+            <h3 class="text-amber-400 text-lg font-bold mb-3 font-display">Music & Sound</h3>
+            <p class="text-white/70 text-sm font-sans leading-relaxed">Original scores and carefully curated soundscapes were used to amplify emotions, from intimate family moments to dramatic turning points.</p>
+          </article>
+          <article class="bg-cinema-950 p-6 md:p-8 rounded-xl border border-white/5 hover:border-amber-400/20 transition-all duration-500 reveal stagger-2">
+            <h3 class="text-amber-400 text-lg font-bold mb-3 font-display">Editing & Post Production</h3>
+            <p class="text-white/70 text-sm font-sans leading-relaxed">Post-production emphasized narrative pacing and visual continuity, combining color grading, sound design, and subtle visual effects to elevate storytelling.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <h2 class="text-amber-500 uppercase md:text-4xl text-3xl font-semibold font-geist leading-none tracking-tight">
-          Omotola Jalade-Ekeinde
+    <!-- ===== REEL 10: CLOSING TITLE ===== -->
+    <section class="relative min-h-[60vh] flex items-center justify-center bg-cinema-950 overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#e09e2308,_transparent_60%)] pointer-events-none"></div>
+      <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        <div class="reveal">
+          <span class="text-[10px] md:text-xs uppercase tracking-[0.5em] text-amber-400/40 font-display">The Journey Continues</span>
+        </div>
+        <h2 class="reveal stagger-1 mt-8 text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-[0.95]">
+          A Story That <span class="text-amber-400">Stays With You.</span>
         </h2>
-
-        <h3 class="text-amber-500 uppercase md:text-xl text-2xl font-semibold font-geist leading-none tracking-wide">
-          Director’s Statement
-        </h3>
-
-      </header>
-
-
-      <!-- Statement Content -->
-      <section class="max-w-5xl font-inter font-normal text-sm md:text-base leading-relaxed text-neutral-300">
-
-        <p class="mb-6">
-          Mother’s Love is more than a film to me, it’s a deeply personal journey. As my directorial debut, it draws inspiration from real experiences, not just my own, but from the many untold stories of young Nigerian women finding their place in a complex world.
+        <div class="reveal stagger-2 mx-auto w-16 h-px bg-amber-400/30 my-10"></div>
+        <p class="reveal stagger-3 text-white/50 text-base md:text-lg font-sans max-w-2xl mx-auto leading-relaxed">
+          From a mother's sacrifice to a daughter's discovery — <span class="italic">Mother's Love</span> is a universal story about the bonds that shape us, the courage that defines us, and the love that never lets go.
         </p>
-
-        <p class="mb-6">
-          I wanted to tell a coming-of-age story that challenges privilege, confronts identity and ultimately celebrates the quiet strength of women redefining themselves on their own terms.
-        </p>
-
-        <p class="mb-6">
-          Set against the vibrant, layered backdrop of modern Nigeria, Mother’s Love captures both the beauty and the friction of growth, how we wrestle with where we come from in order to discover who we truly are.
-        </p>
-
-        <p class="mb-6">
-          This film is performance-led, emotionally grounded, and socially aware. It speaks to universal themes of family, resilience, and empowerment while offering a lens into contemporary Nigerian life rarely seen on screen.
-        </p>
-
-        <p class="mb-6">
-          I believe authentic and bold stories like this deserve a global platform, and I’m honoured to share it with audiences ready to embrace something both intimate and impactful.
-        </p>
-
-
-        <!-- Signature -->
-        <footer class="mt-10 flex flex-col gap-1">
-
-          <div class="w-16 h-[1px] bg-amber-500 mb-4"></div>
-
-          <p class="font-inter font-normal text-sm md:text-base text-neutral-200">
-            – Omotola Jalade-Ekeinde
-          </p>
-
-          <p class="font-inter font-bold text-sm md:text-base text-neutral-100">
-            Co-Writer & Director, Producer, Mother’s Love
-          </p>
-
-        </footer>
-
-      </section>
-
-    </article>
-
-  </div>
-</section>
-
-<section class="relative w-full bg-zinc-950 text-neutral-50 py-24 px-6 lg:px-12 overflow-hidden">
-
-  <!-- cinematic ambient lighting -->
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(255,140,0,0.08),transparent_60%)]"></div>
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_85%_80%,rgba(255,255,255,0.04),transparent_60%)]"></div>
-
-  <div class="relative mx-auto max-w-7xl grid lg:grid-cols-2 gap-16 items-center">
-
-    <!-- Text Content -->
-    <article class="flex flex-col gap-10">
-
-      <!-- cinematic divider -->
-      <div class="w-24 h-[1px] bg-amber-500"></div>
-
-      <!-- Header -->
-      <header class="flex flex-col gap-6">
-
-        <h2 class="text-amber-500 font-semibold font-geist 
-                   text-xl md:text-4xl 
-                   leading-[0.9] tracking-tight uppercase">
-
-          Co-Producer’s Statement
-
-        </h2>
-
-      </header>
-
-
-      <!-- Statement -->
-      <section class="max-w-3xl text-neutral-300 text-sm md:text-base font-normal font-inter leading-relaxed">
-
-        <p class="mb-6">
-          Mother’s Love is a heartfelt exploration of the strength, sacrifice and silent resilience that define motherhood. Co-producing this film alongside Omotola Jalade Ekeinde was a powerful experience, as we sought to tell a story that honours the everyday heroism of women who love fiercely, even in the face of multiple challenges.
-        </p>
-
-        <p class="mb-6">
-          This film is a tribute to the mothers whose stories often go untold. With sincerity and purpose, we aimed to create a narrative that not only moves audiences but also sparks meaningful reflection on the depth of a mother’s love.
-        </p>
-
-        <p class="mb-8">
-          We are proud to share this story with the world.
-        </p>
-
-
-        <!-- Signature -->
-        <footer class="flex flex-col gap-1">
-
-          <div class="w-16 h-[1px] bg-amber-500 mb-3"></div>
-
-          <p class="text-neutral-100 font-bold text-sm md:text-base font-inter">
-            By Tyna Obahiagbon
-          </p>
-
-          <p class="text-neutral-400 text-sm md:text-base font-normal font-inter">
-            Co-Producer
-          </p>
-
-        </footer>
-
-      </section>
-
-    </article>
-
-
-    <!-- Image -->
-    <figure class="relative w-full max-w-2xl lg:max-w-none group">
-
-      <!-- glow -->
-      <div class="absolute -inset-4 bg-gradient-to-tr from-amber-500/10 via-transparent to-transparent blur-2xl opacity-70 group-hover:opacity-100 transition duration-700"></div>
-
-      <!-- image -->
-      <img
-        src="public/1.png"
-        alt="Tyna Obahiagbon portrait"
-        class="relative w-full h-auto object-cover rounded-md shadow-[0_40px_120px_rgba(0,0,0,0.8)]"
-      />
-
-      <!-- cinematic vignette -->
-      <div class="absolute inset-0 rounded-md bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-
-    </figure>
-
-  </div>
-
-</section>
-
-<section class="relative w-full bg-zinc-950 text-neutral-50 py-28 px-6 lg:px-12 overflow-hidden">
-
-  <!-- cinematic ambient light -->
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,140,0,0.08),transparent_60%)]"></div>
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(255,255,255,0.03),transparent_60%)]"></div>
-
-  <div class="relative mx-auto max-w-7xl flex flex-col gap-20">
-
-    <!-- Section Header -->
-    <header class="flex flex-col gap-6">
-
-      <div class="w-24 h-[1px] bg-amber-500"></div>
-
-      <h2 class="text-amber-500 font-normal font-geist
-                 text-3xl md:text-6xl
-                 leading-[0.9] tracking-tight uppercase">
-        Cast
-      </h2>
-
-    </header>
-
-    <!-- CAST LIST -->
-    <div class="flex flex-col gap-40">
-
-      <!-- CAST MEMBER -->
-      <article class="grid lg:grid-cols-2 gap-16 items-center">
-
-        <!-- Image -->
-        <figure class="relative group">
-
-          <div class="absolute -inset-4 bg-gradient-to-tr from-amber-500/10 to-transparent blur-2xl opacity-70 group-hover:opacity-100 transition duration-700"></div>
-
-          <img
-            src="public/72.png"
-            alt="Omotola Jalade-Ekeinde portrait"
-            class="relative w-full h-auto object-cover rounded-md shadow-[0_40px_120px_rgba(0,0,0,0.9)]"
-          />
-
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent rounded-md"></div>
-
-        </figure>
-
-
-        <!-- Info -->
-        <div class="flex flex-col gap-8">
-
-          <header class="flex flex-col gap-4">
-
-            <h3 class="text-amber-500 font-normal font-geist
-                       text-3xl md:text-4xl 
-                       leading-[0.9] uppercase">
-              Omotola Jalade-Ekeinde
-            </h3>
-
-            <p class="text-neutral-100 text-sm md:text-base font-bold font-inter">
-              AS: Labike
-            </p>
-
-            <div class="flex items-center gap-4 text-neutral-400 text-lg font-inter">
-              <div class="w-12 h-12 rounded-full ">
-                <a href="https://www.instagram.com/realomosexy?igsh=MXJvanlub3E2bDRhNA==">
-                    <img src="public/insta.svg" alt="">
-                </a>
-              </div>
-              <div>
-                @realomosexy<br>
-                5.7M followers
-              </div>
-            </div>
-
-          </header>
-
-
-          <p class="text-neutral-300 text-sm md:text-base font-normal font-inter leading-relaxed max-w-xl">
-            Omotola Jalade Ekeinde is a renowned Nigerian actress, singer, philanthropist, and former model. She has starred in numerous Nollywood films and is celebrated for her compelling performances. Her advocacy work and humanitarian efforts have earned her global recognition, making her one of Africa’s most influential cinematic voices.
-          </p>
-
+        <div class="reveal stagger-4 mt-12 flex flex-wrap justify-center gap-4">
+          <a href="films.html" class="btn-primary">View More Films</a>
+          <a href="contact.html" class="btn-outline">Get in Touch</a>
         </div>
-
-      </article>
-
-      <!-- CAST MEMBER (REVERSED LAYOUT) -->
-      <article class="grid lg:grid-cols-2 gap-16 items-center">
-
-        <!-- Info -->
-        <div class="flex flex-col gap-8 lg:order-1 order-2">
-
-          <header class="flex flex-col gap-4">
-
-            <h3 class="text-amber-500 font-normal font-geist
-                       text-3xl md:text-4xl 
-                       leading-[0.9] uppercase">
-              Olumide Oworu
-            </h3>
-
-            <p class="text-neutral-100 text-sm md:text-base font-bold font-inter">
-              AS: Obaro
-            </p>
-
-            <div class="flex items-center gap-4 text-neutral-400 text-lg font-inter">
-              <div class="w-12 h-12 rounded-full ">
-                <a href="https://www.instagram.com/olumideoworu?igsh=cG11c2ExMnBiZGph">
-                    <img src="public/insta.svg" alt="">
-                </a>
-              </div>
-              <div>
-                @olumideoworu<br>
-                467K followers
-              </div>
-            </div>
-
-          </header>
-
-
-          <p class="text-neutral-300 text-sm md:text-base font-normal font-inter leading-relaxed max-w-xl">
-            Olumide Oworu is a versatile Nigerian actor known for his standout performances across television and film. His work reflects a new generation of African storytelling, blending authenticity with global cinematic appeal.
-          </p>
-
-        </div>
-
-
-        <!-- Image -->
-        <figure class="relative group lg:order-2 order-1">
-
-          <div class="absolute -inset-4 bg-gradient-to-tr from-amber-500/10 to-transparent blur-2xl opacity-70 group-hover:opacity-100 transition duration-700"></div>
-
-          <img
-            src="public/oworu.png"
-            alt="Olumide Oworu portrait"
-            class="relative w-full h-auto object-cover rounded-md shadow-[0_40px_120px_rgba(0,0,0,0.9)]"
-          />
-
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent rounded-md"></div>
-
-        </figure>
-
-      </article>
-
-      <!-- CAST MEMBER -->
-      <article class="grid lg:grid-cols-2 gap-16 items-center">
-
-        <!-- Image -->
-        <figure class="relative group">
-
-          <div class="absolute -inset-4 bg-gradient-to-tr from-amber-500/10 to-transparent blur-2xl opacity-70 group-hover:opacity-100 transition duration-700"></div>
-
-          <img
-            src="public/noray.png"
-            alt="Omotola Jalade-Ekeinde portrait"
-            class="relative w-full h-auto object-cover rounded-md shadow-[0_40px_120px_rgba(0,0,0,0.9)]"
-          />
-
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent rounded-md"></div>
-
-        </figure>
-
-
-        <!-- Info -->
-        <div class="flex flex-col gap-8">
-
-          <header class="flex flex-col gap-4">
-
-            <h3 class="text-amber-500 font-normal font-geist
-                       text-3xl md:text-4xl 
-                       leading-[0.9] uppercase">
-              Noray Nehita
-            </h3>
-
-            <p class="text-neutral-100 text-sm md:text-base font-bold font-inter">
-              -AS: ADEBISI
-            </p>
-
-            <div class="flex items-center gap-4 text-neutral-400 text-lg font-inter">
-              <div class="w-12 h-12 rounded-full ">
-                <a href="https://www.instagram.com/aynoray?igsh=MWxvNXJ4dnJ6a3d6Mg==">
-                    <img src="public/insta.svg" alt="">
-                </a>
-              </div>
-              <div>
-                @aynorqy<br>
-                5,273 followers 
-              </div>
-            </div>
-
-          </header>
-
-
-          <p class="text-neutral-300 text-sm md:text-base font-normal font-inter leading-relaxed max-w-xl">
-            Noray Nehita is an emerging Nigerian actress who made her screen debut in the 2025 drama Mother’s Love, directed by Omotola Jalade Ekeinde. Beyond her acting career, Nehita is known for her vibrant presence on social media, where she shares insights into her creative journey and personal experiences.
-          </p>
-
-        </div>
-
-      </article>
-
-      <!-- CAST MEMBER (REVERSED LAYOUT) -->
-      <article class="grid lg:grid-cols-2 gap-16 items-center">
-
-        <!-- Info -->
-        <div class="flex flex-col gap-8 lg:order-1 order-2">
-
-          <header class="flex flex-col gap-4">
-
-            <h3 class="text-amber-500 font-normal font-geist
-                       text-3xl md:text-4xl 
-                       leading-[0.9] uppercase">
-              Ifeanyi Kalu 
-            </h3>
-
-            <p class="text-neutral-100 text-sm md:text-base font-bold font-inter">
-              -AS: Rotimi Rhode
-            </p>
-
-            <div class="flex items-center gap-4 text-neutral-400 text-lg font-inter">
-              <div class="w-12 h-12 rounded-full ">
-                <a href="https://www.instagram.com/ifeanyikalu1?igsh=MXY5ZHp0OHM0dzkxNg==">
-                    <img src="public/insta.svg" alt="">
-                </a>
-              </div>
-              <div>
-                @ifeanyikalu1<br>
-                150k followers
-              </div>
-            </div>
-
-          </header>
-
-
-          <p class="text-neutral-300 text-sm md:text-base font-normal font-inter leading-relaxed max-w-xl">
-            Ifeanyi Kalu is a multifaceted Nigerian actor, model and fashion designer. Hailing from Nwangele Local Government Area in Imo State, he pursued a degree in Computer Science at Lagos State University before transitioning into the entertainment industry.
-          </p>
-
-        </div>
-
-
-        <!-- Image -->
-        <figure class="relative group lg:order-2 order-1">
-
-          <div class="absolute -inset-4 bg-gradient-to-tr from-amber-500/10 to-transparent blur-2xl opacity-70 group-hover:opacity-100 transition duration-700"></div>
-
-          <img
-            src="public/kalu.png"
-            alt="Olumide Oworu portrait"
-            class="relative w-full h-auto object-cover rounded-md shadow-[0_40px_120px_rgba(0,0,0,0.9)]"
-          />
-
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent rounded-md"></div>
-
-        </figure>
-
-      </article>
-
-      <!-- CAST MEMBER -->
-      <article class="grid lg:grid-cols-2 gap-16 items-center">
-
-        <!-- Image -->
-        <figure class="relative group">
-
-          <div class="absolute -inset-4 bg-gradient-to-tr from-amber-500/10 to-transparent blur-2xl opacity-70 group-hover:opacity-100 transition duration-700"></div>
-
-          <img
-            src="public/7 1.png"
-            alt="Omotola Jalade-Ekeinde portrait"
-            class="relative w-full h-auto object-cover rounded-md shadow-[0_40px_120px_rgba(0,0,0,0.9)]"
-          />
-
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent rounded-md"></div>
-
-        </figure>
-
-
-        <!-- Info -->
-        <div class="flex flex-col gap-8">
-
-          <header class="flex flex-col gap-4">
-
-            <h3 class="text-amber-500 font-normal font-geist
-                       text-3xl md:text-4xl 
-                       leading-[0.9] uppercase">
-              Lilian Afegbai
-            </h3>
-
-            <p class="text-neutral-100 text-sm md:text-base font-bold font-inter">
-              -AS: Ese
-            </p>
-
-            <div class="flex items-center gap-4 text-neutral-400 text-lg font-inter">
-              <div class="w-12 h-12 rounded-full ">
-                <a href="https://www.instagram.com/lillyafe?igsh=MXcyOXhkMnpmbmo5NA==">
-                    <img src="public/insta.svg" alt="">
-                </a>
-              </div>
-              <div>
-                @lillyafe <br>
-                827k followers
-              </div>
-            </div>
-
-          </header>
-
-
-          <p class="text-neutral-300 text-sm md:text-base font-normal font-inter leading-relaxed max-w-xl">
-             Lilian Afegbai is a Nigerian actress, film producer, and entrepreneur. She gained initial recognition as a housemate on Big Brother Africa in 2014, which served as a springboard into Nollywood. She has since appeared in numerous films and television series, including Tinsel, The Women, Moms at War and Hotel Labamba.
-            </p>
-
-        </div>
-
-      </article>
-
-      <!-- CAST MEMBER (REVERSED LAYOUT) -->
-      <article class="grid lg:grid-cols-2 gap-16 items-center">
-
-        <!-- Info -->
-        <div class="flex flex-col gap-8 lg:order-1 order-2">
-
-          <header class="flex flex-col gap-4">
-
-            <h3 class="text-amber-500 font-normal font-geist
-                       text-3xl md:text-4xl 
-                       leading-[0.9] uppercase">
-              Nosa Rex
-            </h3>
-
-            <p class="text-neutral-100 text-sm md:text-base font-bold font-inter">
-              -AS: James
-            </p>
-
-            <div class="flex items-center gap-4 text-neutral-400 text-lg font-inter">
-              <div class="w-12 h-12 rounded-full ">
-                <a href="https://www.instagram.com/babarex0?igsh=YTQ5YWdmeWNsMG5v">
-                    <img src="public/insta.svg" alt="">
-                </a>
-              </div>
-              <div>
-                @ babarex0<br>
-                3M followers
-              </div>
-            </div>
-
-          </header>
-
-
-          <p class="text-neutral-300 text-sm md:text-base font-normal font-inter leading-relaxed max-w-xl">
-                Nosa Rex Okunzuwa, popularly known as Baba Rex, is a celebrated Nigerian actor, producer, and content creator renowned for his dynamic presence in Nollywood. He earned a degree in Mechanical Engineering from Ambrose Alli University before venturing into acting in 2010. His breakout role came with Gazza Treasure and he gained widespread recognition for his portrayal of Terwase in the hit TV series Jenifa’s Diary. </p>
-        </div>
-
-
-        <!-- Image -->
-        <figure class="relative group lg:order-2 order-1">
-
-          <div class="absolute -inset-4 bg-gradient-to-tr from-amber-500/10 to-transparent blur-2xl opacity-70 group-hover:opacity-100 transition duration-700"></div>
-
-          <img
-            src="public/rex.png"
-            alt="Nora rex portrait"
-            class="relative w-full h-auto object-cover rounded-md shadow-[0_40px_120px_rgba(0,0,0,0.9)]"
-          />
-
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent rounded-md"></div>
-
-        </figure>
-
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="relative w-full h-screen bg-black text-white overflow-hidden">
-
-  <!-- Trailer Video -->
-  <video
-    class="w-full h-full object-cover"
-    controls
-    playsinline
-  >
-    <source src="./public/ml teaser.mp4" type="video/mp4">
-  </video>
-
-  <!-- Cinematic Overlay -->
-  <!-- <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent flex flex-col justify-end p-8 lg:p-24"> -->
-    
-    <h2 class="text-amber-500 font-geist uppercase text-3xl lg:text-6xl tracking-wide">
-      Mother’s Love
-    </h2>
-
-    <p class="mt-3 font-inter text-base lg:text-xl max-w-xl text-neutral-200">
-      A coming-of-age story of resilience, identity and a mother’s enduring love.
-    </p>
-
-  </div>
-
-</section>
-
-
-<section id="production-notes" class="w-full bg-zinc-900 text-neutral-50 py-16 px-6 lg:px-14">
-  <!-- Section Header -->
-  <header class="text-center mb-12">
-    <h2 class="text-amber-500 text-2xl md:text-3xl uppercase font-semibold font-geist">
-      Production Notes
-    </h2>
-    <p class="text-neutral-50 text-sm md:text-base mt-4 max-w-2xl mx-auto font-inter">
-      Dive into the meticulous planning, creative choices, and challenges that brought <span class="italic">Mother’s Love</span> to life.
-    </p>
-  </header>
-
-  <!-- Notes Grid -->
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-    
-    <!-- Note 1 -->
-    <article class="bg-zinc-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-500">
-      <h3 class="text-amber-500 text-xl semibold font-bold mb-4 font-geist">Script & Storyboarding</h3>
-      <p class="text-neutral-50 text-sm md:text-base font-inter leading-relaxed">
-        Every scene was meticulously storyboarded to capture the emotional journey of our protagonist. Special attention was given to the NYSC sequence to maintain authenticity.
-      </p>
-    </article>
-
-    <!-- Note 2 -->
-    <article class="bg-zinc-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-500">
-      <h3 class="text-amber-500 text-xl semibold font-bold mb-4 font-geist">Cinematography</h3>
-      <p class="text-neutral-50 text-sm md:text-base font-inter leading-relaxed">
-        The film employs a rich visual language with warm tones, natural lighting, and dynamic camera angles to immerse viewers in the story’s emotional depth.
-      </p>
-    </article>
-
-    <!-- Note 3 -->
-    <article class="bg-zinc-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-500">
-      <h3 class="text-amber-500 text-xl semibold font-bold mb-4 font-geist">Locations & Set Design</h3>
-      <p class="text-neutral-50 text-sm md:text-base font-inter leading-relaxed">
-        Shooting across iconic Nigerian landscapes, every set was designed to reflect both cultural authenticity and cinematic grandeur, creating an immersive experience.
-      </p>
-    </article>
-
-    <!-- Note 4 -->
-    <article class="bg-zinc-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-500">
-      <h3 class="text-amber-500 text-xl semibold font-bold mb-4 font-geist">Casting & Performance</h3>
-      <p class="text-neutral-50 text-sm md:text-base font-inter leading-relaxed">
-        The cast underwent extensive workshops to capture the nuances of their characters, ensuring performances that resonate with authenticity and emotion.
-      </p>
-    </article>
-
-    <!-- Note 5 -->
-    <article class="bg-zinc-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-500">
-      <h3 class="text-amber-500 text-xl semibold font-bold mb-4 font-geist">Music & Sound</h3>
-      <p class="text-neutral-50 text-sm md:text-base font-inter leading-relaxed">
-        Original scores and carefully curated soundscapes were used to amplify emotions, from intimate family moments to dramatic turning points.
-      </p>
-    </article>
-
-    <!-- Note 6 -->
-    <article class="bg-zinc-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-500">
-      <h3 class="text-amber-500 text-xl semibold font-bold mb-4 font-geist">Editing & Post Production</h3>
-      <p class="text-neutral-50 text-sm md:text-base font-inter leading-relaxed">
-        Post-production emphasized narrative pacing and visual continuity, combining color grading, sound design, and subtle visual effects to elevate storytelling.
-      </p>
-    </article>
-
-  </div>
-</section>
-
+      </div>
+      <div class="absolute bottom-10 left-0 right-0 text-center">
+        <p class="text-white/10 text-xs font-display tracking-[0.3em] uppercase">&mdash; &infin; &mdash;</p>
+      </div>
+    </section>
 
   </main>
 
-  <footer class="w-full py-16 border-t border-amber-400 flex flex-col items-center gap-7 px-4 text-center reveal reveal-up">
-
-    <nav class="w-full max-w-4xl">
-      <ul
-        class="flex flex-wrap justify-center gap-6 md:gap-12 text-sm uppercase tracking-widest text-white/80 font-geist">
-        <li><a href="/" class="hover:text-amber-400 transition-colors">Home</a></li>
-        <li><a href="about.html" class="hover:text-amber-400 transition-colors">About</a></li>
-        <li><a href="films.html" class="hover:text-amber-400 transition-colors">Films</a></li>
-        <li><a href="legacy.html" class="hover:text-amber-400 transition-colors">30yrs legacy</a></li>
-        <li><a href="#" class="hover:text-amber-400 transition-colors">Affiliate</a></li>
-        <li><a href="contact.html" class="hover:text-amber-400 transition-colors">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="reveal reveal-up stagger-1 flex flex-col items-center gap-2">
-      <p class="text-zinc-400 text-xs font-semibold uppercase">Email</p>
-      <a href="mailto:contact@redhotconcepts.com"
-        class="text-amber-400 text-sm md:text-base font-normal font-inter hover:underline hover-glow">contact@redhotconcepts.com</a>
-    </div>
-
-    <div class="reveal reveal-up stagger-2 flex flex-wrap justify-center items-center gap-8 text-2xl text-white">
-      <a href="https://www.youtube.com/@RedHotConceptTV" target="_blank" rel="noopener noreferrer" class="hover-lift"
-        aria-label="YouTube">
-        <i class="fa-brands fa-youtube hover:text-red-600 transition-colors cursor-pointer"></i>
+  <footer class="w-full border-t border-white/5 py-16 px-6">
+    <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+      <a href="/" class="flex items-center justify-center w-24 h-10 md:w-32 md:h-14 transition-all duration-300 hover:opacity-80">
+        <img src="public/img124.webp" class="w-full h-full object-contain" alt="RedHot Concepts">
       </a>
-      <a href="https://www.instagram.com/redhotconcepts?igsh=bTBwaWEwNTJtemp0" target="_blank" rel="noopener noreferrer"
-        class="hover-lift" aria-label="Instagram">
-        <i class="fa-brands fa-instagram hover:text-pink-600 transition-colors cursor-pointer"></i>
-      </a>
-      <a href="https://x.com/redhot_concept?t=Q4aHP6bGxqztv0k9isMVQw&s=09" target="_blank" rel="noopener noreferrer"
-        class="hover-lift" aria-label="X">
-        <i class="fa-brands fa-x-twitter hover:text-blue-400 transition-colors cursor-pointer"></i>
-      </a>
+      <nav>
+        <ul class="flex flex-wrap justify-center gap-6 md:gap-10 text-[10px] uppercase tracking-[0.25em] text-white/40 font-display">
+          <li><a href="/" class="hover:text-amber-400 transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-amber-400 transition-colors">About</a></li>
+          <li><a href="films.html" class="hover:text-amber-400 transition-colors">Films</a></li>
+          <li><a href="legacy.html" class="hover:text-amber-400 transition-colors">Legacy</a></li>
+          <li><a href="contact.html" class="hover:text-amber-400 transition-colors">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex gap-6 text-white/30">
+        <a href="https://www.youtube.com/@RedHotConceptTV" target="_blank" rel="noopener noreferrer" class="hover:text-red-500 transition-all hover:scale-110"><i class="fa-brands fa-youtube text-lg"></i></a>
+        <a href="https://www.instagram.com/redhotconcepts" target="_blank" rel="noopener noreferrer" class="hover:text-pink-500 transition-all hover:scale-110"><i class="fa-brands fa-instagram text-lg"></i></a>
+        <a href="https://x.com/redhot_concept" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-all hover:scale-110"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+      </div>
     </div>
-
-    <div class="text-white text-sm font-normal font-inter tracking-wide opacity-60">
-      ©2026 RedHot Concepts. All Rights Reserved.
-    </div>
-
-    <div class="text-white inline-flex items-center gap-2 text-sm font-normal font-inter tracking-wide opacity-60">
-      Designed and Developed by <a href="https://nextdaysite.com" target="_blank" class="text-amber-400 hover:underline"><img src="public/nds.png" alt=""></a>
+    <div class="max-w-[1440px] mx-auto mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-white/20 text-[10px] font-sans tracking-wide">
+      <span>&copy; 2026 RedHot Concepts. All Rights Reserved.</span>
+      <span>Designed &amp; Developed by <a href="https://nextdaysite.com" target="_blank" class="text-amber-400/60 hover:text-amber-400"><img src="public/nds.png" class="h-3 inline" alt="NDS"></a></span>
     </div>
   </footer>
 
@@ -990,159 +546,6 @@
   </div>
 
   <script src="script.js"></script>
-
- <script>
-    document.querySelectorAll(".scroll-section").forEach(section => {
-
-      const container = section.querySelector(".scroll-container");
-      const leftBtn = section.querySelector(".scroll-left");
-      const rightBtn = section.querySelector(".scroll-right");
-
-      leftBtn.addEventListener("click", () => {
-        container.scrollBy({ left: -350, behavior: "smooth" });
-      });
-
-      rightBtn.addEventListener("click", () => {
-        container.scrollBy({ left: 350, behavior: "smooth" });
-      });
-
-    });
-  </script>
-
- <script>
-  const flipTexts = document.querySelectorAll('[data-flip]');
-
-  const flipObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target); // run once
-        }
-      });
-    },
-    {
-      threshold: 0.4, // sweet cinematic timing
-    }
-  );
-
-  flipTexts.forEach(el => flipObserver.observe(el));
-</script>
-
- <script>
-  let lastScrollY = window.scrollY;
-
-const header = document.getElementById("mainHeader");
-const desktopNav = document.getElementById("desktopNav");
-const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-const mobileClose = document.getElementById("mobileClose");
-const othersToggle = document.getElementById("othersToggle");
-const othersAccordion = document.getElementById("othersAccordion");
-const othersIcon = document.getElementById("othersIcon");
-const logoWrap = document.getElementById("logoWrap");
-const logoWhite = document.getElementById("logoWhite");
-const logoRed = document.getElementById("logoRed");
-
-function showNavLinks() {
-  desktopNav.classList.remove("hidden");
-  requestAnimationFrame(() => {
-    desktopNav.classList.add("nav-visible");
-  });
-}
-
-function hideNavLinks() {
-  desktopNav.classList.remove("nav-visible");
-}
-
-function onScroll() {
-  const currentScroll = window.scrollY;
-
-  /* =======================
-     TOP OF PAGE
-  ======================= */
-  if (currentScroll === 0) {
-    header.classList.remove("nav-hidden");
-    header.classList.add("glass-nav");
-
-    // logoWrap.classList.add("scale-90");.
-
-    logoWhite.style.opacity = "1";
-    logoRed.style.opacity = "0";
-
-    hideNavLinks();
-    return;
-  }
-
-  /* =======================
-     ANYWHERE ELSE
-  ======================= */
-  header.classList.remove("nav-hidden");
-  header.classList.add("glass-nav");
-
-  logoWrap.classList.remove("scale-90");
-
-  logoWhite.style.opacity = "0";
-  logoRed.style.opacity = "1";
-
-  if (window.innerWidth >= 768) {
-    showNavLinks();
-  }
-
-  lastScrollY = currentScroll;
-}
-
-onScroll();
-window.addEventListener("scroll", onScroll);
-
-/* =======================
-   RESPONSIVE SYNC
-======================= */
-window.addEventListener("resize", () => {
-  if (window.innerWidth < 768) {
-    desktopNav.classList.add("hidden");
-    desktopNav.classList.remove("nav-visible");
-  } else {
-    desktopNav.classList.remove("hidden");
-    onScroll();
-  }
-});
-
-menuBtn.addEventListener("click", () => {
-    menuBtn.classList.toggle("active");
-    if(mobileMenu.classList.contains("translate-y-full")) openMobileMenu();
-    else closeMobileMenu();
-  });
-
-  mobileClose.addEventListener("click", closeMobileMenu);
-
-  function openMobileMenu(){
-    mobileMenu.classList.remove("translate-y-full","opacity-0");
-    mobileMenu.classList.add("translate-y-0","opacity-100");
-
-    const items = document.querySelectorAll("#mobileMenu .menu-item");
-    items.forEach((el,i)=>{ el.style.transitionDelay=`${i*0.1}s`; el.classList.remove("opacity-0","translate-y-6"); el.classList.add("opacity-100","translate-y-0"); });
-  }
-
-  function closeMobileMenu(){
-    mobileMenu.classList.remove("translate-y-0","opacity-100");
-    mobileMenu.classList.add("translate-y-full","opacity-0");
-
-    const items = document.querySelectorAll("#mobileMenu .menu-item");
-    items.forEach(el=>{ el.style.transitionDelay="0s"; el.classList.add("opacity-0","translate-y-6"); el.classList.remove("opacity-100","translate-y-0"); });
-
-    menuBtn.classList.remove("active");
-  }
-
-  othersToggle?.addEventListener("click", ()=>{
-    if(othersAccordion.style.maxHeight && othersAccordion.style.maxHeight !== "0px"){
-      othersAccordion.style.maxHeight="0px"; othersIcon.classList.remove("rotate-180");
-    } else {
-      othersAccordion.style.maxHeight=othersAccordion.scrollHeight+"px"; othersIcon.classList.add("rotate-180");
-    }
-  });
-</script>
-
 </body>
 
 </html>

@@ -1,260 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
+<head>  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="output.css">
   <script src="https://kit.fontawesome.com/c4993cb090.js" crossorigin="anonymous"></script>
-  <link rel="shortcut icon" href="public/redbg.png" type="image/x-icon">
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <link rel="shortcut icon" href="public_optimized/redbg.webp" type="image/webp">
+  <title>RedHot Concepts � News</title></head>
 
-  <title>Omotola . News</title>
-</head>
-
-<body class="bg-[#0d0d0d] text-white">
-  <div class="md:pb-10">
-   <header id="mainHeader" class="fixed top-0 w-full z-50 pr-4 md:pr-14 md:pl-6 py-4 md:py-1 transition-all duration-500">
-      <div class="flex justify-between items-center">
-
-        <!-- Logo -->
-        <a id="logoWrap" href="/"
-        class="relative flex items-center justify-center w-20 h-10 md:w-28 md:h-[5rem] p-2 rounded-md transition-all duration-300">
-            <img id="logoWhite"
-                src="public/img124.webp"
-                class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-100"
-                alt="Logo White"/>
-
-            <img id="logoRed"
-                src="public/redbg.png"
-                class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-0"
-                alt="Logo Red"/>
-        </a>
-
-
-        <!-- Desktop Nav -->
-        <nav id="desktopNav" class="hidden md:flex items-center ">
-          <ul class="flex items-center text-white gap-8 uppercase font-inter">
-            <li><a href="/" class="hover:text-orange-300 transition-all text-sm tracking-wide">Home</a></li>
-                <li><a href="films.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Films</a></li>
-                <!-- <li><a href="news.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">News</a></li> -->
-            <li><a href="legacy.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">30 Years legacy</a></li>
-            <li class="relative group tracking-wide text-sm">
-              <a class="hover:text-orange-300 flex items-center gap-2" >Affiliates <i class="fa-solid fa-chevron-down text-sm"></i></a>
-              <div class="absolute top-full left-1/2 -translate-x-1/2 w-[300px] px-2 py-2 bg-white rounded-3xl shadow-lg invisible group-hover:visible transition-all duration-300">
-                <ul class="text-stone-500 flex flex-col gap-2">
-                  <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 block px-4 py-1">OYEP</a></li>
-                  <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 block px-4 py-1">OSEAL</a></li>
-                  <li><a href="https://www.teffest.com/" class="hover:text-orange-300 block px-4 py-1">TEFFEST</a></li>
-                  <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 block px-4 py-1">DOUBLE DOORS</a></li>
-                </ul>
-              </div>
-            </li>
-            <li><a href="about.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">About</a></li>
-            <li><a href="contact.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Contact</a></li>
-          </ul>
-        </nav>
-
-        <!-- Hamburger -->
-        <button id="menuBtn" class="md:hidden text-white text-3xl hover:text-amber-400 transition-all">
-          <span><i class="fa-solid fa-bars"></i></span>
-        </button>
-
-      </div>
-
-      <!-- Mobile Menu -->
-      <nav id="mobileMenu" class="fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-lg z-50 flex flex-col items-center justify-center transform translate-y-full opacity-0">
-        <button id="mobileClose" class="absolute top-8 right-8 text-white text-3xl hover:text-amber-400 transition-all"><i class="fa-solid fa-xmark"></i></button>
-        <ul id="mobileMenuList" class="flex flex-col justify-center items-center gap-8 text-center font-geist">
-          <li class="menu-item opacity-0 translate-y-6"><a href="films.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">Films</a></li>
-          <li class="menu-item opacity-0 translate-y-6"><a href="news.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">News</a></li>
-          <li class="menu-item opacity-0 translate-y-6"><a href="legacy.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">30 Years Legacy</a></li>
-          <li class="menu-item opacity-0 translate-y-6">
-            <button id="othersToggle" class="flex items-center justify-center text-3xl font-bold uppercase hover:text-amber-400 gap-2 transition-all duration-300">
-              Affiliates <i id="othersIcon" class="fa-solid fa-chevron-down transition-transform duration-300"></i>
-            </button>
-            <ul id="othersAccordion" class="mt-4 max-h-0 overflow-hidden flex flex-col gap-3 transition-all duration-300">
-              <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400">OYEP</a></li>
-              <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400">OSEAL</a></li>
-              <li><a href="https://www.teffest.com/" class="hover:text-amber-400">TEFFEST</a></li>
-              <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400">DOUBLE DOORS</a></li>
-            </ul>
+<body class="bg-cinema-950 text-white">
+  <div id="scrollProgress" class="fixed top-0 left-0 z-[60] h-[2px] bg-amber-400/70" style="width:0%"></div>
+  <header id="mainHeader" class="fixed top-0 w-full z-50 px-6 md:px-14 py-5 transition-all duration-700">
+    <div class="max-w-[1440px] mx-auto flex justify-between items-center">
+      <a href="/" class="relative flex items-center justify-center w-20 h-10 md:w-28 md:h-16 rounded-md transition-all duration-300 group">
+        <img id="logoWhite" src="public/img124.webp" class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-100 group-hover:opacity-80" alt="RedHot Concepts">
+        <img id="logoRed" src="public_optimized/redbg.webp" class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-0" alt="RedHot Concepts">
+      </a>
+      <nav id="desktopNav" class="hidden md:flex items-center">
+        <ul class="flex items-center text-white/80 gap-9 uppercase font-display text-[11px] tracking-[0.2em]">
+          <li><a href="/" class="hover:text-amber-400 transition-all duration-300">Home</a></li>
+          <li><a href="films.html" class="hover:text-amber-400 transition-all duration-300">Films</a></li>
+          <li><a href="legacy.html" class="hover:text-amber-400 transition-all duration-300">Legacy</a></li>
+          <li class="relative group">
+            <a class="hover:text-amber-400 flex items-center gap-1.5 cursor-pointer transition-all duration-300">Affiliates <i class="fa-solid fa-chevron-down text-[8px]"></i></a>
+            <div class="absolute top-full left-1/2 -translate-x-1/2 w-[240px] px-2 py-3 bg-cinema-900/95 backdrop-blur-xl border border-white/5 rounded-xl shadow-2xl invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-1">
+              <ul class="text-white/70 flex flex-col gap-0.5">
+                <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400 hover:bg-white/5 block px-4 py-2.5 rounded-lg transition text-[11px] tracking-[0.15em] uppercase">OYEP</a></li>
+                <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400 hover:bg-white/5 block px-4 py-2.5 rounded-lg transition text-[11px] tracking-[0.15em] uppercase">OSEAL</a></li>
+                <li><a href="https://www.teffest.com/" class="hover:text-amber-400 hover:bg-white/5 block px-4 py-2.5 rounded-lg transition text-[11px] tracking-[0.15em] uppercase">TEFFEST</a></li>
+                <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400 hover:bg-white/5 block px-4 py-2.5 rounded-lg transition text-[11px] tracking-[0.15em] uppercase">Double Door</a></li>
+              </ul>
+            </div>
           </li>
-          <li class="menu-item opacity-0 translate-y-6"><a href="about.html" class="text-3xl font-bold uppercase hover:text-amber-400">About</a></li>
-          <li class="menu-item opacity-0 translate-y-6"><a href="contact.html" class="text-3xl font-bold uppercase hover:text-amber-400">Contact</a></li>
+          <li><a href="about.html" class="hover:text-amber-400 transition-all duration-300">About</a></li>
+          <li><a href="contact.html" class="hover:text-amber-400 transition-all duration-300">Contact</a></li>
         </ul>
       </nav>
-    </header>
+      <button id="menuBtn" class="md:hidden text-white text-xl hover:text-amber-400 transition-all">
+        <span><i class="fa-solid fa-bars"></i></span>
+      </button>
+    </div>
+    <nav id="mobileMenu" class="fixed top-0 left-0 w-full h-screen bg-cinema-950/95 backdrop-blur-2xl z-50 flex flex-col items-center justify-center translate-y-full opacity-0 transition-all duration-500">
+      <button id="mobileClose" class="absolute top-8 right-8 text-white text-3xl hover:text-amber-400 transition-all"><i class="fa-solid fa-xmark"></i></button>
+      <ul class="text-white flex flex-col items-center gap-8 font-display">
+        <li class="menu-item opacity-0 translate-y-6"><a href="films.html" class="text-3xl font-bold uppercase hover:text-amber-400 tracking-wider">Films</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="news.html" class="text-3xl font-bold uppercase hover:text-amber-400 tracking-wider">News</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="legacy.html" class="text-3xl font-bold uppercase hover:text-amber-400 tracking-wider">Legacy</a></li>
+        <li class="menu-item opacity-0 translate-y-6">
+          <button id="othersToggle" class="flex items-center text-3xl font-bold uppercase hover:text-amber-400 gap-2">
+            Affiliates <i id="othersIcon" class="fa-solid fa-chevron-down text-xl transition-transform duration-300"></i>
+          </button>
+          <ul id="othersAccordion" class="mt-4 max-h-0 overflow-hidden flex flex-col gap-3 transition-all duration-300 text-xl text-center">
+            <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400">OYEP</a></li>
+            <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400">OSEAL</a></li>
+            <li><a href="https://www.teffest.com/" class="hover:text-amber-400">TEFFEST</a></li>
+            <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400">DOOR</a></li>
+          </ul>
+        </li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="about.html" class="text-3xl font-bold uppercase hover:text-amber-400">About</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="contact.html" class="text-3xl font-bold uppercase hover:text-amber-400">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
   
 
-  <main class="px-6 pb-20 min-h-screen" style="margin-top: 224px;">
+      <main class="px-6 pb-20 min-h-screen pt-28 md:pt-36">
 
-      <article class="animate-fadeUp max-w-4xl mx-auto">
-          <span class="block text-sm tracking-[0.35em] uppercase text-zinc-500 mb-4 mt-10 font-geist">2026</span>
-          <h1 class="text-3xl md:text-5xl font-light leading-tight font-geist text-white mb-10">I Won’t Be Dancing to Promote My Movie</h1>
+      <!-- Cinematic Hero -->
+      <section class="relative w-full h-[50vh] md:h-[65vh] mb-16 rounded-2xl overflow-hidden group">
+        <div class="absolute inset-0">
+          <img src="public_optimized/motherlovenew.webp" alt="I Won’t Be Dancing to Promote My Movie" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  loading="lazy"/>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-cinema-950 via-cinema-950/40 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-6 md:p-12 max-w-3xl">
+          <span class="text-xs tracking-[0.35em] uppercase text-amber-400 font-geist">2026</span>
+          <h1 class="text-3xl md:text-5xl lg:text-6xl font-light leading-tight font-geist text-white mt-3">I Won’t Be Dancing to Promote My Movie</h1>
+        </div>
+      </section>
 
-          <figure class="w-full mb-12 rounded-xl overflow-hidden shadow-2xl shadow-black/50">
-              <img src="public/motherlovenew.jpeg" alt="Social Media Highlights" class="w-full h-auto object-cover" />
-          </figure>
-
+      <article class="max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-12">
           <div class="prose prose-invert prose-lg max-w-none text-zinc-300 font-geist leading-relaxed">
-              <p class="text-xl text-white leading-relaxed mb-8">Catch the latest buzz and reactions on social media regarding Omotola's TIFF feature.</p>
-
-              <p>Veteran Nollywood actress Omotola Jalade has spoken out against the growing expectation that actors dance on social media as part of movie promotion, calling the trend unprofessional and misplaced.</p>
-
-              <p>Speaking during an interview on TVC Entertainment, Omotola made it clear that while she enjoys dancing, it should remain a personal choice — not a compulsory requirement tied to marketing a film.</p>
-
-              <p>According to the actress, the backlash against viral promotional stunts stems from the pressure placed on actors to perform online just to sell their projects.</p>
+            <p class="text-xl text-white leading-relaxed mb-8">Catch the latest buzz and reactions on social media regarding Omotola&apos;s TIFF feature.</p>
+            <p>Veteran Nollywood actress Omotola Jalade has spoken out against the growing expectation that actors dance on social media as part of movie promotion, calling the trend unprofessional and misplaced.</p>
           </div>
 
-          <!-- Bottom Navigation -->
-          <div class="mt-20 pt-10 border-t border-zinc-800 flex justify-between items-center">
-               <a href="news.html" class="text-zinc-500 hover:text-amber-400 transition text-sm tracking-widest uppercase">
-                  <i class="fa-solid fa-grid"></i> All News
-               </a>
-               
-            <a href="news-nollywire.html" class="inline-flex items-center gap-2 text-amber-400 hover:text-white transition group ">
-                <span class="hidden md:inline text-sm text-zinc-400 group-hover:text-white transition">Next: Nollywire: Mother's Love...</span>
-                <span>Next</span> <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-            </a>
-            
-          </div>
+          <aside class="space-y-10 lg:border-l lg:border-white/10 lg:pl-10">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-zinc-500 mb-4 font-geist">Share</p>
+              <div class="flex gap-4">
+                <a href="https://twitter.com/intent/tweet?text=I%20Won%C3%A2%E2%82%AC%E2%84%A2t%20Be%20Dancing%20to%20Promote%20My%20Movie&amp;url=https%3A%2F%2Fredhotconcepts.com%2Fnews-socials.html" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 hover:bg-amber-400/20 flex items-center justify-center text-white/60 hover:text-amber-400 transition-all"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fredhotconcepts.com%2Fnews-socials.html" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 hover:bg-blue-500/20 flex items-center justify-center text-white/60 hover:text-blue-400 transition-all"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fredhotconcepts.com%2Fnews-socials.html" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 hover:bg-blue-600/20 flex items-center justify-center text-white/60 hover:text-blue-500 transition-all"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+              </div>
+            </div>
+
+            <div class="p-6 rounded-xl bg-white/[0.02] border border-white/5">
+              <p class="text-xs uppercase tracking-[0.3em] text-zinc-500 mb-3 font-geist">Published</p>
+              <p class="text-sm text-zinc-300">2026</p>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="mt-20 pt-10 border-t border-zinc-800 flex justify-between items-center">
+          <a href="news.html" class="text-zinc-500 hover:text-amber-400 transition text-sm tracking-widest uppercase flex items-center gap-2 group">
+            <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+            <span>All News</span>
+          </a>
+          <a href="news-nollywire.html"
+            class="inline-flex items-center gap-2 text-amber-400 hover:text-white transition group text-right">
+            <span class="hidden md:inline text-sm text-zinc-400 group-hover:text-white transition">Next: Nollywire: Mother&apos;s Love...</span>
+            <span>Next</span> <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
       </article>
-  </main>
 
-   <footer class="w-full py-16 border-t border-amber-400 flex flex-col items-center gap-7 px-4 text-center reveal reveal-up">
-      <nav class="w-full max-w-4xl">
-        <ul
-          class="flex flex-wrap justify-center gap-6 md:gap-12 text-sm uppercase tracking-widest text-white/80 font-geist">
+    <section class="relative text-white py-10 overflow-x-hidden animate-fadeUp ">
+        <div class="max-w-7xl mx-auto px-6 mb-14">
+          <p class="text-xs uppercase tracking-[0.4em] text-amber-400">Other News</p>
+        </div>
+
+        <div class="relative overflow-hidden x-auto px-6">
+          <div class="flex gap-x-10 overflow-x-auto scrollbar-elegant">
+            <div class="text-zinc-500 text-sm">No other news items found.</div>
+                    </div>
+        </div>
+      </section>
+    </main>
+
+   <footer class="w-full border-t border-white/5 py-16 px-6">
+    <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+      <a href="/" class="flex items-center justify-center w-24 h-10 md:w-32 md:h-14 transition-all duration-300 hover:opacity-80">
+        <img src="public/img124.webp" class="w-full h-full object-contain" alt="RedHot Concepts">
+      </a>
+      <nav>
+        <ul class="flex flex-wrap justify-center gap-6 md:gap-10 text-[10px] uppercase tracking-[0.25em] text-white/40 font-display">
           <li><a href="/" class="hover:text-amber-400 transition-colors">Home</a></li>
           <li><a href="about.html" class="hover:text-amber-400 transition-colors">About</a></li>
           <li><a href="films.html" class="hover:text-amber-400 transition-colors">Films</a></li>
-          <li><a href="legacy.html" class="hover:text-amber-400 transition-colors">30yrs legacy</a></li>
-          <li><a href="#" class="hover:text-amber-400 transition-colors">Affiliate</a></li>
+          <li><a href="legacy.html" class="hover:text-amber-400 transition-colors">Legacy</a></li>
           <li><a href="contact.html" class="hover:text-amber-400 transition-colors">Contact</a></li>
         </ul>
       </nav>
-
-      
-
-      <div class="reveal reveal-up stagger-2 flex flex-wrap justify-center items-center gap-8 text-2xl text-white">
-        <a href="https://www.youtube.com/@RedHotConceptTV" target="_blank" rel="noopener noreferrer" class="hover-lift"
-          aria-label="YouTube">
-          <i class="fa-brands fa-youtube hover:text-red-600 transition-colors cursor-pointer"></i>
-        </a>
-        <a href="https://www.instagram.com/redhotconcepts?igsh=bTBwaWEwNTJtemp0" target="_blank" rel="noopener noreferrer"
-          class="hover-lift" aria-label="Instagram">
-          <i class="fa-brands fa-instagram hover:text-pink-600 transition-colors cursor-pointer"></i>
-        </a>
-        <a href="https://x.com/redhot_concept?t=Q4aHP6bGxqztv0k9isMVQw&s=09" target="_blank" rel="noopener noreferrer"
-          class="hover-lift" aria-label="X">
-          <i class="fa-brands fa-x-twitter hover:text-blue-400 transition-colors cursor-pointer"></i>
-        </a>
+      <div class="flex gap-6 text-white/30">
+        <a href="https://www.youtube.com/@RedHotConceptTV" target="_blank" rel="noopener noreferrer" class="hover:text-red-500 transition-all hover:scale-110"><i class="fa-brands fa-youtube text-lg"></i></a>
+        <a href="https://www.instagram.com/redhotconcepts" target="_blank" rel="noopener noreferrer" class="hover:text-pink-500 transition-all hover:scale-110"><i class="fa-brands fa-instagram text-lg"></i></a>
+        <a href="https://x.com/redhot_concept" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-all hover:scale-110"><i class="fa-brands fa-x-twitter text-lg"></i></a>
       </div>
-
-      <div class="text-white text-sm font-normal font-inter tracking-wide opacity-60">
-        ©2026 RedHot Concepts. All Rights Reserved.
-      </div>
-      <div class="text-white inline-flex items-center gap-2 text-sm font-normal font-inter tracking-wide opacity-60">
-      Designed and Developed by <a href="https://nextdaysite.com" target="_blank" class="text-amber-400 hover:underline"><img src="public/nds.png" alt=""></a>
     </div>
-    </footer>
+    <div class="max-w-[1440px] mx-auto mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-white/20 text-[10px] font-sans tracking-wide">
+      <span>&copy; 2026 RedHot Concepts. All Rights Reserved.</span>
+      <span>Designed &amp; Developed by <a href="https://nextdaysite.com" target="_blank" class="text-amber-400/60 hover:text-amber-400"><img src="public/nds.png" class="h-3 inline" alt="NDS"></a></span>
+    </div>
+  </footer>
+
+  <div id="cursor-spotlight">
+    <div class="outer"></div>
+    <div class="inner"></div>
+  </div>
+
+  <script src="script.js"></script>
 
   <script>
-    const scrollAnimationObserverOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const scrollAnimationObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+    document.querySelectorAll('.press-item, .reveal').forEach(el => {
+      const observer = new IntersectionObserver(([entry]) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
           if (entry.target.classList.contains('press-item')) {
             entry.target.classList.remove("opacity-0", "translate-y-16", "scale-95");
             entry.target.classList.add("opacity-100", "translate-y-0", "scale-100");
           }
-          scrollAnimationObserver.unobserve(entry.target);
+          observer.unobserve(entry.target);
         }
-      });
-    }, scrollAnimationObserverOptions);
-
-    document.querySelectorAll('.reveal, .press-item').forEach(el => {
-      scrollAnimationObserver.observe(el);
-    });
-  </script>
-  <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    let open = false;
-
-    menuBtn.addEventListener('click', () => {
-      open = !open;
-
-      if (open) {
-        mobileMenu.classList.remove('hidden');
-      } else {
-        mobileMenu.classList.add('hidden');
-      }
-      menuBtn.innerHTML = open
-        ? '<i class="fa-solid fa-xmark"></i>'
-        : '<i class="fa-solid fa-bars"></i>';
-    });
-
-    const othersToggle = document.getElementById('othersToggle');
-    const othersAccordion = document.getElementById('othersAccordion');
-    const othersIcon = document.getElementById('othersIcon');
-
-    if (othersToggle && othersAccordion && othersIcon) {
-      othersToggle.addEventListener('click', () => {
-        if (othersAccordion.style.maxHeight) {
-          othersAccordion.style.maxHeight = null;
-          othersIcon.classList.remove('rotate-180');
-        } else {
-          othersAccordion.style.maxHeight = othersAccordion.scrollHeight + "px";
-          othersIcon.classList.add('rotate-180');
-        }
-      });
-    }
-  </script>
-
-  <script>
-    document.querySelectorAll(".scroll-section").forEach(section => {
-
-      const container = section.querySelector(".scroll-container");
-      const leftBtn = section.querySelector(".scroll-left");
-      const rightBtn = section.querySelector(".scroll-right");
-
-      leftBtn.addEventListener("click", () => {
-        container.scrollBy({ left: -350, behavior: "smooth" });
-      });
-
-      rightBtn.addEventListener("click", () => {
-        container.scrollBy({ left: 350, behavior: "smooth" });
-      });
-
-    });
-  </script>
-
-
-
-  <script>
-    let lastScrollY = window.scrollY;
-    window.addEventListener('scroll', () => {
-      const header = document.getElementById('mainHeader');
-      const logo = document.getElementById('navLogo');
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > 50) {
-        header.style.transform = 'translateY(0)';
-        header.classList.add('bg-black/90', 'backdrop-blur-md');
-        logo.style.filter = 'brightness(0) saturate(100%) invert(18%) sepia(90%) saturate(6000%) hue-rotate(355deg) brightness(95%) contrast(110%)';
-      } else {
-        header.style.transform = 'translateY(0)';
-        header.classList.remove('bg-black/90', 'backdrop-blur-md');
-        logo.style.filter = 'none';
-      }
-      lastScrollY = currentScrollY;
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      observer.observe(el);
     });
   </script>
 </body>

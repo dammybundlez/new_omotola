@@ -3,664 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="output.css">
     <script src="https://kit.fontawesome.com/c4993cb090.js" crossorigin="anonymous"></script>
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <link rel="shortcut icon" href="public/redbg.png" type="image/x-icon">
-
-    <title>Omotola . Films</title>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="output.css">
+    <link rel="shortcut icon" href="public_optimized/redbg.webp" type="image/webp">
+    <title>RedHot Concepts — Films</title>
 </head>
-<body class="bg-[#0d0d0d]">
-    <header id="mainHeader" class="fixed top-0 w-full z-50 pr-4 md:pr-14 md:pl-6 py-4 md:py-1 transition-all duration-500">
-      <div class="flex justify-between items-center">
+<body class="bg-cinema-950">
+  <div id="scrollProgress" class="fixed top-0 left-0 z-[60] h-[2px] bg-amber-400/70" style="width:0%"></div>
+  <header id="mainHeader" class="fixed top-0 w-full z-50 px-6 md:px-14 py-5 transition-all duration-700">
+    <div class="max-w-[1440px] mx-auto flex justify-between items-center">
+      <a href="/" class="relative flex items-center justify-center w-20 h-10 md:w-28 md:h-16 rounded-md transition-all duration-300 group">
+        <img id="logoWhite" src="public/img124.webp" class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-100 group-hover:opacity-80" alt="RedHot Concepts">
+        <img id="logoRed" src="public_optimized/redbg.webp" class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-0" alt="RedHot Concepts">
+      </a>
+      <nav id="desktopNav" class="hidden md:flex items-center">
+        <ul class="flex items-center text-white/80 gap-9 uppercase font-display text-[11px] tracking-[0.2em]">
+          <li><a href="/" class="hover:text-amber-400 transition-all duration-300">Home</a></li>
+          <li><a href="films.html" class="text-amber-400 transition-all duration-300">Films</a></li>
+          <li><a href="legacy.html" class="hover:text-amber-400 transition-all duration-300">Legacy</a></li>
+          <li class="relative group">
+            <a class="hover:text-amber-400 flex items-center gap-1.5 cursor-pointer transition-all duration-300">Affiliates <i class="fa-solid fa-chevron-down text-[8px]"></i></a>
+            <div class="absolute top-full left-1/2 -translate-x-1/2 w-[240px] px-2 py-3 bg-cinema-900/95 backdrop-blur-xl border border-white/5 rounded-xl shadow-2xl invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-1">
+              <ul class="text-white/70 flex flex-col gap-0.5">
+                <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400 hover:bg-white/5 block px-4 py-2.5 rounded-lg transition text-[11px] tracking-[0.15em] uppercase">OYEP</a></li>
+                <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400 hover:bg-white/5 block px-4 py-2.5 rounded-lg transition text-[11px] tracking-[0.15em] uppercase">OSEAL</a></li>
+                <li><a href="https://www.teffest.com/" class="hover:text-amber-400 hover:bg-white/5 block px-4 py-2.5 rounded-lg transition text-[11px] tracking-[0.15em] uppercase">TEFFEST</a></li>
+                <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400 hover:bg-white/5 block px-4 py-2.5 rounded-lg transition text-[11px] tracking-[0.15em] uppercase">Double Door</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="about.html" class="hover:text-amber-400 transition-all duration-300">About</a></li>
+          <li><a href="contact.html" class="hover:text-amber-400 transition-all duration-300">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="menuBtn" class="md:hidden text-white text-xl hover:text-amber-400 transition-all">
+        <span><i class="fa-solid fa-bars"></i></span>
+      </button>
+    </div>
+    <nav id="mobileMenu" class="fixed top-0 left-0 w-full h-screen bg-cinema-950/95 backdrop-blur-2xl z-50 flex flex-col items-center justify-center translate-y-full opacity-0 transition-all duration-500">
+      <button id="mobileClose" class="absolute top-8 right-8 text-white text-3xl hover:text-amber-400 transition-all"><i class="fa-solid fa-xmark"></i></button>
+      <ul class="text-white flex flex-col items-center gap-8 font-display">
+        <li class="menu-item opacity-0 translate-y-6"><a href="films.html" class="text-3xl font-bold uppercase hover:text-amber-400 tracking-wider">Films</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="news.html" class="text-3xl font-bold uppercase hover:text-amber-400 tracking-wider">News</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="legacy.html" class="text-3xl font-bold uppercase hover:text-amber-400 tracking-wider">Legacy</a></li>
+        <li class="menu-item opacity-0 translate-y-6">
+          <button id="othersToggle" class="flex items-center text-3xl font-bold uppercase hover:text-amber-400 gap-2">
+            Affiliates <i id="othersIcon" class="fa-solid fa-chevron-down text-xl transition-transform duration-300"></i>
+          </button>
+          <ul id="othersAccordion" class="mt-4 max-h-0 overflow-hidden flex flex-col gap-3 transition-all duration-300 text-xl text-center">
+            <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400">OYEP</a></li>
+            <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400">OSEAL</a></li>
+            <li><a href="https://www.teffest.com/" class="hover:text-amber-400">TEFFEST</a></li>
+            <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400">DOUBLE DOOR</a></li>
+          </ul>
+        </li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="about.html" class="text-3xl font-bold uppercase hover:text-amber-400">About</a></li>
+        <li class="menu-item opacity-0 translate-y-6"><a href="contact.html" class="text-3xl font-bold uppercase hover:text-amber-400">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <!-- Logo -->
-        <a id="logoWrap" href="/"
-        class="relative flex items-center justify-center w-20 h-10 md:w-28 md:h-[5rem] p-2 rounded-md transition-all duration-300">
-            <img id="logoWhite"
-                src="public/img124.webp"
-                class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-100"
-                alt="Logo White"/>
+    <main>
+      <!-- ===== FILMOGRAPHY HERO ===== -->
+      <section class="relative w-full overflow-hidden">
+        <div class="grain-overlay absolute inset-0"></div>
+        <div class="max-w-[1440px] mx-auto px-6 md:px-14 pt-28 md:pt-36 pb-6">
+          <div class="w-full py-10 flex flex-col items-center text-center reveal">
+            <span class="block text-xs md:text-sm uppercase tracking-[0.35em] text-amber-400 font-display">RedHot Concepts</span>
+            <h2 class="text-3xl md:text-6xl font-light uppercase tracking-tight text-white font-display text-glow mt-4">Full Filmography</h2>
+            <p class="text-white/60 text-base md:text-lg max-w-2xl mx-auto font-sans mt-4">A cinematic journey through decades of impactful performances and original storytelling.</p>
+            <div class="mx-auto h-px w-24 bg-white/10 mt-6"></div>
+          </div>
 
-            <img id="logoRed"
-                src="public/redbg.png"
-                class="absolute w-14 md:w-16 transition-opacity duration-500 ease-out opacity-0"
-                alt="Logo Red"/>
-        </a>
+          <!-- Filter Pills -->
+          <div class="flex flex-wrap justify-center gap-3 mb-8 reveal stagger-1">
+            <button class="filter-pill active" data-filter="all">All</button>
+            <button class="filter-pill" data-filter="released">Released</button>
+            <button class="filter-pill" data-filter="coming-soon">Coming Soon</button>
+          </div>
 
+          <!-- Search -->
+          <div class="flex justify-center mb-12 reveal stagger-2">
+            <div class="relative w-full max-w-md">
+              <input type="text" id="searchInput" class="cinematic-input w-full pl-5 pr-12" placeholder="Search films...">
+              <span class="absolute right-4 top-1/2 -translate-y-1/2 text-white/30"><i class="fa-solid fa-search"></i></span>
+            </div>
+          </div>
 
-        <!-- Desktop Nav -->
-        <nav id="desktopNav" class="hidden md:flex items-center">
-          <ul class="flex items-center text-white gap-8 uppercase font-inter">
-            <li><a href="/" class="hover:text-orange-300 transition-all text-sm tracking-wide">Home</a></li>
-            <li><a href="films.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Films</a></li>
-            <!-- <li><a href="news.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">News</a></li> -->
-            <li><a href="legacy.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">30 Years legacy</a></li>
-            <li class="relative group tracking-wide text-sm">
-              <a class="hover:text-orange-300 flex items-center gap-2" >Affiliates <i class="fa-solid fa-chevron-down text-sm"></i></a>
-              <div class="absolute top-full left-1/2 -translate-x-1/2 w-[300px] px-2 py-2 bg-white rounded-3xl shadow-lg invisible group-hover:visible transition-all duration-300">
-                <ul class="text-stone-500 flex flex-col gap-2">
-                  <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-orange-300 block px-4 py-1">OYEP</a></li>
-                  <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-orange-300 block px-4 py-1">OSEAL</a></li>
-                  <li><a href="https://www.teffest.com/" class="hover:text-orange-300 block px-4 py-1">TEFFEST</a></li>
-                  <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-orange-300 block px-4 py-1">DOUBLE DOORS</a></li>
-                </ul>
+          <!-- Card Grid -->
+          <div id="cardGrid" class="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-6"></div>
+        </div>
+      </section>
+
+      <!-- ===== FEATURED SPOTLIGHT ===== -->
+      <section class="relative w-full overflow-hidden bg-cinema-900/50">
+        <div class="grain-overlay absolute inset-0"></div>
+        <div class="max-w-[1440px] mx-auto px-6 md:px-14 py-20 md:py-28">
+          <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center reveal">
+            <figure class="relative group">
+              <div class="absolute -inset-4 bg-gradient-to-tr from-amber-400/10 to-transparent blur-2xl opacity-60"></div>
+              <img src="public_optimized/Mothers-Love-Web-Banner-NEW.jpg.webp" alt="A Mother's Love" class="relative w-full h-auto object-cover rounded-lg shadow-2xl" loading="lazy">
+              <div class="absolute inset-0 rounded-lg bg-gradient-to-t from-cinema-950/60 via-transparent to-transparent"></div>
+            </figure>
+            <div class="flex flex-col gap-6">
+              <span class="text-xs uppercase tracking-[0.35em] text-amber-400 font-display">Directorial Debut</span>
+              <h2 class="text-3xl md:text-5xl font-light leading-tight text-white font-display">A Mother's Love</h2>
+              <div class="w-16 h-[2px] bg-amber-400"></div>
+              <p class="text-white/70 text-base md:text-lg leading-relaxed font-sans">A powerful coming-of-age story inspired by real emotional truths. A young woman's journey from comfort to self-discovery, set against the backdrop of Nigeria's National Youth Service Corps.</p>
+              <div class="flex flex-wrap gap-4 text-sm text-white/50 font-sans">
+                <span>2025</span>
+                <span>•</span>
+                <span>PG-13</span>
+                <span>•</span>
+                <span>1h 42m</span>
+                <span>•</span>
+                <span>Drama, Family</span>
               </div>
-            </li>
-            <li><a href="about.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">About</a></li>
-            <li><a href="contact.html" class="hover:text-orange-300 transition-all text-sm tracking-wide">Contact</a></li>
+              <div class="flex gap-4 mt-2">
+                <a href="details.html" class="btn-hero text-sm inline-flex items-center gap-2">View Details <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                <a href="https://www.youtube.com/@RedHotConceptTV" target="_blank" class="btn-hero-outline text-sm inline-flex items-center gap-2"><i class="fa-brands fa-youtube"></i> Watch Trailer</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== BEHIND THE LENS ===== -->
+      <section class="relative w-full overflow-hidden">
+        <div class="grain-overlay absolute inset-0"></div>
+        <div class="max-w-[1440px] mx-auto px-6 md:px-14 py-20 md:py-28">
+          <div class="text-center mb-14 reveal">
+            <span class="block text-xs uppercase tracking-[0.45em] text-amber-400 font-display">Behind the Lens</span>
+            <h2 class="text-3xl md:text-5xl font-light leading-tight tracking-tight text-white font-display mt-4">From the Set of <span class="text-amber-400">Mother's Love</span></h2>
+            <div class="mx-auto h-px w-20 bg-white/10 mt-6"></div>
+          </div>
+
+          <div class="bts-grid reveal stagger-1">
+            <img src="public_optimized/bts1.webp" alt="BTS" loading="lazy">
+            <img src="public_optimized/bts2.webp" alt="BTS" loading="lazy">
+            <img src="public_optimized/bts3.webp" alt="BTS" loading="lazy">
+            <img src="public_optimized/bts4.webp" alt="BTS" loading="lazy">
+            <img src="public_optimized/bts5.webp" alt="BTS" loading="lazy">
+            <img src="public_optimized/bts6.webp" alt="BTS" loading="lazy">
+            <img src="public_optimized/bts7.webp" alt="BTS" loading="lazy">
+            <img src="public_optimized/bts8.webp" alt="BTS" loading="lazy">
+          </div>
+
+          <p class="text-center text-white/40 text-sm font-sans mt-8 reveal stagger-2">Candid frames from the production of <span class="italic">A Mother's Love</span> — directed by Omotola Jalade-Ekeinde.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="w-full border-t border-white/5 py-16 px-6">
+      <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+        <a href="/" class="flex items-center justify-center w-24 h-10 md:w-32 md:h-14 transition-all duration-300 hover:opacity-80">
+          <img src="public/img124.webp" class="w-full h-full object-contain" alt="RedHot Concepts">
+        </a>
+        <nav>
+          <ul class="flex flex-wrap justify-center gap-6 md:gap-10 text-[10px] uppercase tracking-[0.25em] text-white/40 font-display">
+            <li><a href="/" class="hover:text-amber-400 transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-amber-400 transition-colors">About</a></li>
+            <li><a href="films.html" class="hover:text-amber-400 transition-colors">Films</a></li>
+            <li><a href="legacy.html" class="hover:text-amber-400 transition-colors">Legacy</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400 transition-colors">Contact</a></li>
           </ul>
         </nav>
-
-        <!-- Hamburger -->
-        <button id="menuBtn" class="md:hidden text-white text-3xl hover:text-amber-400 transition-all">
-          <span><i class="fa-solid fa-bars"></i></span>
-        </button>
-
-      </div>
-
-      <!-- Mobile Menu -->
-      <nav id="mobileMenu" class="fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-lg z-50 flex flex-col items-center justify-center transform translate-y-full opacity-0">
-        <button id="mobileClose" class="absolute top-8 right-8 text-white text-3xl hover:text-amber-400 transition-all"><i class="fa-solid fa-xmark"></i></button>
-        <ul id="mobileMenuList" class="flex flex-col justify-center items-center gap-8 text-center font-geist text-white">
-          <li class="menu-item opacity-0 translate-y-6"><a href="films.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">Films</a></li>
-          <li class="menu-item opacity-0 translate-y-6"><a href="news.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">News</a></li>
-          <li class="menu-item opacity-0 translate-y-6"><a href="legacy.html" class="text-3xl font-bold uppercase hover:text-amber-400 transition-all duration-300">30 Years Legacy</a></li>
-          <li class="menu-item opacity-0 translate-y-6">
-            <button id="othersToggle" class="flex items-center justify-center text-3xl font-bold uppercase hover:text-amber-400 gap-2 transition-all duration-300">
-              Affiliates <i id="othersIcon" class="fa-solid fa-chevron-down transition-transform duration-300"></i>
-            </button>
-            <ul id="othersAccordion" class="mt-4 max-h-0 overflow-hidden flex flex-col gap-3 transition-all duration-300">
-              <li><a href="https://red-hot.vercel.app/Oyep.html" class="hover:text-amber-400">OYEP</a></li>
-              <li><a href="https://red-hot.vercel.app/Oseal.html" class="hover:text-amber-400">OSEAL</a></li>
-              <li><a href="https://www.teffest.com/" class="hover:text-amber-400">TEFFEST</a></li>
-              <li><a href="https://red-hot.vercel.app/Doubledoors.html" class="hover:text-amber-400">DOUBLE DOORS</a></li>
-            </ul>
-          </li>
-          <li class="menu-item opacity-0 translate-y-6"><a href="about.html" class="text-3xl font-bold uppercase hover:text-amber-400">About</a></li>
-          <li class="menu-item opacity-0 translate-y-6"><a href="contact.html" class="text-3xl font-bold uppercase hover:text-amber-400">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <section class="max-w-7xl mx-auto px-4 md:mt-20 sm:px-6 md:px-14 py-10">
-        <!-- Section Heading -->
-        <div class="w-full py-10 flex flex-col items-center text-center">
-          <header class="space-y-4">
-            <!-- Micro-header / subtle category -->
-            <span class="block text-xs md:text-sm uppercase tracking-[0.35em] text-amber-400 font-geist">
-              Career Highlights
-            </span>
-
-            <!-- Main Title -->
-            <h2 class="text-3xl md:text-6xl font-light uppercase tracking-tight text-white font-geist">
-              Full Filmography
-            </h2>
-
-            <!-- Optional description -->
-            <p class="text-zinc-400 text-base md:text-lg max-w-2xl mx-auto font-geist">
-              A cinematic journey through decades of impactful performances and storytelling.
-            </p>
-
-            <!-- Divider for style -->
-            <div class="mx-auto h-px w-24 bg-zinc-700 mt-4"></div>
-          </header>
+        <div class="flex gap-6 text-white/30">
+          <a href="https://www.youtube.com/@RedHotConceptTV" target="_blank" rel="noopener noreferrer" class="hover:text-red-500 transition-all hover:scale-110"><i class="fa-brands fa-youtube text-lg"></i></a>
+          <a href="https://www.instagram.com/redhotconcepts" target="_blank" rel="noopener noreferrer" class="hover:text-pink-500 transition-all hover:scale-110"><i class="fa-brands fa-instagram text-lg"></i></a>
+          <a href="https://x.com/redhot_concept" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-all hover:scale-110"><i class="fa-brands fa-x-twitter text-lg"></i></a>
         </div>
-
-
-        <div class="flex flex-col md:flex-row justify-center gap-6 mb-10">
-            <div class="relative w-full md:w-1/3">
-                <input type="text" id="searchInput"
-                    class="w-full bg-white/10 rounded-full px-5 py-3 active:bg-black text-white font-poppins placeholder-white/50"
-                    placeholder="Search">
-
-                <button class="p-3 absolute right-2 top-1/2 -translate-y-1/2">
-                    <i class="fa-solid fa-magnifying-glass text-white text-lg"></i>
-                </button>
-            </div>
-        </div>
-
-        <div id="cardGrid" class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            
-        </div>
-    </section>
-
-  
-    <section class="relative w-full sm:px-6 md:py-20 md:px-14 py-10 px-5 bg-black overflow-hidden tracking-wide">
-
-  <!-- Atmospheric background -->
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_#1a1a1a,_transparent_65%)] opacity-40"></div>
-      <div class="pointer-events-none absolute inset-0 bg-[url('/grain.png')] opacity-[0.06] mix-blend-overlay"></div>
-
-      <div
-        data-aos="fade-up"
-        class="relative max-w-5xl mx-auto px-6 text-center space-y-10"
-      >
-
-        <!-- Subtle preface -->
-        <span class="block text-xs uppercase tracking-[0.45em] text-amber-400 font-geist">
-          Our Philosophy
-        </span>
-
-        <!-- Statement -->
-        <h2
-          class="text-3xl md:text-5xl lg:text-6xl font-light leading-tight tracking-tight text-white font-geist"
-        >
-          Culture is not created by noise.
-          <br />
-          <span class="text-amber-400">
-            It is shaped by intention.
-          </span>
-        </h2>
-
-        <!-- Divider -->
-        <div class="mx-auto h-px w-28 bg-zinc-700"></div>
-
-        <!-- Supporting line -->
-        <p class="max-w-3xl mx-auto text-zinc-400 text-lg md:text-xl leading-relaxed font-geist">
-          RedHot Concepts operates at the intersection of vision, discipline,
-          and long-term impact — building brands, stories, and platforms
-          designed to endure beyond trends, timelines, and applause.
-        </p>
-
-        <!-- Signature -->
-        <p class="pt-8 text-sm uppercase tracking-[0.4em] text-zinc-500 font-geist">
-          RedHot Concepts
-        </p>
-
       </div>
-    </section>
-    
-    <footer class="w-full py-16 border-t border-amber-400 flex flex-col items-center gap-7 px-4 text-center reveal reveal-up">
-      <nav class="w-full max-w-4xl">
-        <ul
-          class="flex flex-wrap justify-center gap-6 md:gap-12 text-sm uppercase tracking-widest text-white/80 font-geist">
-          <li><a href="/" class="hover:text-amber-400 transition-colors">Home</a></li>
-          <li><a href="about.html" class="hover:text-amber-400 transition-colors">About</a></li>
-          <li><a href="films.html" class="hover:text-amber-400 transition-colors">Films</a></li>
-          <li><a href="legacy.html" class="hover:text-amber-400 transition-colors">30yrs legacy</a></li>
-          <li><a href="#" class="hover:text-amber-400 transition-colors">Affiliate</a></li>
-          <li><a href="contact.html" class="hover:text-amber-400 transition-colors">Contact</a></li>
-        </ul>
-      </nav>
-
-      
-
-      <div class="reveal reveal-up stagger-2 flex flex-wrap justify-center items-center gap-8 text-2xl text-white">
-        <a href="https://www.youtube.com/@RedHotConceptTV" target="_blank" rel="noopener noreferrer" class="hover-lift"
-          aria-label="YouTube">
-          <i class="fa-brands fa-youtube hover:text-red-600 transition-colors cursor-pointer"></i>
-        </a>
-        <a href="https://www.instagram.com/redhotconcepts?igsh=bTBwaWEwNTJtemp0" target="_blank" rel="noopener noreferrer"
-          class="hover-lift" aria-label="Instagram">
-          <i class="fa-brands fa-instagram hover:text-pink-600 transition-colors cursor-pointer"></i>
-        </a>
-        <a href="https://x.com/redhot_concept?t=Q4aHP6bGxqztv0k9isMVQw&s=09" target="_blank" rel="noopener noreferrer"
-          class="hover-lift" aria-label="X">
-          <i class="fa-brands fa-x-twitter hover:text-blue-400 transition-colors cursor-pointer"></i>
-        </a>
-      </div>
-
-      <div class="text-white text-sm font-normal font-poppins opacity-60">
-        ©2026 RedHot Concepts. All Rights Reserved.
-      </div>
-
-      <div class="text-white inline-flex items-center gap-2 text-sm font-normal font-inter tracking-wide opacity-60">
-        Designed and Developed by <a href="https://nextdaysite.com" target="_blank" class="text-amber-400 hover:underline"><img src="public/nds.png" alt=""></a>
+      <div class="max-w-[1440px] mx-auto mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-white/20 text-[10px] font-sans tracking-wide">
+        <span>&copy; 2026 RedHot Concepts. All Rights Reserved.</span>
+        <span>Designed &amp; Developed by <a href="https://nextdaysite.com" target="_blank" class="text-amber-400/60 hover:text-amber-400"><img src="public/nds.png" class="h-3 inline" alt="NDS"></a></span>
       </div>
     </footer>
 
-     <div id="cursor-spotlight">
+    <div id="cursor-spotlight">
       <div class="outer"></div>
       <div class="inner"></div>
     </div>
 
     <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-out-cubic',
-            once: true, 
-        });
-    </script>
+    const cards = [
+      { name: "A Mother's Love", image: "public_optimized/herobg.webp", year: 2025, status: "released", keywords: ["omotola", "directorial debut", "mother", "tiff"], link: "details.html" },
+      { name: "Road Rogue", image: "public_optimized/road_rogue.webp", year: 2024, status: "released", keywords: ["road", "rogue", "action", "thriller"], link: "#" },
+    ];
 
-<script>
-  const btn = document.getElementById('othersBtn');
-  const dropdown = document.getElementById('othersDropdown');
+    const input = document.getElementById("searchInput");
+    const grid = document.getElementById("cardGrid");
+    const pills = document.querySelectorAll(".filter-pill");
+    let activeFilter = "all";
+    let searchQuery = "";
 
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    dropdown.classList.toggle('opacity-0');
-    dropdown.classList.toggle('invisible');
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
-      dropdown.classList.add('opacity-0', 'invisible');
+    function filterCards() {
+      let list = cards;
+      if (activeFilter !== "all") {
+        list = list.filter(c => c.status === activeFilter);
+      }
+      if (searchQuery) {
+        const q = searchQuery.toLowerCase();
+        list = list.filter(c =>
+          c.name.toLowerCase().includes(q) ||
+          c.keywords.some(k => k.toLowerCase().includes(q))
+        );
+      }
+      return list;
     }
-  });
-</script>
 
-<script>
-  const toggle = document.getElementById('othersToggle');
-  const accordion = document.getElementById('othersAccordion');
-  const icon = document.getElementById('othersIcon');
-
-  toggle.addEventListener('click', () => {
-    const isOpen = accordion.style.maxHeight;
-
-    if (isOpen) {
-      accordion.style.maxHeight = null;
-      icon.classList.remove('rotate-180');
-    } else {
-      accordion.style.maxHeight = accordion.scrollHeight + 'px';
-      icon.classList.add('rotate-180');
+    function renderCards() {
+      const list = filterCards();
+      grid.innerHTML = "";
+      if (list.length === 0) {
+        grid.innerHTML = `<div class="col-span-full text-center text-lg py-20 text-white/40 font-display uppercase tracking-widest">No films match your criteria</div>`;
+        return;
+      }
+      list.forEach((card, index) => {
+        const div = document.createElement("div");
+        div.className = `transition overflow-hidden reveal ${index < 4 ? `stagger-${index + 1}` : ''}`;
+        const badge = card.status === "coming-soon" ? '<span class="coming-soon-badge">Coming Soon</span>' : '';
+        const linkStart = card.link && card.link !== "#" ? `<a href="${card.link}" class="block group relative` : `<div class="block group relative`;
+        const linkEnd = card.link && card.link !== "#" ? `</a>` : `</div>`;
+        div.innerHTML = `
+          ${linkStart} flex flex-col gap-3 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]">
+            <div class="relative overflow-hidden rounded-xl glass-card aspect-[3/4]">
+              <img src="${card.image}" alt="${card.name}" loading="lazy" class="cinematic-img" />
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80"></div>
+              <div class="grain-overlay absolute inset-0"></div>
+              ${badge}
+            </div>
+            <div class="flex flex-col gap-1 px-1">
+              <span class="text-base font-medium text-white font-display uppercase leading-5 tracking-wide transition-all duration-500 group-hover:text-amber-400">${card.name}</span>
+              <span class="text-[11px] text-white/30 font-sans tracking-wide">${card.year}</span>
+            </div>
+          ${linkEnd}`;
+        grid.appendChild(div);
+      });
     }
-  });
-</script>
 
-<script>
-const cards = [
-  {
-    name: "A Mother's Love",
-    image: "public/herobg.webp",
-    keywords: ["Mother", "Love", "omotola"]
-  },
-  {
-    name: "Road Rogue",
-    image: "public/road_rogue.webp",
-    keywords: ["road", "rogue" , "action"]
-  },
-  
-  
-  // {
-  //   name: "When Love Dies",
-  //   image: "public/whenlovedies.jpg",
-  //   keywords: ["shadow", "action" , "omotola"]
-  // },
-  // {
-  //   name: "Last Celebrity",
-  //   image: "public/notfound.jpg",
-  //   keywords: ["shadow", "action" , "omotola"]
-  // },
-  // {
-  //   name: "In Totality",
-  //   image: "public/notfound.jpg",
-  //   keywords: ["shadow", "action" , "omotola"]
-  // },
-  // {
-  //   name: "My Last Ambition",
-  //   image: "public/lastambition.jpg",
-  //   keywords: ["shadow", "action" , "omotola"]
-  // },
-  // {
-  //   name: "Iva",
-  //   image: "public/iva.jpg",
-  //   keywords: ["shadow", "action" , "omotola"]
-  // },
-  // {
-  //   name: "Yankee Girls",
-  //   image: "public/yankeegirls.jpg",
-  //   keywords: ["shadow", "action" , "omotola"]
-  // },
-  // {
-  //   name: "Kosorogun",
-  //   image: "public/notfound.jpg",
-  //   keywords: ["shadow", "action" , "omotola"]
-  // },
-  // {
-  //   name: "Left Alone",
-  //   image: "public/leftalone.jpg",
-  //   keywords: ["shadow", "action" , "omotola"]
-  // },
-  // {
-  //   name: "Blindfold",
-  //   image: "public/blindfold.jpg",
-  //   keywords: ["shadow", "action" , "omotola"]
-  // },
-  // {
-  //   name: "Market Sellers",
-  //   image: "public/marketseller.jpg",
-  //   keywords: ["shadow", "action" , "omotola"]
-  // },
-  // {
-  //   name: "Under Fire",
-  //   image: "public/notfound.jpg",
-  //   keywords: ["shadow", "action" , "omotola"]
-  // },
-  // {
-  //   name: "Master Stroke",
-  //   image: "public/notfound.jpg",
-  //   keywords: ["shadow", "action" , "omotola"]
-  // },
-  // {
-  //   name: "Kings Battle",
-  //   image: "public/kingbattle.jpg",
-  //   keywords: ["shadow", "action" , "omotola"]
-  // },
-  // {
-  //   name: "Tomorrow Must Wait",
-  //   image: "public/notfound.jpg",
-  //   keywords: ["shadow", "action" , "omotola"]
-  // },
-  // {
-  //   name: "No One But You",
-  //   image: "public/notfound.jpg",
-  //   keywords: ["drama", "film" , "omotola"]
-  // },{
-  //   name: "A Private Storm",
-  //   image: "public/privatestorm.webp",
-  //   keywords: ["hollywood", "romance" , "omotola"]
-  // },
-  // {
-  //   name: "Shackles and The Rugged Cross",
-  //   image: "public/notfound.jpg",
-  //   keywords: ["fight", "nollywood" , "omotola"]
-  // },
-  // {
-  //   name: "Jealousy",
-  //   image: "public/notfound.jpg",
-  //   keywords: ["shadow", "drama" , "omotola"]
-  // },
-  // {
-  //   name: "Brave Heart",
-  //   image: "public/notfound.jpg",
-  //   keywords: ["brave", "heart" , "omotola"]
-  // },
-  // {
-  //   name: "Nollywood Babylon",
-  //   image: "public/nollyhoodbabylon.jpg",
-  //   keywords: ["Nollywood", "action" , "omotola"]
-  // },
-  // {
-  //   name: "Working in Love",
-  //   image: "public/workinginlove.jpg",
-  //   keywords: ["War", "action" , "omotola"]
-  // },
-  // {
-  //   name: "Out of Love",
-  //   image: "public/outoflove.jpg",
-  //   keywords: ["waters", "sad" , "omotola"]
-  // },
-  // {
-  //   name: "Lookdown",
-  //   image: "public/lockdown.jpg",
-  //   keywords: ["lockdown", "action" , "omotola"]
-  // },
-  // {
-  //   name: "Lost kingdom",
-  //   image: "public/notfound.jpg",
-  //   keywords: ["kingdom", "drama" , "omotola"]
-  // },
-  // {
-  //   name: "Total War",
-  //   image: "public/notfound.jpg",
-  //   keywords: ["War", "drama" , "omotola"]
-  // },
-  // {
-  //   name: "Somewhere Else",
-  //   image: "public/somewhere.jpg",
-  //   keywords: ["Place", "drama" , "omotola"]
-  // },
-  // {
-  //   name: "Blood In The Lagoon",
-  //   image: "public/bloodinthelagoon.jpg",
-  //   keywords: ["blood", "water" , "omotola"]
-  // },
-  // {
-  //   name: "Mind Game",
-  //   image: "public/mindgame.jpg",
-  //   keywords: ["blood", "water" , "omotola"]
-  // }
-
-];
-
-const input = document.getElementById("searchInput");
-const grid = document.getElementById("cardGrid");
-
-function filterCards(query) {
-  const q = query.toLowerCase();
-
-  return cards.filter(card =>
-    card.name.toLowerCase().includes(q) ||
-    card.keywords.some(k => k.toLowerCase().includes(q))
-  );
-}
-
-function renderCards(list, query = "") {
-  grid.innerHTML = "";
-
-  if (query && list.length === 0) {
-    grid.innerHTML = `
-      <li class="col-span-full text-center md:text-xl text-base py-16 text-zinc-400 font-geist uppercase tracking-wide list-none">
-        No result for "${query}"
-      </li>
-    `;
-    return;
-  }
-
-  list.forEach(card => {
-    const li = document.createElement("li");
-    li.className = "transition overflow-hidden";
-
-    li.innerHTML = `
-      <figure
-  class="group relative flex flex-col gap-4 overflow-hidden
-         transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]"
->
-  <!-- Image Wrapper -->
-  <div class="relative overflow-hidden rounded-xl">
-    <!-- Image -->
-    <img
-      src="${card.image}"
-      alt="${card.name}"
-      class="w-full aspect-[201/256] object-cover
-             transition-transform duration-[1200ms]
-             group-hover:scale-105"
-    />
-
-    <!-- Cinematic Overlay -->
-    <div
-      class="pointer-events-none absolute inset-0
-             bg-gradient-to-t from-black/80 via-black/30 to-transparent
-             opacity-80"
-    ></div>
-
-    <!-- Film Grain (optional but 🔥) -->
-    <div
-      class="pointer-events-none absolute inset-0 opacity-[0.08]
-             mix-blend-overlay
-             bg-[url('/grain.png')]"
-    ></div>
-  </div>
-
-  <!-- Caption -->
-  <figcaption
-    class="relative z-10 text-base font-medium text-white font-geist uppercase leading-5
-           tracking-wide transition-all duration-500
-           group-hover:text-amber-400"
-  >
-    ${card.name}
-  </figcaption>
-
-  <!-- Subtle Accent Line -->
-  <span
-    class="absolute bottom-0 left-0 h-[2px] w-0 bg-amber-400
-           transition-all duration-700
-           group-hover:w-full"
-  ></span>
-</figure>
-
-    `;
-
-    grid.appendChild(li);
-  });
-}
-
-input.addEventListener("input", e => {
-  const query = e.target.value.trim();
-
-  if (!query) {
-    renderCards(cards);
-    return;
-  }
-
-  const results = filterCards(query);
-  renderCards(results, query);
-});
-
-renderCards(cards);
-
-</script>
-
-<script>
-    const cursor = document.getElementById("cursor-spotlight");
-    const outer = cursor.querySelector('.outer');
-    const inner = cursor.querySelector('.inner');
-    const cursorSize = outer.offsetWidth; // 25px
-
-    let mouseX = 0, mouseY = 0;
-    let outerX = 0, outerY = 0;
-    let innerX = 0, innerY = 0;
-
-    const outerSpeed = 0.2; // outer ring speed
-    const innerSpeed = 0.15; // inner dot slower speed
-
-    document.addEventListener("mousemove", e => {
-      mouseX = e.clientX - cursorSize / 2;
-      mouseY = e.clientY - cursorSize / 2;
+    input.addEventListener("input", e => {
+      searchQuery = e.target.value.trim();
+      renderCards();
     });
 
-    function animateCursor() {
-      // Outer ring follows mouse quickly
-      outerX += (mouseX - outerX) * outerSpeed;
-      outerY += (mouseY - outerY) * outerSpeed;
-      outer.style.transform = `translate3d(${outerX}px, ${outerY}px, 0)`;
+    pills.forEach(pill => {
+      pill.addEventListener("click", () => {
+        pills.forEach(p => p.classList.remove("active"));
+        pill.classList.add("active");
+        activeFilter = pill.dataset.filter;
+        renderCards();
+      });
+    });
 
-      // Inner dot follows outer slowly
-      innerX += (outerX - innerX) * innerSpeed;
-      innerY += (outerY - innerY) * innerSpeed;
-      inner.style.transform = `translate3d(${innerX}px, ${innerY}px, 0)`;
+    renderCards();
+    </script>
 
-      requestAnimationFrame(animateCursor);
-    }
-
-    animateCursor();
-  </script>
-
-  <script>
-  let lastScrollY = window.scrollY;
-
-const header = document.getElementById("mainHeader");
-const desktopNav = document.getElementById("desktopNav");
-const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-const mobileClose = document.getElementById("mobileClose");
-const othersToggle = document.getElementById("othersToggle");
-const othersAccordion = document.getElementById("othersAccordion");
-const othersIcon = document.getElementById("othersIcon");
-const logoWrap = document.getElementById("logoWrap");
-const logoWhite = document.getElementById("logoWhite");
-const logoRed = document.getElementById("logoRed");
-
-function showNavLinks() {
-  desktopNav.classList.remove("hidden");
-  requestAnimationFrame(() => {
-    desktopNav.classList.add("nav-visible");
-  });
-}
-
-function hideNavLinks() {
-  desktopNav.classList.remove("nav-visible");
-}
-
-function onScroll() {
-  const currentScroll = window.scrollY;
-
-  /* =======================
-     TOP OF PAGE
-  ======================= */
-  if (currentScroll === 0) {
-    header.classList.remove("nav-hidden");
-    header.classList.add("glass-nav");
-
-    logoWrap.classList.remove("scale-90");
-
-    logoWhite.style.opacity = "1";
-    logoRed.style.opacity = "0";
-
-    hideNavLinks();
-    return;
-  }
-
-  /* =======================
-     ANYWHERE ELSE
-  ======================= */
-  header.classList.remove("nav-hidden");
-  header.classList.add("glass-nav");
-
-  logoWrap.classList.add("scale-90");
-
-  logoWhite.style.opacity = "0";
-  logoRed.style.opacity = "1";
-
-  if (window.innerWidth >= 768) {
-    showNavLinks();
-  }
-
-  lastScrollY = currentScroll;
-}
-
-onScroll();
-window.addEventListener("scroll", onScroll);
-
-/* =======================
-   RESPONSIVE SYNC
-======================= */
-window.addEventListener("resize", () => {
-  if (window.innerWidth < 768) {
-    desktopNav.classList.add("hidden");
-    desktopNav.classList.remove("nav-visible");
-  } else {
-    desktopNav.classList.remove("hidden");
-    onScroll();
-  }
-});
-
-menuBtn.addEventListener("click", () => {
-    menuBtn.classList.toggle("active");
-    if(mobileMenu.classList.contains("translate-y-full")) openMobileMenu();
-    else closeMobileMenu();
-  });
-
-  mobileClose.addEventListener("click", closeMobileMenu);
-
-  function openMobileMenu(){
-    mobileMenu.classList.remove("translate-y-full","opacity-0");
-    mobileMenu.classList.add("translate-y-0","opacity-100");
-
-    const items = document.querySelectorAll("#mobileMenu .menu-item");
-    items.forEach((el,i)=>{ el.style.transitionDelay=`${i*0.1}s`; el.classList.remove("opacity-0","translate-y-6"); el.classList.add("opacity-100","translate-y-0"); });
-  }
-
-  function closeMobileMenu(){
-    mobileMenu.classList.remove("translate-y-0","opacity-100");
-    mobileMenu.classList.add("translate-y-full","opacity-0");
-
-    const items = document.querySelectorAll("#mobileMenu .menu-item");
-    items.forEach(el=>{ el.style.transitionDelay="0s"; el.classList.add("opacity-0","translate-y-6"); el.classList.remove("opacity-100","translate-y-0"); });
-
-    menuBtn.classList.remove("active");
-  }
-
-  othersToggle?.addEventListener("click", ()=>{
-    if(othersAccordion.style.maxHeight && othersAccordion.style.maxHeight !== "0px"){
-      othersAccordion.style.maxHeight="0px"; othersIcon.classList.remove("rotate-180");
-    } else {
-      othersAccordion.style.maxHeight=othersAccordion.scrollHeight+"px"; othersIcon.classList.add("rotate-180");
-    }
-  });
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
