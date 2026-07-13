@@ -1336,6 +1336,10 @@ body{
   height: 100vh;
 }
 
+.h-5{
+  height: 1.25rem;
+}
+
 .max-h-0{
   max-height: 0px;
 }
@@ -1491,6 +1495,10 @@ body{
 
 .w-px{
   width: 1px;
+}
+
+.w-32{
+  width: 8rem;
 }
 
 .min-w-\[280px\]{
