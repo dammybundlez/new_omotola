@@ -452,6 +452,13 @@ h1, h2, h3, h4{
   font-family: Syne, sans-serif;
 }
 
+@media (max-width: 767px) {
+  h1, h2, h3, h4 {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
 body{
   font-family: DM Sans, system-ui, sans-serif;
 }
@@ -658,6 +665,13 @@ body{
   transition-duration: 500ms;
 }
 
+@media (max-width: 767px) {
+  .btn-primary {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
 .btn-primary:hover{
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -685,6 +699,13 @@ body{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
+}
+
+@media (max-width: 767px) {
+  .btn-outline {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
 .btn-outline:hover{
@@ -3754,6 +3775,28 @@ body {
   background: rgba(224, 158, 35, 0.5);
 }
 
+/* Mobile text readability improvements */
+
+@media (max-width: 767px) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 0.02em;
+  }
+
+  [class*="text-white/4"], [class*="text-white/5"] {
+    text-shadow: 0 0 1px rgba(255,255,255,0.15);
+  }
+}
+
 /* ========== SCROLL PROGRESS ========== */
 
 #scrollProgress {
@@ -3807,6 +3850,13 @@ body {
   transition-duration: 500ms;
 }
 
+@media (max-width: 767px) {
+  .btn-hero {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
 .btn-hero:hover{
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -3834,6 +3884,13 @@ body {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
+}
+
+@media (max-width: 767px) {
+  .btn-hero-outline {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
 .btn-hero-outline:hover{
@@ -4417,6 +4474,13 @@ img {
   transition-duration: 300ms;
 }
 
+@media (max-width: 767px) {
+  .filter-pill {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
 .filter-pill:hover{
   border-color: rgb(224 158 35 / 0.5);
   --tw-text-opacity: 1;
@@ -4453,6 +4517,13 @@ img {
   letter-spacing: 0.2em;
   --tw-text-opacity: 1;
   color: rgb(7 7 10 / var(--tw-text-opacity));
+}
+
+@media (max-width: 767px) {
+  .coming-soon-badge {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
 /* ========== FEATURED FILM ========== */
@@ -4963,6 +5034,10 @@ img {
     margin-top: -1rem;
   }
 
+  .md\:mb-12{
+    margin-bottom: 3rem;
+  }
+
   .md\:mb-20{
     margin-bottom: 5rem;
   }
@@ -4973,6 +5048,10 @@ img {
 
   .md\:ml-auto{
     margin-left: auto;
+  }
+
+  .md\:mt-0{
+    margin-top: 0px;
   }
 
   .md\:mt-16{

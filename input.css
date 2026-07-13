@@ -56,6 +56,24 @@ body {
   }
 }
 
+/* Mobile text readability improvements */
+@media (max-width: 767px) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6, .font-display {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 0.02em;
+  }
+  [class*="text-white/4"], [class*="text-white/5"] {
+    text-shadow: 0 0 1px rgba(255,255,255,0.15);
+  }
+}
+
 @layer components {
   .cinematic-img {
     @apply w-full h-full object-cover cursor-pointer transition-transform duration-700 scale-100 group-hover:scale-110;
